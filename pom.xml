@@ -8,12 +8,12 @@
     <version>18</version>
   </parent>
 
-  <groupId>org.codehaus.sonar-plugins.python</groupId>
-  <artifactId>python</artifactId>
+  <groupId>org.codehaus.sonar-plugins.matlab</groupId>
+  <artifactId>matlab</artifactId>
   <version>1.4-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>Python</name>
+  <name>Matlab</name>
   <inceptionYear>2011</inceptionYear>
   <organization>
     <name>SonarSource and Waleri Enns</name>
@@ -45,16 +45,16 @@
   </developers>
 
   <modules>
-    <module>python-squid</module>
-    <module>python-checks</module>
-    <module>sonar-python-plugin</module>
-    <module>sslr-python-toolkit</module>
+    <module>matlab-squid</module>
+    <module>matlab-checks</module>
+    <module>sonar-matlab-plugin</module>
+    <module>sslr-matlab-toolkit</module>
   </modules>
 
   <scm>
-    <connection>scm:git:git@github.com:SonarCommunity/sonar-python.git</connection>
-    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-python.git</developerConnection>
-    <url>https://github.com/SonarCommunity/sonar-python</url>
+    <connection>scm:git:git@github.com:SonarCommunity/sonar-matlab.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-matlab.git</developerConnection>
+    <url>https://github.com/SonarCommunity/sonar-matlab</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
@@ -63,19 +63,19 @@
   </issueManagement>
   <ciManagement>
     <system>Cloudbees</system>
-    <url>https://sonarplugins.ci.cloudbees.com/job/python/</url>
+    <url>https://sonarplugins.ci.cloudbees.com/job/matlab/</url>
   </ciManagement>
 
   <properties>
-    <license.title>SonarQube Python Plugin</license.title>
+    <license.title>SonarQube Matlab Plugin</license.title>
 
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
 
     <sonar.version>3.7</sonar.version>
     <sslr.version>1.20</sslr.version>
 
-    <sonar.pluginClass>org.sonar.plugins.python.PythonPlugin</sonar.pluginClass>
-    <sonar.pluginName>Python</sonar.pluginName>
+    <sonar.pluginClass>org.sonar.plugins.matlab.MatlabPlugin</sonar.pluginClass>
+    <sonar.pluginName>Matlab</sonar.pluginName>
   </properties>
 
   <dependencyManagement>

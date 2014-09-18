@@ -2,19 +2,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.codehaus.sonar-plugins.python</groupId>
-    <artifactId>python</artifactId>
+    <groupId>org.codehaus.sonar-plugins.matlab</groupId>
+    <artifactId>matlab</artifactId>
     <version>1.4-SNAPSHOT</version>
   </parent>
 
-  <artifactId>sslr-python-toolkit</artifactId>
+  <artifactId>sslr-matlab-toolkit</artifactId>
 
-  <name>Python :: SSLR Toolkit</name>
+  <name>Matlab :: SSLR Toolkit</name>
 
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>python-squid</artifactId>
+      <artifactId>matlab-squid</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -51,7 +51,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.sonar.python.toolkit.PythonToolkit</mainClass>
+              <mainClass>org.sonar.matlab.toolkit.MatlabToolkit</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -67,7 +67,7 @@
             </goals>
             <configuration>
               <includes>
-                <include>${project.groupId}:python-squid</include>
+                <include>${project.groupId}:matlab-squid</include>
                 <include>org.codehaus.sonar.sslr:sslr-core</include>
                 <include>org.codehaus.sonar.sslr:sslr-xpath</include>
                 <include>org.codehaus.sonar.sslr-squid-bridge:sslr-squid-bridge</include>

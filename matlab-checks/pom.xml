@@ -3,19 +3,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.codehaus.sonar-plugins.python</groupId>
-    <artifactId>python</artifactId>
+    <groupId>org.codehaus.sonar-plugins.matlab</groupId>
+    <artifactId>matlab</artifactId>
     <version>1.4-SNAPSHOT</version>
   </parent>
 
-  <artifactId>python-checks</artifactId>
+  <artifactId>matlab-checks</artifactId>
 
-  <name>Python :: Checks</name>
+  <name>Matlab :: Checks</name>
 
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>python-squid</artifactId>
+      <artifactId>matlab-squid</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

@@ -3,28 +3,28 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.codehaus.sonar-plugins.python</groupId>
-    <artifactId>python</artifactId>
+    <groupId>org.codehaus.sonar-plugins.matlab</groupId>
+    <artifactId>matlab</artifactId>
     <version>1.4-SNAPSHOT</version>
   </parent>
 
-  <artifactId>sonar-python-plugin</artifactId>
+  <artifactId>sonar-matlab-plugin</artifactId>
   <packaging>sonar-plugin</packaging>
 
-  <name>Python :: Sonar Plugin</name>
-  <description>Enable analysis and reporting on python projects.</description>
-  <url>http://docs.codehaus.org/display/SONAR/Python+Plugin</url>
+  <name>Matlab :: Sonar Plugin</name>
+  <description>Enable analysis and reporting on matlab projects.</description>
+  <url>http://docs.codehaus.org/display/SONAR/Matlab+Plugin</url>
 
   <scm>
-    <connection>scm:git:git@github.com:SonarCommunity/sonar-python.git</connection>
-    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-python.git</developerConnection>
-    <url>https://github.com/SonarCommunity/sonar-python</url>
+    <connection>scm:git:git@github.com:SonarCommunity/sonar-matlab.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-matlab.git</developerConnection>
+    <url>https://github.com/SonarCommunity/sonar-matlab</url>
     <tag>HEAD</tag>
   </scm>
 
   <properties>
-    <sonar.pluginClass>org.sonar.plugins.python.PythonPlugin</sonar.pluginClass>
-    <sonar.pluginName>Python</sonar.pluginName>
+    <sonar.pluginClass>org.sonar.plugins.matlab.MatlabPlugin</sonar.pluginClass>
+    <sonar.pluginName>Matlab</sonar.pluginName>
   </properties>
 
   <dependencies>
@@ -36,12 +36,12 @@
 
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>python-squid</artifactId>
+      <artifactId>matlab-squid</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>python-checks</artifactId>
+      <artifactId>matlab-checks</artifactId>
       <version>${project.version}</version>
     </dependency>
 
