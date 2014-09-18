@@ -28,9 +28,9 @@ import java.util.List;
 
 public class Matlab extends AbstractLanguage {
 
-  public static final String KEY = "py";
+  public static final String KEY = "matlab";
 
-  private static final String[] DEFAULT_FILE_SUFFIXES = { "py" };
+  private static final String[] DEFAULT_FILE_SUFFIXES = { "m" };
 
   private Settings settings;
 

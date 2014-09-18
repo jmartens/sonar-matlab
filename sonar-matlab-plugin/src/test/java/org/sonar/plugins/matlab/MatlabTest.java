@@ -32,15 +32,15 @@ public class MatlabTest {
   @Test
   public void test() {
     Matlab language = new Matlab(new Settings());
-    assertThat(language.getKey()).isEqualTo("py");
+    assertThat(language.getKey()).isEqualTo("matlab");
     assertThat(language.getName()).isEqualTo("Matlab");
-    assertThat(language.getFileSuffixes()).hasSize(1).contains("py");
+    assertThat(language.getFileSuffixes()).hasSize(1).contains("m");
   }
 
   @Test
   public void custom_file_suffixes() {
     Map<String, String> props = Maps.newHashMap();
-    props.put(MatlabPlugin.FILE_SUFFIXES_KEY, "py,matlab");
+    props.put(MatlabPlugin.FILE_SUFFIXES_KEY, "m,matlab");
 
     Settings settings = new Settings();
     settings.addProperties(props);
