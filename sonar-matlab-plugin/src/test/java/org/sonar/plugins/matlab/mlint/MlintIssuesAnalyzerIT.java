@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import com.google.common.base.Charsets;
 import org.junit.Rule;
@@ -29,21 +29,21 @@ import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PylintIssuesAnalyzerIT {
+public class MlintIssuesAnalyzerIT {
 
   @Rule
   public TemporaryFolder tempFolder = new TemporaryFolder();
 
   @Test
   public void issuesTest() throws Exception {
-    String pylintrcResource = "/org/sonar/plugins/matlab/pylint/pylintrc_sample";
+    String mlintrcResource = "/org/sonar/plugins/matlab/mlint/mlintrc_sample";
     String codeChunksResource = "/org/sonar/plugins/matlab/code_chunks_2.py";
-    String pylintConfigPath = getClass().getResource(pylintrcResource).getPath();
+    String mlintConfigPath = getClass().getResource(mlintrcResource).getPath();
     String codeChunksPathName = getClass().getResource(codeChunksResource).getPath();
-    String pylintPath = null;
+    String mlintPath = null;
     File out = tempFolder.newFile();
 
-    List<Issue> issues = new PylintIssuesAnalyzer(pylintPath, pylintConfigPath).analyze(codeChunksPathName, Charsets.UTF_8, out);
+    List<Issue> issues = new MlintIssuesAnalyzer(mlintPath, mlintConfigPath).analyze(codeChunksPathName, Charsets.UTF_8, out);
     assertThat(issues).isNotEmpty();
   }
 

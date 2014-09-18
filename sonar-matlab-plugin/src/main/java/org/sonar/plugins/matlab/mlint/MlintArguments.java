@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Iterables;
@@ -27,20 +27,20 @@ import org.sonar.api.utils.command.CommandExecutor;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PylintArguments {
+public class MlintArguments {
 
-  private static final Pattern PYLINT_VERSION_PATTERN = Pattern.compile(".*pylint[^ ]* ([0-9\\.]+).*");
+  private static final Pattern PYLINT_VERSION_PATTERN = Pattern.compile(".*mlint[^ ]* ([0-9\\.]+).*");
   private static final String[] ARGS_PYLINT_0_X = {"-i", "y", "-f", "parseable", "-r", "n"};
   private static final String[] ARGS_PYLINT_1_X = {"--msg-template", "{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}", "-r", "n"};
 
   private final String[] arguments;
 
-  public PylintArguments(Command command) {
-    String pylintVersion = pylintVersion(command);
-    this.arguments = pylintVersion.startsWith("0") ? ARGS_PYLINT_0_X : ARGS_PYLINT_1_X;
+  public MlintArguments(Command command) {
+    String mlintVersion = mlintVersion(command);
+    this.arguments = mlintVersion.startsWith("0") ? ARGS_PYLINT_0_X : ARGS_PYLINT_1_X;
   }
 
-  private static String pylintVersion(Command command) {
+  private static String mlintVersion(Command command) {
     long timeout = 10000;
     CommandStreamConsumer out = new CommandStreamConsumer();
     CommandStreamConsumer err = new CommandStreamConsumer();
@@ -53,7 +53,7 @@ public class PylintArguments {
       }
     }
     String message =
-      "Failed to determine pylint version with command: \"" + command.toCommandLine()
+      "Failed to determine mlint version with command: \"" + command.toCommandLine()
         + "\", received " + Iterables.size(outputLines) + " line(s) of output:\n" + Joiner.on('\n').join(outputLines);
     throw new IllegalArgumentException(message);
   }

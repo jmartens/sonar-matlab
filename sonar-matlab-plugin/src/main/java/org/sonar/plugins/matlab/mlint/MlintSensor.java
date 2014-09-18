@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -40,18 +40,18 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-public class PylintSensor implements Sensor {
+public class MlintSensor implements Sensor {
 
-  private static final Logger LOG = LoggerFactory.getLogger(PylintSensor.class);
+  private static final Logger LOG = LoggerFactory.getLogger(MlintSensor.class);
 
   private RuleFinder ruleFinder;
   private RulesProfile profile;
-  private PylintConfiguration conf;
+  private MlintConfiguration conf;
   private ModuleFileSystem fileSystem;
   private ResourcePerspectives resourcePerspectives;
 
 
-  public PylintSensor(RuleFinder ruleFinder, PylintConfiguration conf, RulesProfile profile, ModuleFileSystem fileSystem, ResourcePerspectives resourcePerspectives) {
+  public MlintSensor(RuleFinder ruleFinder, MlintConfiguration conf, RulesProfile profile, ModuleFileSystem fileSystem, ResourcePerspectives resourcePerspectives) {
     this.ruleFinder = ruleFinder;
     this.conf = conf;
     this.profile = profile;
@@ -61,11 +61,11 @@ public class PylintSensor implements Sensor {
 
   public boolean shouldExecuteOnProject(Project project) {
     return !fileSystem.files(FileQuery.onSource().onLanguage(Matlab.KEY)).isEmpty()
-        && !profile.getActiveRulesByRepository(PylintRuleRepository.REPOSITORY_KEY).isEmpty();
+        && !profile.getActiveRulesByRepository(MlintRuleRepository.REPOSITORY_KEY).isEmpty();
   }
 
   public void analyse(Project project, SensorContext sensorContext) {
-    File workdir = new File(fileSystem.workingDir(), "/pylint/");
+    File workdir = new File(fileSystem.workingDir(), "/mlint/");
     prepareWorkDir(workdir);
     int i = 0;
     for (File file : fileSystem.files(FileQuery.onSource().onLanguage(Matlab.KEY))) {
@@ -89,14 +89,14 @@ public class PylintSensor implements Sensor {
   protected void analyzeFile(File file, File out, Project project, SensorContext sensorContext) throws IOException {
     org.sonar.api.resources.File pyfile = org.sonar.api.resources.File.fromIOFile(file, project);
 
-    String pylintConfigPath = conf.getPylintConfigPath(fileSystem);
-    String pylintPath = conf.getPylintPath();
+    String mlintConfigPath = conf.getMlintConfigPath(fileSystem);
+    String mlintPath = conf.getMlintPath();
 
-    PylintIssuesAnalyzer analyzer = new PylintIssuesAnalyzer(pylintPath, pylintConfigPath);
+    MlintIssuesAnalyzer analyzer = new MlintIssuesAnalyzer(mlintPath, mlintConfigPath);
     List<Issue> issues = analyzer.analyze(file.getAbsolutePath(), fileSystem.sourceCharset(), out);
 
-    for (Issue pylintIssue : issues) {
-      Rule rule = ruleFinder.findByKey(PylintRuleRepository.REPOSITORY_KEY, pylintIssue.getRuleId());
+    for (Issue mlintIssue : issues) {
+      Rule rule = ruleFinder.findByKey(MlintRuleRepository.REPOSITORY_KEY, mlintIssue.getRuleId());
 
       if (rule != null) {
         if (rule.isEnabled()) {
@@ -105,16 +105,16 @@ public class PylintSensor implements Sensor {
           if (issuable != null) {
             org.sonar.api.issue.Issue issue = issuable.newIssueBuilder()
               .ruleKey(RuleKey.of(rule.getRepositoryKey(), rule.getKey()))
-              .line(pylintIssue.getLine())
-              .message(pylintIssue.getDescr())
+              .line(mlintIssue.getLine())
+              .message(mlintIssue.getDescr())
               .build();
             issuable.addIssue(issue);
           }
         } else {
-          LOG.debug("Pylint rule '{}' is disabled in Sonar", pylintIssue.getRuleId());
+          LOG.debug("Mlint rule '{}' is disabled in Sonar", mlintIssue.getRuleId());
         }
       } else {
-        LOG.warn("Pylint rule '{}' is unknown in Sonar", pylintIssue.getRuleId());
+        LOG.warn("Mlint rule '{}' is unknown in Sonar", mlintIssue.getRuleId());
       }
     }
   }

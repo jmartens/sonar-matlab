@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import org.apache.commons.lang.SystemUtils;
 import org.junit.Test;
@@ -25,29 +25,29 @@ import org.sonar.api.utils.command.Command;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PylintArgumentsTest {
+public class MlintArgumentsTest {
 
   @Test
-  public void pylint_0_x() {
-    String[] arguments = new PylintArguments(command("pylint 0.28.0")).arguments();
+  public void mlint_0_x() {
+    String[] arguments = new MlintArguments(command("mlint 0.28.0")).arguments();
     assertThat(arguments).containsOnly("-i", "y", "-f", "parseable", "-r", "n");
   }
 
   @Test
-  public void pylint_bat_0_x() {
-    String[] arguments = new PylintArguments(command("pylint.bat 0.28.0")).arguments();
+  public void mlint_bat_0_x() {
+    String[] arguments = new MlintArguments(command("mlint.bat 0.28.0")).arguments();
     assertThat(arguments).containsOnly("-i", "y", "-f", "parseable", "-r", "n");
   }
 
   @Test
-  public void pylint_1_x() {
-    String[] arguments = new PylintArguments(command("pylint 1.1.0")).arguments();
+  public void mlint_1_x() {
+    String[] arguments = new MlintArguments(command("mlint 1.1.0")).arguments();
     assertThat(arguments).containsOnly("--msg-template", "{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}", "-r", "n");
   }
 
   @Test(expected = IllegalArgumentException.class)
   public void unknown() throws Exception {
-    new PylintArguments(command(""));
+    new MlintArguments(command(""));
   }
 
   private Command command(String toOutput) {

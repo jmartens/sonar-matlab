@@ -17,46 +17,12 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
 
-class Issue {
+/**
+ * Integration with mlint.
+ */
+@ParametersAreNonnullByDefault
+package org.sonar.plugins.matlab.mlint;
 
-  private final String filename;
-  private final int line;
-  private final String ruleId;
-  private final String objname;
-  private final String descr;
+import javax.annotation.ParametersAreNonnullByDefault;
 
-  Issue(String filename, int line, String ruleId, String objname, String descr) {
-    this.filename = filename;
-    this.line = line;
-    this.ruleId = ruleId;
-    this.objname = objname;
-    this.descr = descr;
-  }
-
-  @Override
-  public String toString() {
-    return "(" + filename + ", " + line + ", " + ruleId + ", " + objname + ", " + descr + ")";
-  }
-
-  String getFilename() {
-    return filename;
-  }
-
-  int getLine() {
-    return line;
-  }
-
-  String getRuleId() {
-    return ruleId;
-  }
-
-  String getObjname() {
-    return objname;
-  }
-
-  String getDescr() {
-    return descr;
-  }
-}

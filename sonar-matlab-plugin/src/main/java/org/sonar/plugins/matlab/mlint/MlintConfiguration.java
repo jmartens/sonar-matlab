@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import org.apache.commons.lang.StringUtils;
 import org.sonar.api.BatchExtension;
@@ -30,33 +30,33 @@ import java.io.File;
 
 @Properties({
   @Property(
-    key = PylintConfiguration.PYLINT_CONFIG_KEY,
+    key = MlintConfiguration.PYLINT_CONFIG_KEY,
     defaultValue = "",
-    name = "pylint configuration",
-    description = "Path to the pylint configuration file to use in pylint analysis. Set to empty to use the default.",
+    name = "mlint configuration",
+    description = "Path to the mlint configuration file to use in mlint analysis. Set to empty to use the default.",
     global = false,
     project = true),
   @Property(
-    key = PylintConfiguration.PYLINT_KEY,
+    key = MlintConfiguration.PYLINT_KEY,
     defaultValue = "",
-    name = "pylint executable",
-    description = "Path to the pylint executable to use in pylint analysis. Set to empty to use the default one.",
+    name = "mlint executable",
+    description = "Path to the mlint executable to use in mlint analysis. Set to empty to use the default one.",
     global = true,
     project = false)
 })
-public class PylintConfiguration implements BatchExtension {
+public class MlintConfiguration implements BatchExtension {
 
-  public static final String PYLINT_CONFIG_KEY = "sonar.matlab.pylint_config";
-  public static final String PYLINT_KEY = "sonar.matlab.pylint";
+  public static final String PYLINT_CONFIG_KEY = "sonar.matlab.mlint_config";
+  public static final String PYLINT_KEY = "sonar.matlab.mlint";
 
   private final Settings conf;
 
-  public PylintConfiguration(Settings conf) {
+  public MlintConfiguration(Settings conf) {
     this.conf = conf;
   }
 
-  public String getPylintConfigPath(ModuleFileSystem fileSystem) {
-    String configPath = conf.getString(PylintConfiguration.PYLINT_CONFIG_KEY);
+  public String getMlintConfigPath(ModuleFileSystem fileSystem) {
+    String configPath = conf.getString(MlintConfiguration.PYLINT_CONFIG_KEY);
     if (StringUtils.isEmpty(configPath)) {
       return null;
     }
@@ -68,8 +68,8 @@ public class PylintConfiguration implements BatchExtension {
     return configFile.getAbsolutePath();
   }
 
-  public String getPylintPath() {
-    return conf.getString(PylintConfiguration.PYLINT_KEY);
+  public String getMlintPath() {
+    return conf.getString(MlintConfiguration.PYLINT_KEY);
   }
 
 }

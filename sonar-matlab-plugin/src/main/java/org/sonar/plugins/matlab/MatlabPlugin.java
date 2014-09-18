@@ -26,9 +26,9 @@ import org.sonar.api.resources.Qualifiers;
 import org.sonar.plugins.matlab.colorizer.MatlabColorizer;
 import org.sonar.plugins.matlab.coverage.MatlabCoverageSensor;
 import org.sonar.plugins.matlab.cpd.MatlabCpdMapping;
-import org.sonar.plugins.matlab.pylint.PylintConfiguration;
-import org.sonar.plugins.matlab.pylint.PylintRuleRepository;
-import org.sonar.plugins.matlab.pylint.PylintSensor;
+import org.sonar.plugins.matlab.mlint.MlintConfiguration;
+import org.sonar.plugins.matlab.mlint.MlintRuleRepository;
+import org.sonar.plugins.matlab.mlint.MlintSensor;
 import org.sonar.plugins.matlab.xunit.MatlabXunitSensor;
 
 import java.util.List;
@@ -59,10 +59,10 @@ public class MatlabPlugin extends SonarPlugin {
 
         MatlabCommonRulesEngine.class,
 
-        // pylint
-        PylintConfiguration.class,
-        PylintSensor.class,
-        PylintRuleRepository.class,
+        // mlint
+        MlintConfiguration.class,
+        MlintSensor.class,
+        MlintRuleRepository.class,
 
         MatlabXunitSensor.class,
         MatlabCoverageSensor.class);

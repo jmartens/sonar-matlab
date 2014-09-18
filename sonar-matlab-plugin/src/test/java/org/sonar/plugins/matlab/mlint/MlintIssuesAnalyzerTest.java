@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
@@ -32,84 +32,84 @@ import java.util.List;
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
-public class PylintIssuesAnalyzerTest {
+public class MlintIssuesAnalyzerTest {
 
   @Test
   public void shouldParseCorrectly() {
-    String resourceName = "/org/sonar/plugins/matlab/pylint/sample_pylint_output.txt";
+    String resourceName = "/org/sonar/plugins/matlab/mlint/sample_mlint_output.txt";
     String pathName = getClass().getResource(resourceName).getPath();
-    String pylintConfigPath = null;
-    String pylintPath = null;
+    String mlintConfigPath = null;
+    String mlintPath = null;
     List<String> lines = readFile(pathName);
-    List<Issue> issues = analyzer(pylintPath, pylintConfigPath).parseOutput(lines);
+    List<Issue> issues = analyzer(mlintPath, mlintConfigPath).parseOutput(lines);
     assertThat(issues.size()).isEqualTo(21);
   }
 
   @Test
   public void shouldParseCorrectlyNewFormat() {
-    String resourceName = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_new_format.txt";
+    String resourceName = "/org/sonar/plugins/matlab/mlint/sample_mlint_output_new_format.txt";
     String pathName = getClass().getResource(resourceName).getPath();
-    String pylintConfigPath = null;
-    String pylintPath = null;
+    String mlintConfigPath = null;
+    String mlintPath = null;
     List<String> lines = readFile(pathName);
-    List<Issue> issues = analyzer(pylintPath, pylintConfigPath).parseOutput(lines);
+    List<Issue> issues = analyzer(mlintPath, mlintConfigPath).parseOutput(lines);
     assertThat(issues.size()).isEqualTo(1);
     assertThat(issues.get(0).getRuleId()).isEqualTo("C0111");
   }
 
   @Test
   public void shouldParseCorrectlyOutputWithWindowsPaths() {
-    String resourceName = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_with_win_paths.txt";
+    String resourceName = "/org/sonar/plugins/matlab/mlint/sample_mlint_output_with_win_paths.txt";
     String pathName = getClass().getResource(resourceName).getPath();
-    String pylintConfigPath = null;
-    String pylintPath = null;
+    String mlintConfigPath = null;
+    String mlintPath = null;
     List<String> lines = readFile(pathName);
-    List<Issue> issues = analyzer(pylintPath, pylintConfigPath).parseOutput(lines);
+    List<Issue> issues = analyzer(mlintPath, mlintConfigPath).parseOutput(lines);
     assertThat(issues.size()).isEqualTo(1);
   }
 
   @Test
   public void shouldMapIssuesIdsCorrectly() {
-    String resourceOld = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_oldids.txt";
-    String resourceNew = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_newids.txt";
+    String resourceOld = "/org/sonar/plugins/matlab/mlint/sample_mlint_output_oldids.txt";
+    String resourceNew = "/org/sonar/plugins/matlab/mlint/sample_mlint_output_newids.txt";
     String pathNameOld = getClass().getResource(resourceOld).getPath();
     String pathNameNew = getClass().getResource(resourceNew).getPath();
-    String pylintConfigPath = null;
-    String pylintPath = null;
+    String mlintConfigPath = null;
+    String mlintPath = null;
     List<String> linesOld = readFile(pathNameOld);
     List<String> linesNew = readFile(pathNameNew);
-    List<Issue> issuesOld = analyzer(pylintPath, pylintConfigPath).parseOutput(linesOld);
-    List<Issue> issuesNew = analyzer(pylintPath, pylintConfigPath).parseOutput(linesNew);
+    List<Issue> issuesOld = analyzer(mlintPath, mlintConfigPath).parseOutput(linesOld);
+    List<Issue> issuesNew = analyzer(mlintPath, mlintConfigPath).parseOutput(linesNew);
     assertThat(getIds(issuesOld)).isEqualTo(getIds(issuesNew));
   }
 
   @Test
   public void shouldWorkWithValidCustomConfig() {
-    String resourceName = "/org/sonar/plugins/matlab/pylint/pylintrc_sample";
-    String pylintConfigPath = getClass().getResource(resourceName).getPath();
-    String pylintPath = null;
-    analyzer(pylintPath, pylintConfigPath);
+    String resourceName = "/org/sonar/plugins/matlab/mlint/mlintrc_sample";
+    String mlintConfigPath = getClass().getResource(resourceName).getPath();
+    String mlintPath = null;
+    analyzer(mlintPath, mlintConfigPath);
   }
 
   @Test(expected = SonarException.class)
   public void shouldFailIfGivenInvalidConfig() {
-    String pylintConfigPath = "xx_path_that_doesnt_exist_xx";
-    String pylintPath = null;
-    analyzer(pylintPath, pylintConfigPath);
+    String mlintConfigPath = "xx_path_that_doesnt_exist_xx";
+    String mlintPath = null;
+    analyzer(mlintPath, mlintConfigPath);
   }
 
   @Test
   public void shouldInstantiateWhenGivenValidParams() {
-    String pylintrcResource = "/org/sonar/plugins/matlab/pylint/pylintrc_sample";
-    String pylintrcPath = getClass().getResource(pylintrcResource).getPath();
-    String executableResource = "/org/sonar/plugins/matlab/pylint/executable";
+    String mlintrcResource = "/org/sonar/plugins/matlab/mlint/mlintrc_sample";
+    String mlintrcPath = getClass().getResource(mlintrcResource).getPath();
+    String executableResource = "/org/sonar/plugins/matlab/mlint/executable";
     String executablePath = getClass().getResource(executableResource).getPath();
     final String[] VALID_PARAMETERS =
       {
         null, null,
         executablePath, null,
-        null, pylintrcPath,
-        executablePath, pylintrcPath
+        null, mlintrcPath,
+        executablePath, mlintrcPath
       };
 
     int numberOfParams = VALID_PARAMETERS.length;
@@ -168,9 +168,9 @@ public class PylintIssuesAnalyzerTest {
     return ids;
   }
 
-  private PylintIssuesAnalyzer analyzer(String pylintPath, String pylintConfigPath) {
-    PylintArguments arguments = mock(PylintArguments.class);
-    return new PylintIssuesAnalyzer(pylintPath, pylintConfigPath, arguments);
+  private MlintIssuesAnalyzer analyzer(String mlintPath, String mlintConfigPath) {
+    MlintArguments arguments = mock(MlintArguments.class);
+    return new MlintIssuesAnalyzer(mlintPath, mlintConfigPath, arguments);
   }
 
 }

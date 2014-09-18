@@ -17,36 +17,24 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
+import org.junit.Test;
 import org.sonar.api.rules.Rule;
-import org.sonar.api.rules.RuleRepository;
 import org.sonar.api.rules.XMLRuleParser;
-import org.sonar.plugins.matlab.Matlab;
 
 import java.util.List;
 
-public class PylintRuleRepository extends RuleRepository {
+import static org.fest.assertions.Assertions.assertThat;
 
-  public static final String REPOSITORY_NAME = "Pylint";
-  public static final String REPOSITORY_KEY = REPOSITORY_NAME;
+public class MlintRuleRepositoryTest {
 
-  private static final String RULES_FILE = "/org/sonar/plugins/matlab/pylint/rules.xml";
-  private final XMLRuleParser ruleParser;
+  @Test
+  public void createRulesTest() {
+    MlintRuleRepository rulerep = new MlintRuleRepository(new XMLRuleParser());
+    List<Rule> rules = rulerep.createRules();
 
-  public PylintRuleRepository(XMLRuleParser ruleParser) {
-    super(REPOSITORY_KEY, Matlab.KEY);
-    setName(REPOSITORY_NAME);
-    this.ruleParser = ruleParser;
-  }
-
-  @Override
-  public List<Rule> createRules() {
-    List<Rule> rules = ruleParser.parse(getClass().getResourceAsStream(RULES_FILE));
-    for (Rule r : rules) {
-      r.setRepositoryKey(REPOSITORY_KEY);
-    }
-    return rules;
+    assertThat(rules.size()).isEqualTo(180);
   }
 
 }

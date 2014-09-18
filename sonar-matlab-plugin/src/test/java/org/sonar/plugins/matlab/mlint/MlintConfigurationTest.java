@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,40 +30,40 @@ import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class PylintConfigurationTest {
+public class MlintConfigurationTest {
 
   private Settings settings;
-  private PylintConfiguration pylintConfiguration;
+  private MlintConfiguration mlintConfiguration;
 
   @Before
   public void setUp() throws Exception {
     settings = new Settings();
-    pylintConfiguration = new PylintConfiguration(settings);
+    mlintConfiguration = new MlintConfiguration(settings);
   }
 
   @Test
-  public void shouldGetCorrectPylintPath() {
+  public void shouldGetCorrectMlintPath() {
     ModuleFileSystem fs = mock(ModuleFileSystem.class);
     when(fs.baseDir()).thenReturn(new File("/projectroot"));
 
-    assertThat(pylintConfiguration.getPylintConfigPath(fs)).isNull();
+    assertThat(mlintConfiguration.getMlintConfigPath(fs)).isNull();
 
-    settings.setProperty(PylintConfiguration.PYLINT_CONFIG_KEY, (String) null);
-    assertThat(pylintConfiguration.getPylintConfigPath(fs)).isNull();
+    settings.setProperty(MlintConfiguration.PYLINT_CONFIG_KEY, (String) null);
+    assertThat(mlintConfiguration.getMlintConfigPath(fs)).isNull();
 
-    settings.setProperty(PylintConfiguration.PYLINT_CONFIG_KEY, ".pylintrc");
-    assertThat(pylintConfiguration.getPylintConfigPath(fs)).isEqualTo(new File("/projectroot/.pylintrc").getAbsolutePath());
+    settings.setProperty(MlintConfiguration.PYLINT_CONFIG_KEY, ".mlintrc");
+    assertThat(mlintConfiguration.getMlintConfigPath(fs)).isEqualTo(new File("/projectroot/.mlintrc").getAbsolutePath());
 
-    String absolutePath = new File("/absolute/.pylintrc").getAbsolutePath();
-    settings.setProperty(PylintConfiguration.PYLINT_CONFIG_KEY, absolutePath);
-    assertThat(pylintConfiguration.getPylintConfigPath(fs)).isEqualTo(absolutePath);
+    String absolutePath = new File("/absolute/.mlintrc").getAbsolutePath();
+    settings.setProperty(MlintConfiguration.PYLINT_CONFIG_KEY, absolutePath);
+    assertThat(mlintConfiguration.getMlintConfigPath(fs)).isEqualTo(absolutePath);
   }
 
   @Test
-  public void getPylintPath() {
+  public void getMlintPath() {
     String path = "test/path";
-    settings.setProperty(PylintConfiguration.PYLINT_KEY, path);
+    settings.setProperty(MlintConfiguration.PYLINT_KEY, path);
 
-    assertThat(pylintConfiguration.getPylintPath()).isEqualTo(path);
+    assertThat(mlintConfiguration.getMlintPath()).isEqualTo(path);
   }
 }

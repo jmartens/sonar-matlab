@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.matlab.pylint;
+package org.sonar.plugins.matlab.mlint;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.io.Files;
@@ -37,13 +37,13 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class PylintIssuesAnalyzer {
+public class MlintIssuesAnalyzer {
 
-  private static final Logger LOG = LoggerFactory.getLogger(PylintSensor.class);
+  private static final Logger LOG = LoggerFactory.getLogger(MlintSensor.class);
 
-  // Pylint 0.24 brings a nasty reidentifying of some rules...
+  // Mlint 0.24 brings a nasty reidentifying of some rules...
   // To avoid burdening of users with rule clones we map the ids.
-  // This workaround can die as soon as pylints <= 0.23.X become obsolete.
+  // This workaround can die as soon as mlints <= 0.23.X become obsolete.
   private static final Map<String, String> ID_MAP = ImmutableMap.<String, String>builder()
     .put("E9900", "E1300")
     .put("E9901", "E1301")
@@ -57,45 +57,45 @@ public class PylintIssuesAnalyzer {
     .put("W9901", "W1301")
     .build();
 
-  private static final String FALLBACK_PYLINT = "pylint";
+  private static final String FALLBACK_PYLINT = "mlint";
   private static final Pattern PATTERN = Pattern.compile("(.+):([0-9]+): \\[(.*)\\] (.*)");
 
-  private String pylint = null;
-  private String pylintConfigParam = null;
-  private PylintArguments pylintArguments;
+  private String mlint = null;
+  private String mlintConfigParam = null;
+  private MlintArguments mlintArguments;
 
-  PylintIssuesAnalyzer(String pylintPath, String pylintConfigPath) {
-    this(pylintPath, pylintConfigPath, new PylintArguments(Command.create(pylintPathWithDefault(pylintPath)).addArgument("--version")));
+  MlintIssuesAnalyzer(String mlintPath, String mlintConfigPath) {
+    this(mlintPath, mlintConfigPath, new MlintArguments(Command.create(mlintPathWithDefault(mlintPath)).addArgument("--version")));
   }
 
-  PylintIssuesAnalyzer(String pylintPath, String pylintConfigPath, PylintArguments arguments) {
-    pylint = pylintPathWithDefault(pylintPath);
+  MlintIssuesAnalyzer(String mlintPath, String mlintConfigPath, MlintArguments arguments) {
+    mlint = mlintPathWithDefault(mlintPath);
 
-    if (pylintConfigPath != null) {
-      if (!new File(pylintConfigPath).exists()) {
-        throw new SonarException("Cannot find the pylint configuration file: " + pylintConfigPath);
+    if (mlintConfigPath != null) {
+      if (!new File(mlintConfigPath).exists()) {
+        throw new SonarException("Cannot find the mlint configuration file: " + mlintConfigPath);
       }
-      pylintConfigParam = "--rcfile=" + pylintConfigPath;
+      mlintConfigParam = "--rcfile=" + mlintConfigPath;
     }
     
-    pylintArguments = arguments;
+    mlintArguments = arguments;
   }
 
-  private static String pylintPathWithDefault(String pylintPath) {
-    if (pylintPath != null) {
-      if (!new File(pylintPath).exists()) {
-        throw new SonarException("Cannot find the pylint executable: " + pylintPath);
+  private static String mlintPathWithDefault(String mlintPath) {
+    if (mlintPath != null) {
+      if (!new File(mlintPath).exists()) {
+        throw new SonarException("Cannot find the mlint executable: " + mlintPath);
       }
-      return pylintPath;
+      return mlintPath;
     }
     return FALLBACK_PYLINT;
   }
 
   public List<Issue> analyze(String path, Charset charset, File out) throws IOException {
-    Command command = Command.create(pylint).addArguments(pylintArguments.arguments()).addArgument(path);
+    Command command = Command.create(mlint).addArguments(mlintArguments.arguments()).addArgument(path);
 
-    if (pylintConfigParam != null) {
-      command.addArgument(pylintConfigParam);
+    if (mlintConfigParam != null) {
+      command.addArgument(mlintConfigParam);
     }
 
     LOG.debug("Calling command: '{}'", command.toString());
@@ -106,9 +106,9 @@ public class PylintIssuesAnalyzer {
     CommandExecutor.create().execute(command, stdOut, stdErr, timeoutMS);
 
     // the error stream can contain a line like 'no custom config found, using default'
-    // any bigger output on the error stream is likely a pylint malfunction
+    // any bigger output on the error stream is likely a mlint malfunction
     if (stdErr.getData().size() > 1) {
-      LOG.warn("Output on the error channel detected: this is probably due to a problem on pylint's side.");
+      LOG.warn("Output on the error channel detected: this is probably due to a problem on mlint's side.");
       LOG.warn("Content of the error stream: \n\"{}\"", StringUtils.join(stdErr.getData(), "\n"));
     }
 
@@ -118,7 +118,7 @@ public class PylintIssuesAnalyzer {
   }
 
   protected List<Issue> parseOutput(List<String> lines) {
-    // Parse the output of pylint. Example of the format:
+    // Parse the output of mlint. Example of the format:
     //
     // complexity/code_chunks.py:62: [W0104, list_compr] Statement seems to have no effect
     // complexity/code_chunks.py:64: [C0111, list_compr_filter] Missing docstring

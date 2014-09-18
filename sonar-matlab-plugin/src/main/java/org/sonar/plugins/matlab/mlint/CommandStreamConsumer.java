@@ -17,12 +17,21 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
+package org.sonar.plugins.matlab.mlint;
 
-/**
- * Integration with pylint.
- */
-@ParametersAreNonnullByDefault
-package org.sonar.plugins.matlab.pylint;
+import org.sonar.api.utils.command.StreamConsumer;
 
-import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.LinkedList;
+import java.util.List;
 
+class CommandStreamConsumer implements StreamConsumer {
+  private List<String> data = new LinkedList<String>();
+
+  public void consumeLine(String line) {
+    data.add(line);
+  }
+
+  public List<String> getData() {
+    return data;
+  }
+}
