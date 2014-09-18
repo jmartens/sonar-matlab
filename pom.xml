@@ -74,8 +74,8 @@
     <sonar.version>3.7</sonar.version>
     <sslr.version>1.20</sslr.version>
 
-    <sonar.pluginClass>org.sonar.plugins.python.PythonPlugin</sonar.pluginClass>
-    <sonar.pluginName>Python</sonar.pluginName>
+    <sonar.pluginClass>org.sonar.plugins.matlab.MatlabPlugin</sonar.pluginClass>
+    <sonar.pluginName>Matlab</sonar.pluginName>
   </properties>
 
   <dependencyManagement>
