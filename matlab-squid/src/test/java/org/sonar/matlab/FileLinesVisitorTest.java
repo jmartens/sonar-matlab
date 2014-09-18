@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python;
+package org.sonar.matlab;
 
 import com.google.common.collect.ImmutableList;
 import com.sonar.sslr.api.Grammar;
@@ -30,7 +30,7 @@ import org.sonar.api.measures.FileLinesContext;
 import org.sonar.api.measures.FileLinesContextFactory;
 import org.sonar.api.resources.Project;
 import org.sonar.api.resources.ProjectFileSystem;
-import org.sonar.python.metrics.FileLinesVisitor;
+import org.sonar.matlab.metrics.FileLinesVisitor;
 import org.sonar.squidbridge.SquidAstVisitor;
 import org.sonar.squidbridge.api.SourceFile;
 
@@ -68,7 +68,7 @@ public class FileLinesVisitorTest {
 
     SquidAstVisitor<Grammar> visitor = new FileLinesVisitor(project, fileLinesContextFactory);
 
-    SourceFile sourceFile = PythonAstScanner.scanSingleFile(file, visitor);
+    SourceFile sourceFile = MatlabAstScanner.scanSingleFile(file, visitor);
     verify(fileLinesContext).setIntValue(CoreMetrics.NCLOC_DATA_KEY, 1, 0);
     verify(fileLinesContext).setIntValue(CoreMetrics.NCLOC_DATA_KEY, 2, 1);
     verify(fileLinesContext).setIntValue(CoreMetrics.NCLOC_DATA_KEY, 3, 0);

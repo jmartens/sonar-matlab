@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,10 +17,10 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 
 public class CheckUtils {
 
@@ -35,7 +35,7 @@ public class CheckUtils {
         parent = parent.getParent();
       }
     }
-    return parent != null && parent.is(PythonGrammar.CLASSDEF);
+    return parent != null && parent.is(MatlabGrammar.CLASSDEF);
   }
 
 }

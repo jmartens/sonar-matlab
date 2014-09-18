@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,11 +17,11 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import org.sonar.squidbridge.checks.CheckMessagesVerifier;
 import org.junit.Test;
-import org.sonar.python.PythonAstScanner;
+import org.sonar.matlab.MatlabAstScanner;
 import org.sonar.squidbridge.api.SourceFile;
 
 import java.io.File;
@@ -32,7 +32,7 @@ public class NestedIfDepthCheckTest {
 
   @Test
   public void testDefault() {
-    SourceFile file = PythonAstScanner.scanSingleFile(new File("src/test/resources/checks/nestedIfDepth.py"), check);
+    SourceFile file = MatlabAstScanner.scanSingleFile(new File("src/test/resources/checks/nestedIfDepth.py"), check);
     CheckMessagesVerifier.verify(file.getCheckMessages())
         .next().atLine(4).withMessage("This if has a nesting level of 4, which is higher than the maximum allowed 3.")
         .noMore();
@@ -42,7 +42,7 @@ public class NestedIfDepthCheckTest {
   public void testCustomDepth() {
     check.maximumNestingLevel = 1;
 
-    SourceFile file = PythonAstScanner.scanSingleFile(new File("src/test/resources/checks/nestedIfDepth.py"), check);
+    SourceFile file = MatlabAstScanner.scanSingleFile(new File("src/test/resources/checks/nestedIfDepth.py"), check);
     CheckMessagesVerifier.verify(file.getCheckMessages())
         .next().atLine(2).withMessage("This if has a nesting level of 2, which is higher than the maximum allowed 1.")
         .next().atLine(8)

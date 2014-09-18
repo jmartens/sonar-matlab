@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,15 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
 import com.sonar.sslr.api.Token;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.api.MatlabTokenType;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 import java.util.regex.Pattern;
@@ -40,24 +40,24 @@ public class MissingDocstringCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.FILE_INPUT, PythonGrammar.FUNCDEF, PythonGrammar.CLASSDEF);
+    subscribeTo(MatlabGrammar.FILE_INPUT, MatlabGrammar.FUNCDEF, MatlabGrammar.CLASSDEF);
   }
 
   @Override
   public void visitNode(AstNode astNode) {
-    if (astNode.is(PythonGrammar.FILE_INPUT)) {
+    if (astNode.is(MatlabGrammar.FILE_INPUT)) {
       visitModule(astNode);
     }
-    if (astNode.is(PythonGrammar.FUNCDEF)) {
+    if (astNode.is(MatlabGrammar.FUNCDEF)) {
       visitFuncDef(astNode);
     }
-    if (astNode.is(PythonGrammar.CLASSDEF)) {
+    if (astNode.is(MatlabGrammar.CLASSDEF)) {
       visitClassDef(astNode);
     }
   }
 
   private void visitModule(AstNode astNode) {
-    AstNode firstStatement = astNode.getFirstChild(PythonGrammar.STATEMENT);
+    AstNode firstStatement = astNode.getFirstChild(MatlabGrammar.STATEMENT);
     AstNode firstSimpleStmt = null;
     if (firstStatement != null) {
       firstSimpleStmt = firstSimpleStmt(firstStatement);
@@ -76,13 +76,13 @@ public class MissingDocstringCheck extends SquidCheck<Grammar> {
   }
 
   private void checkFirstSuite(AstNode astNode, String typeName) {
-    AstNode suite = astNode.getFirstChild(PythonGrammar.SUITE);
-    AstNode firstStatement = suite.getFirstChild(PythonGrammar.STATEMENT);
+    AstNode suite = astNode.getFirstChild(MatlabGrammar.SUITE);
+    AstNode firstStatement = suite.getFirstChild(MatlabGrammar.STATEMENT);
     AstNode firstSimpleStmt = null;
     if (firstStatement == null) {
       firstSimpleStmt = suite
-        .getFirstChild(PythonGrammar.STMT_LIST)
-        .getFirstChild(PythonGrammar.SIMPLE_STMT);
+        .getFirstChild(MatlabGrammar.STMT_LIST)
+        .getFirstChild(MatlabGrammar.SIMPLE_STMT);
     } else {
       firstSimpleStmt = firstSimpleStmt(firstStatement);
     }
@@ -100,15 +100,15 @@ public class MissingDocstringCheck extends SquidCheck<Grammar> {
   }
 
   private AstNode firstSimpleStmt(AstNode statement) {
-    AstNode stmtList = statement.getFirstChild(PythonGrammar.STMT_LIST);
+    AstNode stmtList = statement.getFirstChild(MatlabGrammar.STMT_LIST);
     if (stmtList != null) {
-      return stmtList.getFirstChild(PythonGrammar.SIMPLE_STMT);
+      return stmtList.getFirstChild(MatlabGrammar.SIMPLE_STMT);
     }
     return null;
   }
 
   private boolean isNonEmptyString(Token token) {
-    return token.getType() == PythonTokenType.STRING
+    return token.getType() == MatlabTokenType.STRING
       && !EMPTY_STRING_REGEXP.matcher(token.getValue()).matches();
   }
 }

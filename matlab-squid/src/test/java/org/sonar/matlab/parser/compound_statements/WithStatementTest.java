@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser.compound_statements;
+package org.sonar.matlab.parser.compound_statements;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.parser.PythonTestUtils;
-import org.sonar.python.parser.RuleTest;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.parser.MatlabTestUtils;
+import org.sonar.matlab.parser.RuleTest;
 
 import static org.sonar.sslr.tests.Assertions.assertThat;
 
@@ -31,13 +31,13 @@ public class WithStatementTest extends RuleTest {
 
   @Before
   public void init() {
-    setRootRule(PythonGrammar.WITH_STMT);
+    setRootRule(MatlabGrammar.WITH_STMT);
   }
 
   @Test
   public void ok() {
-    p.getGrammar().rule(PythonGrammar.SUITE).mock();
-    p.getGrammar().rule(PythonGrammar.WITH_ITEM).mock();
+    p.getGrammar().rule(MatlabGrammar.SUITE).mock();
+    p.getGrammar().rule(MatlabGrammar.WITH_ITEM).mock();
 
     assertThat(p).matches("with WITH_ITEM , WITH_ITEM : SUITE");
     assertThat(p).matches("with WITH_ITEM : SUITE");
@@ -45,8 +45,8 @@ public class WithStatementTest extends RuleTest {
 
   @Test
   public void realLife() {
-    assertThat(p).matches(PythonTestUtils.appendNewLine("with A() as a : pass"));
-    assertThat(p).matches(PythonTestUtils.appendNewLine("with A() as a, B() as b : pass"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("with A() as a : pass"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("with A() as a, B() as b : pass"));
   }
 
 }

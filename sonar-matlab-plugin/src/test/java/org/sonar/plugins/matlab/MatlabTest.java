@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import com.google.common.collect.Maps;
 import org.junit.Test;
@@ -27,25 +27,25 @@ import java.util.Map;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonTest {
+public class MatlabTest {
 
   @Test
   public void test() {
-    Python language = new Python(new Settings());
+    Matlab language = new Matlab(new Settings());
     assertThat(language.getKey()).isEqualTo("py");
-    assertThat(language.getName()).isEqualTo("Python");
+    assertThat(language.getName()).isEqualTo("Matlab");
     assertThat(language.getFileSuffixes()).hasSize(1).contains("py");
   }
 
   @Test
   public void custom_file_suffixes() {
     Map<String, String> props = Maps.newHashMap();
-    props.put(PythonPlugin.FILE_SUFFIXES_KEY, "py,python");
+    props.put(MatlabPlugin.FILE_SUFFIXES_KEY, "py,matlab");
 
     Settings settings = new Settings();
     settings.addProperties(props);
 
-    Python language = new Python(settings);
-    assertThat(language.getFileSuffixes()).hasSize(2).contains("python");
+    Matlab language = new Matlab(settings);
+    assertThat(language.getFileSuffixes()).hasSize(2).contains("matlab");
   }
 }

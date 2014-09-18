@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,22 +17,22 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser;
+package org.sonar.matlab.parser;
 
 import com.sonar.sslr.api.Grammar;
 import com.sonar.sslr.impl.Parser;
-import org.sonar.python.PythonConfiguration;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.lexer.PythonLexer;
+import org.sonar.matlab.MatlabConfiguration;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.lexer.MatlabLexer;
 
-public final class PythonParser {
+public final class MatlabParser {
 
-  private PythonParser() {
+  private MatlabParser() {
   }
 
-  public static Parser<Grammar> create(PythonConfiguration conf) {
-    return Parser.builder(PythonGrammar.create().build())
-      .withLexer(PythonLexer.create(conf)).build();
+  public static Parser<Grammar> create(MatlabConfiguration conf) {
+    return Parser.builder(MatlabGrammar.create().build())
+      .withLexer(MatlabLexer.create(conf)).build();
   }
 
 }

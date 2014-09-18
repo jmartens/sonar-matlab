@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,20 +17,20 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.lexer;
+package org.sonar.matlab.lexer;
 
 import com.google.common.collect.Lists;
 import com.sonar.sslr.api.GenericTokenType;
 import com.sonar.sslr.api.Preprocessor;
 import com.sonar.sslr.api.PreprocessorAction;
 import com.sonar.sslr.api.Token;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabTokenType;
 
 import java.util.Collections;
 import java.util.List;
 
 /**
- * http://docs.python.org/reference/lexical_analysis.html#indentation
+ * http://docs.matlab.org/reference/lexical_analysis.html#indentation
  */
 public class IndentationPreprocessor extends Preprocessor {
 
@@ -58,7 +58,7 @@ public class IndentationPreprocessor extends Preprocessor {
         lexerState.indentationStack.pop();
         tokensToInject.add(Token.builder(token)
             .setURI(token.getURI())
-            .setType(PythonTokenType.DEDENT)
+            .setType(MatlabTokenType.DEDENT)
             .setLine(token.getLine())
             .setColumn(token.getColumn())
             .setValueAndOriginalValue("")

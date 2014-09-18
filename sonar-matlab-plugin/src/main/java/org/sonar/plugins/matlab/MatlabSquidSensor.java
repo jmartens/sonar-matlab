@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import com.google.common.collect.Lists;
 import com.sonar.sslr.api.Grammar;
@@ -38,11 +38,11 @@ import org.sonar.api.rule.RuleKey;
 import org.sonar.api.rules.ActiveRule;
 import org.sonar.api.scan.filesystem.FileQuery;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
-import org.sonar.python.PythonAstScanner;
-import org.sonar.python.PythonConfiguration;
-import org.sonar.python.api.PythonMetric;
-import org.sonar.python.checks.CheckList;
-import org.sonar.python.metrics.FileLinesVisitor;
+import org.sonar.matlab.MatlabAstScanner;
+import org.sonar.matlab.MatlabConfiguration;
+import org.sonar.matlab.api.MatlabMetric;
+import org.sonar.matlab.checks.CheckList;
+import org.sonar.matlab.metrics.FileLinesVisitor;
 import org.sonar.squidbridge.AstScanner;
 import org.sonar.squidbridge.SquidAstVisitor;
 import org.sonar.squidbridge.api.CheckMessage;
@@ -56,7 +56,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 
-public final class PythonSquidSensor implements Sensor {
+public final class MatlabSquidSensor implements Sensor {
 
   private static final Number[] FUNCTIONS_DISTRIB_BOTTOM_LIMITS = {1, 2, 4, 6, 8, 10, 12, 20, 30};
   private static final Number[] FILES_DISTRIB_BOTTOM_LIMITS = {0, 5, 10, 20, 30, 60, 90};
@@ -70,7 +70,7 @@ public final class PythonSquidSensor implements Sensor {
   private ModuleFileSystem fileSystem;
   private ResourcePerspectives resourcePerspectives;
 
-  public PythonSquidSensor(RulesProfile profile, FileLinesContextFactory fileLinesContextFactory, ModuleFileSystem fileSystem, ResourcePerspectives resourcePerspectives) {
+  public MatlabSquidSensor(RulesProfile profile, FileLinesContextFactory fileLinesContextFactory, ModuleFileSystem fileSystem, ResourcePerspectives resourcePerspectives) {
     this.annotationCheckFactory = AnnotationCheckFactory.create(profile, CheckList.REPOSITORY_KEY, CheckList.getChecks());
     this.fileLinesContextFactory = fileLinesContextFactory;
     this.fileSystem = fileSystem;
@@ -78,7 +78,7 @@ public final class PythonSquidSensor implements Sensor {
   }
 
   public boolean shouldExecuteOnProject(Project project) {
-    return !fileSystem.files(FileQuery.onSource().onLanguage(Python.KEY)).isEmpty();
+    return !fileSystem.files(FileQuery.onSource().onLanguage(Matlab.KEY)).isEmpty();
   }
 
   public void analyse(Project project, SensorContext context) {
@@ -88,15 +88,15 @@ public final class PythonSquidSensor implements Sensor {
     Collection<SquidAstVisitor<Grammar>> squidChecks = annotationCheckFactory.getChecks();
     List<SquidAstVisitor<Grammar>> visitors = Lists.newArrayList(squidChecks);
     visitors.add(new FileLinesVisitor(project, fileLinesContextFactory));
-    this.scanner = PythonAstScanner.create(createConfiguration(project), visitors.toArray(new SquidAstVisitor[visitors.size()]));
-    scanner.scanFiles(fileSystem.files(FileQuery.onSource().onLanguage(Python.KEY)));
+    this.scanner = MatlabAstScanner.create(createConfiguration(project), visitors.toArray(new SquidAstVisitor[visitors.size()]));
+    scanner.scanFiles(fileSystem.files(FileQuery.onSource().onLanguage(Matlab.KEY)));
 
     Collection<SourceCode> squidSourceFiles = scanner.getIndex().search(new QueryByType(SourceFile.class));
     save(squidSourceFiles);
   }
 
-  private PythonConfiguration createConfiguration(Project project) {
-    return new PythonConfiguration(fileSystem.sourceCharset());
+  private MatlabConfiguration createConfiguration(Project project) {
+    return new MatlabConfiguration(fileSystem.sourceCharset());
   }
 
   private void save(Collection<SourceCode> squidSourceFiles) {
@@ -113,28 +113,28 @@ public final class PythonSquidSensor implements Sensor {
   }
 
   private void saveMeasures(File sonarFile, SourceFile squidFile) {
-    context.saveMeasure(sonarFile, CoreMetrics.FILES, squidFile.getDouble(PythonMetric.FILES));
-    context.saveMeasure(sonarFile, CoreMetrics.LINES, squidFile.getDouble(PythonMetric.LINES));
-    context.saveMeasure(sonarFile, CoreMetrics.NCLOC, squidFile.getDouble(PythonMetric.LINES_OF_CODE));
-    context.saveMeasure(sonarFile, CoreMetrics.STATEMENTS, squidFile.getDouble(PythonMetric.STATEMENTS));
-    context.saveMeasure(sonarFile, CoreMetrics.FUNCTIONS, squidFile.getDouble(PythonMetric.FUNCTIONS));
-    context.saveMeasure(sonarFile, CoreMetrics.CLASSES, squidFile.getDouble(PythonMetric.CLASSES));
-    context.saveMeasure(sonarFile, CoreMetrics.COMPLEXITY, squidFile.getDouble(PythonMetric.COMPLEXITY));
-    context.saveMeasure(sonarFile, CoreMetrics.COMMENT_LINES, squidFile.getDouble(PythonMetric.COMMENT_LINES));
+    context.saveMeasure(sonarFile, CoreMetrics.FILES, squidFile.getDouble(MatlabMetric.FILES));
+    context.saveMeasure(sonarFile, CoreMetrics.LINES, squidFile.getDouble(MatlabMetric.LINES));
+    context.saveMeasure(sonarFile, CoreMetrics.NCLOC, squidFile.getDouble(MatlabMetric.LINES_OF_CODE));
+    context.saveMeasure(sonarFile, CoreMetrics.STATEMENTS, squidFile.getDouble(MatlabMetric.STATEMENTS));
+    context.saveMeasure(sonarFile, CoreMetrics.FUNCTIONS, squidFile.getDouble(MatlabMetric.FUNCTIONS));
+    context.saveMeasure(sonarFile, CoreMetrics.CLASSES, squidFile.getDouble(MatlabMetric.CLASSES));
+    context.saveMeasure(sonarFile, CoreMetrics.COMPLEXITY, squidFile.getDouble(MatlabMetric.COMPLEXITY));
+    context.saveMeasure(sonarFile, CoreMetrics.COMMENT_LINES, squidFile.getDouble(MatlabMetric.COMMENT_LINES));
   }
 
   private void saveFunctionsComplexityDistribution(File sonarFile, SourceFile squidFile) {
     Collection<SourceCode> squidFunctionsInFile = scanner.getIndex().search(new QueryByParent(squidFile), new QueryByType(SourceFunction.class));
     RangeDistributionBuilder complexityDistribution = new RangeDistributionBuilder(CoreMetrics.FUNCTION_COMPLEXITY_DISTRIBUTION, FUNCTIONS_DISTRIB_BOTTOM_LIMITS);
     for (SourceCode squidFunction : squidFunctionsInFile) {
-      complexityDistribution.add(squidFunction.getDouble(PythonMetric.COMPLEXITY));
+      complexityDistribution.add(squidFunction.getDouble(MatlabMetric.COMPLEXITY));
     }
     context.saveMeasure(sonarFile, complexityDistribution.build().setPersistenceMode(PersistenceMode.MEMORY));
   }
 
   private void saveFilesComplexityDistribution(File sonarFile, SourceFile squidFile) {
     RangeDistributionBuilder complexityDistribution = new RangeDistributionBuilder(CoreMetrics.FILE_COMPLEXITY_DISTRIBUTION, FILES_DISTRIB_BOTTOM_LIMITS);
-    complexityDistribution.add(squidFile.getDouble(PythonMetric.COMPLEXITY));
+    complexityDistribution.add(squidFile.getDouble(MatlabMetric.COMPLEXITY));
     context.saveMeasure(sonarFile, complexityDistribution.build().setPersistenceMode(PersistenceMode.MEMORY));
   }
 

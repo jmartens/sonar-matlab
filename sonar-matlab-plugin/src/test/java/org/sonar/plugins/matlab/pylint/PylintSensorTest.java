@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.pylint;
+package org.sonar.plugins.matlab.pylint;
 
 import com.google.common.collect.ImmutableList;
 import org.apache.commons.collections.ListUtils;
@@ -30,7 +30,7 @@ import org.sonar.api.rules.ActiveRule;
 import org.sonar.api.rules.RuleFinder;
 import org.sonar.api.scan.filesystem.FileQuery;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
-import org.sonar.plugins.python.Python;
+import org.sonar.plugins.matlab.Matlab;
 
 import java.io.File;
 import java.util.LinkedList;
@@ -64,17 +64,17 @@ public class PylintSensorTest {
 
   @Test
   public void shouldExecuteOnlyWhenNecessary() {
-    // which means: only on python projects and only if
+    // which means: only on matlab projects and only if
     // there is at least one active pylint rule
 
-    Project pythonProject = createProjectForLanguage(Python.KEY);
+    Project matlabProject = createProjectForLanguage(Matlab.KEY);
     Project foreignProject = createProjectForLanguage("whatever");
     RulesProfile emptyProfile = mock(RulesProfile.class);
     RulesProfile pylintProfile = createPylintProfile();
 
     when(fs.files(any(FileQuery.class))).thenReturn(ImmutableList.of(new File("/tmp")));
-    checkNecessityOfExecution(pythonProject, pylintProfile, true);
-    checkNecessityOfExecution(pythonProject, emptyProfile, false);
+    checkNecessityOfExecution(matlabProject, pylintProfile, true);
+    checkNecessityOfExecution(matlabProject, emptyProfile, false);
 
     when(fs.files(any(FileQuery.class))).thenReturn(ListUtils.EMPTY_LIST);
     checkNecessityOfExecution(foreignProject, pylintProfile, false);

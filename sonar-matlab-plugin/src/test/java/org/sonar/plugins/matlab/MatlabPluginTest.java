@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,17 +17,17 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonPluginTest {
+public class MatlabPluginTest {
 
   @Test
   public void testGetExtensions() {
-    assertThat(new PythonPlugin().getExtensions()).hasSize(14);
+    assertThat(new MatlabPlugin().getExtensions()).hasSize(14);
   }
 
 }

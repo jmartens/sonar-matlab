@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.coverage;
+package org.sonar.plugins.matlab.coverage;
 
 import org.sonar.api.Properties;
 import org.sonar.api.Property;
@@ -30,7 +30,7 @@ import org.sonar.api.measures.Metric;
 import org.sonar.api.resources.Project;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
 import org.sonar.api.utils.SonarException;
-import org.sonar.plugins.python.PythonReportSensor;
+import org.sonar.plugins.matlab.MatlabReportSensor;
 
 import javax.xml.stream.XMLStreamException;
 
@@ -41,29 +41,29 @@ import java.util.Map;
 
 @Properties({
   @Property(
-    key = PythonCoverageSensor.REPORT_PATH_KEY,
-    defaultValue = PythonCoverageSensor.DEFAULT_REPORT_PATH,
+    key = MatlabCoverageSensor.REPORT_PATH_KEY,
+    defaultValue = MatlabCoverageSensor.DEFAULT_REPORT_PATH,
     name = "Path to coverage report(s)",
     description = "Path to coverage reports, relative to project's root. Ant patterns are accepted. The reports have to conform to the Cobertura XML format.",
     global = false,
     project = true),
   @Property(
-    key = PythonCoverageSensor.IT_REPORT_PATH_KEY,
-    defaultValue = PythonCoverageSensor.IT_DEFAULT_REPORT_PATH,
+    key = MatlabCoverageSensor.IT_REPORT_PATH_KEY,
+    defaultValue = MatlabCoverageSensor.IT_DEFAULT_REPORT_PATH,
     name = "Path to coverage report(s) for integration tests",
     description = "Path to coverage reports for integration tests, relative to project's root. Ant patterns are accepted. The reports have to conform to the Cobertura XML format.",
     global = false,
     project = true)
 })
-public class PythonCoverageSensor extends PythonReportSensor {
-  public static final String REPORT_PATH_KEY = "sonar.python.coverage.reportPath";
-  public static final String IT_REPORT_PATH_KEY = "sonar.python.coverage.itReportPath";
+public class MatlabCoverageSensor extends MatlabReportSensor {
+  public static final String REPORT_PATH_KEY = "sonar.matlab.coverage.reportPath";
+  public static final String IT_REPORT_PATH_KEY = "sonar.matlab.coverage.itReportPath";
   public static final String DEFAULT_REPORT_PATH = "coverage-reports/coverage-*.xml";
   public static final String IT_DEFAULT_REPORT_PATH = "coverage-reports/it-coverage-*.xml";
 
   private CoberturaParser parser = new CoberturaParser();
 
-  public PythonCoverageSensor(Settings conf, ModuleFileSystem fileSystem) {
+  public MatlabCoverageSensor(Settings conf, ModuleFileSystem fileSystem) {
     super(conf, fileSystem);
   }
 
@@ -99,12 +99,12 @@ public class PythonCoverageSensor extends PythonReportSensor {
     FileResolver fileResolver = new FileResolver(project, fileSystem);
     for(Map.Entry<String, CoverageMeasuresBuilder> entry: coverageMeasures.entrySet()) {
       String filePath = entry.getKey();
-      org.sonar.api.resources.File pythonfile = fileResolver.getFile(filePath);
-      if (fileExist(context, pythonfile)) {
+      org.sonar.api.resources.File matlabfile = fileResolver.getFile(filePath);
+      if (fileExist(context, matlabfile)) {
         LOG.debug("Saving coverage measures for file '{}'", filePath);
         for (Measure measure : entry.getValue().createMeasures()) {
           measure = itTest ? convertToItMeasure(measure) : measure;
-          context.saveMeasure(pythonfile, measure);
+          context.saveMeasure(matlabfile, measure);
         }
       } else {
         LOG.debug("Cannot find the file '{}', ignoring coverage measures", filePath);

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.api;
+package org.sonar.matlab.api;
 
 import com.sonar.sslr.api.AstNode;
 import org.junit.Test;
@@ -25,14 +25,14 @@ import org.junit.Test;
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
-public class PythonTokenTypeTest {
+public class MatlabTokenTypeTest {
 
   @Test
   public void test() {
-    assertThat(PythonTokenType.values()).hasSize(5);
+    assertThat(MatlabTokenType.values()).hasSize(5);
 
     AstNode astNode = mock(AstNode.class);
-    for (PythonTokenType tokenType : PythonTokenType.values()) {
+    for (MatlabTokenType tokenType : MatlabTokenType.values()) {
       assertThat(tokenType.getName()).isEqualTo(tokenType.name());
       assertThat(tokenType.getValue()).isEqualTo(tokenType.name());
       assertThat(tokenType.hasToBeSkippedFromAst(astNode)).isFalse();

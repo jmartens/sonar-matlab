@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.api;
+package org.sonar.matlab.api;
 
 import com.sonar.sslr.api.AstNode;
 import org.junit.Test;
@@ -25,14 +25,14 @@ import org.junit.Test;
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
-public class PythonPunctuatorTest {
+public class MatlabPunctuatorTest {
 
   @Test
   public void test() {
-    assertThat(PythonPunctuator.values()).hasSize(45);
+    assertThat(MatlabPunctuator.values()).hasSize(45);
 
     AstNode astNode = mock(AstNode.class);
-    for (PythonPunctuator punctuator : PythonPunctuator.values()) {
+    for (MatlabPunctuator punctuator : MatlabPunctuator.values()) {
       assertThat(punctuator.hasToBeSkippedFromAst(astNode)).isFalse();
     }
   }

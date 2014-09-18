@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.metrics;
+package org.sonar.matlab.metrics;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.api.PythonKeyword;
-import org.sonar.python.api.PythonMetric;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.api.MatlabKeyword;
+import org.sonar.matlab.api.MatlabMetric;
 import org.sonar.squidbridge.SquidAstVisitor;
 
 public class ComplexityVisitor extends SquidAstVisitor<Grammar> {
@@ -32,25 +32,25 @@ public class ComplexityVisitor extends SquidAstVisitor<Grammar> {
   public void init() {
     subscribeTo(
       // Entry points
-      PythonGrammar.FUNCDEF,
+      MatlabGrammar.FUNCDEF,
 
       // Branching nodes
-      // Note that IF_STMT covered by PythonKeyword.IF below
-      PythonGrammar.WHILE_STMT,
-      PythonGrammar.FOR_STMT,
-      PythonGrammar.RETURN_STMT,
-      PythonGrammar.RAISE_STMT,
-      PythonGrammar.EXCEPT_CLAUSE,
+      // Note that IF_STMT covered by MatlabKeyword.IF below
+      MatlabGrammar.WHILE_STMT,
+      MatlabGrammar.FOR_STMT,
+      MatlabGrammar.RETURN_STMT,
+      MatlabGrammar.RAISE_STMT,
+      MatlabGrammar.EXCEPT_CLAUSE,
 
       // Expressions
-      PythonKeyword.IF,
-      PythonKeyword.AND,
-      PythonKeyword.OR);
+      MatlabKeyword.IF,
+      MatlabKeyword.AND,
+      MatlabKeyword.OR);
   }
 
   @Override
   public void visitNode(AstNode astNode) {
-    getContext().peekSourceCode().add(PythonMetric.COMPLEXITY, 1);
+    getContext().peekSourceCode().add(MatlabMetric.COMPLEXITY, 1);
   }
 
 }

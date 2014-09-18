@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
@@ -25,7 +25,7 @@ import org.sonar.squidbridge.checks.SquidCheck;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabTokenType;
 
 @Rule(
   key = "LongIntegerWithLowercaseSuffixUsage",
@@ -35,7 +35,7 @@ public class LongIntegerWithLowercaseSuffixUsageCheck extends SquidCheck<Grammar
 
   @Override
   public void init() {
-    subscribeTo(PythonTokenType.NUMBER);
+    subscribeTo(MatlabTokenType.NUMBER);
   }
 
   @Override

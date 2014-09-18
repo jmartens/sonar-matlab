@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
@@ -25,7 +25,7 @@ import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 import java.util.regex.Pattern;
@@ -48,12 +48,12 @@ public class ClassNameCheck extends SquidCheck<Grammar> {
   @Override
   public void init() {
     pattern = Pattern.compile(format);
-    subscribeTo(PythonGrammar.CLASSDEF);
+    subscribeTo(MatlabGrammar.CLASSDEF);
   }
 
   @Override
   public void visitNode(AstNode astNode) {
-    String className = astNode.getFirstChild(PythonGrammar.CLASSNAME).getTokenValue();
+    String className = astNode.getFirstChild(MatlabGrammar.CLASSNAME).getTokenValue();
     if (!pattern.matcher(className).matches()) {
       getContext().createLineViolation(this,
         "Rename class \"{0}\" to match the regular expression {1}.", astNode, className, format);

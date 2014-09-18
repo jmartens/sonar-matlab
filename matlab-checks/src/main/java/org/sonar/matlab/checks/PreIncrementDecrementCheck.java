@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,15 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.api.PythonPunctuator;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.api.MatlabPunctuator;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 import java.util.List;
@@ -38,7 +38,7 @@ public class PreIncrementDecrementCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.FACTOR);
+    subscribeTo(MatlabGrammar.FACTOR);
   }
 
   @Override
@@ -46,10 +46,10 @@ public class PreIncrementDecrementCheck extends SquidCheck<Grammar> {
     List<AstNode> children = astNode.getChildren();
     AstNode firstChild = children.get(0);
     AstNode secondChild = children.get(1);
-    if (firstChild.is(PythonPunctuator.PLUS) && secondChild.getFirstChild().is(PythonPunctuator.PLUS)) {
+    if (firstChild.is(MatlabPunctuator.PLUS) && secondChild.getFirstChild().is(MatlabPunctuator.PLUS)) {
       getContext().createLineViolation(this, "This statement doesn't produce the expected result, replace use of non-existent pre-increment operator", astNode);
     }
-    if (firstChild.is(PythonPunctuator.MINUS) && secondChild.getFirstChild().is(PythonPunctuator.MINUS)) {
+    if (firstChild.is(MatlabPunctuator.MINUS) && secondChild.getFirstChild().is(MatlabPunctuator.MINUS)) {
       getContext().createLineViolation(this, "This statement doesn't produce the expected result, replace use of non-existent pre-decrement operator", astNode);
     }
   }

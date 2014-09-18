@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,23 +17,23 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import org.sonar.api.rules.AnnotationRuleParser;
 import org.sonar.api.rules.Rule;
 import org.sonar.api.rules.RuleRepository;
-import org.sonar.python.checks.CheckList;
+import org.sonar.matlab.checks.CheckList;
 
 import java.util.List;
 
-public class PythonRuleRepository extends RuleRepository {
+public class MatlabRuleRepository extends RuleRepository {
 
   private static final String REPOSITORY_NAME = "SonarQube";
 
   private final AnnotationRuleParser annotationRuleParser;
 
-  public PythonRuleRepository(AnnotationRuleParser annotationRuleParser) {
-    super(CheckList.REPOSITORY_KEY, Python.KEY);
+  public MatlabRuleRepository(AnnotationRuleParser annotationRuleParser) {
+    super(CheckList.REPOSITORY_KEY, Matlab.KEY);
     setName(REPOSITORY_NAME);
     this.annotationRuleParser = annotationRuleParser;
   }

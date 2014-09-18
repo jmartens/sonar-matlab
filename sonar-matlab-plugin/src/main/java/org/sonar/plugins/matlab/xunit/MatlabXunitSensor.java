@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.xunit;
+package org.sonar.plugins.matlab.xunit;
 
 import org.apache.commons.lang.StringUtils;
 import org.sonar.api.Properties;
@@ -33,8 +33,8 @@ import org.sonar.api.resources.Qualifiers;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
 import org.sonar.api.utils.ParsingUtils;
 import org.sonar.api.utils.StaxParser;
-import org.sonar.plugins.python.Python;
-import org.sonar.plugins.python.PythonReportSensor;
+import org.sonar.plugins.matlab.Matlab;
+import org.sonar.plugins.matlab.MatlabReportSensor;
 
 import java.io.File;
 import java.util.Collection;
@@ -43,20 +43,20 @@ import java.util.Map;
 
 @Properties({
   @Property(
-    key = PythonXunitSensor.REPORT_PATH_KEY,
-    defaultValue = PythonXunitSensor.DEFAULT_REPORT_PATH,
+    key = MatlabXunitSensor.REPORT_PATH_KEY,
+    defaultValue = MatlabXunitSensor.DEFAULT_REPORT_PATH,
     name = "Path to xunit report(s)",
     description = "Path to the report of test execution, relative to project's root. Ant patterns are accepted. The reports have to conform to the junitreport XML format.",
     global = false,
     project = true)
 })
-public class PythonXunitSensor extends PythonReportSensor {
+public class MatlabXunitSensor extends MatlabReportSensor {
 
-  public static final String REPORT_PATH_KEY = "sonar.python.xunit.reportPath";
+  public static final String REPORT_PATH_KEY = "sonar.matlab.xunit.reportPath";
   public static final String DEFAULT_REPORT_PATH = "xunit-reports/xunit-result-*.xml";
-  private Python lang = null;
+  private Matlab lang = null;
 
-  public PythonXunitSensor(Settings conf, Python lang, ModuleFileSystem fileSystem) {
+  public MatlabXunitSensor(Settings conf, Matlab lang, ModuleFileSystem fileSystem) {
     super(conf, fileSystem);
     this.lang = lang;
   }

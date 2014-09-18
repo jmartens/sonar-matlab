@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import com.google.common.collect.Lists;
 import org.apache.commons.lang.StringUtils;
@@ -26,7 +26,7 @@ import org.sonar.api.resources.AbstractLanguage;
 
 import java.util.List;
 
-public class Python extends AbstractLanguage {
+public class Matlab extends AbstractLanguage {
 
   public static final String KEY = "py";
 
@@ -34,15 +34,15 @@ public class Python extends AbstractLanguage {
 
   private Settings settings;
 
-  public Python(Settings settings) {
-    super(KEY, "Python");
+  public Matlab(Settings settings) {
+    super(KEY, "Matlab");
     this.settings = settings;
   }
 
   public String[] getFileSuffixes() {
-    String[] suffixes = filterEmptyStrings(settings.getStringArray(PythonPlugin.FILE_SUFFIXES_KEY));
+    String[] suffixes = filterEmptyStrings(settings.getStringArray(MatlabPlugin.FILE_SUFFIXES_KEY));
 
-    return suffixes.length == 0 ? Python.DEFAULT_FILE_SUFFIXES : suffixes;
+    return suffixes.length == 0 ? Matlab.DEFAULT_FILE_SUFFIXES : suffixes;
   }
 
   private String[] filterEmptyStrings(String[] stringArray) {

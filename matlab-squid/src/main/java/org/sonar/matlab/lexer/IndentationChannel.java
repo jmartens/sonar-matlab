@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,16 +17,16 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.lexer;
+package org.sonar.matlab.lexer;
 
 import com.sonar.sslr.api.Token;
 import com.sonar.sslr.impl.Lexer;
 import org.sonar.sslr.channel.Channel;
 import org.sonar.sslr.channel.CodeReader;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabTokenType;
 
 /**
- * http://docs.python.org/reference/lexical_analysis.html#indentation
+ * http://docs.matlab.org/reference/lexical_analysis.html#indentation
  */
 public class IndentationChannel extends Channel<Lexer> {
 
@@ -73,7 +73,7 @@ public class IndentationChannel extends Channel<Lexer> {
     if (indentationLevel > lexerState.indentationStack.peek()) {
       lexerState.indentationStack.push(indentationLevel);
       lexer.addToken(Token.builder()
-          .setType(PythonTokenType.INDENT)
+          .setType(MatlabTokenType.INDENT)
           .setValueAndOriginalValue(buffer.toString())
           .setURI(lexer.getURI())
           .setLine(line)
@@ -83,7 +83,7 @@ public class IndentationChannel extends Channel<Lexer> {
       while (indentationLevel < lexerState.indentationStack.peek()) {
         lexerState.indentationStack.pop();
         lexer.addToken(Token.builder()
-            .setType(PythonTokenType.DEDENT)
+            .setType(MatlabTokenType.DEDENT)
             .setValueAndOriginalValue(buffer.toString())
             .setURI(lexer.getURI())
             .setLine(line)

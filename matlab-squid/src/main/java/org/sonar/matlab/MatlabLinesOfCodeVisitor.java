@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,14 +17,14 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python;
+package org.sonar.matlab;
 
 import com.sonar.sslr.api.AstAndTokenVisitor;
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
 import com.sonar.sslr.api.Token;
 import org.sonar.squidbridge.SquidAstVisitor;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabTokenType;
 import org.sonar.squidbridge.measures.MetricDef;
 
 import static com.sonar.sslr.api.GenericTokenType.EOF;
@@ -32,12 +32,12 @@ import static com.sonar.sslr.api.GenericTokenType.EOF;
 /**
  * Visitor that computes the number of lines of code of a file.
  */
-public class PythonLinesOfCodeVisitor<GRAMMAR extends Grammar> extends SquidAstVisitor<GRAMMAR> implements AstAndTokenVisitor {
+public class MatlabLinesOfCodeVisitor<GRAMMAR extends Grammar> extends SquidAstVisitor<GRAMMAR> implements AstAndTokenVisitor {
 
   private final MetricDef metric;
   private int lastTokenLine;
 
-  public PythonLinesOfCodeVisitor(MetricDef metric) {
+  public MatlabLinesOfCodeVisitor(MetricDef metric) {
     this.metric = metric;
   }
 
@@ -53,7 +53,7 @@ public class PythonLinesOfCodeVisitor<GRAMMAR extends Grammar> extends SquidAstV
    * {@inheritDoc}
    */
   public void visitToken(Token token) {
-    if (token.getType() != EOF && token.getType() != PythonTokenType.DEDENT && token.getType() != PythonTokenType.INDENT && token.getType() != PythonTokenType.NEWLINE) {
+    if (token.getType() != EOF && token.getType() != MatlabTokenType.DEDENT && token.getType() != MatlabTokenType.INDENT && token.getType() != MatlabTokenType.NEWLINE) {
       /* Handle all the lines of the token */
       String[] tokenLines = token.getValue().split("\n", -1);
 

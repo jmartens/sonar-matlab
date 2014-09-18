@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,12 +17,12 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser.simple_statements;
+package org.sonar.matlab.parser.simple_statements;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.parser.RuleTest;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.parser.RuleTest;
 
 import static org.sonar.sslr.tests.Assertions.assertThat;
 
@@ -30,7 +30,7 @@ public class ContinueStatementTest extends RuleTest {
 
   @Before
   public void init() {
-    setRootRule(PythonGrammar.CONTINUE_STMT);
+    setRootRule(MatlabGrammar.CONTINUE_STMT);
   }
 
   @Test

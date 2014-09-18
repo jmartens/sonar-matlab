@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import com.google.common.collect.ImmutableList;
 import org.apache.commons.collections.ListUtils;
@@ -44,7 +44,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-public class PythonSquidSensorTest {
+public class MatlabSquidSensorTest {
 
   private FileLinesContextFactory fileLinesContextFactory;
 
@@ -56,10 +56,10 @@ public class PythonSquidSensorTest {
   }
 
   @Test
-  public void should_execute_on_python_project() {
+  public void should_execute_on_matlab_project() {
     Project project = mock(Project.class);
     ModuleFileSystem fs = mock(ModuleFileSystem.class);
-    PythonSquidSensor sensor = new PythonSquidSensor(mock(RulesProfile.class), fileLinesContextFactory, fs, mock(ResourcePerspectives.class));
+    MatlabSquidSensor sensor = new MatlabSquidSensor(mock(RulesProfile.class), fileLinesContextFactory, fs, mock(ResourcePerspectives.class));
 
     when(fs.files(any(FileQuery.class))).thenReturn(ListUtils.EMPTY_LIST);
     assertThat(sensor.shouldExecuteOnProject(project)).isFalse();
@@ -73,15 +73,15 @@ public class PythonSquidSensorTest {
     ModuleFileSystem fs = mock(ModuleFileSystem.class);
     when(fs.sourceCharset()).thenReturn(Charset.forName("UTF-8"));
     when(fs.files(any(FileQuery.class))).thenReturn(ImmutableList.of(
-      new File("src/test/resources/org/sonar/plugins/python/code_chunks_2.py")));
+      new File("src/test/resources/org/sonar/plugins/matlab/code_chunks_2.py")));
 
     ProjectFileSystem pfs = mock(ProjectFileSystem.class);
-    when(pfs.getSourceDirs()).thenReturn(ImmutableList.of(new File("src/test/resources/org/sonar/plugins/python/")));
+    when(pfs.getSourceDirs()).thenReturn(ImmutableList.of(new File("src/test/resources/org/sonar/plugins/matlab/")));
 
     Project project = new Project("key");
     project.setFileSystem(pfs);
     SensorContext context = mock(SensorContext.class);
-    PythonSquidSensor sensor = new PythonSquidSensor(mock(RulesProfile.class), fileLinesContextFactory, fs, mock(ResourcePerspectives.class));
+    MatlabSquidSensor sensor = new MatlabSquidSensor(mock(RulesProfile.class), fileLinesContextFactory, fs, mock(ResourcePerspectives.class));
 
     sensor.analyse(project, context);
 
@@ -97,8 +97,8 @@ public class PythonSquidSensorTest {
 
   @Test
   public void test_toString() {
-    PythonSquidSensor sensor = new PythonSquidSensor(mock(RulesProfile.class), fileLinesContextFactory, null, mock(ResourcePerspectives.class));
-    assertThat(sensor.toString()).isEqualTo("PythonSquidSensor");
+    MatlabSquidSensor sensor = new MatlabSquidSensor(mock(RulesProfile.class), fileLinesContextFactory, null, mock(ResourcePerspectives.class));
+    assertThat(sensor.toString()).isEqualTo("MatlabSquidSensor");
   }
 
 }

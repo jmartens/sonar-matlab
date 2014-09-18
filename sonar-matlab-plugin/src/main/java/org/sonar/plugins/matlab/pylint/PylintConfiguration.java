@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.pylint;
+package org.sonar.plugins.matlab.pylint;
 
 import org.apache.commons.lang.StringUtils;
 import org.sonar.api.BatchExtension;
@@ -46,8 +46,8 @@ import java.io.File;
 })
 public class PylintConfiguration implements BatchExtension {
 
-  public static final String PYLINT_CONFIG_KEY = "sonar.python.pylint_config";
-  public static final String PYLINT_KEY = "sonar.python.pylint";
+  public static final String PYLINT_CONFIG_KEY = "sonar.matlab.pylint_config";
+  public static final String PYLINT_KEY = "sonar.matlab.pylint";
 
   private final Settings conf;
 

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,18 +17,18 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.lexer;
+package org.sonar.matlab.lexer;
 
 import com.sonar.sslr.api.Token;
 import com.sonar.sslr.impl.Lexer;
 import org.sonar.sslr.channel.Channel;
 import org.sonar.sslr.channel.CodeReader;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabTokenType;
 
 /**
- * http://docs.python.org/reference/lexical_analysis.html#explicit-line-joining
- * http://docs.python.org/reference/lexical_analysis.html#implicit-line-joining
- * http://docs.python.org/reference/lexical_analysis.html#blank-lines
+ * http://docs.matlab.org/reference/lexical_analysis.html#explicit-line-joining
+ * http://docs.matlab.org/reference/lexical_analysis.html#implicit-line-joining
+ * http://docs.matlab.org/reference/lexical_analysis.html#blank-lines
  */
 public class NewLineChannel extends Channel<Lexer> {
 
@@ -70,7 +70,7 @@ public class NewLineChannel extends Channel<Lexer> {
         return true;
       }
 
-      if (output.getTokens().isEmpty() || (output.getTokens().get(output.getTokens().size() - 1).getType() == PythonTokenType.NEWLINE)) {
+      if (output.getTokens().isEmpty() || (output.getTokens().get(output.getTokens().size() - 1).getType() == MatlabTokenType.NEWLINE)) {
         // Blank line
         consumeEOL(code);
         return true;
@@ -81,7 +81,7 @@ public class NewLineChannel extends Channel<Lexer> {
           .setLine(code.getLinePosition())
           .setColumn(code.getColumnPosition())
           .setURI(output.getURI())
-          .setType(PythonTokenType.NEWLINE)
+          .setType(MatlabTokenType.NEWLINE)
           .setValueAndOriginalValue("\n")
           .setGeneratedCode(true)
           .build());

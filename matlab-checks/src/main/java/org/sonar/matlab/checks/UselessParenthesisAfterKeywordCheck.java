@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.google.common.collect.ImmutableMap;
 import com.sonar.sslr.api.AstNode;
@@ -25,8 +25,8 @@ import com.sonar.sslr.api.Grammar;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.api.PythonPunctuator;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.api.MatlabPunctuator;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 import java.util.List;
@@ -38,59 +38,59 @@ import java.util.Map;
 @BelongsToProfile(title = CheckList.SONAR_WAY_PROFILE, priority = Priority.MAJOR)
 public class UselessParenthesisAfterKeywordCheck extends SquidCheck<Grammar> {
 
-  private static final Map<PythonGrammar, String> KEYWORDS_FOLLOWED_BY_TEST = ImmutableMap.of(
-    PythonGrammar.ASSERT_STMT, "assert",
-    PythonGrammar.RAISE_STMT, "raise",
-    PythonGrammar.WHILE_STMT, "while");
+  private static final Map<MatlabGrammar, String> KEYWORDS_FOLLOWED_BY_TEST = ImmutableMap.of(
+    MatlabGrammar.ASSERT_STMT, "assert",
+    MatlabGrammar.RAISE_STMT, "raise",
+    MatlabGrammar.WHILE_STMT, "while");
 
   @Override
   public void init() {
     subscribeTo(
-      PythonGrammar.ASSERT_STMT,
-      PythonGrammar.DEL_STMT,
-      PythonGrammar.IF_STMT,
-      PythonGrammar.FOR_STMT,
-      PythonGrammar.RAISE_STMT,
-      PythonGrammar.RETURN_STMT,
-      PythonGrammar.WHILE_STMT,
-      PythonGrammar.YIELD_EXPR,
-      PythonGrammar.EXCEPT_CLAUSE,
-      PythonGrammar.NOT_TEST);
+      MatlabGrammar.ASSERT_STMT,
+      MatlabGrammar.DEL_STMT,
+      MatlabGrammar.IF_STMT,
+      MatlabGrammar.FOR_STMT,
+      MatlabGrammar.RAISE_STMT,
+      MatlabGrammar.RETURN_STMT,
+      MatlabGrammar.WHILE_STMT,
+      MatlabGrammar.YIELD_EXPR,
+      MatlabGrammar.EXCEPT_CLAUSE,
+      MatlabGrammar.NOT_TEST);
   }
 
   @Override
   public void visitNode(AstNode node) {
     String keyword = KEYWORDS_FOLLOWED_BY_TEST.get(node.getType());
     if (keyword != null) {
-      checkParenthesis(node.getFirstChild(PythonGrammar.TEST), keyword, node);
-    } else if (node.is(PythonGrammar.DEL_STMT)) {
-      checkParenthesis(node.getFirstChild(PythonGrammar.EXPRLIST), "del", node);
-    } else if (node.is(PythonGrammar.IF_STMT)) {
-      List<AstNode> testNodes = node.getChildren(PythonGrammar.TEST);
+      checkParenthesis(node.getFirstChild(MatlabGrammar.TEST), keyword, node);
+    } else if (node.is(MatlabGrammar.DEL_STMT)) {
+      checkParenthesis(node.getFirstChild(MatlabGrammar.EXPRLIST), "del", node);
+    } else if (node.is(MatlabGrammar.IF_STMT)) {
+      List<AstNode> testNodes = node.getChildren(MatlabGrammar.TEST);
       checkParenthesis(testNodes.get(0), "if", node);
       if (testNodes.size() > 1) {
         checkParenthesis(testNodes.get(1), "elif", testNodes.get(1));
       }
-    } else if (node.is(PythonGrammar.FOR_STMT)) {
-      checkParenthesis(node.getFirstChild(PythonGrammar.EXPRLIST), "for", node);
-      checkParenthesis(node.getFirstChild(PythonGrammar.TESTLIST), "in", node);
-    } else if (node.is(PythonGrammar.RETURN_STMT)) {
-      checkParenthesis(node.getFirstChild(PythonGrammar.TESTLIST), "return", node);
-    } else if (node.is(PythonGrammar.YIELD_EXPR)) {
-      checkParenthesis(node.getFirstChild(PythonGrammar.TESTLIST), "yield", node);
-    } else if (node.is(PythonGrammar.EXCEPT_CLAUSE)) {
+    } else if (node.is(MatlabGrammar.FOR_STMT)) {
+      checkParenthesis(node.getFirstChild(MatlabGrammar.EXPRLIST), "for", node);
+      checkParenthesis(node.getFirstChild(MatlabGrammar.TESTLIST), "in", node);
+    } else if (node.is(MatlabGrammar.RETURN_STMT)) {
+      checkParenthesis(node.getFirstChild(MatlabGrammar.TESTLIST), "return", node);
+    } else if (node.is(MatlabGrammar.YIELD_EXPR)) {
+      checkParenthesis(node.getFirstChild(MatlabGrammar.TESTLIST), "yield", node);
+    } else if (node.is(MatlabGrammar.EXCEPT_CLAUSE)) {
       visitExceptClause(node);
-    } else if (node.is(PythonGrammar.NOT_TEST)) {
+    } else if (node.is(MatlabGrammar.NOT_TEST)) {
       visitNotTest(node);
     }
   }
 
   private void visitNotTest(AstNode node) {
     boolean hasUselessParenthesis = node.select()
-      .children(PythonGrammar.ATOM)
-      .children(PythonGrammar.TESTLIST_COMP)
-      .children(PythonGrammar.TEST)
-      .children(PythonGrammar.ATOM, PythonGrammar.COMPARISON)
+      .children(MatlabGrammar.ATOM)
+      .children(MatlabGrammar.TESTLIST_COMP)
+      .children(MatlabGrammar.TEST)
+      .children(MatlabGrammar.ATOM, MatlabGrammar.COMPARISON)
       .isNotEmpty();
     if (hasUselessParenthesis) {
       checkParenthesis(node.getFirstChild().getNextSibling(), "not", node);
@@ -99,18 +99,18 @@ public class UselessParenthesisAfterKeywordCheck extends SquidCheck<Grammar> {
 
   private void visitExceptClause(AstNode node) {
     int nbTests = node.select()
-      .children(PythonGrammar.TEST)
-      .children(PythonGrammar.ATOM)
-      .children(PythonGrammar.TESTLIST_COMP)
-      .children(PythonGrammar.TEST)
+      .children(MatlabGrammar.TEST)
+      .children(MatlabGrammar.ATOM)
+      .children(MatlabGrammar.TESTLIST_COMP)
+      .children(MatlabGrammar.TEST)
       .size();
     if (nbTests == 1) {
-      checkParenthesis(node.getFirstChild(PythonGrammar.TEST), "except", node);
+      checkParenthesis(node.getFirstChild(MatlabGrammar.TEST), "except", node);
     }
   }
 
   private void checkParenthesis(AstNode child, String keyword, AstNode errorNode) {
-    if (child != null && child.getToken().getType() == PythonPunctuator.LPARENTHESIS && isOnASingleLine(child)) {
+    if (child != null && child.getToken().getType() == MatlabPunctuator.LPARENTHESIS && isOnASingleLine(child)) {
       getContext().createLineViolation(this,
         "Remove the parentheses after this \"{0}\" keyword", errorNode, keyword);
     }

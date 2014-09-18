@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,26 +17,26 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.lexer;
+package org.sonar.matlab.lexer;
 
 import com.sonar.sslr.impl.Lexer;
 import com.sonar.sslr.impl.channel.BlackHoleChannel;
 import com.sonar.sslr.impl.channel.IdentifierAndKeywordChannel;
 import com.sonar.sslr.impl.channel.PunctuatorChannel;
 import com.sonar.sslr.impl.channel.UnknownCharacterChannel;
-import org.sonar.python.PythonConfiguration;
-import org.sonar.python.api.PythonKeyword;
-import org.sonar.python.api.PythonPunctuator;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.MatlabConfiguration;
+import org.sonar.matlab.api.MatlabKeyword;
+import org.sonar.matlab.api.MatlabPunctuator;
+import org.sonar.matlab.api.MatlabTokenType;
 
 import static com.sonar.sslr.impl.channel.RegexpChannelBuilder.and;
 import static com.sonar.sslr.impl.channel.RegexpChannelBuilder.commentRegexp;
 import static com.sonar.sslr.impl.channel.RegexpChannelBuilder.o2n;
 import static com.sonar.sslr.impl.channel.RegexpChannelBuilder.regexp;
 
-public final class PythonLexer {
+public final class MatlabLexer {
 
-  private PythonLexer() {
+  private MatlabLexer() {
   }
 
   private static final String EXP = "([Ee][+-]?+[0-9_]++)";
@@ -44,7 +44,7 @@ public final class PythonLexer {
   private static final String IMAGINARY_SUFFIX = "(j|J)";
   private static final String LONG_INTEGER_SUFFIX = "(l|L)";
 
-  public static Lexer create(PythonConfiguration conf) {
+  public static Lexer create(MatlabConfiguration conf) {
     LexerState lexerState = new LexerState();
 
     return Lexer.builder()
@@ -58,36 +58,36 @@ public final class PythonLexer {
 
         .withChannel(new BlackHoleChannel("\\s"))
 
-        // http://docs.python.org/reference/lexical_analysis.html#comments
+        // http://docs.matlab.org/reference/lexical_analysis.html#comments
         .withChannel(commentRegexp("#[^\\n\\r]*+"))
 
-        // http://docs.python.org/reference/lexical_analysis.html#string-literals
+        // http://docs.matlab.org/reference/lexical_analysis.html#string-literals
         .withChannel(new StringLiteralsChannel())
 
-        // http://docs.python.org/release/3.2/reference/lexical_analysis.html#string-and-bytes-literals
-        .withChannel(regexp(PythonTokenType.STRING, BYTES_PREFIX + "\'([^\'\\\\]*+(\\\\[\\s\\S])?+)*+\'"))
-        .withChannel(regexp(PythonTokenType.STRING, BYTES_PREFIX + "\"([^\"\\\\]*+(\\\\[\\s\\S])?+)*+\""))
+        // http://docs.matlab.org/release/3.2/reference/lexical_analysis.html#string-and-bytes-literals
+        .withChannel(regexp(MatlabTokenType.STRING, BYTES_PREFIX + "\'([^\'\\\\]*+(\\\\[\\s\\S])?+)*+\'"))
+        .withChannel(regexp(MatlabTokenType.STRING, BYTES_PREFIX + "\"([^\"\\\\]*+(\\\\[\\s\\S])?+)*+\""))
 
-        // http://docs.python.org/reference/lexical_analysis.html#floating-point-literals
-        // http://docs.python.org/reference/lexical_analysis.html#imaginary-literals
-        .withChannel(regexp(PythonTokenType.NUMBER, "[0-9]++\\.[0-9]*+" + EXP + "?+" + IMAGINARY_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "\\.[0-9]++" + EXP + "?+" + IMAGINARY_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "[0-9]++" + EXP + IMAGINARY_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "[0-9]++" + IMAGINARY_SUFFIX))
+        // http://docs.matlab.org/reference/lexical_analysis.html#floating-point-literals
+        // http://docs.matlab.org/reference/lexical_analysis.html#imaginary-literals
+        .withChannel(regexp(MatlabTokenType.NUMBER, "[0-9]++\\.[0-9]*+" + EXP + "?+" + IMAGINARY_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "\\.[0-9]++" + EXP + "?+" + IMAGINARY_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "[0-9]++" + EXP + IMAGINARY_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "[0-9]++" + IMAGINARY_SUFFIX))
 
-        // http://docs.python.org/reference/lexical_analysis.html#integer-and-long-integer-literals
-        .withChannel(regexp(PythonTokenType.NUMBER, "0[oO]?+[0-7]++" + LONG_INTEGER_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "0[xX][0-9a-fA-F]++" + LONG_INTEGER_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "0[bB][01]++" + LONG_INTEGER_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "[1-9][0-9]*+" + LONG_INTEGER_SUFFIX + "?+"))
-        .withChannel(regexp(PythonTokenType.NUMBER, "0++" + LONG_INTEGER_SUFFIX + "?+"))
+        // http://docs.matlab.org/reference/lexical_analysis.html#integer-and-long-integer-literals
+        .withChannel(regexp(MatlabTokenType.NUMBER, "0[oO]?+[0-7]++" + LONG_INTEGER_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "0[xX][0-9a-fA-F]++" + LONG_INTEGER_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "0[bB][01]++" + LONG_INTEGER_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "[1-9][0-9]*+" + LONG_INTEGER_SUFFIX + "?+"))
+        .withChannel(regexp(MatlabTokenType.NUMBER, "0++" + LONG_INTEGER_SUFFIX + "?+"))
 
-        // http://docs.python.org/reference/lexical_analysis.html#identifiers
-        .withChannel(new IdentifierAndKeywordChannel(and("[a-zA-Z_]", o2n("\\w")), true, PythonKeyword.values()))
+        // http://docs.matlab.org/reference/lexical_analysis.html#identifiers
+        .withChannel(new IdentifierAndKeywordChannel(and("[a-zA-Z_]", o2n("\\w")), true, MatlabKeyword.values()))
 
-        // http://docs.python.org/reference/lexical_analysis.html#operators
-        // http://docs.python.org/reference/lexical_analysis.html#delimiters
-        .withChannel(new PunctuatorChannel(PythonPunctuator.values()))
+        // http://docs.matlab.org/reference/lexical_analysis.html#operators
+        // http://docs.matlab.org/reference/lexical_analysis.html#delimiters
+        .withChannel(new PunctuatorChannel(MatlabPunctuator.values()))
 
         .withChannel(new UnknownCharacterChannel())
 

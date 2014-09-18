@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,18 +17,18 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.api;
+package org.sonar.matlab.api;
 
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonKeywordTest {
+public class MatlabKeywordTest {
 
   @Test
   public void test() {
-    assertThat(PythonKeyword.values()).hasSize(33);
-    assertThat(PythonKeyword.keywordValues()).hasSize(PythonKeyword.values().length);
+    assertThat(MatlabKeyword.values()).hasSize(33);
+    assertThat(MatlabKeyword.keywordValues()).hasSize(MatlabKeyword.values().length);
   }
 
 }

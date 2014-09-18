@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.pylint;
+package org.sonar.plugins.matlab.pylint;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Test;
@@ -36,7 +36,7 @@ public class PylintIssuesAnalyzerTest {
 
   @Test
   public void shouldParseCorrectly() {
-    String resourceName = "/org/sonar/plugins/python/pylint/sample_pylint_output.txt";
+    String resourceName = "/org/sonar/plugins/matlab/pylint/sample_pylint_output.txt";
     String pathName = getClass().getResource(resourceName).getPath();
     String pylintConfigPath = null;
     String pylintPath = null;
@@ -47,7 +47,7 @@ public class PylintIssuesAnalyzerTest {
 
   @Test
   public void shouldParseCorrectlyNewFormat() {
-    String resourceName = "/org/sonar/plugins/python/pylint/sample_pylint_output_new_format.txt";
+    String resourceName = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_new_format.txt";
     String pathName = getClass().getResource(resourceName).getPath();
     String pylintConfigPath = null;
     String pylintPath = null;
@@ -59,7 +59,7 @@ public class PylintIssuesAnalyzerTest {
 
   @Test
   public void shouldParseCorrectlyOutputWithWindowsPaths() {
-    String resourceName = "/org/sonar/plugins/python/pylint/sample_pylint_output_with_win_paths.txt";
+    String resourceName = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_with_win_paths.txt";
     String pathName = getClass().getResource(resourceName).getPath();
     String pylintConfigPath = null;
     String pylintPath = null;
@@ -70,8 +70,8 @@ public class PylintIssuesAnalyzerTest {
 
   @Test
   public void shouldMapIssuesIdsCorrectly() {
-    String resourceOld = "/org/sonar/plugins/python/pylint/sample_pylint_output_oldids.txt";
-    String resourceNew = "/org/sonar/plugins/python/pylint/sample_pylint_output_newids.txt";
+    String resourceOld = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_oldids.txt";
+    String resourceNew = "/org/sonar/plugins/matlab/pylint/sample_pylint_output_newids.txt";
     String pathNameOld = getClass().getResource(resourceOld).getPath();
     String pathNameNew = getClass().getResource(resourceNew).getPath();
     String pylintConfigPath = null;
@@ -85,7 +85,7 @@ public class PylintIssuesAnalyzerTest {
 
   @Test
   public void shouldWorkWithValidCustomConfig() {
-    String resourceName = "/org/sonar/plugins/python/pylint/pylintrc_sample";
+    String resourceName = "/org/sonar/plugins/matlab/pylint/pylintrc_sample";
     String pylintConfigPath = getClass().getResource(resourceName).getPath();
     String pylintPath = null;
     analyzer(pylintPath, pylintConfigPath);
@@ -100,9 +100,9 @@ public class PylintIssuesAnalyzerTest {
 
   @Test
   public void shouldInstantiateWhenGivenValidParams() {
-    String pylintrcResource = "/org/sonar/plugins/python/pylint/pylintrc_sample";
+    String pylintrcResource = "/org/sonar/plugins/matlab/pylint/pylintrc_sample";
     String pylintrcPath = getClass().getResource(pylintrcResource).getPath();
-    String executableResource = "/org/sonar/plugins/python/pylint/executable";
+    String executableResource = "/org/sonar/plugins/matlab/pylint/executable";
     String executablePath = getClass().getResource(executableResource).getPath();
     final String[] VALID_PARAMETERS =
       {

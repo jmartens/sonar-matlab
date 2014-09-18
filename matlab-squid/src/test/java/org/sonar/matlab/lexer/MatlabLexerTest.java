@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,17 +17,17 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.lexer;
+package org.sonar.matlab.lexer;
 
 import com.google.common.base.Charsets;
 import com.sonar.sslr.api.GenericTokenType;
 import com.sonar.sslr.impl.Lexer;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.sonar.python.PythonConfiguration;
-import org.sonar.python.api.PythonKeyword;
-import org.sonar.python.api.PythonPunctuator;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.MatlabConfiguration;
+import org.sonar.matlab.api.MatlabKeyword;
+import org.sonar.matlab.api.MatlabPunctuator;
+import org.sonar.matlab.api.MatlabTokenType;
 
 import static com.sonar.sslr.test.lexer.LexerMatchers.hasComment;
 import static com.sonar.sslr.test.lexer.LexerMatchers.hasToken;
@@ -36,17 +36,17 @@ import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 
-public class PythonLexerTest {
+public class MatlabLexerTest {
 
   private static Lexer lexer;
 
   @BeforeClass
   public static void init() {
-    lexer = PythonLexer.create(new PythonConfiguration(Charsets.UTF_8));
+    lexer = MatlabLexer.create(new MatlabConfiguration(Charsets.UTF_8));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#comments
+   * http://docs.matlab.org/reference/lexical_analysis.html#comments
    */
   @Test
   public void comments() {
@@ -54,143 +54,143 @@ public class PythonLexerTest {
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#string-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#string-literals
    */
   @Test
   public void shortstring_literals() {
-    assertThat("empty", lexer.lex("''"), hasToken("''", PythonTokenType.STRING));
-    assertThat("empty", lexer.lex("\"\""), hasToken("\"\"", PythonTokenType.STRING));
+    assertThat("empty", lexer.lex("''"), hasToken("''", MatlabTokenType.STRING));
+    assertThat("empty", lexer.lex("\"\""), hasToken("\"\"", MatlabTokenType.STRING));
 
-    assertThat(lexer.lex("'hello world'"), hasToken("'hello world'", PythonTokenType.STRING));
-    assertThat("stringprefix", lexer.lex("r'hello world'"), hasToken("r'hello world'", PythonTokenType.STRING));
-    assertThat("stringprefix", lexer.lex("R'hello world'"), hasToken("R'hello world'", PythonTokenType.STRING));
-    assertThat(lexer.lex("\"hello world\""), hasToken("\"hello world\"", PythonTokenType.STRING));
-    assertThat("stringprefix", lexer.lex("r\"hello world\""), hasToken("r\"hello world\"", PythonTokenType.STRING));
-    assertThat("stringprefix", lexer.lex("R\"hello world\""), hasToken("R\"hello world\"", PythonTokenType.STRING));
+    assertThat(lexer.lex("'hello world'"), hasToken("'hello world'", MatlabTokenType.STRING));
+    assertThat("stringprefix", lexer.lex("r'hello world'"), hasToken("r'hello world'", MatlabTokenType.STRING));
+    assertThat("stringprefix", lexer.lex("R'hello world'"), hasToken("R'hello world'", MatlabTokenType.STRING));
+    assertThat(lexer.lex("\"hello world\""), hasToken("\"hello world\"", MatlabTokenType.STRING));
+    assertThat("stringprefix", lexer.lex("r\"hello world\""), hasToken("r\"hello world\"", MatlabTokenType.STRING));
+    assertThat("stringprefix", lexer.lex("R\"hello world\""), hasToken("R\"hello world\"", MatlabTokenType.STRING));
 
-    assertThat("2.7.3 stringprefix", lexer.lex("u'hello world'"), hasToken("u'hello world'", PythonTokenType.STRING));
-    assertThat("2.7.3 stringprefix", lexer.lex("ur'hello world'"), hasToken("ur'hello world'", PythonTokenType.STRING));
+    assertThat("2.7.3 stringprefix", lexer.lex("u'hello world'"), hasToken("u'hello world'", MatlabTokenType.STRING));
+    assertThat("2.7.3 stringprefix", lexer.lex("ur'hello world'"), hasToken("ur'hello world'", MatlabTokenType.STRING));
 
-    assertThat("escaped single quote", lexer.lex("'\\''"), hasToken("'\\''", PythonTokenType.STRING));
-    assertThat("escaped double quote", lexer.lex("\"\\\"\""), hasToken("\"\\\"\"", PythonTokenType.STRING));
+    assertThat("escaped single quote", lexer.lex("'\\''"), hasToken("'\\''", MatlabTokenType.STRING));
+    assertThat("escaped double quote", lexer.lex("\"\\\"\""), hasToken("\"\\\"\"", MatlabTokenType.STRING));
 
     assertThat("unterminated", lexer.lex("'"), hasToken("'", GenericTokenType.UNKNOWN_CHAR));
     assertThat("unterminated", lexer.lex("\""), hasToken("\"", GenericTokenType.UNKNOWN_CHAR));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#string-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#string-literals
    */
   @Test
   public void longstring_literals() {
-    assertThat("empty", lexer.lex("''''''"), hasToken("''''''", PythonTokenType.STRING));
-    assertThat("empty", lexer.lex("\"\"\"\"\"\""), hasToken("\"\"\"\"\"\"", PythonTokenType.STRING));
+    assertThat("empty", lexer.lex("''''''"), hasToken("''''''", MatlabTokenType.STRING));
+    assertThat("empty", lexer.lex("\"\"\"\"\"\""), hasToken("\"\"\"\"\"\"", MatlabTokenType.STRING));
 
-    assertThat("multiline", lexer.lex("'''\n'''"), hasToken("'''\n'''", PythonTokenType.STRING));
-    assertThat("multiline", lexer.lex("\"\"\"\n\"\"\""), hasToken("\"\"\"\n\"\"\"", PythonTokenType.STRING));
+    assertThat("multiline", lexer.lex("'''\n'''"), hasToken("'''\n'''", MatlabTokenType.STRING));
+    assertThat("multiline", lexer.lex("\"\"\"\n\"\"\""), hasToken("\"\"\"\n\"\"\"", MatlabTokenType.STRING));
 
-    assertThat("stringprefix", lexer.lex("r'''\n'''"), hasToken("r'''\n'''", PythonTokenType.STRING));
-    assertThat("stringprefix", lexer.lex("r\"\"\"\n\"\"\""), hasToken("r\"\"\"\n\"\"\"", PythonTokenType.STRING));
+    assertThat("stringprefix", lexer.lex("r'''\n'''"), hasToken("r'''\n'''", MatlabTokenType.STRING));
+    assertThat("stringprefix", lexer.lex("r\"\"\"\n\"\"\""), hasToken("r\"\"\"\n\"\"\"", MatlabTokenType.STRING));
 
-    assertThat("2.7.3 stringprefix", lexer.lex("u'''\n'''"), hasToken("u'''\n'''", PythonTokenType.STRING));
-    assertThat("2.7.3 stringprefix", lexer.lex("ur'''\n'''"), hasToken("ur'''\n'''", PythonTokenType.STRING));
-    assertThat("2.7.3 stringprefix", lexer.lex("u\"\"\"\n\"\"\""), hasToken("u\"\"\"\n\"\"\"", PythonTokenType.STRING));
-    assertThat("2.7.3 stringprefix", lexer.lex("ur\"\"\"\n\"\"\""), hasToken("ur\"\"\"\n\"\"\"", PythonTokenType.STRING));
+    assertThat("2.7.3 stringprefix", lexer.lex("u'''\n'''"), hasToken("u'''\n'''", MatlabTokenType.STRING));
+    assertThat("2.7.3 stringprefix", lexer.lex("ur'''\n'''"), hasToken("ur'''\n'''", MatlabTokenType.STRING));
+    assertThat("2.7.3 stringprefix", lexer.lex("u\"\"\"\n\"\"\""), hasToken("u\"\"\"\n\"\"\"", MatlabTokenType.STRING));
+    assertThat("2.7.3 stringprefix", lexer.lex("ur\"\"\"\n\"\"\""), hasToken("ur\"\"\"\n\"\"\"", MatlabTokenType.STRING));
 
-    assertThat("escaped single quote", lexer.lex("'''\\''''"), hasToken("'''\\''''", PythonTokenType.STRING));
-    assertThat("escaped double quote", lexer.lex("\"\"\"\\\"\"\"\""), hasToken("\"\"\"\\\"\"\"\"", PythonTokenType.STRING));
+    assertThat("escaped single quote", lexer.lex("'''\\''''"), hasToken("'''\\''''", MatlabTokenType.STRING));
+    assertThat("escaped double quote", lexer.lex("\"\"\"\\\"\"\"\""), hasToken("\"\"\"\\\"\"\"\"", MatlabTokenType.STRING));
 
     assertThat("unterminated", lexer.lex("'''"), hasToken("'", GenericTokenType.UNKNOWN_CHAR));
     assertThat("unterminated", lexer.lex("\"\"\""), hasToken("\"", GenericTokenType.UNKNOWN_CHAR));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#string-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#string-literals
    */
   @Test
   public void bytes_literal() {
-    assertThat(lexer.lex("br'hello world'"), hasToken("br'hello world'", PythonTokenType.STRING));
-    assertThat(lexer.lex("br\"hello world\""), hasToken("br\"hello world\"", PythonTokenType.STRING));
+    assertThat(lexer.lex("br'hello world'"), hasToken("br'hello world'", MatlabTokenType.STRING));
+    assertThat(lexer.lex("br\"hello world\""), hasToken("br\"hello world\"", MatlabTokenType.STRING));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#string-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#string-literals
    */
   @Test
   public void longbytes_literal() {
-    assertThat(lexer.lex("b'''\n'''"), hasToken("b'''\n'''", PythonTokenType.STRING));
-    assertThat(lexer.lex("b\"\"\"\n\"\"\""), hasToken("b\"\"\"\n\"\"\"", PythonTokenType.STRING));
+    assertThat(lexer.lex("b'''\n'''"), hasToken("b'''\n'''", MatlabTokenType.STRING));
+    assertThat(lexer.lex("b\"\"\"\n\"\"\""), hasToken("b\"\"\"\n\"\"\"", MatlabTokenType.STRING));
 
-    assertThat(lexer.lex("br'''\n'''"), hasToken("br'''\n'''", PythonTokenType.STRING));
-    assertThat(lexer.lex("br\"\"\"\n\"\"\""), hasToken("br\"\"\"\n\"\"\"", PythonTokenType.STRING));
+    assertThat(lexer.lex("br'''\n'''"), hasToken("br'''\n'''", MatlabTokenType.STRING));
+    assertThat(lexer.lex("br\"\"\"\n\"\"\""), hasToken("br\"\"\"\n\"\"\"", MatlabTokenType.STRING));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#integer-and-long-integer-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#integer-and-long-integer-literals
    */
   @Test
   public void integer_literals() {
-    assertThat(lexer.lex("7"), hasToken("7", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("0o177"), hasToken("0o177", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("0b100110111"), hasToken("0b100110111", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("0xdeadbeef"), hasToken("0xdeadbeef", PythonTokenType.NUMBER));
+    assertThat(lexer.lex("7"), hasToken("7", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("0o177"), hasToken("0o177", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("0b100110111"), hasToken("0b100110111", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("0xdeadbeef"), hasToken("0xdeadbeef", MatlabTokenType.NUMBER));
 
-    assertThat("2.7.3 long decimal integer", lexer.lex("9L"), hasToken("9L", PythonTokenType.NUMBER));
-    assertThat("2.7.3 long octal integer", lexer.lex("0x77L"), hasToken("0x77L", PythonTokenType.NUMBER));
-    assertThat("2.7.3 long binary integer", lexer.lex("0b11L"), hasToken("0b11L", PythonTokenType.NUMBER));
-    assertThat("2.7.3 long hex integer", lexer.lex("0xffL"), hasToken("0xffL", PythonTokenType.NUMBER));
+    assertThat("2.7.3 long decimal integer", lexer.lex("9L"), hasToken("9L", MatlabTokenType.NUMBER));
+    assertThat("2.7.3 long octal integer", lexer.lex("0x77L"), hasToken("0x77L", MatlabTokenType.NUMBER));
+    assertThat("2.7.3 long binary integer", lexer.lex("0b11L"), hasToken("0b11L", MatlabTokenType.NUMBER));
+    assertThat("2.7.3 long hex integer", lexer.lex("0xffL"), hasToken("0xffL", MatlabTokenType.NUMBER));
 
-    assertThat("2.7.3 octal integer", lexer.lex("0700"), hasToken("0700", PythonTokenType.NUMBER));
+    assertThat("2.7.3 octal integer", lexer.lex("0700"), hasToken("0700", MatlabTokenType.NUMBER));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#floating-point-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#floating-point-literals
    */
   @Test
   public void floating_point_literals() {
-    assertThat(lexer.lex("3.14"), hasToken("3.14", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("10."), hasToken("10.", PythonTokenType.NUMBER));
-    assertThat(lexer.lex(".001"), hasToken(".001", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("1e100"), hasToken("1e100", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("3.14e-10"), hasToken("3.14e-10", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("0e0"), hasToken("0e0", PythonTokenType.NUMBER));
+    assertThat(lexer.lex("3.14"), hasToken("3.14", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("10."), hasToken("10.", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex(".001"), hasToken(".001", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("1e100"), hasToken("1e100", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("3.14e-10"), hasToken("3.14e-10", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("0e0"), hasToken("0e0", MatlabTokenType.NUMBER));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#imaginary-literals
+   * http://docs.matlab.org/reference/lexical_analysis.html#imaginary-literals
    */
   @Test
   public void imaginary_literals() {
-    assertThat(lexer.lex("3.14j"), hasToken("3.14j", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("10.j"), hasToken("10.j", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("10j"), hasToken("10j", PythonTokenType.NUMBER));
-    assertThat(lexer.lex(".001j"), hasToken(".001j", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("1e100j"), hasToken("1e100j", PythonTokenType.NUMBER));
-    assertThat(lexer.lex("3.14e-10j"), hasToken("3.14e-10j", PythonTokenType.NUMBER));
-    assertThat("uppercase suffix", lexer.lex("10J"), hasToken("10J", PythonTokenType.NUMBER));
+    assertThat(lexer.lex("3.14j"), hasToken("3.14j", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("10.j"), hasToken("10.j", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("10j"), hasToken("10j", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex(".001j"), hasToken(".001j", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("1e100j"), hasToken("1e100j", MatlabTokenType.NUMBER));
+    assertThat(lexer.lex("3.14e-10j"), hasToken("3.14e-10j", MatlabTokenType.NUMBER));
+    assertThat("uppercase suffix", lexer.lex("10J"), hasToken("10J", MatlabTokenType.NUMBER));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#identifiers
+   * http://docs.matlab.org/reference/lexical_analysis.html#identifiers
    */
   @Test
   public void identifiers_and_keywords() {
-    assertThat(lexer.lex("True"), hasToken("True", PythonKeyword.TRUE));
+    assertThat(lexer.lex("True"), hasToken("True", MatlabKeyword.TRUE));
     assertThat(lexer.lex("identifier"), hasToken("identifier", GenericTokenType.IDENTIFIER));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#operators
-   * http://docs.python.org/reference/lexical_analysis.html#delimiters
+   * http://docs.matlab.org/reference/lexical_analysis.html#operators
+   * http://docs.matlab.org/reference/lexical_analysis.html#delimiters
    */
   @Test
   public void operators_and_delimiters() {
-    assertThat(lexer.lex("<<"), hasToken("<<", PythonPunctuator.LEFT_OP));
-    assertThat(lexer.lex("+="), hasToken("+=", PythonPunctuator.PLUS_ASSIGN));
+    assertThat(lexer.lex("<<"), hasToken("<<", MatlabPunctuator.LEFT_OP));
+    assertThat(lexer.lex("+="), hasToken("+=", MatlabPunctuator.PLUS_ASSIGN));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#blank-lines
+   * http://docs.matlab.org/reference/lexical_analysis.html#blank-lines
    */
   @Test
   public void blank_lines() {
@@ -201,33 +201,33 @@ public class PythonLexerTest {
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#indentation
+   * http://docs.matlab.org/reference/lexical_analysis.html#indentation
    */
   @Test
   public void indent_dedent() {
-    assertThat(lexer.lex("    STATEMENT\n  STATEMENT"), allOf(hasToken("    ", PythonTokenType.INDENT), hasToken("  ", PythonTokenType.DEDENT)));
+    assertThat(lexer.lex("    STATEMENT\n  STATEMENT"), allOf(hasToken("    ", MatlabTokenType.INDENT), hasToken("  ", MatlabTokenType.DEDENT)));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#implicit-line-joining
+   * http://docs.matlab.org/reference/lexical_analysis.html#implicit-line-joining
    */
   @Test
   public void implicit_line_joining() {
-    assertThat(lexer.lex("month_names = ['January', \n 'December']"), not(hasToken("\n", PythonTokenType.NEWLINE)));
+    assertThat(lexer.lex("month_names = ['January', \n 'December']"), not(hasToken("\n", MatlabTokenType.NEWLINE)));
   }
 
   /**
-   * http://docs.python.org/reference/lexical_analysis.html#explicit-line-joining
+   * http://docs.matlab.org/reference/lexical_analysis.html#explicit-line-joining
    */
   @Test
   public void explicit_line_joining() {
-    assertThat(lexer.lex("line\r\nline"), hasToken(PythonTokenType.NEWLINE));
-    assertThat(lexer.lex("line\rline"), hasToken(PythonTokenType.NEWLINE));
-    assertThat(lexer.lex("line\nline"), hasToken(PythonTokenType.NEWLINE));
+    assertThat(lexer.lex("line\r\nline"), hasToken(MatlabTokenType.NEWLINE));
+    assertThat(lexer.lex("line\rline"), hasToken(MatlabTokenType.NEWLINE));
+    assertThat(lexer.lex("line\nline"), hasToken(MatlabTokenType.NEWLINE));
 
-    assertThat(lexer.lex("line\\\r\nline"), not(hasToken(PythonTokenType.NEWLINE)));
-    assertThat(lexer.lex("line\\\rline"), not(hasToken(PythonTokenType.NEWLINE)));
-    assertThat(lexer.lex("line\\\nline"), not(hasToken(PythonTokenType.NEWLINE)));
+    assertThat(lexer.lex("line\\\r\nline"), not(hasToken(MatlabTokenType.NEWLINE)));
+    assertThat(lexer.lex("line\\\rline"), not(hasToken(MatlabTokenType.NEWLINE)));
+    assertThat(lexer.lex("line\\\nline"), not(hasToken(MatlabTokenType.NEWLINE)));
 
     assertThat(lexer.lex("line\\\n    line")).hasSize(3);
   }

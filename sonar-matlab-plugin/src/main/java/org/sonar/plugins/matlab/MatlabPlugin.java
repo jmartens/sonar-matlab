@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,55 +17,55 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import com.google.common.collect.ImmutableList;
 import org.sonar.api.SonarPlugin;
 import org.sonar.api.config.PropertyDefinition;
 import org.sonar.api.resources.Qualifiers;
-import org.sonar.plugins.python.colorizer.PythonColorizer;
-import org.sonar.plugins.python.coverage.PythonCoverageSensor;
-import org.sonar.plugins.python.cpd.PythonCpdMapping;
-import org.sonar.plugins.python.pylint.PylintConfiguration;
-import org.sonar.plugins.python.pylint.PylintRuleRepository;
-import org.sonar.plugins.python.pylint.PylintSensor;
-import org.sonar.plugins.python.xunit.PythonXunitSensor;
+import org.sonar.plugins.matlab.colorizer.MatlabColorizer;
+import org.sonar.plugins.matlab.coverage.MatlabCoverageSensor;
+import org.sonar.plugins.matlab.cpd.MatlabCpdMapping;
+import org.sonar.plugins.matlab.pylint.PylintConfiguration;
+import org.sonar.plugins.matlab.pylint.PylintRuleRepository;
+import org.sonar.plugins.matlab.pylint.PylintSensor;
+import org.sonar.plugins.matlab.xunit.MatlabXunitSensor;
 
 import java.util.List;
 
-public class PythonPlugin extends SonarPlugin {
+public class MatlabPlugin extends SonarPlugin {
 
-  public static final String FILE_SUFFIXES_KEY = "sonar.python.file.suffixes";
+  public static final String FILE_SUFFIXES_KEY = "sonar.matlab.file.suffixes";
 
   public List getExtensions() {
     return ImmutableList.of(
 
         PropertyDefinition.builder(FILE_SUFFIXES_KEY)
           .name("File Suffixes")
-          .description("Comma-separated list of suffixes of Python files to analyze.")
-          .category("Python")
+          .description("Comma-separated list of suffixes of Matlab files to analyze.")
+          .category("Matlab")
           .onQualifiers(Qualifiers.PROJECT)
           .defaultValue("py")
           .build(),
 
-        Python.class,
-        PythonSourceImporter.class,
-        PythonColorizer.class,
-        PythonCpdMapping.class,
+        Matlab.class,
+        MatlabSourceImporter.class,
+        MatlabColorizer.class,
+        MatlabCpdMapping.class,
 
-        PythonSquidSensor.class,
-        PythonRuleRepository.class,
-        PythonDefaultProfile.class,
+        MatlabSquidSensor.class,
+        MatlabRuleRepository.class,
+        MatlabDefaultProfile.class,
 
-        PythonCommonRulesEngine.class,
+        MatlabCommonRulesEngine.class,
 
         // pylint
         PylintConfiguration.class,
         PylintSensor.class,
         PylintRuleRepository.class,
 
-        PythonXunitSensor.class,
-        PythonCoverageSensor.class);
+        MatlabXunitSensor.class,
+        MatlabCoverageSensor.class);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,12 +17,12 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser.compound_statements;
+package org.sonar.matlab.parser.compound_statements;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.parser.RuleTest;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.parser.RuleTest;
 
 import static org.sonar.sslr.tests.Assertions.assertThat;
 
@@ -30,14 +30,14 @@ public class TryStatementTest extends RuleTest {
 
   @Before
   public void init() {
-    setRootRule(PythonGrammar.TRY_STMT);
+    setRootRule(MatlabGrammar.TRY_STMT);
   }
 
   @Test
   public void ok() {
-    p.getGrammar().rule(PythonGrammar.SUITE).mock();
-    p.getGrammar().rule(PythonGrammar.TEST).mock();
-    p.getGrammar().rule(PythonGrammar.EXCEPT_CLAUSE).mock();
+    p.getGrammar().rule(MatlabGrammar.SUITE).mock();
+    p.getGrammar().rule(MatlabGrammar.TEST).mock();
+    p.getGrammar().rule(MatlabGrammar.EXCEPT_CLAUSE).mock();
 
     assertThat(p).matches("try : SUITE EXCEPT_CLAUSE : SUITE");
     assertThat(p).matches("try : SUITE EXCEPT_CLAUSE : SUITE EXCEPT_CLAUSE : SUITE");

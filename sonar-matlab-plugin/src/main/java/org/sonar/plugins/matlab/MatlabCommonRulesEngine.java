@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,15 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import org.sonar.commonrules.api.CommonRulesEngine;
 import org.sonar.commonrules.api.CommonRulesRepository;
 
-public class PythonCommonRulesEngine extends CommonRulesEngine {
+public class MatlabCommonRulesEngine extends CommonRulesEngine {
 
-  public PythonCommonRulesEngine() {
-    super(Python.KEY);
+  public MatlabCommonRulesEngine() {
+    super(Matlab.KEY);
   }
 
   @Override

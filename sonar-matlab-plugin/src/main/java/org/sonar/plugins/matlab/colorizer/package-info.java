@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -21,7 +21,7 @@
  * Support for code colorizer.
  */
 @ParametersAreNonnullByDefault
-package org.sonar.plugins.python.colorizer;
+package org.sonar.plugins.matlab.colorizer;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 

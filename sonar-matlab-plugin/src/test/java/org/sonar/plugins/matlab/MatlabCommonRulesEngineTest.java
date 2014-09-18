@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,24 +17,24 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import org.junit.Test;
 import org.sonar.commonrules.api.CommonRulesRepository;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonCommonRulesEngineTest {
+public class MatlabCommonRulesEngineTest {
 
   @Test
   public void shouldProvideExpectedExtensions() {
-    PythonCommonRulesEngine engine = new PythonCommonRulesEngine();
+    MatlabCommonRulesEngine engine = new MatlabCommonRulesEngine();
     assertThat(engine.provide()).isNotEmpty();
   }
 
   @Test
   public void enable_common_rules() {
-    PythonCommonRulesEngine engine = new PythonCommonRulesEngine();
+    MatlabCommonRulesEngine engine = new MatlabCommonRulesEngine();
     CommonRulesRepository repo = engine.newRepository();
     assertThat(repo.rules()).hasSize(4);
     assertThat(repo.rule(CommonRulesRepository.RULE_INSUFFICIENT_COMMENT_DENSITY)).isNotNull();

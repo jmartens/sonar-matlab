@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.toolkit;
+package org.sonar.matlab.toolkit;
 
 import com.google.common.base.Charsets;
 import org.junit.Rule;
@@ -26,14 +26,14 @@ import org.junit.rules.ExpectedException;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonConfigurationModelTest {
+public class MatlabConfigurationModelTest {
 
   @Rule
   public ExpectedException thrown = ExpectedException.none();
 
   @Test
   public void getConfiguration_charset() {
-    PythonConfigurationModel model = new PythonConfigurationModel();
+    MatlabConfigurationModel model = new MatlabConfigurationModel();
     model.charsetProperty.setValue("UTF-8");
     assertThat(model.getCharset()).isEqualTo(Charsets.UTF_8);
     assertThat(model.getConfiguration().getCharset()).isEqualTo(Charsets.UTF_8);
@@ -48,7 +48,7 @@ public class PythonConfigurationModelTest {
 
     try {
       System.setProperty("foo", "bar");
-      assertThat(PythonConfigurationModel.getPropertyOrDefaultValue("foo", "baz")).isEqualTo("bar");
+      assertThat(MatlabConfigurationModel.getPropertyOrDefaultValue("foo", "baz")).isEqualTo("bar");
     } finally {
       if (oldValue == null) {
         System.clearProperty("foo");
@@ -64,7 +64,7 @@ public class PythonConfigurationModelTest {
 
     try {
       System.clearProperty("foo");
-      assertThat(PythonConfigurationModel.getPropertyOrDefaultValue("foo", "baz")).isEqualTo("baz");
+      assertThat(MatlabConfigurationModel.getPropertyOrDefaultValue("foo", "baz")).isEqualTo("baz");
     } finally {
       if (oldValue == null) {
         System.clearProperty("foo");

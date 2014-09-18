@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.cpd;
+package org.sonar.plugins.matlab.cpd;
 
-import org.sonar.plugins.python.Python;
+import org.sonar.plugins.matlab.Matlab;
 
-import org.sonar.plugins.python.cpd.PythonCpdMapping;
+import org.sonar.plugins.matlab.cpd.MatlabCpdMapping;
 
-import org.sonar.plugins.python.cpd.PythonTokenizer;
+import org.sonar.plugins.matlab.cpd.MatlabTokenizer;
 
 import org.junit.Test;
 import org.sonar.api.resources.ProjectFileSystem;
@@ -31,15 +31,15 @@ import org.sonar.api.resources.ProjectFileSystem;
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
 
-public class PythonCpdMappingTest {
+public class MatlabCpdMappingTest {
 
   @Test
   public void test() {
-    Python language = mock(Python.class);
+    Matlab language = mock(Matlab.class);
     ProjectFileSystem fs = mock(ProjectFileSystem.class);
-    PythonCpdMapping mapping = new PythonCpdMapping(language, fs);
+    MatlabCpdMapping mapping = new MatlabCpdMapping(language, fs);
     assertThat(mapping.getLanguage()).isSameAs(language);
-    assertThat(mapping.getTokenizer()).isInstanceOf(PythonTokenizer.class);
+    assertThat(mapping.getTokenizer()).isInstanceOf(MatlabTokenizer.class);
   }
 
 }

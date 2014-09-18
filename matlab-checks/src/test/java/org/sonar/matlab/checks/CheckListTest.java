@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.google.common.collect.Sets;
 import org.apache.commons.io.FileUtils;
@@ -42,7 +42,7 @@ public class CheckListTest {
   @Test
   public void count() {
     int count = 0;
-    List<File> files = (List<File>) FileUtils.listFiles(new File("src/main/java/org/sonar/python/checks/"), new String[] {"java"}, false);
+    List<File> files = (List<File>) FileUtils.listFiles(new File("src/main/java/org/sonar/matlab/checks/"), new String[] {"java"}, false);
     for (File file : files) {
       if (file.getName().endsWith("Check.java") && !file.getName().startsWith("Abstract")) {
         count++;
@@ -65,7 +65,7 @@ public class CheckListTest {
           .isNotNull();
     }
 
-    ResourceBundle resourceBundle = ResourceBundle.getBundle("org.sonar.l10n.python", Locale.ENGLISH);
+    ResourceBundle resourceBundle = ResourceBundle.getBundle("org.sonar.l10n.matlab", Locale.ENGLISH);
 
     Set<String> keys = Sets.newHashSet();
     List<Rule> rules = new AnnotationRuleParser().parse("repositoryKey", checks);
@@ -74,7 +74,7 @@ public class CheckListTest {
       keys.add(rule.getKey());
 
       resourceBundle.getString("rule." + CheckList.REPOSITORY_KEY + "." + rule.getKey() + ".name");
-      assertThat(getClass().getResource("/org/sonar/l10n/python/rules/python/" + rule.getKey() + ".html"))
+      assertThat(getClass().getResource("/org/sonar/l10n/matlab/rules/matlab/" + rule.getKey() + ".html"))
           .overridingErrorMessage("No description for " + rule.getKey())
           .isNotNull();
 

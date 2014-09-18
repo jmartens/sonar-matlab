@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,10 +17,10 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import org.junit.Test;
-import org.sonar.python.PythonAstScanner;
+import org.sonar.matlab.MatlabAstScanner;
 import org.sonar.squidbridge.api.SourceFile;
 import org.sonar.squidbridge.checks.CheckMessagesVerifier;
 
@@ -47,7 +47,7 @@ public class TooManyLinesInFileCheckTest {
   private SourceFile scanFile(int maximum) {
     TooManyLinesInFileCheck check = new TooManyLinesInFileCheck();
     check.maximum = maximum;
-    return PythonAstScanner.scanSingleFile(new File("src/test/resources/checks/tooManyLinesInFile.py"), check);
+    return MatlabAstScanner.scanSingleFile(new File("src/test/resources/checks/tooManyLinesInFile.py"), check);
   }
 
 }

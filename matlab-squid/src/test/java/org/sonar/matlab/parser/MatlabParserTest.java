@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,21 +17,21 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser;
+package org.sonar.matlab.parser;
 
 import com.google.common.base.Charsets;
 import com.sonar.sslr.api.Grammar;
 import com.sonar.sslr.impl.Parser;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
-import org.sonar.python.PythonConfiguration;
+import org.sonar.matlab.MatlabConfiguration;
 
 import java.io.File;
 import java.util.Collection;
 
-public class PythonParserTest {
+public class MatlabParserTest {
 
-  private final Parser<Grammar> parser = PythonParser.create(new PythonConfiguration(Charsets.UTF_8));
+  private final Parser<Grammar> parser = MatlabParser.create(new MatlabConfiguration(Charsets.UTF_8));
 
   @Test
   public void test() {

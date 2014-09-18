@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
@@ -25,7 +25,7 @@ import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 @Rule(
@@ -43,24 +43,24 @@ public class TooManyParametersCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.FUNCDEF, PythonGrammar.LAMBDEF);
+    subscribeTo(MatlabGrammar.FUNCDEF, MatlabGrammar.LAMBDEF);
   }
 
   @Override
   public void visitNode(AstNode node) {
     int nbParameters = node.select()
-      .children(PythonGrammar.VARARGSLIST)
-      .children(PythonGrammar.FPDEF)
+      .children(MatlabGrammar.VARARGSLIST)
+      .children(MatlabGrammar.FPDEF)
       .size();
     if (nbParameters > max) {
       String name = "Lambda";
-      if (node.is(PythonGrammar.FUNCDEF)) {
+      if (node.is(MatlabGrammar.FUNCDEF)) {
         String typeName = CheckUtils.isMethodDefinition(node) ? "Method" : "Function";
-        name = node.getFirstChild(PythonGrammar.FUNCNAME).getTokenOriginalValue();
+        name = node.getFirstChild(MatlabGrammar.FUNCNAME).getTokenOriginalValue();
         name = String.format("%s \"%s\"", typeName, name);
       }
       String message = "{0} has {1} parameters, which is greater than the {2} authorized.";
-      getContext().createLineViolation(this, message, node.getFirstChild(PythonGrammar.VARARGSLIST), name, nbParameters, max);
+      getContext().createLineViolation(this, message, node.getFirstChild(MatlabGrammar.VARARGSLIST), name, nbParameters, max);
     }
   }
 }

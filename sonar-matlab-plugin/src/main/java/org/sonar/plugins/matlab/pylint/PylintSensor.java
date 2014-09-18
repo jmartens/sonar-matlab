@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.pylint;
+package org.sonar.plugins.matlab.pylint;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -34,7 +34,7 @@ import org.sonar.api.rules.RuleFinder;
 import org.sonar.api.scan.filesystem.FileQuery;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
 import org.sonar.api.utils.SonarException;
-import org.sonar.plugins.python.Python;
+import org.sonar.plugins.matlab.Matlab;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class PylintSensor implements Sensor {
   }
 
   public boolean shouldExecuteOnProject(Project project) {
-    return !fileSystem.files(FileQuery.onSource().onLanguage(Python.KEY)).isEmpty()
+    return !fileSystem.files(FileQuery.onSource().onLanguage(Matlab.KEY)).isEmpty()
         && !profile.getActiveRulesByRepository(PylintRuleRepository.REPOSITORY_KEY).isEmpty();
   }
 
@@ -68,7 +68,7 @@ public class PylintSensor implements Sensor {
     File workdir = new File(fileSystem.workingDir(), "/pylint/");
     prepareWorkDir(workdir);
     int i = 0;
-    for (File file : fileSystem.files(FileQuery.onSource().onLanguage(Python.KEY))) {
+    for (File file : fileSystem.files(FileQuery.onSource().onLanguage(Matlab.KEY))) {
       try {
         File out = new File(workdir, i + ".out");
         analyzeFile(file, out, project, sensorContext);

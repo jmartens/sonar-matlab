@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.toolkit;
+package org.sonar.matlab.toolkit;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
@@ -27,9 +27,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.sonar.colorizer.KeywordsTokenizer;
 import org.sonar.colorizer.Tokenizer;
-import org.sonar.python.PythonConfiguration;
-import org.sonar.python.api.PythonKeyword;
-import org.sonar.python.parser.PythonParser;
+import org.sonar.matlab.MatlabConfiguration;
+import org.sonar.matlab.api.MatlabKeyword;
+import org.sonar.matlab.parser.MatlabParser;
 import org.sonar.sslr.toolkit.AbstractConfigurationModel;
 import org.sonar.sslr.toolkit.ConfigurationProperty;
 import org.sonar.sslr.toolkit.Validators;
@@ -37,9 +37,9 @@ import org.sonar.sslr.toolkit.Validators;
 import java.nio.charset.Charset;
 import java.util.List;
 
-public class PythonConfigurationModel extends AbstractConfigurationModel {
+public class MatlabConfigurationModel extends AbstractConfigurationModel {
 
-  private static final Logger LOG = LoggerFactory.getLogger(PythonConfigurationModel.class);
+  private static final Logger LOG = LoggerFactory.getLogger(MatlabConfigurationModel.class);
 
   private static final String CHARSET_PROPERTY_KEY = "sonar.sourceEncoding";
 
@@ -60,18 +60,18 @@ public class PythonConfigurationModel extends AbstractConfigurationModel {
 
   @Override
   public Parser<Grammar> doGetParser() {
-    return PythonParser.create(getConfiguration());
+    return MatlabParser.create(getConfiguration());
   }
 
   @Override
   public List<Tokenizer> doGetTokenizers() {
     return ImmutableList.of(
-      (Tokenizer) new KeywordsTokenizer("<span class=\"k\">", "</span>", PythonKeyword.keywordValues()));
+      (Tokenizer) new KeywordsTokenizer("<span class=\"k\">", "</span>", MatlabKeyword.keywordValues()));
   }
 
   @VisibleForTesting
-  PythonConfiguration getConfiguration() {
-    return new PythonConfiguration(Charset.forName(charsetProperty.getValue()));
+  MatlabConfiguration getConfiguration() {
+    return new MatlabConfiguration(Charset.forName(charsetProperty.getValue()));
   }
 
   @VisibleForTesting

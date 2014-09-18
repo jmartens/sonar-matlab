@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.colorizer;
+package org.sonar.plugins.matlab.colorizer;
 
 import org.sonar.colorizer.InlineDocTokenizer;
 
-public class PythonDocTokenizer extends InlineDocTokenizer {
+public class MatlabDocTokenizer extends InlineDocTokenizer {
 
-  public PythonDocTokenizer(String tagBefore, String tagAfter) {
+  public MatlabDocTokenizer(String tagBefore, String tagAfter) {
     super("#", tagBefore, tagAfter);
   }
 

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,29 +17,29 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.toolkit;
+package org.sonar.matlab.toolkit;
 
 import com.google.common.collect.ImmutableList;
 import org.sonar.colorizer.KeywordsTokenizer;
 import org.sonar.colorizer.Tokenizer;
-import org.sonar.python.api.PythonKeyword;
+import org.sonar.matlab.api.MatlabKeyword;
 import org.sonar.sslr.toolkit.Toolkit;
 
 import java.util.List;
 
-public final class PythonToolkit {
+public final class MatlabToolkit {
 
-  private PythonToolkit() {
+  private MatlabToolkit() {
   }
 
   public static void main(String[] args) {
-    Toolkit toolkit = new Toolkit("SSLR :: Python :: Toolkit", new PythonConfigurationModel());
+    Toolkit toolkit = new Toolkit("SSLR :: Matlab :: Toolkit", new MatlabConfigurationModel());
     toolkit.run();
   }
 
-  public static List<Tokenizer> getPythonTokenizers() {
+  public static List<Tokenizer> getMatlabTokenizers() {
     return ImmutableList.of(
-      (Tokenizer) new KeywordsTokenizer("<span class=\"k\">", "</span>", PythonKeyword.keywordValues()));
+      (Tokenizer) new KeywordsTokenizer("<span class=\"k\">", "</span>", MatlabKeyword.keywordValues()));
   }
 
 }

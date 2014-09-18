@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,12 +17,12 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
 import org.sonar.check.RuleProperty;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 import java.util.regex.Pattern;
@@ -40,7 +40,7 @@ public abstract class AbstractFunctionNameCheck extends SquidCheck<Grammar> {
   @Override
   public void init() {
     pattern = Pattern.compile(format);
-    subscribeTo(PythonGrammar.FUNCDEF);
+    subscribeTo(MatlabGrammar.FUNCDEF);
   }
 
   @Override
@@ -48,7 +48,7 @@ public abstract class AbstractFunctionNameCheck extends SquidCheck<Grammar> {
     if (!shouldCheckFunctionDeclaration(astNode)) {
       return;
     }
-    AstNode nameNode = astNode.getFirstChild(PythonGrammar.FUNCNAME);
+    AstNode nameNode = astNode.getFirstChild(MatlabGrammar.FUNCNAME);
     String name = nameNode.getTokenValue();
     if (!pattern.matcher(name).matches()) {
       getContext().createLineViolation(this,

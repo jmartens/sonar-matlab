@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.metrics;
+package org.sonar.matlab.metrics;
 
 import com.google.common.collect.Sets;
 import com.sonar.sslr.api.*;
@@ -27,8 +27,8 @@ import org.sonar.api.measures.FileLinesContext;
 import org.sonar.api.measures.FileLinesContextFactory;
 import org.sonar.api.resources.File;
 import org.sonar.api.resources.Project;
-import org.sonar.python.api.PythonMetric;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabMetric;
+import org.sonar.matlab.api.MatlabTokenType;
 
 import java.util.List;
 import java.util.Set;
@@ -54,7 +54,7 @@ public class FileLinesVisitor extends SquidAstVisitor<Grammar> implements AstAnd
       return;
     }
 
-    if (token.getType() != PythonTokenType.DEDENT && token.getType() != PythonTokenType.INDENT && token.getType() != PythonTokenType.NEWLINE) {
+    if (token.getType() != MatlabTokenType.DEDENT && token.getType() != MatlabTokenType.INDENT && token.getType() != MatlabTokenType.NEWLINE) {
       /* Handle all the lines of the token */
       String[] tokenLines = token.getValue().split("\n", -1);
       for (int line = token.getLine(); line < token.getLine() + tokenLines.length; line++) {
@@ -75,7 +75,7 @@ public class FileLinesVisitor extends SquidAstVisitor<Grammar> implements AstAnd
     File sonarFile = File.fromIOFile(getContext().getFile(), project);
     FileLinesContext fileLinesContext = fileLinesContextFactory.createFor(sonarFile);
 
-    int fileLength = getContext().peekSourceCode().getInt(PythonMetric.LINES);
+    int fileLength = getContext().peekSourceCode().getInt(MatlabMetric.LINES);
     for (int line = 1; line <= fileLength; line++) {
       fileLinesContext.setIntValue(CoreMetrics.NCLOC_DATA_KEY, line, linesOfCode.contains(line) ? 1 : 0);
       fileLinesContext.setIntValue(CoreMetrics.COMMENT_LINES_DATA_KEY, line, linesOfComments.contains(line) ? 1 : 0);

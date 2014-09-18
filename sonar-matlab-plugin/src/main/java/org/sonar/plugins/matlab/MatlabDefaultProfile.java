@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,25 +17,25 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import org.sonar.api.profiles.AnnotationProfileParser;
 import org.sonar.api.profiles.ProfileDefinition;
 import org.sonar.api.profiles.RulesProfile;
 import org.sonar.api.utils.ValidationMessages;
-import org.sonar.python.checks.CheckList;
+import org.sonar.matlab.checks.CheckList;
 
-public class PythonDefaultProfile extends ProfileDefinition {
+public class MatlabDefaultProfile extends ProfileDefinition {
 
   private final AnnotationProfileParser annotationProfileParser;
 
-  public PythonDefaultProfile(AnnotationProfileParser annotationProfileParser) {
+  public MatlabDefaultProfile(AnnotationProfileParser annotationProfileParser) {
     this.annotationProfileParser = annotationProfileParser;
   }
 
   @Override
   public RulesProfile createProfile(ValidationMessages messages) {
-    return annotationProfileParser.parse(CheckList.REPOSITORY_KEY, CheckList.SONAR_WAY_PROFILE, Python.KEY, CheckList.getChecks(), messages);
+    return annotationProfileParser.parse(CheckList.REPOSITORY_KEY, CheckList.SONAR_WAY_PROFILE, Matlab.KEY, CheckList.getChecks(), messages);
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,15 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.api;
+package org.sonar.matlab.api;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.TokenType;
 
 /**
- * http://docs.python.org/reference/lexical_analysis.html#keywords
+ * http://docs.matlab.org/reference/lexical_analysis.html#keywords
  */
-public enum PythonKeyword implements TokenType {
+public enum MatlabKeyword implements TokenType {
 
   FALSE("False"),
   NONE("None"),
@@ -73,7 +73,7 @@ public enum PythonKeyword implements TokenType {
 
   private final String value;
 
-  private PythonKeyword(String value) {
+  private MatlabKeyword(String value) {
     this.value = value;
   }
 
@@ -90,7 +90,7 @@ public enum PythonKeyword implements TokenType {
   }
 
   public static String[] keywordValues() {
-    PythonKeyword[] keywordsEnum = PythonKeyword.values();
+    MatlabKeyword[] keywordsEnum = MatlabKeyword.values();
     String[] keywords = new String[keywordsEnum.length];
     for (int i = 0; i < keywords.length; i++) {
       keywords[i] = keywordsEnum[i].getValue();

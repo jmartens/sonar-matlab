@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.mock;
@@ -56,7 +56,7 @@ public class TestUtils{
    * @return default mock project
    */
   public static Project mockProject() {
-    return mockProject(loadResource("/org/sonar/plugins/python/"));
+    return mockProject(loadResource("/org/sonar/plugins/matlab/"));
   }
 
   /**
@@ -72,8 +72,8 @@ public class TestUtils{
     ProjectFileSystem fileSystem = mock(ProjectFileSystem.class);
     when(fileSystem.getBasedir()).thenReturn(baseDir);
     when(fileSystem.getSourceCharset()).thenReturn(Charset.defaultCharset());
-    when(fileSystem.mainFiles(Python.KEY)).thenReturn(mainFiles);
-    when(fileSystem.testFiles(Python.KEY)).thenReturn(testFiles);
+    when(fileSystem.mainFiles(Matlab.KEY)).thenReturn(mainFiles);
+    when(fileSystem.testFiles(Matlab.KEY)).thenReturn(testFiles);
     when(fileSystem.getSourceDirs()).thenReturn(dirList);
     when(fileSystem.getTestDirs()).thenReturn(dirList);
 
@@ -85,15 +85,15 @@ public class TestUtils{
     return project;
   }
 
-  public static Python mockLanguage(){
-    Python lang = mock(Python.class);
+  public static Matlab mockLanguage(){
+    Matlab lang = mock(Matlab.class);
     return lang;
   }
 
   public static ModuleFileSystem mockFileSystem() {
     ModuleFileSystem fs = mock(ModuleFileSystem.class);
     when(fs.files(any(FileQuery.class))).thenReturn(ImmutableList.of(new File("/tmp")));
-    when(fs.baseDir()).thenReturn(loadResource("/org/sonar/plugins/python/"));
+    when(fs.baseDir()).thenReturn(loadResource("/org/sonar/plugins/matlab/"));
 
     return fs;
   }

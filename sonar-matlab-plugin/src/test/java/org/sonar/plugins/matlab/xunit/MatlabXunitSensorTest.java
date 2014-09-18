@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -18,7 +18,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
 
-package org.sonar.plugins.python.xunit;
+package org.sonar.plugins.matlab.xunit;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,7 +30,7 @@ import org.sonar.api.measures.Measure;
 import org.sonar.api.resources.Project;
 import org.sonar.api.resources.Resource;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
-import org.sonar.plugins.python.TestUtils;
+import org.sonar.plugins.matlab.TestUtils;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.mockito.Matchers.anyObject;
@@ -41,9 +41,9 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class PythonXunitSensorTest {
+public class MatlabXunitSensorTest {
   Settings settings;
-  PythonXunitSensor sensor;
+  MatlabXunitSensor sensor;
   SensorContext context;
   Project project;
   ModuleFileSystem fs;
@@ -53,7 +53,7 @@ public class PythonXunitSensorTest {
     settings = new Settings();
     project = TestUtils.mockProject();
     fs = TestUtils.mockFileSystem();
-    sensor = new PythonXunitSensor(settings, TestUtils.mockLanguage(), fs);
+    sensor = new MatlabXunitSensor(settings, TestUtils.mockLanguage(), fs);
     context = mock(SensorContext.class);
   }
 
@@ -81,8 +81,8 @@ public class PythonXunitSensorTest {
 
   @Test
   public void shouldReportNothingWhenNoReportFound() {
-    settings.setProperty(PythonXunitSensor.REPORT_PATH_KEY, "notexistingpath");
-    sensor = new PythonXunitSensor(settings, TestUtils.mockLanguage(), fs);
+    settings.setProperty(MatlabXunitSensor.REPORT_PATH_KEY, "notexistingpath");
+    sensor = new MatlabXunitSensor(settings, TestUtils.mockLanguage(), fs);
 
     sensor.analyse(project, context);
 
@@ -91,8 +91,8 @@ public class PythonXunitSensorTest {
 
   @Test(expected = org.sonar.api.utils.SonarException.class)
   public void shouldThrowWhenGivenInvalidTime() {
-    settings.setProperty(PythonXunitSensor.REPORT_PATH_KEY, "xunit-reports/invalid-time-xunit-report.xml");
-    sensor = new PythonXunitSensor(settings, TestUtils.mockLanguage(), fs);
+    settings.setProperty(MatlabXunitSensor.REPORT_PATH_KEY, "xunit-reports/invalid-time-xunit-report.xml");
+    sensor = new MatlabXunitSensor(settings, TestUtils.mockLanguage(), fs);
 
     sensor.analyse(project, context);
   }

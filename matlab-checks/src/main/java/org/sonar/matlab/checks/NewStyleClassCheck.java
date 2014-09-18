@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.SquidCheck;
 
 @Rule(
@@ -33,15 +33,15 @@ public class NewStyleClassCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.CLASSDEF);
+    subscribeTo(MatlabGrammar.CLASSDEF);
   }
 
   @Override
   public void visitNode(AstNode node) {
-    AstNode argListNode = node.getFirstChild(PythonGrammar.ARGLIST);
-    if (argListNode == null || !argListNode.hasDirectChildren(PythonGrammar.ARGUMENT)) {
+    AstNode argListNode = node.getFirstChild(MatlabGrammar.ARGLIST);
+    if (argListNode == null || !argListNode.hasDirectChildren(MatlabGrammar.ARGUMENT)) {
       getContext().createLineViolation(this,
-        "Add inheritance from \"object\" or some other new-style class.", node.getFirstChild(PythonGrammar.CLASSNAME));
+        "Add inheritance from \"object\" or some other new-style class.", node.getFirstChild(MatlabGrammar.CLASSNAME));
     }
   }
 

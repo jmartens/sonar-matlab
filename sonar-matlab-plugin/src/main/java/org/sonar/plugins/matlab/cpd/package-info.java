@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -22,7 +22,7 @@
  * Support for detection of duplications.
  */
 @ParametersAreNonnullByDefault
-package org.sonar.plugins.python.cpd;
+package org.sonar.plugins.matlab.cpd;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 

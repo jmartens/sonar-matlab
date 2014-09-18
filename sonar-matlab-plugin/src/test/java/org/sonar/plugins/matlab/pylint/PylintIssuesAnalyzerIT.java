@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.pylint;
+package org.sonar.plugins.matlab.pylint;
 
 import com.google.common.base.Charsets;
 import org.junit.Rule;
@@ -36,8 +36,8 @@ public class PylintIssuesAnalyzerIT {
 
   @Test
   public void issuesTest() throws Exception {
-    String pylintrcResource = "/org/sonar/plugins/python/pylint/pylintrc_sample";
-    String codeChunksResource = "/org/sonar/plugins/python/code_chunks_2.py";
+    String pylintrcResource = "/org/sonar/plugins/matlab/pylint/pylintrc_sample";
+    String codeChunksResource = "/org/sonar/plugins/matlab/code_chunks_2.py";
     String pylintConfigPath = getClass().getResource(pylintrcResource).getPath();
     String codeChunksPathName = getClass().getResource(codeChunksResource).getPath();
     String pylintPath = null;

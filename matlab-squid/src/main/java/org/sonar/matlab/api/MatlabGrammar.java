@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,18 +17,18 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.api;
+package org.sonar.matlab.api;
 
 import org.sonar.sslr.grammar.GrammarRuleKey;
 import org.sonar.sslr.grammar.LexerfulGrammarBuilder;
 
 import static com.sonar.sslr.api.GenericTokenType.EOF;
 import static com.sonar.sslr.api.GenericTokenType.IDENTIFIER;
-import static org.sonar.python.api.PythonTokenType.DEDENT;
-import static org.sonar.python.api.PythonTokenType.INDENT;
-import static org.sonar.python.api.PythonTokenType.NEWLINE;
+import static org.sonar.matlab.api.MatlabTokenType.DEDENT;
+import static org.sonar.matlab.api.MatlabTokenType.INDENT;
+import static org.sonar.matlab.api.MatlabTokenType.NEWLINE;
 
-public enum PythonGrammar implements GrammarRuleKey {
+public enum MatlabGrammar implements GrammarRuleKey {
   FACTOR,
   TRAILER,
   SUBSCRIPTLIST,
@@ -190,12 +190,12 @@ public enum PythonGrammar implements GrammarRuleKey {
       b.sequence("{", b.optional(DICTORSETMAKER), "}"),
       b.sequence("`", TEST, b.zeroOrMore(",", TEST), "`"),
       NAME,
-      PythonTokenType.NUMBER,
-      b.oneOrMore(PythonTokenType.STRING),
+      MatlabTokenType.NUMBER,
+      b.oneOrMore(MatlabTokenType.STRING),
       "...",
-      PythonKeyword.NONE,
-      PythonKeyword.TRUE,
-      PythonKeyword.FALSE));
+      MatlabKeyword.NONE,
+      MatlabKeyword.TRUE,
+      MatlabKeyword.FALSE));
     b.rule(TESTLIST_COMP).is(b.firstOf(TEST, STAR_EXPR), b.firstOf(COMP_FOR, b.sequence(b.zeroOrMore(",", b.firstOf(TEST, STAR_EXPR)), b.optional(","))));
     b.rule(TRAILER).is(b.firstOf(
       b.sequence("(", b.optional(ARGLIST), ")"),
@@ -238,7 +238,7 @@ public enum PythonGrammar implements GrammarRuleKey {
 
   /**
    * Expressions
-   * http://docs.python.org/reference/expressions.html
+   * http://docs.matlab.org/reference/expressions.html
    */
   public static void expressions(LexerfulGrammarBuilder b) {
     b.rule(M_EXPR).is(FACTOR, b.zeroOrMore(b.firstOf("*", "//", "/", "%"), FACTOR)).skipIfOneChild();
@@ -269,7 +269,7 @@ public enum PythonGrammar implements GrammarRuleKey {
 
   /**
    * Simple statements
-   * http://docs.python.org/reference/simple_stmts.html
+   * http://docs.matlab.org/reference/simple_stmts.html
    */
   public static void simpleStatements(LexerfulGrammarBuilder b) {
     b.rule(SIMPLE_STMT).is(b.firstOf(
@@ -319,7 +319,7 @@ public enum PythonGrammar implements GrammarRuleKey {
 
   /**
    * Compound statements
-   * http://docs.python.org/reference/compound_stmts.html
+   * http://docs.matlab.org/reference/compound_stmts.html
    */
   public static void compoundStatements(LexerfulGrammarBuilder b) {
     b.rule(COMPOUND_STMT).is(b.firstOf(

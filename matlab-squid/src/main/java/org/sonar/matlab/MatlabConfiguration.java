@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,17 +17,17 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python;
+package org.sonar.matlab;
 
 import org.sonar.squidbridge.api.SquidConfiguration;
 
 import java.nio.charset.Charset;
 
-public class PythonConfiguration extends SquidConfiguration {
+public class MatlabConfiguration extends SquidConfiguration {
 
   private boolean ignoreHeaderComments;
 
-  public PythonConfiguration(Charset charset) {
+  public MatlabConfiguration(Charset charset) {
     super(charset);
   }
 

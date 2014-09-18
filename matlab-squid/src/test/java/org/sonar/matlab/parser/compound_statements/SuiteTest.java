@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser.compound_statements;
+package org.sonar.matlab.parser.compound_statements;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.parser.PythonTestUtils;
-import org.sonar.python.parser.RuleTest;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.parser.MatlabTestUtils;
+import org.sonar.matlab.parser.RuleTest;
 
 import static org.sonar.sslr.tests.Assertions.assertThat;
 
@@ -31,21 +31,21 @@ public class SuiteTest extends RuleTest {
 
   @Before
   public void init() {
-    setRootRule(PythonGrammar.SUITE);
+    setRootRule(MatlabGrammar.SUITE);
   }
 
   @Test
   public void ok() {
-    p.getGrammar().rule(PythonGrammar.STMT_LIST).mock();
+    p.getGrammar().rule(MatlabGrammar.STMT_LIST).mock();
 
     assertThat(p).matches("STMT_LIST\n");
   }
 
   @Test
   public void realLife() {
-    assertThat(p).matches(PythonTestUtils.appendNewLine("pass"));
-    assertThat(p).matches(PythonTestUtils.appendNewLine("x = 1"));
-    assertThat(p).matches(PythonTestUtils.appendNewLine("print(x)"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("pass"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("x = 1"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("print(x)"));
   }
 
 }

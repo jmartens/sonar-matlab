@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,19 +17,19 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import org.junit.Test;
 import org.sonar.api.config.Settings;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonSourceImporterTest {
+public class MatlabSourceImporterTest {
 
   @Test
   public void test() {
-    Python language = new Python(new Settings());
-    PythonSourceImporter sourceImporter = new PythonSourceImporter(language);
+    Matlab language = new Matlab(new Settings());
+    MatlabSourceImporter sourceImporter = new MatlabSourceImporter(language);
     assertThat(sourceImporter.getLanguage()).isSameAs(language);
   }
 

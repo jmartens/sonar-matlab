@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.coverage;
+package org.sonar.plugins.matlab.coverage;
 
 import static org.mockito.Matchers.any;
 import static org.mockito.Matchers.anyObject;
@@ -34,10 +34,10 @@ import org.sonar.api.measures.Measure;
 import org.sonar.api.resources.Project;
 import org.sonar.api.resources.Resource;
 import org.sonar.api.scan.filesystem.ModuleFileSystem;
-import org.sonar.plugins.python.TestUtils;
+import org.sonar.plugins.matlab.TestUtils;
 
-public class PythonCoverageSensorTest {
-  PythonCoverageSensor sensor;
+public class MatlabCoverageSensorTest {
+  MatlabCoverageSensor sensor;
   SensorContext context;
   Project project;
   Settings settings;
@@ -48,7 +48,7 @@ public class PythonCoverageSensorTest {
     project = TestUtils.mockProject();
     settings = new Settings();
     fs = TestUtils.mockFileSystem();
-    sensor = new PythonCoverageSensor(settings, fs);
+    sensor = new MatlabCoverageSensor(settings, fs);
     context = mock(SensorContext.class);
     Resource resourceMock = mock(Resource.class);
     when(context.getResource((Resource)anyObject())).thenReturn(resourceMock);
@@ -62,15 +62,15 @@ public class PythonCoverageSensorTest {
 
   @Test(expected=org.sonar.api.utils.SonarException.class)
   public void shouldFailOnInvalidReport() {
-    settings.setProperty(PythonCoverageSensor.REPORT_PATH_KEY, "coverage-reports/invalid-coverage-result.xml");
-    sensor = new PythonCoverageSensor(settings, fs);
+    settings.setProperty(MatlabCoverageSensor.REPORT_PATH_KEY, "coverage-reports/invalid-coverage-result.xml");
+    sensor = new MatlabCoverageSensor(settings, fs);
     sensor.analyse(project, context);
   }
 
   @Test(expected=org.sonar.api.utils.SonarException.class)
   public void shouldFailOnInvalidIntegrationReport() {
-    settings.setProperty(PythonCoverageSensor.IT_REPORT_PATH_KEY, "coverage-reports/invalid-coverage-result.xml");
-    sensor = new PythonCoverageSensor(settings, fs);
+    settings.setProperty(MatlabCoverageSensor.IT_REPORT_PATH_KEY, "coverage-reports/invalid-coverage-result.xml");
+    sensor = new MatlabCoverageSensor(settings, fs);
     sensor.analyse(project, context);
   }
 }

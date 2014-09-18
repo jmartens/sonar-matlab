@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.colorizer;
+package org.sonar.plugins.matlab.colorizer;
 
 import org.junit.Test;
 import org.sonar.colorizer.CodeColorizer;
@@ -26,10 +26,10 @@ import java.io.StringReader;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonColorizerTest {
+public class MatlabColorizerTest {
 
-  private PythonColorizer pythonColorizer = new PythonColorizer();
-  private CodeColorizer codeColorizer = new CodeColorizer(pythonColorizer.getTokenizers());
+  private MatlabColorizer matlabColorizer = new MatlabColorizer();
+  private CodeColorizer codeColorizer = new CodeColorizer(matlabColorizer.getTokenizers());
 
   private String colorize(String sourceCode) {
     return codeColorizer.toHtml(new StringReader(sourceCode));
@@ -37,7 +37,7 @@ public class PythonColorizerTest {
 
   @Test
   public void increase_coverage_for_fun() {
-    assertThat(pythonColorizer.getTokenizers()).isSameAs(pythonColorizer.getTokenizers());
+    assertThat(matlabColorizer.getTokenizers()).isSameAs(matlabColorizer.getTokenizers());
   }
 
   @Test

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,12 +17,12 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.pylint;
+package org.sonar.plugins.matlab.pylint;
 
 import org.sonar.api.rules.Rule;
 import org.sonar.api.rules.RuleRepository;
 import org.sonar.api.rules.XMLRuleParser;
-import org.sonar.plugins.python.Python;
+import org.sonar.plugins.matlab.Matlab;
 
 import java.util.List;
 
@@ -31,11 +31,11 @@ public class PylintRuleRepository extends RuleRepository {
   public static final String REPOSITORY_NAME = "Pylint";
   public static final String REPOSITORY_KEY = REPOSITORY_NAME;
 
-  private static final String RULES_FILE = "/org/sonar/plugins/python/pylint/rules.xml";
+  private static final String RULES_FILE = "/org/sonar/plugins/matlab/pylint/rules.xml";
   private final XMLRuleParser ruleParser;
 
   public PylintRuleRepository(XMLRuleParser ruleParser) {
-    super(REPOSITORY_KEY, Python.KEY);
+    super(REPOSITORY_KEY, Matlab.KEY);
     setName(REPOSITORY_NAME);
     this.ruleParser = ruleParser;
   }

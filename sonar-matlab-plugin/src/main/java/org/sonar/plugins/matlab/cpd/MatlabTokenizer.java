@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.cpd;
+package org.sonar.plugins.matlab.cpd;
 
 import com.sonar.sslr.api.Token;
 import com.sonar.sslr.impl.Lexer;
@@ -25,28 +25,28 @@ import net.sourceforge.pmd.cpd.SourceCode;
 import net.sourceforge.pmd.cpd.TokenEntry;
 import net.sourceforge.pmd.cpd.Tokenizer;
 import net.sourceforge.pmd.cpd.Tokens;
-import org.sonar.python.PythonConfiguration;
-import org.sonar.python.api.PythonTokenType;
-import org.sonar.python.lexer.PythonLexer;
+import org.sonar.matlab.MatlabConfiguration;
+import org.sonar.matlab.api.MatlabTokenType;
+import org.sonar.matlab.lexer.MatlabLexer;
 
 import java.io.File;
 import java.nio.charset.Charset;
 import java.util.List;
 
-public class PythonTokenizer implements Tokenizer {
+public class MatlabTokenizer implements Tokenizer {
 
   private final Charset charset;
 
-  public PythonTokenizer(Charset charset) {
+  public MatlabTokenizer(Charset charset) {
     this.charset = charset;
   }
 
   public final void tokenize(SourceCode source, Tokens cpdTokens) {
-    Lexer lexer = PythonLexer.create(new PythonConfiguration(charset));
+    Lexer lexer = MatlabLexer.create(new MatlabConfiguration(charset));
     String fileName = source.getFileName();
     List<Token> tokens = lexer.lex(new File(fileName));
     for (Token token : tokens) {
-      if (token.getType() != PythonTokenType.NEWLINE && token.getType() != PythonTokenType.DEDENT && token.getType() != PythonTokenType.INDENT) {
+      if (token.getType() != MatlabTokenType.NEWLINE && token.getType() != MatlabTokenType.DEDENT && token.getType() != MatlabTokenType.INDENT) {
         TokenEntry cpdToken = new TokenEntry(getTokenImage(token), fileName, token.getLine());
         cpdTokens.add(cpdToken);
       }

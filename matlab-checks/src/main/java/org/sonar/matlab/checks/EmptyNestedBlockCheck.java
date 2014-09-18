@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.google.common.base.Predicate;
 import com.sonar.sslr.api.AstNode;
@@ -27,7 +27,7 @@ import com.sonar.sslr.api.Trivia;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.SquidCheck;
 import org.sonar.sslr.ast.AstSelect;
 
@@ -42,27 +42,27 @@ public class EmptyNestedBlockCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.SUITE);
+    subscribeTo(MatlabGrammar.SUITE);
   }
 
   @Override
   public void visitNode(AstNode suiteNode) {
-    if (suiteNode.getParent().is(PythonGrammar.FUNCDEF, PythonGrammar.CLASSDEF) || isInExcept(suiteNode)) {
+    if (suiteNode.getParent().is(MatlabGrammar.FUNCDEF, MatlabGrammar.CLASSDEF) || isInExcept(suiteNode)) {
       return;
     }
 
     AstSelect suite = suiteNode.select();
-    AstSelect stmtLists = suite.children(PythonGrammar.STMT_LIST);
+    AstSelect stmtLists = suite.children(MatlabGrammar.STMT_LIST);
     if (stmtLists.isEmpty()) {
-      AstSelect statementSelect = suite.children(PythonGrammar.STATEMENT);
-      if (statementSelect.children(PythonGrammar.COMPOUND_STMT).isNotEmpty()) {
+      AstSelect statementSelect = suite.children(MatlabGrammar.STATEMENT);
+      if (statementSelect.children(MatlabGrammar.COMPOUND_STMT).isNotEmpty()) {
         return;
       }
-      stmtLists = statementSelect.children(PythonGrammar.STMT_LIST);
+      stmtLists = statementSelect.children(MatlabGrammar.STMT_LIST);
     }
 
     AstSelect nonPassSimpleStatements = stmtLists
-      .children(PythonGrammar.SIMPLE_STMT)
+      .children(MatlabGrammar.SIMPLE_STMT)
       .children()
       .filter(NOT_PASS_PREDICATE);
     if (nonPassSimpleStatements.isEmpty() && !containsComment(suiteNode)) {
@@ -71,8 +71,8 @@ public class EmptyNestedBlockCheck extends SquidCheck<Grammar> {
   }
 
   private boolean isInExcept(AstNode suiteNode) {
-    return suiteNode.getParent().is(PythonGrammar.TRY_STMT)
-      && suiteNode.getPreviousSibling().getPreviousSibling().is(PythonGrammar.EXCEPT_CLAUSE);
+    return suiteNode.getParent().is(MatlabGrammar.TRY_STMT)
+      && suiteNode.getPreviousSibling().getPreviousSibling().is(MatlabGrammar.EXCEPT_CLAUSE);
   }
 
   private boolean containsComment(AstNode suiteNode) {
@@ -90,7 +90,7 @@ public class EmptyNestedBlockCheck extends SquidCheck<Grammar> {
 
     @Override
     public boolean apply(AstNode node) {
-      return node.getType() != PythonGrammar.PASS_STMT;
+      return node.getType() != MatlabGrammar.PASS_STMT;
     }
 
   }

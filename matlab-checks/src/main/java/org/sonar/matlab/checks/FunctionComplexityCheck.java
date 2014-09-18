@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,17 +17,17 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.SquidCheck;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
-import org.sonar.python.api.PythonMetric;
+import org.sonar.matlab.api.MatlabMetric;
 import org.sonar.squidbridge.api.SourceFunction;
 
 @Rule(
@@ -45,16 +45,16 @@ public class FunctionComplexityCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.FUNCDEF);
+    subscribeTo(MatlabGrammar.FUNCDEF);
   }
 
   @Override
   public void leaveNode(AstNode node) {
     SourceFunction function = (SourceFunction) getContext().peekSourceCode();
-    if (function.getInt(PythonMetric.COMPLEXITY) > maximumFunctionComplexityThreshold) {
+    if (function.getInt(MatlabMetric.COMPLEXITY) > maximumFunctionComplexityThreshold) {
       getContext().createLineViolation(this,
           "Function has a complexity of {0,number,integer} which is greater than {1,number,integer} authorized.", node,
-          function.getInt(PythonMetric.COMPLEXITY), maximumFunctionComplexityThreshold);
+          function.getInt(MatlabMetric.COMPLEXITY), maximumFunctionComplexityThreshold);
     }
   }
 

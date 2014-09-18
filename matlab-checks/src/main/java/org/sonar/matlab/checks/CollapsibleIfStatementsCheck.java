@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,15 +17,15 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.api.PythonKeyword;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.api.MatlabKeyword;
 import org.sonar.squidbridge.checks.SquidCheck;
 import org.sonar.sslr.ast.AstSelect;
 
@@ -39,13 +39,13 @@ public class CollapsibleIfStatementsCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.IF_STMT);
+    subscribeTo(MatlabGrammar.IF_STMT);
   }
 
   @Override
   public void visitNode(AstNode node) {
-    AstNode suite = node.getLastChild(PythonGrammar.SUITE);
-    if (suite.getPreviousSibling().getPreviousSibling().is(PythonKeyword.ELSE)) {
+    AstNode suite = node.getLastChild(MatlabGrammar.SUITE);
+    if (suite.getPreviousSibling().getPreviousSibling().is(MatlabKeyword.ELSE)) {
       return;
     }
     AstNode singleIfChild = singleIfChild(suite);
@@ -55,15 +55,15 @@ public class CollapsibleIfStatementsCheck extends SquidCheck<Grammar> {
   }
 
   private boolean hasElseOrElif(AstNode ifNode) {
-    return ifNode.hasDirectChildren(PythonKeyword.ELIF) || ifNode.hasDirectChildren(PythonKeyword.ELSE);
+    return ifNode.hasDirectChildren(MatlabKeyword.ELIF) || ifNode.hasDirectChildren(MatlabKeyword.ELSE);
   }
 
   private AstNode singleIfChild(AstNode suite) {
-    List<AstNode> statements = suite.getChildren(PythonGrammar.STATEMENT);
+    List<AstNode> statements = suite.getChildren(MatlabGrammar.STATEMENT);
     if (statements.size() == 1) {
       AstSelect nestedIf = statements.get(0).select()
-        .children(PythonGrammar.COMPOUND_STMT)
-        .children(PythonGrammar.IF_STMT);
+        .children(MatlabGrammar.COMPOUND_STMT)
+        .children(MatlabGrammar.IF_STMT);
       if (nestedIf.size() == 1) {
         return nestedIf.get(0);
       }

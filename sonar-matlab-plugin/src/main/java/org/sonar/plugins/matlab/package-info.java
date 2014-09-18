@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -19,7 +19,7 @@
  */
 
 @ParametersAreNonnullByDefault
-package org.sonar.plugins.python;
+package org.sonar.plugins.matlab;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 

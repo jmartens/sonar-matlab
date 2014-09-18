@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,19 +17,19 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.api;
+package org.sonar.matlab.api;
 
 import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonMetricTest {
+public class MatlabMetricTest {
 
   @Test
   public void test() {
-    assertThat(PythonMetric.values()).hasSize(8);
+    assertThat(MatlabMetric.values()).hasSize(8);
 
-    for (PythonMetric metric : PythonMetric.values()) {
+    for (MatlabMetric metric : MatlabMetric.values()) {
       assertThat(metric.getName()).isEqualTo(metric.name());
       assertThat(metric.isCalculatedMetric()).isFalse();
       assertThat(metric.aggregateIfThereIsAlreadyAValue()).isTrue();

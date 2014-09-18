@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,34 +17,34 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.colorizer;
+package org.sonar.plugins.matlab.colorizer;
 
 import com.google.common.collect.Lists;
 import org.sonar.api.web.CodeColorizerFormat;
 import org.sonar.colorizer.KeywordsTokenizer;
 import org.sonar.colorizer.StringTokenizer;
 import org.sonar.colorizer.Tokenizer;
-import org.sonar.plugins.python.Python;
-import org.sonar.python.api.PythonKeyword;
+import org.sonar.plugins.matlab.Matlab;
+import org.sonar.matlab.api.MatlabKeyword;
 
 import java.util.List;
 
-public final class PythonColorizer extends CodeColorizerFormat {
+public final class MatlabColorizer extends CodeColorizerFormat {
 
   private List<Tokenizer> tokenizers;
   private static final String END_TAG = "</span>";
-  public PythonColorizer() {
-    super(Python.KEY);
+  public MatlabColorizer() {
+    super(Matlab.KEY);
   }
 
   @Override
   public List<Tokenizer> getTokenizers() {
     if (tokenizers == null) {
       tokenizers = Lists.newArrayList();
-      tokenizers.add(new KeywordsTokenizer("<span class=\"k\">", END_TAG, PythonKeyword.keywordValues()));
-      tokenizers.add(new PythonDocStringTokenizer("<span class=\"s\">", END_TAG));
+      tokenizers.add(new KeywordsTokenizer("<span class=\"k\">", END_TAG, MatlabKeyword.keywordValues()));
+      tokenizers.add(new MatlabDocStringTokenizer("<span class=\"s\">", END_TAG));
       tokenizers.add(new StringTokenizer("<span class=\"s\">", END_TAG));
-      tokenizers.add(new PythonDocTokenizer("<span class=\"cd\">", END_TAG));
+      tokenizers.add(new MatlabDocTokenizer("<span class=\"cd\">", END_TAG));
     }
     return tokenizers;
   }

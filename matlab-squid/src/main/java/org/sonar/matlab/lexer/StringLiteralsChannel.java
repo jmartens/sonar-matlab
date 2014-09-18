@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,16 +17,16 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.lexer;
+package org.sonar.matlab.lexer;
 
 import com.sonar.sslr.api.Token;
 import com.sonar.sslr.impl.Lexer;
 import org.sonar.sslr.channel.Channel;
 import org.sonar.sslr.channel.CodeReader;
-import org.sonar.python.api.PythonTokenType;
+import org.sonar.matlab.api.MatlabTokenType;
 
 /**
- * http://docs.python.org/reference/lexical_analysis.html#string-literals
+ * http://docs.matlab.org/reference/lexical_analysis.html#string-literals
  */
 public class StringLiteralsChannel extends Channel<Lexer> {
 
@@ -57,7 +57,7 @@ public class StringLiteralsChannel extends Channel<Lexer> {
         .setColumn(column)
         .setURI(output.getURI())
         .setValueAndOriginalValue(sb.toString())
-        .setType(PythonTokenType.STRING)
+        .setType(MatlabTokenType.STRING)
         .build());
     sb.setLength(0);
     return true;

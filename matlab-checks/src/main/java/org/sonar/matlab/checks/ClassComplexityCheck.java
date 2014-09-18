@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,18 +17,18 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.checks;
+package org.sonar.matlab.checks;
 
 import com.sonar.sslr.api.AstNode;
 import com.sonar.sslr.api.Grammar;
-import org.sonar.python.api.PythonGrammar;
+import org.sonar.matlab.api.MatlabGrammar;
 import org.sonar.squidbridge.checks.ChecksHelper;
 import org.sonar.squidbridge.checks.SquidCheck;
 import org.sonar.check.BelongsToProfile;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.check.RuleProperty;
-import org.sonar.python.api.PythonMetric;
+import org.sonar.matlab.api.MatlabMetric;
 import org.sonar.squidbridge.api.SourceClass;
 
 @Rule(
@@ -46,13 +46,13 @@ public class ClassComplexityCheck extends SquidCheck<Grammar> {
 
   @Override
   public void init() {
-    subscribeTo(PythonGrammar.CLASSDEF);
+    subscribeTo(MatlabGrammar.CLASSDEF);
   }
 
   @Override
   public void leaveNode(AstNode node) {
     SourceClass sourceClass = (SourceClass) getContext().peekSourceCode();
-    int complexity = ChecksHelper.getRecursiveMeasureInt(sourceClass, PythonMetric.COMPLEXITY);
+    int complexity = ChecksHelper.getRecursiveMeasureInt(sourceClass, MatlabMetric.COMPLEXITY);
     if (complexity > maximumClassComplexityThreshold) {
       getContext().createLineViolation(this,
           "Class has a complexity of {0,number,integer} which is greater than {1,number,integer} authorized.",

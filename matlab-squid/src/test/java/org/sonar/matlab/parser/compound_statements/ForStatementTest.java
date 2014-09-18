@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,13 +17,13 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.python.parser.compound_statements;
+package org.sonar.matlab.parser.compound_statements;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.sonar.python.api.PythonGrammar;
-import org.sonar.python.parser.PythonTestUtils;
-import org.sonar.python.parser.RuleTest;
+import org.sonar.matlab.api.MatlabGrammar;
+import org.sonar.matlab.parser.MatlabTestUtils;
+import org.sonar.matlab.parser.RuleTest;
 
 import static org.sonar.sslr.tests.Assertions.assertThat;
 
@@ -31,14 +31,14 @@ public class ForStatementTest extends RuleTest {
 
   @Before
   public void init() {
-    setRootRule(PythonGrammar.FOR_STMT);
+    setRootRule(MatlabGrammar.FOR_STMT);
   }
 
   @Test
   public void ok() {
-    p.getGrammar().rule(PythonGrammar.EXPRLIST).mock();
-    p.getGrammar().rule(PythonGrammar.TESTLIST).mock();
-    p.getGrammar().rule(PythonGrammar.SUITE).mock();
+    p.getGrammar().rule(MatlabGrammar.EXPRLIST).mock();
+    p.getGrammar().rule(MatlabGrammar.TESTLIST).mock();
+    p.getGrammar().rule(MatlabGrammar.SUITE).mock();
 
     assertThat(p).matches("for EXPRLIST in TESTLIST : SUITE");
     assertThat(p).matches("for EXPRLIST in TESTLIST : SUITE else : SUITE");
@@ -46,8 +46,8 @@ public class ForStatementTest extends RuleTest {
 
   @Test
   public void realLife() {
-    assertThat(p).matches(PythonTestUtils.appendNewLine("for i in [0,2] : pass"));
-    assertThat(p).matches(PythonTestUtils.appendNewLine("for x in [0,10] : print(x)"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("for i in [0,2] : pass"));
+    assertThat(p).matches(MatlabTestUtils.appendNewLine("for x in [0,10] : print(x)"));
   }
 
 }

@@ -1,5 +1,5 @@
 /*
- * SonarQube Python Plugin
+ * SonarQube Matlab Plugin
  * Copyright (C) 2011 SonarSource and Waleri Enns
  * dev@sonar.codehaus.org
  *
@@ -17,7 +17,7 @@
  * License along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02
  */
-package org.sonar.plugins.python.cpd;
+package org.sonar.plugins.matlab.cpd;
 
 import net.sourceforge.pmd.cpd.SourceCode;
 import net.sourceforge.pmd.cpd.TokenEntry;
@@ -31,14 +31,14 @@ import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
 
-public class PythonTokenizerTest {
+public class MatlabTokenizerTest {
 
   @Test
   public void shouldWorkOnValidInput() throws URISyntaxException {
-    File file = new File(getClass().getResource("/org/sonar/plugins/python/code_chunks_2.py").toURI());
+    File file = new File(getClass().getResource("/org/sonar/plugins/matlab/code_chunks_2.py").toURI());
     SourceCode source = new SourceCode(new SourceCode.FileCodeLoader(file, "key"));
     Tokens cpdTokens = new Tokens();
-    PythonTokenizer tokenizer = new PythonTokenizer(Charset.forName("UTF-8"));
+    MatlabTokenizer tokenizer = new MatlabTokenizer(Charset.forName("UTF-8"));
     tokenizer.tokenize(source, cpdTokens);
     List<TokenEntry> list = cpdTokens.getTokens();
     assertThat(list.size()).isEqualTo(88);
