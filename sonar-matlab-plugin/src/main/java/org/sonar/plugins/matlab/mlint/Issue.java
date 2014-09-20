@@ -24,20 +24,18 @@ class Issue {
   private final String filename;
   private final int line;
   private final String ruleId;
-  private final String objname;
   private final String descr;
 
-  Issue(String filename, int line, String ruleId, String objname, String descr) {
+  Issue(String filename, int line, String ruleId, String descr) {
     this.filename = filename;
     this.line = line;
     this.ruleId = ruleId;
-    this.objname = objname;
     this.descr = descr;
   }
 
   @Override
   public String toString() {
-    return "(" + filename + ", " + line + ", " + ruleId + ", " + objname + ", " + descr + ")";
+    return "(" + filename + ", " + line + ", " + ruleId + ", " + descr + ")";
   }
 
   String getFilename() {
@@ -50,10 +48,6 @@ class Issue {
 
   String getRuleId() {
     return ruleId;
-  }
-
-  String getObjname() {
-    return objname;
   }
 
   String getDescr() {

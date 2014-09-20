@@ -58,14 +58,14 @@ public class MlintIssuesAnalyzer {
     .build();
 
   private static final String FALLBACK_MLINT = "mlint";
-  private static final Pattern PATTERN = Pattern.compile("(.+):([0-9]+): \\[(.*)\\] (.*)");
+  private static final Pattern PATTERN = Pattern.compile("^L\\s(\\d+)\\s\\(C\\s(\\d+)\\-?(\\d+)?\\)\\:\\s(\\w+)\\:\\s(.*)$");
 
   private String mlint = null;
   private String mlintConfigParam = null;
   private MlintArguments mlintArguments;
 
   MlintIssuesAnalyzer(String mlintPath, String mlintConfigPath) {
-    this(mlintPath, mlintConfigPath, new MlintArguments(Command.create(mlintPathWithDefault(mlintPath)).addArgument("--version")));
+    this(mlintPath, mlintConfigPath, new MlintArguments(Command.create(mlintPathWithDefault(mlintPath))));
   }
 
   MlintIssuesAnalyzer(String mlintPath, String mlintConfigPath, MlintArguments arguments) {
@@ -112,12 +112,13 @@ public class MlintIssuesAnalyzer {
       LOG.warn("Content of the error stream: \n\"{}\"", StringUtils.join(stdErr.getData(), "\n"));
     }
 
-    Files.write(StringUtils.join(stdOut.getData(), "\n"), out, charset);
+    Files.write(StringUtils.join(stdErr.getData(), "\n"), out, charset);
 
-    return parseOutput(stdOut.getData());
+    // mlint seems to write everything to sdtout instead of stderr... sigh
+    return parseOutput(stdErr.getData(), path);
   }
 
-  protected List<Issue> parseOutput(List<String> lines) {
+  protected List<Issue> parseOutput(List<String> lines, String path) {
     // Parse the output of mlint. Example of the format:
     //
     // complexity/code_chunks.py:62: [W0104, list_compr] Statement seems to have no effect
@@ -137,19 +138,12 @@ public class MlintIssuesAnalyzer {
         if (line.length() > 0) {
           if (!isDetail(line)) {
             Matcher m = PATTERN.matcher(line);
-            if (m.matches() && m.groupCount() == 4) {
-              filename = m.group(1);
-              linenr = Integer.valueOf(m.group(2));
-              String[] parts = m.group(3).split(",");
-
-              ruleid = ruleId(parts[0].trim());
-
-              if (parts.length == 2) {
-                objname = parts[1].trim();
-              }
-
-              descr = m.group(4);
-              issues.add(new Issue(filename, linenr, ruleid, objname, descr));
+            if (m.matches() && m.groupCount() >= 4) {
+              filename = path;
+              linenr = Integer.valueOf(m.group(1));
+              ruleid = m.group(4);
+              descr = m.group(5);
+              issues.add(new Issue(filename, linenr, ruleid, descr));
             } else {
               LOG.debug("Cannot parse the line: {}", line);
             }
