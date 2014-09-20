@@ -4,7 +4,7 @@
 		<key>MSHHH</key>
 		<configKey>MSHHH</configKey>
 		<name>MSHHH</name>
-		<priority>INFO</priority>
+		<priority>BLOCKER</priority>
 		<description>
 			<![CDATA[this is used for %#ok and should never be seen!]]>
 		</description>
@@ -13,7 +13,7 @@
 		<key>BAIL</key>
 		<configKey>BAIL</configKey>
 		<name>BAIL</name>
-		<priority>INFO</priority>
+		<priority>BLOCKER</priority>
 		<description>
 			<![CDATA[done with run due to error]]>
 		</description>
@@ -31,7 +31,7 @@
 		<key>BDLEX</key>
 		<configKey>BDLEX</configKey>
 		<name>BDLEX</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: lexer returns unknown token.]]>
 		</description>
@@ -40,7 +40,7 @@
 		<key>TMMSG</key>
 		<configKey>TMMSG</configKey>
 		<name>TMMSG</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[More than 50,000 Code Analyzer messages were generated, leading to some being deleted.]]>
 		</description>
@@ -49,7 +49,7 @@
 		<key>TMNOD</key>
 		<configKey>TMNOD</configKey>
 		<name>TMNOD</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer node table exceeded due to complexity of this program.]]>
 		</description>
@@ -58,7 +58,7 @@
 		<key>MXASET</key>
 		<configKey>MXASET</configKey>
 		<name>MXASET</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Expression is too complex for code analysis to complete.]]>
 		</description>
@@ -67,7 +67,7 @@
 		<key>NOMEM</key>
 		<configKey>NOMEM</configKey>
 		<name>NOMEM</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer has run out of memory.]]>
 		</description>
@@ -76,7 +76,7 @@
 		<key>INERR</key>
 		<configKey>INERR</configKey>
 		<name>INERR</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[An internal Code Analyzer consistency check has failed (Code Analyzer bug!).]]>
 		</description>
@@ -85,7 +85,7 @@
 		<key>XJOIN</key>
 		<configKey>XJOIN</configKey>
 		<name>XJOIN</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected JOIN.]]>
 		</description>
@@ -94,7 +94,7 @@
 		<key>NULLA</key>
 		<configKey>NULLA</configKey>
 		<name>NULLA</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: Null pointer in ASET.]]>
 		</description>
@@ -103,7 +103,7 @@
 		<key>XOTHR</key>
 		<configKey>XOTHR</configKey>
 		<name>XOTHR</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected OTHERWISE.]]>
 		</description>
@@ -112,7 +112,7 @@
 		<key>XELSE</key>
 		<configKey>XELSE</configKey>
 		<name>XELSE</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected ELSE.]]>
 		</description>
@@ -121,7 +121,7 @@
 		<key>XCASE</key>
 		<configKey>XCASE</configKey>
 		<name>XCASE</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected CASE.]]>
 		</description>
@@ -130,7 +130,7 @@
 		<key>XCTCH</key>
 		<configKey>XCTCH</configKey>
 		<name>XCTCH</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected CATCH.]]>
 		</description>
@@ -139,7 +139,7 @@
 		<key>TOPLP</key>
 		<configKey>TOPLP</configKey>
 		<name>TOPLP</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected left parenthesis.]]>
 		</description>
@@ -148,7 +148,7 @@
 		<key>TOPCL</key>
 		<configKey>TOPCL</configKey>
 		<name>TOPCL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: call at top level.]]>
 		</description>
@@ -157,7 +157,7 @@
 		<key>TMPAR</key>
 		<configKey>TMPAR</configKey>
 		<name>TMPAR</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: multiple parents for node.]]>
 		</description>
@@ -166,7 +166,7 @@
 		<key>XTABL</key>
 		<configKey>XTABL</configKey>
 		<name>XTABL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: table format error.]]>
 		</description>
@@ -175,7 +175,7 @@
 		<key>XID</key>
 		<configKey>XID</configKey>
 		<name>XID</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: invalid ID index.]]>
 		</description>
@@ -184,7 +184,7 @@
 		<key>XIDP</key>
 		<configKey>XIDP</configKey>
 		<name>XIDP</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: ID points to missing entry.]]>
 		</description>
@@ -193,7 +193,7 @@
 		<key>XSTID</key>
 		<configKey>XSTID</configKey>
 		<name>XSTID</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: symbol table link is bad.]]>
 		</description>
@@ -202,7 +202,7 @@
 		<key>XSTPT</key>
 		<configKey>XSTPT</configKey>
 		<name>XSTPT</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: symbol table list error.]]>
 		</description>
@@ -211,7 +211,7 @@
 		<key>XNOU</key>
 		<configKey>XNOU</configKey>
 		<name>XNOU</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: missing use in table.]]>
 		</description>
@@ -220,7 +220,7 @@
 		<key>XQUOT</key>
 		<configKey>XQUOT</configKey>
 		<name>XQUOT</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected quote in table.]]>
 		</description>
@@ -229,7 +229,7 @@
 		<key>NOUSE</key>
 		<configKey>NOUSE</configKey>
 		<name>NOUSE</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: Cannot find source of use conflict.]]>
 		</description>
@@ -238,7 +238,7 @@
 		<key>NOLST</key>
 		<configKey>NOLST</configKey>
 		<name>NOLST</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: missing list entry.]]>
 		</description>
@@ -247,7 +247,7 @@
 		<key>NONUK</key>
 		<configKey>NONUK</configKey>
 		<name>NONUK</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected need to remove quote.]]>
 		</description>
@@ -256,7 +256,7 @@
 		<key>NODS</key>
 		<configKey>NODS</configKey>
 		<name>NODS</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: data structure corruption.]]>
 		</description>
@@ -265,7 +265,7 @@
 		<key>XVAR2</key>
 		<configKey>XVAR2</configKey>
 		<name>XVAR2</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: linking var twice.]]>
 		</description>
@@ -274,7 +274,7 @@
 		<key>XCALL</key>
 		<configKey>XCALL</configKey>
 		<name>XCALL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected CALL.]]>
 		</description>
@@ -283,7 +283,7 @@
 		<key>XDCAL</key>
 		<configKey>XDCAL</configKey>
 		<name>XDCAL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: unexpected DCALL.]]>
 		</description>
@@ -292,7 +292,7 @@
 		<key>XSB2E</key>
 		<configKey>XSB2E</configKey>
 		<name>XSB2E</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: subscript seen too early.]]>
 		</description>
@@ -301,7 +301,7 @@
 		<key>XDOPE</key>
 		<configKey>XDOPE</configKey>
 		<name>XDOPE</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: dope field seen for non-ID.]]>
 		</description>
@@ -310,7 +310,7 @@
 		<key>XDUAL</key>
 		<configKey>XDUAL</configKey>
 		<name>XDUAL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: Dual data structure error.]]>
 		</description>
@@ -319,7 +319,7 @@
 		<key>XFOR</key>
 		<configKey>XFOR</configKey>
 		<name>XFOR</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: badly constructed FOR.]]>
 		</description>
@@ -328,7 +328,7 @@
 		<key>XUPLV</key>
 		<configKey>XUPLV</configKey>
 		<name>XUPLV</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: missing list in uplevel.]]>
 		</description>
@@ -337,7 +337,7 @@
 		<key>UPFCN</key>
 		<configKey>UPFCN</configKey>
 		<name>UPFCN</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: uplevel of function defn.]]>
 		</description>
@@ -346,7 +346,7 @@
 		<key>XTREE</key>
 		<configKey>XTREE</configKey>
 		<name>XTREE</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: bad parse tree.]]>
 		</description>
@@ -355,7 +355,7 @@
 		<key>XTRCL</key>
 		<configKey>XTRCL</configKey>
 		<name>XTRCL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: bad tree turning to call.]]>
 		</description>
@@ -364,7 +364,7 @@
 		<key>XMISS</key>
 		<configKey>XMISS</configKey>
 		<name>XMISS</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: no missing entries in scripts.]]>
 		</description>
@@ -373,7 +373,7 @@
 		<key>XOUT</key>
 		<configKey>XOUT</configKey>
 		<name>XOUT</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Code Analyzer bug: bad outer scope entry.]]>
 		</description>
@@ -391,7 +391,7 @@
 		<key>QUIT</key>
 		<configKey>QUIT</configKey>
 		<name>QUIT</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Earlier syntax errors confused Code Analyzer (or a possible Code Analyzer bug).]]>
 		</description>
@@ -400,7 +400,7 @@
 		<key>NOSPC</key>
 		<configKey>NOSPC</configKey>
 		<name>NOSPC</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[File <FILE> is too large or complex to analyze.]]>
 		</description>
@@ -409,7 +409,7 @@
 		<key>MBIG</key>
 		<configKey>MBIG</configKey>
 		<name>MBIG</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[File <FILE> is too big for Code Analyzer to handle.]]>
 		</description>
@@ -418,7 +418,7 @@
 		<key>NOFIL</key>
 		<configKey>NOFIL</configKey>
 		<name>NOFIL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[File <FILE> cannot be opened for reading.]]>
 		</description>
@@ -427,7 +427,7 @@
 		<key>NOFWR</key>
 		<configKey>NOFWR</configKey>
 		<name>NOFWR</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[File <FILE> cannot be opened for writing.]]>
 		</description>
@@ -436,7 +436,7 @@
 		<key>MDOTM</key>
 		<configKey>MDOTM</configKey>
 		<name>MDOTM</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Filename <FILE> must be a valid MATLAB code file.]]>
 		</description>
@@ -445,7 +445,7 @@
 		<key>BDFIL</key>
 		<configKey>BDFIL</configKey>
 		<name>BDFIL</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Filename <FILE> is not formed from a valid MATLAB identifier.]]>
 		</description>
@@ -454,7 +454,7 @@
 		<key>RDERR</key>
 		<configKey>RDERR</configKey>
 		<name>RDERR</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Unable to read file <FILE>.]]>
 		</description>
@@ -463,7 +463,7 @@
 		<key>MCDIR</key>
 		<configKey>MCDIR</configKey>
 		<name>MCDIR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Class name <name> and @directory name do not agree: <FILE>.]]>
 		</description>
@@ -472,7 +472,7 @@
 		<key>MCFIL</key>
 		<configKey>MCFIL</configKey>
 		<name>MCFIL</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Class name <name> and file name do not agree: <file>.]]>
 		</description>
@@ -481,7 +481,7 @@
 		<key>CFERR</key>
 		<configKey>CFERR</configKey>
 		<name>CFERR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Cannot open or read the Code Analyzer settings from file <FILE>. Using default settings instead.]]>
 		</description>
@@ -490,7 +490,7 @@
 		<key>BDOPT</key>
 		<configKey>BDOPT</configKey>
 		<name>BDOPT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Option <name> is ignored because it is invalid.]]>
 		</description>
@@ -553,7 +553,7 @@
 		<key>REDEF</key>
 		<configKey>REDEF</configKey>
 		<name>REDEF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[<name> might be used incompatibly or redefined.]]>
 		</description>
@@ -589,7 +589,7 @@
 		<key>MDEEP</key>
 		<configKey>MDEEP</configKey>
 		<name>MDEEP</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Parentheses, brackets, and braces are nested too deeply.]]>
 		</description>
@@ -598,7 +598,7 @@
 		<key>DEEPC</key>
 		<configKey>DEEPC</configKey>
 		<name>DEEPC</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Block comments are nested too deeply.]]>
 		</description>
@@ -607,7 +607,7 @@
 		<key>DEEPN</key>
 		<configKey>DEEPN</configKey>
 		<name>DEEPN</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Functions are nested too deeply.]]>
 		</description>
@@ -616,7 +616,7 @@
 		<key>DEEPS</key>
 		<configKey>DEEPS</configKey>
 		<name>DEEPS</name>
-		<priority>MINOR</priority>
+		<priority>CRITICAL</priority>
 		<description>
 			<![CDATA[Statements are nested too deeply.]]>
 		</description>
@@ -634,7 +634,7 @@
 		<key>TWOCM</key>
 		<configKey>TWOCM</configKey>
 		<name>TWOCM</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A comma cannot immediately follow another comma.]]>
 		</description>
@@ -643,7 +643,7 @@
 		<key>ROWLN</key>
 		<configKey>ROWLN</configKey>
 		<name>ROWLN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[All matrix rows must be the same length.]]>
 		</description>
@@ -652,7 +652,7 @@
 		<key>COLND</key>
 		<configKey>COLND</configKey>
 		<name>COLND</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[END or Colon can only be used to index arrays. This might be an incorrect use.]]>
 		</description>
@@ -661,7 +661,7 @@
 		<key>NOCLS</key>
 		<configKey>NOCLS</configKey>
 		<name>NOCLS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[DOT in function name is only valid in methods of a class]]>
 		</description>
@@ -670,7 +670,7 @@
 		<key>GPFST</key>
 		<configKey>GPFST</configKey>
 		<name>GPFST</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A GLOBAL or PERSISTENT declaration must precede first use.]]>
 		</description>
@@ -679,7 +679,7 @@
 		<key>NPERS</key>
 		<configKey>NPERS</configKey>
 		<name>NPERS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A PERSISTENT declaration is not valid in scripts.]]>
 		</description>
@@ -688,7 +688,7 @@
 		<key>DSARG</key>
 		<configKey>DSARG</configKey>
 		<name>DSARG</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The DRANGE function must have 1, 2, or 3 arguments.]]>
 		</description>
@@ -733,7 +733,7 @@
 		<key>CFIG</key>
 		<configKey>CFIG</configKey>
 		<name>CFIG</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The Code Analyzer settings file, <FILE>, has an error on line <line #>.]]>
 		</description>
@@ -742,7 +742,7 @@
 		<key>BADNOT</key>
 		<configKey>BADNOT</configKey>
 		<name>BADNOT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Using ~ to ignore a value is not permitted in this context.]]>
 		</description>
@@ -760,7 +760,7 @@
 		<key>PFRNG</key>
 		<configKey>PFRNG</configKey>
 		<name>PFRNG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The range of a PARFOR statement must be increasing consecutive integers.]]>
 		</description>
@@ -769,7 +769,7 @@
 		<key>PFNST</key>
 		<configKey>PFNST</configKey>
 		<name>PFNST</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[PARFOR or SPMD cannot be used inside another PARFOR loop.]]>
 		</description>
@@ -778,7 +778,7 @@
 		<key>PFDF</key>
 		<configKey>PFDF</configKey>
 		<name>PFDF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[FOR with DRANGE (old PARFOR) cannot be used inside a PARFOR loop.]]>
 		</description>
@@ -787,7 +787,7 @@
 		<key>PFBR</key>
 		<configKey>PFBR</configKey>
 		<name>PFBR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[BREAK and RETURN statements cannot be used inside a PARFOR loop.]]>
 		</description>
@@ -796,7 +796,7 @@
 		<key>PFLD</key>
 		<configKey>PFLD</configKey>
 		<name>PFLD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The LOAD function can only be used to assign an output structure in a PARFOR loop.]]>
 		</description>
@@ -805,7 +805,7 @@
 		<key>PFSV</key>
 		<configKey>PFSV</configKey>
 		<name>PFSV</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[SAVE cannot be called in a PARFOR loop.]]>
 		</description>
@@ -814,7 +814,7 @@
 		<key>PFGP</key>
 		<configKey>PFGP</configKey>
 		<name>PFGP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The GLOBAL or PERSISTENT variable <name> should not be set inside a PARFOR loop.]]>
 		</description>
@@ -823,7 +823,7 @@
 		<key>PFGV</key>
 		<configKey>PFGV</configKey>
 		<name>PFGV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using GLOBAL variable <name> in a PARFOR loop could fail because it accesses a worker machine's global area.]]>
 		</description>
@@ -832,7 +832,7 @@
 		<key>PFEVB</key>
 		<configKey>PFEVB</configKey>
 		<name>PFEVB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using EVALIN('base') or ASSIGNIN('base') inside a PARFOR loop refers to the worker machines' base workspaces.]]>
 		</description>
@@ -841,7 +841,7 @@
 		<key>PFEVC</key>
 		<configKey>PFEVC</configKey>
 		<name>PFEVC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[EVALIN('caller') and ASSIGNIN('caller') are invalid inside of a PARFOR loop.]]>
 		</description>
@@ -850,7 +850,7 @@
 		<key>PFNAIO</key>
 		<configKey>PFNAIO</configKey>
 		<name>PFNAIO</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> with zero input arguments should not be used inside a PARFOR loop.]]>
 		</description>
@@ -859,7 +859,7 @@
 		<key>PFNACK</key>
 		<configKey>PFNACK</configKey>
 		<name>PFNACK</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> should not be used inside a PARFOR loop.]]>
 		</description>
@@ -868,7 +868,7 @@
 		<key>PFUIX</key>
 		<configKey>PFUIX</configKey>
 		<name>PFUIX</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The index variable <name> might be used after the PARFOR loop, but it is unavailable after the loop.]]>
 		</description>
@@ -877,7 +877,7 @@
 		<key>PFOUS</key>
 		<configKey>PFOUS</configKey>
 		<name>PFOUS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The output variable <name> might not be used after the PARFOR loop.]]>
 		</description>
@@ -886,7 +886,7 @@
 		<key>PFIIN</key>
 		<configKey>PFIIN</configKey>
 		<name>PFIIN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The input variable <name> should be initialized before the PARFOR loop.]]>
 		</description>
@@ -895,7 +895,7 @@
 		<key>PFUNK</key>
 		<configKey>PFUNK</configKey>
 		<name>PFUNK</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The PARFOR loop cannot run due to the way variable <name> is used.]]>
 		</description>
@@ -904,7 +904,7 @@
 		<key>PFRIN</key>
 		<configKey>PFRIN</configKey>
 		<name>PFRIN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The reduction variable <name> might not be set before the PARFOR loop.]]>
 		</description>
@@ -913,7 +913,7 @@
 		<key>PFRUS</key>
 		<configKey>PFRUS</configKey>
 		<name>PFRUS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The reduction variable <name> might not be used after the PARFOR loop.]]>
 		</description>
@@ -922,7 +922,7 @@
 		<key>PFPIE</key>
 		<configKey>PFPIE</configKey>
 		<name>PFPIE</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Valid indices for <name> are restricted in PARFOR loops.]]>
 		</description>
@@ -931,7 +931,7 @@
 		<key>PFBNS</key>
 		<configKey>PFBNS</configKey>
 		<name>PFBNS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The entire array or structure <name> is a broadcast variable. This might result in unnecessary communication overhead.]]>
 		</description>
@@ -940,7 +940,7 @@
 		<key>PFSAME</key>
 		<configKey>PFSAME</configKey>
 		<name>PFSAME</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[In a PARFOR loop, variable <name> is indexed in different ways, potentially causing dependencies between iterations.]]>
 		</description>
@@ -949,7 +949,7 @@
 		<key>PFTIN</key>
 		<configKey>PFTIN</configKey>
 		<name>PFTIN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The temporary variable <name> uses a value set outside of the PARFOR loop.]]>
 		</description>
@@ -958,7 +958,7 @@
 		<key>PFBFN</key>
 		<configKey>PFBFN</configKey>
 		<name>PFBFN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The function <NAME> inside a PARFOR loop might not access the correct workspace.]]>
 		</description>
@@ -967,7 +967,7 @@
 		<key>PFIFN</key>
 		<configKey>PFIFN</configKey>
 		<name>PFIFN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The function <NAME> might make an invalid workspace access inside the PARFOR loop.]]>
 		</description>
@@ -976,7 +976,7 @@
 		<key>PFNF</key>
 		<configKey>PFNF</configKey>
 		<name>PFNF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The nested function <NAME> cannot be called from within a PARFOR loop.]]>
 		</description>
@@ -985,7 +985,7 @@
 		<key>PFTUS</key>
 		<configKey>PFTUS</configKey>
 		<name>PFTUS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The temporary variable <name> is used after the PARFOR loop, but its value is not available after the loop.]]>
 		</description>
@@ -994,7 +994,7 @@
 		<key>PFRNC</key>
 		<configKey>PFRNC</configKey>
 		<name>PFRNC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The variable <name> is used like a PARFOR reduction variable, but it has additional (invalid) uses.]]>
 		</description>
@@ -1003,7 +1003,7 @@
 		<key>PFRFH</key>
 		<configKey>PFRFH</configKey>
 		<name>PFRFH</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The PARFOR reduction function <NAME> must either be a function name or a broadcast variable.]]>
 		</description>
@@ -1012,7 +1012,7 @@
 		<key>FORFLG</key>
 		<configKey>FORFLG</configKey>
 		<name>FORFLG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Problems would result if this FOR keyword were replaced by PARFOR.]]>
 		</description>
@@ -1021,7 +1021,7 @@
 		<key>FORPF</key>
 		<configKey>FORPF</configKey>
 		<name>FORPF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This FOR loop might be a candidate for conversion to a PARFOR loop.]]>
 		</description>
@@ -1030,7 +1030,7 @@
 		<key>PFXST</key>
 		<configKey>PFXST</configKey>
 		<name>PFXST</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Changing the loop index <name> is invalid inside a PARFOR loop.]]>
 		</description>
@@ -1039,7 +1039,7 @@
 		<key>PFCODN</key>
 		<configKey>PFCODN</configKey>
 		<name>PFCODN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Because the variable <name> is or contains a distributed or codistributed variable, it is invalid inside a PARFOR loop.]]>
 		</description>
@@ -1048,7 +1048,7 @@
 		<key>PFCODA</key>
 		<configKey>PFCODA</configKey>
 		<name>PFCODA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Because this expression appears to be or contain a distributed or codistributed variable, it is invalid inside a PARFOR loop.]]>
 		</description>
@@ -1057,7 +1057,7 @@
 		<key>PFCMPN</key>
 		<configKey>PFCMPN</configKey>
 		<name>PFCMPN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Because the variable <name> is or contains a Composite, it is invalid inside a PARFOR loop.]]>
 		</description>
@@ -1066,7 +1066,7 @@
 		<key>PFCMPA</key>
 		<configKey>PFCMPA</configKey>
 		<name>PFCMPA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Because this expression appears to be or contain a Composite, it is invalid inside a PARFOR loop.]]>
 		</description>
@@ -1075,7 +1075,7 @@
 		<key>SPDEC</key>
 		<configKey>SPDEC</configKey>
 		<name>SPDEC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The bounds on the number of workers an SPMD block can use must be a positive integer.]]>
 		</description>
@@ -1084,7 +1084,7 @@
 		<key>SPDEC3</key>
 		<configKey>SPDEC3</configKey>
 		<name>SPDEC3</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[An SPMD block can only specify a lower and upper bound for the number of workers to use.]]>
 		</description>
@@ -1093,7 +1093,7 @@
 		<key>SPNST</key>
 		<configKey>SPNST</configKey>
 		<name>SPNST</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[PARFOR or SPMD cannot be used inside an SPMD block.]]>
 		</description>
@@ -1102,7 +1102,7 @@
 		<key>SPRET</key>
 		<configKey>SPRET</configKey>
 		<name>SPRET</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[<reserved word> statement cannot be used inside an SPMD block.]]>
 		</description>
@@ -1111,7 +1111,7 @@
 		<key>SPBRK</key>
 		<configKey>SPBRK</configKey>
 		<name>SPBRK</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The loop containing the BREAK or CONTINUE must be completely contained in the SPMD block.]]>
 		</description>
@@ -1120,7 +1120,7 @@
 		<key>SPLD</key>
 		<configKey>SPLD</configKey>
 		<name>SPLD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[In an SPMD block, the only valid use of the LOAD function is to assign to an output structure.]]>
 		</description>
@@ -1129,7 +1129,7 @@
 		<key>SPSV</key>
 		<configKey>SPSV</configKey>
 		<name>SPSV</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[SAVE cannot be called in an SPMD block.]]>
 		</description>
@@ -1138,7 +1138,7 @@
 		<key>SPGP</key>
 		<configKey>SPGP</configKey>
 		<name>SPGP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Setting the GLOBAL or PERSISTENT variable <name> in an SPMD block might fail because the set happens on a worker machine.]]>
 		</description>
@@ -1147,7 +1147,7 @@
 		<key>SPGV</key>
 		<configKey>SPGV</configKey>
 		<name>SPGV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using the GLOBAL or PERSISTENT variable <name> in an SPMD block might fail because it is accessed on a worker machine.]]>
 		</description>
@@ -1156,7 +1156,7 @@
 		<key>SPEVB</key>
 		<configKey>SPEVB</configKey>
 		<name>SPEVB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using EVALIN('base') or ASSIGNIN('base') inside an SPMD block refers to the worker machines' base workspaces.]]>
 		</description>
@@ -1165,7 +1165,7 @@
 		<key>SPEVC</key>
 		<configKey>SPEVC</configKey>
 		<name>SPEVC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[EVALIN('caller') and ASSIGNIN('caller') are invalid inside of an SPMD block.]]>
 		</description>
@@ -1174,7 +1174,7 @@
 		<key>SPBFN</key>
 		<configKey>SPBFN</configKey>
 		<name>SPBFN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The function <NAME> inside an SPMD block might not access the desired workspace.]]>
 		</description>
@@ -1183,7 +1183,7 @@
 		<key>SPIFN</key>
 		<configKey>SPIFN</configKey>
 		<name>SPIFN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The function <NAME> might make an invalid workspace access inside the SPMD block.]]>
 		</description>
@@ -1192,7 +1192,7 @@
 		<key>SPNF</key>
 		<configKey>SPNF</configKey>
 		<name>SPNF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The nested function <NAME> cannot be called from within an SPMD block.]]>
 		</description>
@@ -1201,7 +1201,7 @@
 		<key>DCMIX</key>
 		<configKey>DCMIX</configKey>
 		<name>DCMIX</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The operator <operator> appears to combine distributed and codistributed values.]]>
 		</description>
@@ -1210,7 +1210,7 @@
 		<key>SPCN</key>
 		<configKey>SPCN</configKey>
 		<name>SPCN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Container <name> should not be used inside an SPMD block because it is hiding a Composite, distributed, or codistributed variable.]]>
 		</description>
@@ -1219,7 +1219,7 @@
 		<key>SPCNC</key>
 		<configKey>SPCNC</configKey>
 		<name>SPCNC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This cell array should not be used inside an SPMD block because it is hiding a Composite, distributed, or codistributed variable.]]>
 		</description>
@@ -1228,7 +1228,7 @@
 		<key>SPICN</key>
 		<configKey>SPICN</configKey>
 		<name>SPICN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The variable <name> contains a hidden Composite, distributed, or codistributed variable and therefore should not be used inside an SPMD block.]]>
 		</description>
@@ -1237,7 +1237,7 @@
 		<key>SPCCO</key>
 		<configKey>SPCCO</configKey>
 		<name>SPCCO</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Because the variable <name> contains a hidden codistributed variable, it should not be used outside an SPMD block.]]>
 		</description>
@@ -1246,7 +1246,7 @@
 		<key>DSPMDN</key>
 		<configKey>DSPMDN</configKey>
 		<name>DSPMDN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> appears to be distributed, but is created inside an SPMD block.]]>
 		</description>
@@ -1255,7 +1255,7 @@
 		<key>DSPMDA</key>
 		<configKey>DSPMDA</configKey>
 		<name>DSPMDA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This expression appears to create a distributed value inside an SPMD block.]]>
 		</description>
@@ -1264,7 +1264,7 @@
 		<key>DCUNK</key>
 		<configKey>DCUNK</configKey>
 		<name>DCUNK</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The codistributed or distributed array static function <name> is unrecognized.]]>
 		</description>
@@ -1273,7 +1273,7 @@
 		<key>FSPMDN</key>
 		<configKey>FSPMDN</configKey>
 		<name>FSPMDN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> appears to be set to a codistributed value outside of an SPMD block.]]>
 		</description>
@@ -1282,7 +1282,7 @@
 		<key>FSPMDA</key>
 		<configKey>FSPMDA</configKey>
 		<name>FSPMDA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This expression appears to create a codistributed value outside of an SPMD block.]]>
 		</description>
@@ -1291,7 +1291,7 @@
 		<key>SPWHOS</key>
 		<configKey>SPWHOS</configKey>
 		<name>SPWHOS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The <NAME> function cannot be called from within an SPMD block.]]>
 		</description>
@@ -1300,7 +1300,7 @@
 		<key>NOEFF</key>
 		<configKey>NOEFF</configKey>
 		<name>NOEFF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The operation or expression <operator> has no evident effect.]]>
 		</description>
@@ -1309,7 +1309,7 @@
 		<key>NUSED</key>
 		<configKey>NUSED</configKey>
 		<name>NUSED</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Global or persistent variable <name> might be unused or unset in this function or script.]]>
 		</description>
@@ -1318,7 +1318,7 @@
 		<key>NOANS</key>
 		<configKey>NOANS</configKey>
 		<name>NOANS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using ANS as a variable is not recommended as ANS is frequently overwritten by MATLAB.]]>
 		</description>
@@ -1327,7 +1327,7 @@
 		<key>PUSE</key>
 		<configKey>PUSE</configKey>
 		<name>PUSE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Persistent variable <name> might be unused.]]>
 		</description>
@@ -1336,7 +1336,7 @@
 		<key>USENS</key>
 		<configKey>USENS</configKey>
 		<name>USENS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Variable <name> is used, but might be unset.]]>
 		</description>
@@ -1345,7 +1345,7 @@
 		<key>SUSENS</key>
 		<configKey>SUSENS</configKey>
 		<name>SUSENS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Variable <name> is used, but might be unset (within a script).]]>
 		</description>
@@ -1354,7 +1354,7 @@
 		<key>SETNU</key>
 		<configKey>SETNU</configKey>
 		<name>SETNU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Variable <name> is set, but might be unused.]]>
 		</description>
@@ -1363,7 +1363,7 @@
 		<key>ASGLU</key>
 		<configKey>ASGLU</configKey>
 		<name>ASGLU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The value assigned here to <name> appears to be unused. Consider replacing it by ~.]]>
 		</description>
@@ -1372,7 +1372,7 @@
 		<key>NASGU</key>
 		<configKey>NASGU</configKey>
 		<name>NASGU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The value assigned to variable <name> might be unused.]]>
 		</description>
@@ -1381,7 +1381,7 @@
 		<key>PREALL</key>
 		<configKey>PREALL</configKey>
 		<name>PREALL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> appears to be preallocated, but preallocation is not recommended here.]]>
 		</description>
@@ -1390,7 +1390,7 @@
 		<key>SNASGU</key>
 		<configKey>SNASGU</configKey>
 		<name>SNASGU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The value assigned to variable <name> might be unused (within the script).]]>
 		</description>
@@ -1399,7 +1399,7 @@
 		<key>NODEF</key>
 		<configKey>NODEF</configKey>
 		<name>NODEF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> might be used before it is defined.]]>
 		</description>
@@ -1408,7 +1408,7 @@
 		<key>INUSD</key>
 		<configKey>INUSD</configKey>
 		<name>INUSD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Input argument <name> might be unused. If this is OK, consider replacing it by ~.]]>
 		</description>
@@ -1417,7 +1417,7 @@
 		<key>VANUS</key>
 		<configKey>VANUS</configKey>
 		<name>VANUS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Input argument 'varargin' might be unused.]]>
 		</description>
@@ -1426,7 +1426,7 @@
 		<key>INUSL</key>
 		<configKey>INUSL</configKey>
 		<name>INUSL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Input argument <name> might be unused, although a later one is used. Consider replacing it by ~.]]>
 		</description>
@@ -1435,7 +1435,7 @@
 		<key>DEFNU</key>
 		<configKey>DEFNU</configKey>
 		<name>DEFNU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The function <name> might be unused.]]>
 		</description>
@@ -1444,7 +1444,7 @@
 		<key>VALST</key>
 		<configKey>VALST</configKey>
 		<name>VALST</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<name> must be the last argument in the argument list.]]>
 		</description>
@@ -1453,7 +1453,7 @@
 		<key>ASGSL</key>
 		<configKey>ASGSL</configKey>
 		<name>ASGSL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Assignment to <name> might be unnecessary.]]>
 		</description>
@@ -1462,7 +1462,7 @@
 		<key>UNRCH</key>
 		<configKey>UNRCH</configKey>
 		<name>UNRCH</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This statement (and possibly following ones) cannot be reached.]]>
 		</description>
@@ -1471,7 +1471,7 @@
 		<key>PROP</key>
 		<configKey>PROP</configKey>
 		<name>PROP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[There is a property named <name>. Did you mean to reference it?]]>
 		</description>
@@ -1480,7 +1480,7 @@
 		<key>CPROP</key>
 		<configKey>CPROP</configKey>
 		<name>CPROP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Confusing function call. Did you mean to reference property <name>?]]>
 		</description>
@@ -1489,7 +1489,7 @@
 		<key>COMNL</key>
 		<configKey>COMNL</configKey>
 		<name>COMNL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Comma before newline might incorrectly suggest row continuation.]]>
 		</description>
@@ -1498,7 +1498,7 @@
 		<key>FXSET</key>
 		<configKey>FXSET</configKey>
 		<name>FXSET</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Loop index <name> is changed inside of a FOR loop.]]>
 		</description>
@@ -1507,7 +1507,7 @@
 		<key>FXUP</key>
 		<configKey>FXUP</configKey>
 		<name>FXUP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Outer loop index <name> is set inside a child function.]]>
 		</description>
@@ -1516,7 +1516,7 @@
 		<key>STRSZ</key>
 		<configKey>STRSZ</configKey>
 		<name>STRSZ</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Comparing two strings that might have different sizes. Use STRCMP.]]>
 		</description>
@@ -1525,7 +1525,7 @@
 		<key>M3COL</key>
 		<configKey>M3COL</configKey>
 		<name>M3COL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using three colons (a:b:c:d) in an expression is probably unintended.]]>
 		</description>
@@ -1534,7 +1534,7 @@
 		<key>BDLOG</key>
 		<configKey>BDLOG</configKey>
 		<name>BDLOG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Operator <operator> is seldom used in a logical context.]]>
 		</description>
@@ -1543,7 +1543,7 @@
 		<key>BDSCA</key>
 		<configKey>BDSCA</configKey>
 		<name>BDSCA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Operator <operator> is seldom used in a scalar context.]]>
 		</description>
@@ -1552,7 +1552,7 @@
 		<key>BDLGI</key>
 		<configKey>BDLGI</configKey>
 		<name>BDLGI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Variable <name> might be set by a nonlogical operator.]]>
 		</description>
@@ -1561,7 +1561,7 @@
 		<key>BDSCI</key>
 		<configKey>BDSCI</configKey>
 		<name>BDSCI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Variable <name> might be set by a nonscalar operator.]]>
 		</description>
@@ -1570,7 +1570,7 @@
 		<key>DUALC</key>
 		<configKey>DUALC</configKey>
 		<name>DUALC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Command <name> might be prematurely ended by comma.]]>
 		</description>
@@ -1579,7 +1579,7 @@
 		<key>RHSFN</key>
 		<configKey>RHSFN</configKey>
 		<name>RHSFN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The expression cannot be assigned to multiple values.]]>
 		</description>
@@ -1588,7 +1588,7 @@
 		<key>STOUT</key>
 		<configKey>STOUT</configKey>
 		<name>STOUT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The function return value <name> might be unset.]]>
 		</description>
@@ -1597,7 +1597,7 @@
 		<key>LTARG</key>
 		<configKey>LTARG</configKey>
 		<name>LTARG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Function <NAME> might be called with too few arguments.]]>
 		</description>
@@ -1606,7 +1606,7 @@
 		<key>GTARG</key>
 		<configKey>GTARG</configKey>
 		<name>GTARG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Function <NAME> might be called with too many arguments.]]>
 		</description>
@@ -1615,7 +1615,7 @@
 		<key>CTPCT</key>
 		<configKey>CTPCT</configKey>
 		<name>CTPCT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The format string might not agree with the argument count.]]>
 		</description>
@@ -1624,7 +1624,7 @@
 		<key>FNAN</key>
 		<configKey>FNAN</configKey>
 		<name>FNAN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Use ISNAN when comparing values to NaN.]]>
 		</description>
@@ -1633,7 +1633,7 @@
 		<key>NOSEM</key>
 		<configKey>NOSEM</configKey>
 		<name>NOSEM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Extra semicolon is unnecessary.]]>
 		</description>
@@ -1642,7 +1642,7 @@
 		<key>NOCOM</key>
 		<configKey>NOCOM</configKey>
 		<name>NOCOM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Extra comma is unnecessary.]]>
 		</description>
@@ -1651,7 +1651,7 @@
 		<key>TRYNC</key>
 		<configKey>TRYNC</configKey>
 		<name>TRYNC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[TRY statement should have a CATCH statement to check for unexpected errors.]]>
 		</description>
@@ -1660,7 +1660,7 @@
 		<key>NO4LP</key>
 		<configKey>NO4LP</configKey>
 		<name>NO4LP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Parentheses are not needed in a FOR statement.]]>
 		</description>
@@ -1669,7 +1669,7 @@
 		<key>FNDEF</key>
 		<configKey>FNDEF</configKey>
 		<name>FNDEF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Function name <name> is known to MATLAB by its file name: <file>.]]>
 		</description>
@@ -1678,7 +1678,7 @@
 		<key>CTCH</key>
 		<configKey>CTCH</configKey>
 		<name>CTCH</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Best practice is for CATCH to be followed by an identifier that gets the error information.]]>
 		</description>
@@ -1696,7 +1696,7 @@
 		<key>CTORO</key>
 		<configKey>CTORO</configKey>
 		<name>CTORO</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Class constructors must be declared with at least one output argument.]]>
 		</description>
@@ -1705,7 +1705,7 @@
 		<key>NOIN</key>
 		<configKey>NOIN</configKey>
 		<name>NOIN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Method <name> is not Static, so it must have at least one input argument.]]>
 		</description>
@@ -1714,7 +1714,7 @@
 		<key>MANU</key>
 		<configKey>MANU</configKey>
 		<name>MANU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Argument <name> is unused. Should this method be Static?]]>
 		</description>
@@ -1723,7 +1723,7 @@
 		<key>MHERM</key>
 		<configKey>MHERM</configKey>
 		<name>MHERM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Parenthesize the multiplication of <name> and its transpose to ensure the result is Hermitian.]]>
 		</description>
@@ -1732,7 +1732,7 @@
 		<key>MOCUP</key>
 		<configKey>MOCUP</configKey>
 		<name>MOCUP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> is an uplevel variable, invalid in a function called by onCleanup.]]>
 		</description>
@@ -1741,7 +1741,7 @@
 		<key>MDUPC</key>
 		<configKey>MDUPC</configKey>
 		<name>MDUPC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The case value <name> is a duplicate of one on line <line #>.]]>
 		</description>
@@ -1750,7 +1750,7 @@
 		<key>MNANC</key>
 		<configKey>MNANC</configKey>
 		<name>MNANC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[NaN never compares equal to any value, so this case will never be matched.]]>
 		</description>
@@ -1759,7 +1759,7 @@
 		<key>MULCC</key>
 		<configKey>MULCC</configKey>
 		<name>MULCC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This case cannot be matched due to a call to UPPER or LOWER on the SWITCH value.]]>
 		</description>
@@ -1768,7 +1768,7 @@
 		<key>RMWRN</key>
 		<configKey>RMWRN</configKey>
 		<name>RMWRN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The warning with tag <name> has been removed from MATLAB, so this statement has no effect.]]>
 		</description>
@@ -1777,7 +1777,7 @@
 		<key>UNONC</key>
 		<configKey>UNONC</configKey>
 		<name>UNONC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Assign the onCleanup output argument to a variable. Do not use the tilde operator (~) in place of a variable.]]>
 		</description>
@@ -1786,7 +1786,7 @@
 		<key>CHAIN</key>
 		<configKey>CHAIN</configKey>
 		<name>CHAIN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use (<name> <name> <name>) && (<name> <name> <name>) instead of (<name> <name> <name> <name> <name>) to test if <name> is between <name> and <name>.]]>
 		</description>
@@ -1795,7 +1795,7 @@
 		<key>DISPLAY</key>
 		<configKey>DISPLAY</configKey>
 		<name>DISPLAY</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Overloading DISPLAY is not recommended.]]>
 		</description>
@@ -1804,7 +1804,7 @@
 		<key>SUBSINDEX</key>
 		<configKey>SUBSINDEX</configKey>
 		<name>SUBSINDEX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Do not overload SUBSINDEX for fundamental data types.]]>
 		</description>
@@ -1813,7 +1813,7 @@
 		<key>VARARG</key>
 		<configKey>VARARG</configKey>
 		<name>VARARG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Initialize VARARGOUT with a CELL.]]>
 		</description>
@@ -1822,7 +1822,7 @@
 		<key>SUBSASGN</key>
 		<configKey>SUBSASGN</configKey>
 		<name>SUBSASGN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Output of SUBSASGN must be assigned to a variable.]]>
 		</description>
@@ -1831,7 +1831,7 @@
 		<key>CLEARSCRIPT</key>
 		<configKey>CLEARSCRIPT</configKey>
 		<name>CLEARSCRIPT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[For improved performance, consider not using CLEAR <NAME> within a script.]]>
 		</description>
@@ -1840,7 +1840,7 @@
 		<key>CLEARFUNCTION</key>
 		<configKey>CLEARFUNCTION</configKey>
 		<name>CLEARFUNCTION</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[CLEAR <NAME> should only be used in a script.]]>
 		</description>
@@ -1849,7 +1849,7 @@
 		<key>BRKCONT</key>
 		<configKey>BRKCONT</configKey>
 		<name>BRKCONT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> can only be used in a FOR or WHILE loop..]]>
 		</description>
@@ -1858,7 +1858,7 @@
 		<key>ATTF</key>
 		<configKey>ATTF</configKey>
 		<name>ATTF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The attribute value <name> is unexpected. Use "true" or "false" instead.]]>
 		</description>
@@ -1867,7 +1867,7 @@
 		<key>ATPPP</key>
 		<configKey>ATPPP</configKey>
 		<name>ATPPP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The attribute value <name> is unexpected. Use "public", "private", "protected", or a cell array of meta-classes instead.]]>
 		</description>
@@ -1876,7 +1876,7 @@
 		<key>ATPPI</key>
 		<configKey>ATPPI</configKey>
 		<name>ATPPI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The attribute value <name> is unexpected. Use "public", "private", "protected", "immutable", or a cell array of meta-classes instead.]]>
 		</description>
@@ -1885,7 +1885,7 @@
 		<key>ATCA</key>
 		<configKey>ATCA</configKey>
 		<name>ATCA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The attribute value <name> is unexpected. Use a cell array of meta-class objects instead.]]>
 		</description>
@@ -1912,7 +1912,7 @@
 		<key>ATNCA</key>
 		<configKey>ATNCA</configKey>
 		<name>ATNCA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Set attribute <name> to a cell array of meta-class objects.]]>
 		</description>
@@ -1921,7 +1921,7 @@
 		<key>ATAS</key>
 		<configKey>ATAS</configKey>
 		<name>ATAS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The attribute value <name> is unexpected. Use a single meta-class object or a cell array of meta-class objects.]]>
 		</description>
@@ -1930,7 +1930,7 @@
 		<key>ATNAS</key>
 		<configKey>ATNAS</configKey>
 		<name>ATNAS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Set attribute <name> to a single meta-class object or a cell array of meta-class objects.]]>
 		</description>
@@ -1939,7 +1939,7 @@
 		<key>ATUNK</key>
 		<configKey>ATUNK</configKey>
 		<name>ATUNK</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Unknown attribute name <name>.]]>
 		</description>
@@ -1957,7 +1957,7 @@
 		<key>ATTOF</key>
 		<configKey>ATTOF</configKey>
 		<name>ATTOF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Setting the class attribute Abstract to false is not recommended.]]>
 		</description>
@@ -1966,7 +1966,7 @@
 		<key>ATTO</key>
 		<configKey>ATTO</configKey>
 		<name>ATTO</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The attribute value <name> is unexpected. Use "true" or "false" instead.]]>
 		</description>
@@ -1993,7 +1993,7 @@
 		<key>MCHV1</key>
 		<configKey>MCHV1</configKey>
 		<name>MCHV1</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Conflict between handle and value class usage (lines <line #> and <line #>).]]>
 		</description>
@@ -2002,7 +2002,7 @@
 		<key>MCHV2</key>
 		<configKey>MCHV2</configKey>
 		<name>MCHV2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Probable conflict between handle and value class usage (lines <line #> and <line #>).]]>
 		</description>
@@ -2011,7 +2011,7 @@
 		<key>MCHV3</key>
 		<configKey>MCHV3</configKey>
 		<name>MCHV3</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Possible conflict between handle and value class usage (lines <line #> and <line #>).]]>
 		</description>
@@ -2020,7 +2020,7 @@
 		<key>MCVC</key>
 		<configKey>MCVC</configKey>
 		<name>MCVC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The class <NAME> has no superclasses, so must be value class (line <line #>).]]>
 		</description>
@@ -2029,7 +2029,7 @@
 		<key>MCHC</key>
 		<configKey>MCHC</configKey>
 		<name>MCHC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The class <name> is derived from a handle class, so must be a handle class (line <line #>).]]>
 		</description>
@@ -2038,7 +2038,7 @@
 		<key>MCEB</key>
 		<configKey>MCEB</configKey>
 		<name>MCEB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The class has an <reserved word> block, so must be a handle class (line <line #>).]]>
 		</description>
@@ -2047,7 +2047,7 @@
 		<key>MCDEL</key>
 		<configKey>MCDEL</configKey>
 		<name>MCDEL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The class has a <NAME> method, so is likely to be a handle class (line <line #>).]]>
 		</description>
@@ -2056,7 +2056,7 @@
 		<key>MCHM</key>
 		<configKey>MCHM</configKey>
 		<name>MCHM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[A property is set in object <NAME>, but the modified object is not used or returned, implying that this class is a handle class (line <line #>).]]>
 		</description>
@@ -2065,7 +2065,7 @@
 		<key>MCVM</key>
 		<configKey>MCVM</configKey>
 		<name>MCVM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Method <NAME> sets a property and returns the modified object, implying that the class is a value class (line <line #>).]]>
 		</description>
@@ -2074,7 +2074,7 @@
 		<key>MCSGP</key>
 		<configKey>MCSGP</configKey>
 		<name>MCSGP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The method <NAME> does not refer to a valid property name.]]>
 		</description>
@@ -2083,7 +2083,7 @@
 		<key>MCSGA</key>
 		<configKey>MCSGA</configKey>
 		<name>MCSGA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Set/Get method <NAME> must be defined in a METHODS block with no attributes.]]>
 		</description>
@@ -2092,7 +2092,7 @@
 		<key>MCS2I</key>
 		<configKey>MCS2I</configKey>
 		<name>MCS2I</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Set Methods must have exactly two inputs.]]>
 		</description>
@@ -2101,7 +2101,7 @@
 		<key>MCS1O</key>
 		<configKey>MCS1O</configKey>
 		<name>MCS1O</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Set Methods must have at most one output.]]>
 		</description>
@@ -2110,7 +2110,7 @@
 		<key>MCG1I</key>
 		<configKey>MCG1I</configKey>
 		<name>MCG1I</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Get methods must have exactly one input.]]>
 		</description>
@@ -2119,7 +2119,7 @@
 		<key>MCG1O</key>
 		<configKey>MCG1O</configKey>
 		<name>MCG1O</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Get methods must have exactly one output.]]>
 		</description>
@@ -2128,7 +2128,7 @@
 		<key>MCPO</key>
 		<configKey>MCPO</configKey>
 		<name>MCPO</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The property <NAME> is observable, which implies the class is a handle class (line <line #>).]]>
 		</description>
@@ -2137,7 +2137,7 @@
 		<key>MCGSA</key>
 		<configKey>MCGSA</configKey>
 		<name>MCGSA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Method <NAME> tries to set or get an abstract property.]]>
 		</description>
@@ -2146,7 +2146,7 @@
 		<key>MCSCN</key>
 		<configKey>MCSCN</configKey>
 		<name>MCSCN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Method <NAME> tries to set a constant property.]]>
 		</description>
@@ -2155,7 +2155,7 @@
 		<key>MCANI</key>
 		<configKey>MCANI</configKey>
 		<name>MCANI</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Abstract property <name> cannot be initialized.]]>
 		</description>
@@ -2164,7 +2164,7 @@
 		<key>MCASC</key>
 		<configKey>MCASC</configKey>
 		<name>MCASC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Abstract property <name> cannot be used in a Sealed class.]]>
 		</description>
@@ -2173,7 +2173,7 @@
 		<key>MCCPI</key>
 		<configKey>MCCPI</configKey>
 		<name>MCCPI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The Constant property <name> needs to be initialized.]]>
 		</description>
@@ -2182,7 +2182,7 @@
 		<key>MCSH</key>
 		<configKey>MCSH</configKey>
 		<name>MCSH</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Method <NAME> has a signature consistent with a handle class (line <line #>).]]>
 		</description>
@@ -2191,7 +2191,7 @@
 		<key>MCSV</key>
 		<configKey>MCSV</configKey>
 		<name>MCSV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Method <NAME> has a signature consistent with a value class (line <line #>).]]>
 		</description>
@@ -2200,7 +2200,7 @@
 		<key>MCCBD</key>
 		<configKey>MCCBD</configKey>
 		<name>MCCBD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The constructor <NAME> must be fully defined in the class definition file.]]>
 		</description>
@@ -2209,7 +2209,7 @@
 		<key>MCPSG</key>
 		<configKey>MCPSG</configKey>
 		<name>MCPSG</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The set/get function <NAME> must be fully defined in the class definition file.]]>
 		</description>
@@ -2218,7 +2218,7 @@
 		<key>MCSCT</key>
 		<configKey>MCSCT</configKey>
 		<name>MCSCT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A call to a superclass constructor must appear at the top level (not conditional) in a constructor.]]>
 		</description>
@@ -2227,7 +2227,7 @@
 		<key>MCSCO</key>
 		<configKey>MCSCO</configKey>
 		<name>MCSCO</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A superclass constructor must be called using the first constructor output argument.]]>
 		</description>
@@ -2236,7 +2236,7 @@
 		<key>MCSCF</key>
 		<configKey>MCSCF</configKey>
 		<name>MCSCF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A superclass constructor must be assigned to the first constructor output argument.]]>
 		</description>
@@ -2245,7 +2245,7 @@
 		<key>MCCBS</key>
 		<configKey>MCCBS</configKey>
 		<name>MCCBS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A superclass constructor is being called, but <NAME> is not a declared superclass name.]]>
 		</description>
@@ -2254,7 +2254,7 @@
 		<key>MCCBU</key>
 		<configKey>MCCBU</configKey>
 		<name>MCCBU</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[This superclass constructor is called after a use of the constructed object.]]>
 		</description>
@@ -2263,7 +2263,7 @@
 		<key>MCCMC</key>
 		<configKey>MCCMC</configKey>
 		<name>MCCMC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The constructor for superclass <NAME> can only be called once.]]>
 		</description>
@@ -2272,7 +2272,7 @@
 		<key>MCSCM</key>
 		<configKey>MCSCM</configKey>
 		<name>MCSCM</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[In this call of a superclass method, <NAME> must match the name of the method in which it is used.]]>
 		</description>
@@ -2281,7 +2281,7 @@
 		<key>MCNPN</key>
 		<configKey>MCNPN</configKey>
 		<name>MCNPN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<name> is referenced but is not a property, method, or event name defined in this class.]]>
 		</description>
@@ -2290,7 +2290,7 @@
 		<key>MCNPR</key>
 		<configKey>MCNPR</configKey>
 		<name>MCNPR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<name> is not a property, but is the target of an assignment.]]>
 		</description>
@@ -2299,7 +2299,7 @@
 		<key>MCCPE</key>
 		<configKey>MCCPE</configKey>
 		<name>MCCPE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Attempting to call a property or event <NAME> as a function.]]>
 		</description>
@@ -2308,7 +2308,7 @@
 		<key>MCSUP</key>
 		<configKey>MCSUP</configKey>
 		<name>MCSUP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[A set method for a non-Dependent property should not access another property (<name>).]]>
 		</description>
@@ -2317,7 +2317,7 @@
 		<key>MCCSP</key>
 		<configKey>MCCSP</configKey>
 		<name>MCCSP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA['<name>.<name>' creates a struct named <name> with a field named <name>, matching the names of the class and constant property.]]>
 		</description>
@@ -2326,7 +2326,7 @@
 		<key>MTMAT</key>
 		<configKey>MTMAT</configKey>
 		<name>MTMAT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The attribute <name> cannot be set more than once.]]>
 		</description>
@@ -2335,7 +2335,7 @@
 		<key>MTAGS</key>
 		<configKey>MTAGS</configKey>
 		<name>MTAGS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Cannot use the <name> attribute when using the <name> attribute.]]>
 		</description>
@@ -2344,7 +2344,7 @@
 		<key>MCSAC</key>
 		<configKey>MCSAC</configKey>
 		<name>MCSAC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[SetAccess cannot be set on Constant properties.]]>
 		</description>
@@ -2353,7 +2353,7 @@
 		<key>MCSNO</key>
 		<configKey>MCSNO</configKey>
 		<name>MCSNO</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Set method's first argument <name> is not returned, implying a handle class.]]>
 		</description>
@@ -2362,7 +2362,7 @@
 		<key>MCAPP</key>
 		<configKey>MCAPP</configKey>
 		<name>MCAPP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The private property <name> cannot be Abstract.]]>
 		</description>
@@ -2371,7 +2371,7 @@
 		<key>MCMSP</key>
 		<configKey>MCMSP</configKey>
 		<name>MCMSP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[The private method <name> cannot be Abstract.]]>
 		</description>
@@ -2389,7 +2389,7 @@
 		<key>MCSWA</key>
 		<configKey>MCSWA</configKey>
 		<name>MCSWA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[A sealed class cannot specify allowed subclasses.]]>
 		</description>
@@ -2398,7 +2398,7 @@
 		<key>MOBSRV</key>
 		<configKey>MOBSRV</configKey>
 		<name>MOBSRV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using SetObservable or GetObservable on a Constant property has no effect.]]>
 		</description>
@@ -2407,7 +2407,7 @@
 		<key>SPERR</key>
 		<configKey>SPERR</configKey>
 		<name>SPERR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[ERROR takes SPRINTF-like arguments directly.]]>
 		</description>
@@ -2416,7 +2416,7 @@
 		<key>SPWRN</key>
 		<configKey>SPWRN</configKey>
 		<name>SPWRN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[WARNING takes SPRINTF-like arguments directly.]]>
 		</description>
@@ -2425,7 +2425,7 @@
 		<key>NCHKOS</key>
 		<configKey>NCHKOS</configKey>
 		<name>NCHKOS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[NARGINCHK does not return any values.]]>
 		</description>
@@ -2434,7 +2434,7 @@
 		<key>NCHKE</key>
 		<configKey>NCHKE</configKey>
 		<name>NCHKE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use NARGOUTCHK without ERROR.]]>
 		</description>
@@ -2443,7 +2443,7 @@
 		<key>WLAST</key>
 		<configKey>WLAST</configKey>
 		<name>WLAST</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[WARNING('') does not reset the warning state. Use LASTWARN('') instead.]]>
 		</description>
@@ -2452,7 +2452,7 @@
 		<key>WNON</key>
 		<configKey>WNON</configKey>
 		<name>WNON</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[WARNING('ON',msgID) is faster than WARNING('ON').]]>
 		</description>
@@ -2461,7 +2461,7 @@
 		<key>WNOFF</key>
 		<configKey>WNOFF</configKey>
 		<name>WNOFF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[WARNING('OFF',msgID) is faster than WARNING('OFF').]]>
 		</description>
@@ -2470,7 +2470,7 @@
 		<key>WNTAG</key>
 		<configKey>WNTAG</configKey>
 		<name>WNTAG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The first argument of WARNING should be a message identifier. Using a message identifier allows users better control over the message.]]>
 		</description>
@@ -2479,7 +2479,7 @@
 		<key>ERTAG</key>
 		<configKey>ERTAG</configKey>
 		<name>ERTAG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The first argument of ERROR should be a message identifier.]]>
 		</description>
@@ -2488,7 +2488,7 @@
 		<key>ERTXT</key>
 		<configKey>ERTXT</configKey>
 		<name>ERTXT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Specify an error message with the message identifier.]]>
 		</description>
@@ -2497,7 +2497,7 @@
 		<key>WTXT</key>
 		<configKey>WTXT</configKey>
 		<name>WTXT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Specify a warning message with the message identifier.]]>
 		</description>
@@ -2506,7 +2506,7 @@
 		<key>STCI</key>
 		<configKey>STCI</configKey>
 		<name>STCI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use STRCMPI(str1,str2) instead of using UPPER/LOWER in a call to STRCMP.]]>
 		</description>
@@ -2515,7 +2515,7 @@
 		<key>STLOW</key>
 		<configKey>STLOW</configKey>
 		<name>STLOW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[There is no need for UPPER/LOWER in this string comparison.]]>
 		</description>
@@ -2524,7 +2524,7 @@
 		<key>STCUL</key>
 		<configKey>STCUL</configKey>
 		<name>STCUL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The string comparison will likely fail due to upper/lower case mismatch.]]>
 		</description>
@@ -2533,7 +2533,7 @@
 		<key>STISA</key>
 		<configKey>STISA</configKey>
 		<name>STISA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider using ISA instead of comparing the class to a string.]]>
 		</description>
@@ -2542,7 +2542,7 @@
 		<key>PFCEL</key>
 		<configKey>PFCEL</configKey>
 		<name>PFCEL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The function <NAME> is apparently called with a cell array (argument <line #>).]]>
 		</description>
@@ -2551,7 +2551,7 @@
 		<key>STRNU</key>
 		<configKey>STRNU</configKey>
 		<name>STRNU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Variable <name>, apparently a structure, is changed but the value seems to be unused.]]>
 		</description>
@@ -2560,7 +2560,7 @@
 		<key>ITERS</key>
 		<configKey>ITERS</configKey>
 		<name>ITERS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The Code Analyzer type analysis may be incorrect here.]]>
 		</description>
@@ -2569,7 +2569,7 @@
 		<key>TLEV</key>
 		<configKey>TLEV</configKey>
 		<name>TLEV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<reserved word> could be very inefficient unless it is a top-level statement in its function.]]>
 		</description>
@@ -2578,7 +2578,7 @@
 		<key>RGXP1</key>
 		<configKey>RGXP1</configKey>
 		<name>RGXP1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using REGEXP(string, pattern, 'ONCE') is faster in this case.]]>
 		</description>
@@ -2587,7 +2587,7 @@
 		<key>TRIM1</key>
 		<configKey>TRIM1</configKey>
 		<name>TRIM1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use STRTRIM(str) instead of nesting FLIPLR and DEBLANK calls.]]>
 		</description>
@@ -2596,7 +2596,7 @@
 		<key>STTOK</key>
 		<configKey>STTOK</configKey>
 		<name>STTOK</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use one call to TEXTSCAN instead of calling STRTOK in a loop.]]>
 		</description>
@@ -2605,7 +2605,7 @@
 		<key>TRIM2</key>
 		<configKey>TRIM2</configKey>
 		<name>TRIM2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use STRTRIM(str) instead of DEBLANK(STRJUST(str,'left')).]]>
 		</description>
@@ -2614,7 +2614,7 @@
 		<key>STNCI</key>
 		<configKey>STNCI</configKey>
 		<name>STNCI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use STRNCMPI(str1,str2) instead of using UPPER/LOWER in a call to STRNCMP.]]>
 		</description>
@@ -2623,7 +2623,7 @@
 		<key>STCCS</key>
 		<configKey>STCCS</configKey>
 		<name>STCCS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[It appears that STRCMPI/STRNCMPI can be replaced by a faster, case sensitive compare.]]>
 		</description>
@@ -2632,7 +2632,7 @@
 		<key>FLUDLR</key>
 		<configKey>FLUDLR</configKey>
 		<name>FLUDLR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[It appears that flipud(fliplr(x)) or fliplr(flipud(x)) can be replaced by a faster rot90(x,2).]]>
 		</description>
@@ -2641,7 +2641,7 @@
 		<key>RPMT0</key>
 		<configKey>RPMT0</configKey>
 		<name>RPMT0</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing repmat(0,x,y) with zeros(x,y) for better performance.]]>
 		</description>
@@ -2650,7 +2650,7 @@
 		<key>RPMT1</key>
 		<configKey>RPMT1</configKey>
 		<name>RPMT1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing repmat(1,x,y) with ones(x,y) for better performance.]]>
 		</description>
@@ -2659,7 +2659,7 @@
 		<key>RPMTN</key>
 		<configKey>RPMTN</configKey>
 		<name>RPMTN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing repmat(NaN,x,y) with NaN(x,y) for better performance.]]>
 		</description>
@@ -2668,7 +2668,7 @@
 		<key>RPMTF</key>
 		<configKey>RPMTF</configKey>
 		<name>RPMTF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing repmat(false,x,y) with false(x,y) for better performance.]]>
 		</description>
@@ -2677,7 +2677,7 @@
 		<key>RPMTT</key>
 		<configKey>RPMTT</configKey>
 		<name>RPMTT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing repmat(true,x,y) with true(x,y) for better performance.]]>
 		</description>
@@ -2686,7 +2686,7 @@
 		<key>RPMTI</key>
 		<configKey>RPMTI</configKey>
 		<name>RPMTI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing repmat(Inf,x,y) with Inf(x,y) for better performance.]]>
 		</description>
@@ -2695,7 +2695,7 @@
 		<key>PSIZE</key>
 		<configKey>PSIZE</configKey>
 		<name>PSIZE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[NUMEL(x) is usually faster than PROD(SIZE(x)).]]>
 		</description>
@@ -2704,7 +2704,7 @@
 		<key>FNDSB</key>
 		<configKey>FNDSB</configKey>
 		<name>FNDSB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[If <name> is an indexed variable, performance can be improved using logical indexing instead of FIND.]]>
 		</description>
@@ -2713,7 +2713,7 @@
 		<key>SFLD</key>
 		<configKey>SFLD</configKey>
 		<name>SFLD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use dynamic fieldnames with structures instead of SETFIELD.]]>
 		</description>
@@ -2722,7 +2722,7 @@
 		<key>GFLD</key>
 		<configKey>GFLD</configKey>
 		<name>GFLD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use dynamic fieldnames with structures instead of GETFIELD.]]>
 		</description>
@@ -2731,7 +2731,7 @@
 		<key>CCAT</key>
 		<configKey>CCAT</configKey>
 		<name>CCAT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[{ A{:} B } can often be replaced by [ A {B}], which can be much faster.]]>
 		</description>
@@ -2740,7 +2740,7 @@
 		<key>AGROW</key>
 		<configKey>AGROW</configKey>
 		<name>AGROW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> appears to change size on every loop iteration. Consider preallocating for speed.]]>
 		</description>
@@ -2749,7 +2749,7 @@
 		<key>SAGROW</key>
 		<configKey>SAGROW</configKey>
 		<name>SAGROW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The variable <name> appears to change size on every loop iteration (within a script). Consider preallocating for speed.]]>
 		</description>
@@ -2758,7 +2758,7 @@
 		<key>ISMT</key>
 		<configKey>ISMT</configKey>
 		<name>ISMT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using ISEMPTY is usually faster than comparing LENGTH to 0.]]>
 		</description>
@@ -2767,7 +2767,7 @@
 		<key>LOGL</key>
 		<configKey>LOGL</configKey>
 		<name>LOGL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use TRUE or FALSE instead of LOGICAL(1) or LOGICAL(0).]]>
 		</description>
@@ -2776,7 +2776,7 @@
 		<key>ST2NM</key>
 		<configKey>ST2NM</configKey>
 		<name>ST2NM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[STR2DOUBLE is faster than STR2NUM; however, STR2DOUBLE operates only on scalars. Use the function that best suits your needs.]]>
 		</description>
@@ -2785,7 +2785,7 @@
 		<key>FLPST</key>
 		<configKey>FLPST</configKey>
 		<name>FLPST</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[For better performance in some cases, use SORT with the 'descend' option.]]>
 		</description>
@@ -2794,7 +2794,7 @@
 		<key>MXFND</key>
 		<configKey>MXFND</configKey>
 		<name>MXFND</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use FIND with the 'first' or 'last' option.]]>
 		</description>
@@ -2803,7 +2803,7 @@
 		<key>EFIND</key>
 		<configKey>EFIND</configKey>
 		<name>EFIND</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[To improve performance, replace ISEMPTY(FIND(X)) with ISEMPTY(FIND( X, 1 )).]]>
 		</description>
@@ -2812,7 +2812,7 @@
 		<key>EXIST</key>
 		<configKey>EXIST</configKey>
 		<name>EXIST</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[EXIST with two input arguments is generally faster and clearer than with one input argument.]]>
 		</description>
@@ -2821,7 +2821,7 @@
 		<key>UDIM</key>
 		<configKey>UDIM</configKey>
 		<name>UDIM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Instead of using transpose ('), consider using a different DIMENSION input argument to <NAME>.]]>
 		</description>
@@ -2830,7 +2830,7 @@
 		<key>ISCHR</key>
 		<configKey>ISCHR</configKey>
 		<name>ISCHR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use ISCHAR instead of comparing the class to 'char'.]]>
 		</description>
@@ -2839,7 +2839,7 @@
 		<key>ISSTR</key>
 		<configKey>ISSTR</configKey>
 		<name>ISSTR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use ISSTRUCT instead of comparing the class to 'struct'.]]>
 		</description>
@@ -2848,7 +2848,7 @@
 		<key>ISLOG</key>
 		<configKey>ISLOG</configKey>
 		<name>ISLOG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use ISLOGICAL instead of comparing the class to 'logical'.]]>
 		</description>
@@ -2857,7 +2857,7 @@
 		<key>ISCEL</key>
 		<configKey>ISCEL</configKey>
 		<name>ISCEL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use ISCELL instead of comparing the class to 'cell'.]]>
 		</description>
@@ -2866,7 +2866,7 @@
 		<key>MIPC1</key>
 		<configKey>MIPC1</configKey>
 		<name>MIPC1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[On Windows platforms, calling COMPUTER with an argument returns 'win32' or 'win64', but never 'PCWIN'.]]>
 		</description>
@@ -2875,7 +2875,7 @@
 		<key>STFLD</key>
 		<configKey>STFLD</configKey>
 		<name>STFLD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[SETFIELD output must be assigned back to the structure.]]>
 		</description>
@@ -2884,7 +2884,7 @@
 		<key>RMFLD</key>
 		<configKey>RMFLD</configKey>
 		<name>RMFLD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RMFIELD output must be assigned back to the structure.]]>
 		</description>
@@ -2893,7 +2893,7 @@
 		<key>FREAD</key>
 		<configKey>FREAD</configKey>
 		<name>FREAD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FREAD(FID,...,'*char') is more efficient than CHAR(FREAD(...)).]]>
 		</description>
@@ -2902,7 +2902,7 @@
 		<key>N2UNI</key>
 		<configKey>N2UNI</configKey>
 		<name>N2UNI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FREAD no longer requires NATIVE2UNICODE in R2006A and later releases.]]>
 		</description>
@@ -2911,7 +2911,7 @@
 		<key>TNMLP</key>
 		<configKey>TNMLP</configKey>
 		<name>TNMLP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider moving the toolbox function <NAME> out of the loop for better performance.]]>
 		</description>
@@ -2920,7 +2920,7 @@
 		<key>IJCL</key>
 		<configKey>IJCL</configKey>
 		<name>IJCL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Replace complex i and j by 1i for speed and improved robustness.]]>
 		</description>
@@ -2929,7 +2929,7 @@
 		<key>MINV</key>
 		<configKey>MINV</configKey>
 		<name>MINV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[INV(A)*b can be slower and less accurate than A\b. Consider using A\b for INV(A)*b or b/A for b*INV(A).]]>
 		</description>
@@ -2938,7 +2938,7 @@
 		<key>LAXES</key>
 		<configKey>LAXES</configKey>
 		<name>LAXES</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Calling AXES(h) in a loop can be slow. Consider moving the call to AXES outside the loop.]]>
 		</description>
@@ -2947,7 +2947,7 @@
 		<key>MMTC</key>
 		<configKey>MMTC</configKey>
 		<name>MMTC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This use of MAT2CELL should probably be replaced by a simpler, faster call to NUM2CELL.]]>
 		</description>
@@ -2956,7 +2956,7 @@
 		<key>MRPBW</key>
 		<configKey>MRPBW</configKey>
 		<name>MRPBW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[To use less memory, replace BWLABEL(bw) by LOGICAL(bw) in a call of REGIONPROPS.]]>
 		</description>
@@ -2965,7 +2965,7 @@
 		<key>SPRIX</key>
 		<configKey>SPRIX</configKey>
 		<name>SPRIX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[This sparse indexing expression is likely to be slow.]]>
 		</description>
@@ -2974,7 +2974,7 @@
 		<key>SPEIG</key>
 		<configKey>SPEIG</configKey>
 		<name>SPEIG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The <NAME> function is called in an invalid manner with a sparse argument.]]>
 		</description>
@@ -2983,7 +2983,7 @@
 		<key>TRSRT</key>
 		<configKey>TRSRT</configKey>
 		<name>TRSRT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Transposing the input to <NAME> is often unnecessary.]]>
 		</description>
@@ -2992,7 +2992,7 @@
 		<key>CCAT1</key>
 		<configKey>CCAT1</configKey>
 		<name>CCAT1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[{ A{I} } can usually be replaced by A(I) or A(I)', which can be much faster.]]>
 		</description>
@@ -3001,7 +3001,7 @@
 		<key>GRIDD</key>
 		<configKey>GRIDD</configKey>
 		<name>GRIDD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider replacing GRIDDATA with SCATTEREDINTERPOLANT for better performance.]]>
 		</description>
@@ -3010,7 +3010,7 @@
 		<key>ISMAT</key>
 		<configKey>ISMAT</configKey>
 		<name>ISMAT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[When checking if a variable is a matrix consider using ISMATRIX.]]>
 		</description>
@@ -3019,7 +3019,7 @@
 		<key>ISROW</key>
 		<configKey>ISROW</configKey>
 		<name>ISROW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[When checking if a variable is a row vector consider using ISROW.]]>
 		</description>
@@ -3028,7 +3028,7 @@
 		<key>ISCOL</key>
 		<configKey>ISCOL</configKey>
 		<name>ISCOL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[When checking if a variable is a column vector consider using ISCOLUMN.]]>
 		</description>
@@ -3037,7 +3037,7 @@
 		<key>EMAO</key>
 		<configKey>EMAO</configKey>
 		<name>EMAO</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation does not support & and ]]>
 		</description>
@@ -3046,7 +3046,7 @@
 		<key>EMCA</key>
 		<configKey>EMCA</configKey>
 		<name>EMCA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation only supports cell operations for varargin and varargout.]]>
 		</description>
@@ -3055,7 +3055,7 @@
 		<key>EMTC</key>
 		<configKey>EMTC</configKey>
 		<name>EMTC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation does not support TRY/CATCH constructions.]]>
 		</description>
@@ -3064,7 +3064,7 @@
 		<key>EMSCR</key>
 		<configKey>EMSCR</configKey>
 		<name>EMSCR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation does not support scripts.]]>
 		</description>
@@ -3073,7 +3073,7 @@
 		<key>EMNST</key>
 		<configKey>EMNST</configKey>
 		<name>EMNST</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation does not support nested functions.]]>
 		</description>
@@ -3082,7 +3082,7 @@
 		<key>EMFH</key>
 		<configKey>EMFH</configKey>
 		<name>EMFH</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation does not support anonymous functions.]]>
 		</description>
@@ -3091,7 +3091,7 @@
 		<key>EMVDF</key>
 		<configKey>EMVDF</configKey>
 		<name>EMVDF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation requires variable <name> to be fully defined before subscripting it.]]>
 		</description>
@@ -3100,7 +3100,7 @@
 		<key>EMGRO</key>
 		<configKey>EMGRO</configKey>
 		<name>EMGRO</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation does not support variable <name> size growth through indexing.]]>
 		</description>
@@ -3109,7 +3109,7 @@
 		<key>EMNSI</key>
 		<configKey>EMNSI</configKey>
 		<name>EMNSI</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[Code generation requires IF and WHILE conditions to be scalar.]]>
 		</description>
@@ -3118,7 +3118,7 @@
 		<key>EMTAG</key>
 		<configKey>EMTAG</configKey>
 		<name>EMTAG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The compilation directive (or pragma) EML is not recommended. Use CODEGEN instead.]]>
 		</description>
@@ -3127,7 +3127,7 @@
 		<key>EMXTR</key>
 		<configKey>EMXTR</configKey>
 		<name>EMXTR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The EML package is not recommended. Use CODER instead.]]>
 		</description>
@@ -3136,7 +3136,7 @@
 		<key>MCAP</key>
 		<configKey>MCAP</configKey>
 		<name>MCAP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[MCC does not permit the ADDPATH function.]]>
 		</description>
@@ -3145,7 +3145,7 @@
 		<key>MCCD</key>
 		<configKey>MCCD</configKey>
 		<name>MCCD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC use of the CD function is problematic.]]>
 		</description>
@@ -3154,7 +3154,7 @@
 		<key>MCPRD</key>
 		<configKey>MCPRD</configKey>
 		<name>MCPRD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[MCC allows only one argument in the PRINTDLG function.]]>
 		</description>
@@ -3163,7 +3163,7 @@
 		<key>MCPRT</key>
 		<configKey>MCPRT</configKey>
 		<name>MCPRT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC prefers Windows applications to call DEPLOYPRINT instead of PRINT, but use PRINT when printing to a file.]]>
 		</description>
@@ -3172,7 +3172,7 @@
 		<key>MCHLP</key>
 		<configKey>MCHLP</configKey>
 		<name>MCHLP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[MCC does not permit the HELP function.]]>
 		</description>
@@ -3181,7 +3181,7 @@
 		<key>MCKBD</key>
 		<configKey>MCKBD</configKey>
 		<name>MCKBD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[MCC does not permit the KEYBOARD function.]]>
 		</description>
@@ -3190,7 +3190,7 @@
 		<key>MCSVP</key>
 		<configKey>MCSVP</configKey>
 		<name>MCSVP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[MCC does not permit the SAVEPATH function.]]>
 		</description>
@@ -3199,7 +3199,7 @@
 		<key>MCMLR</key>
 		<configKey>MCMLR</configKey>
 		<name>MCMLR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC use of the MATLABROOT function is problematic.]]>
 		</description>
@@ -3208,7 +3208,7 @@
 		<key>MCDP</key>
 		<configKey>MCDP</configKey>
 		<name>MCDP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC use of the DEPLOYPRINT function is problematic.]]>
 		</description>
@@ -3217,7 +3217,7 @@
 		<key>MCABF</key>
 		<configKey>MCABF</configKey>
 		<name>MCABF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC use of absolute file names is likely to fail.]]>
 		</description>
@@ -3226,7 +3226,7 @@
 		<key>MCMFL</key>
 		<configKey>MCMFL</configKey>
 		<name>MCMFL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC allows writing .m files, but they cannot be executed by the deployed application.]]>
 		</description>
@@ -3235,7 +3235,7 @@
 		<key>MCTBX</key>
 		<configKey>MCTBX</configKey>
 		<name>MCTBX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC use of toolbox folder file names is likely to fail.]]>
 		</description>
@@ -3244,7 +3244,7 @@
 		<key>MCUOA</key>
 		<configKey>MCUOA</configKey>
 		<name>MCUOA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[MCC requires the program to assign a value to output argument <name>.]]>
 		</description>
@@ -3253,7 +3253,7 @@
 		<key>MCLL</key>
 		<configKey>MCLL</configKey>
 		<name>MCLL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC does not allow C++ files to be read directly using LOADLIBRARY.]]>
 		</description>
@@ -3262,7 +3262,7 @@
 		<key>MCWBF</key>
 		<configKey>MCWBF</configKey>
 		<name>MCWBF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC requires that the first argument of WEBFIGURE not come from FIGURE(n).]]>
 		</description>
@@ -3271,7 +3271,7 @@
 		<key>MCWFL</key>
 		<configKey>MCWFL</configKey>
 		<name>MCWFL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MCC requires that the first argument of WEBFIGURE not come from FIGURE(n) (line <line #>).]]>
 		</description>
@@ -3280,7 +3280,7 @@
 		<key>DSPS</key>
 		<configKey>DSPS</configKey>
 		<name>DSPS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[DISP(SPRINTF(...)) can usually be replaced by FPRINTF(...).]]>
 		</description>
@@ -3289,7 +3289,7 @@
 		<key>SEPEX</key>
 		<configKey>SEPEX</configKey>
 		<name>SEPEX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[For better readability, use newline, semicolon, or comma before this statement.]]>
 		</description>
@@ -3298,7 +3298,7 @@
 		<key>NBRAK</key>
 		<configKey>NBRAK</configKey>
 		<name>NBRAK</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use of brackets [] is unnecessary. Use parentheses to group, if needed.]]>
 		</description>
@@ -3307,7 +3307,7 @@
 		<key>ALIGN</key>
 		<configKey>ALIGN</configKey>
 		<name>ALIGN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<reserved word> might not be aligned with its matching END (line <line #>).]]>
 		</description>
@@ -3316,7 +3316,7 @@
 		<key>AND2</key>
 		<configKey>AND2</configKey>
 		<name>AND2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use && instead of & as the AND operator in (scalar) conditional statements.]]>
 		</description>
@@ -3325,7 +3325,7 @@
 		<key>OR2</key>
 		<configKey>OR2</configKey>
 		<name>OR2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Use ]]>
 		</description>
@@ -3334,7 +3334,7 @@
 		<key>NOPTS</key>
 		<configKey>NOPTS</configKey>
 		<name>NOPTS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Terminate statement with semicolon to suppress output (within a script).]]>
 		</description>
@@ -3343,7 +3343,7 @@
 		<key>NOPRT</key>
 		<configKey>NOPRT</configKey>
 		<name>NOPRT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Terminate statement with semicolon to suppress output (in functions).]]>
 		</description>
@@ -3352,7 +3352,7 @@
 		<key>VUNUS</key>
 		<configKey>VUNUS</configKey>
 		<name>VUNUS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<operator> produces a value that might be unused.]]>
 		</description>
@@ -3361,7 +3361,7 @@
 		<key>LNGNM</key>
 		<configKey>LNGNM</configKey>
 		<name>LNGNM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The name <name> has been truncated to 63 characters.]]>
 		</description>
@@ -3370,7 +3370,7 @@
 		<key>MFAMB</key>
 		<configKey>MFAMB</configKey>
 		<name>MFAMB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Code Analyzer cannot determine whether <name> is a variable or a function, and assumes it is a function.]]>
 		</description>
@@ -3379,7 +3379,7 @@
 		<key>MSNU</key>
 		<configKey>MSNU</configKey>
 		<name>MSNU</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[A Code Analyzer message was once suppressed here, but the message is no longer generated.]]>
 		</description>
@@ -3388,7 +3388,7 @@
 		<key>DNNW</key>
 		<configKey>DNNW</configKey>
 		<name>DNNW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[DATENUM(NOW) can be replaced by NOW.]]>
 		</description>
@@ -3397,7 +3397,7 @@
 		<key>LIC3</key>
 		<configKey>LIC3</configKey>
 		<name>LIC3</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[In test files, use "qeLicense" instead of LICENSE.]]>
 		</description>
@@ -3406,7 +3406,7 @@
 		<key>APWT</key>
 		<configKey>APWT</configKey>
 		<name>APWT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[In test files, use "qePoll" instead of APWAIT.]]>
 		</description>
@@ -3415,7 +3415,7 @@
 		<key>PRTCAL</key>
 		<configKey>PRTCAL</configKey>
 		<name>PRTCAL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Terminate call to <NAME> with semicolon to suppress output to command window.]]>
 		</description>
@@ -3424,7 +3424,7 @@
 		<key>NCOMMA</key>
 		<configKey>NCOMMA</configKey>
 		<name>NCOMMA</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Best practice is to separate output variables with commas.]]>
 		</description>
@@ -3433,7 +3433,7 @@
 		<key>NSTMT</key>
 		<configKey>NSTMT</configKey>
 		<name>NSTMT</name>
-		<priority>INFO</priority>
+		<priority>BLOCKER</priority>
 		<description>
 			<![CDATA[The function <name> has <line #> statements.]]>
 		</description>
@@ -3442,7 +3442,7 @@
 		<key>NSSMT</key>
 		<configKey>NSSMT</configKey>
 		<name>NSSMT</name>
-		<priority>INFO</priority>
+		<priority>BLOCKER</priority>
 		<description>
 			<![CDATA[This script has <line #> statements.]]>
 		</description>
@@ -3451,7 +3451,7 @@
 		<key>CABE</key>
 		<configKey>CABE</configKey>
 		<name>CABE</name>
-		<priority>INFO</priority>
+		<priority>BLOCKER</priority>
 		<description>
 			<![CDATA[The McCabe complexity of <name> is <line #>.]]>
 		</description>
@@ -3460,7 +3460,7 @@
 		<key>SCABE</key>
 		<configKey>SCABE</configKey>
 		<name>SCABE</name>
-		<priority>INFO</priority>
+		<priority>BLOCKER</priority>
 		<description>
 			<![CDATA[The McCabe complexity is <line #>.]]>
 		</description>
@@ -3469,7 +3469,7 @@
 		<key>LERR</key>
 		<configKey>LERR</configKey>
 		<name>LERR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[LASTERR and LASTERROR are not recommended. Use an identifier on the CATCH block instead.]]>
 		</description>
@@ -3478,7 +3478,7 @@
 		<key>EVLC</key>
 		<configKey>EVLC</configKey>
 		<name>EVLC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Using EVAL and EVALC with two arguments is not recommended. Use TRY/CATCH instead.]]>
 		</description>
@@ -3487,7 +3487,7 @@
 		<key>RAND</key>
 		<configKey>RAND</configKey>
 		<name>RAND</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RAND and RANDN will not accept 'seed', 'state', or 'twister' in a future release.]]>
 		</description>
@@ -3496,7 +3496,7 @@
 		<key>NOV6</key>
 		<configKey>NOV6</configKey>
 		<name>NOV6</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[The 'v6' flag will be removed in <NAME> in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -3505,7 +3505,7 @@
 		<key>V6ON</key>
 		<configKey>V6ON</configKey>
 		<name>V6ON</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[USEV6PLOTAPI('on') will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -3514,7 +3514,7 @@
 		<key>HOUGH</key>
 		<configKey>HOUGH</configKey>
 		<name>HOUGH</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[HOUGH(BW,'ThetaResolution',VAL) is not recommended. Use HOUGH(BW,'Theta',-90:VAL:(90-VAL) ) instead.]]>
 		</description>
@@ -3523,7 +3523,7 @@
 		<key>FROPT</key>
 		<configKey>FROPT</configKey>
 		<name>FROPT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Option <NAME> will be removed in a future release. Use <name> instead.]]>
 		</description>
@@ -3532,7 +3532,7 @@
 		<key>FROPTX</key>
 		<configKey>FROPTX</configKey>
 		<name>FROPTX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Option <NAME> will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -3541,7 +3541,7 @@
 		<key>DPSD</key>
 		<configKey>DPSD</configKey>
 		<name>DPSD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> is not recommended. Use <NAME> instead.]]>
 		</description>
@@ -3550,7 +3550,7 @@
 		<key>VRRPS</key>
 		<configKey>VRRPS</configKey>
 		<name>VRRPS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[VIDEOREADER.ISPLATFORMSUPPORTED has been removed. VIDEOREADER is now supported on all platforms.]]>
 		</description>
@@ -3559,7 +3559,7 @@
 		<key>DMMR</key>
 		<configKey>DMMR</configKey>
 		<name>DMMR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[<NAME> has been removed. Use <name> instead.]]>
 		</description>
@@ -3568,7 +3568,7 @@
 		<key>DMSSPEC</key>
 		<configKey>DMSSPEC</configKey>
 		<name>DMSSPEC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
 		</description>
@@ -3577,7 +3577,7 @@
 		<key>DPSPEC</key>
 		<configKey>DPSPEC</configKey>
 		<name>DPSPEC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
 		</description>
@@ -3586,7 +3586,7 @@
 		<key>DPPSD</key>
 		<configKey>DPPSD</configKey>
 		<name>DPPSD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
 		</description>
@@ -3595,7 +3595,7 @@
 		<key>DINLN</key>
 		<configKey>DINLN</configKey>
 		<name>DINLN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
 		</description>
@@ -3604,7 +3604,7 @@
 		<key>DFCNCHK</key>
 		<configKey>DFCNCHK</configKey>
 		<name>DFCNCHK</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
 		</description>
@@ -3613,7 +3613,7 @@
 		<key>MATCH2</key>
 		<configKey>MATCH2</configKey>
 		<name>MATCH2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[STRMATCH is not recommended. Use STRNCMP or VALIDATESTRING instead.]]>
 		</description>
@@ -3622,7 +3622,7 @@
 		<key>MATCH3</key>
 		<configKey>MATCH3</configKey>
 		<name>MATCH3</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> is not recommended. Use <NAME> instead.]]>
 		</description>
@@ -3631,7 +3631,7 @@
 		<key>GPUAR</key>
 		<configKey>GPUAR</configKey>
 		<name>GPUAR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[<NAME> has been removed. Use <name> instead.]]>
 		</description>
@@ -3640,7 +3640,7 @@
 		<key>GPUARB</key>
 		<configKey>GPUARB</configKey>
 		<name>GPUARB</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[parallel.gpu.GPUArray.<name> has been removed. Use gpuArray.<name> instead.]]>
 		</description>
@@ -3649,7 +3649,7 @@
 		<key>CHLNC</key>
 		<configKey>CHLNC</configKey>
 		<name>CHLNC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[<NAME> has been removed. Use <NAME> instead.]]>
 		</description>
@@ -3658,7 +3658,7 @@
 		<key>CHLNCI</key>
 		<configKey>CHLNCI</configKey>
 		<name>CHLNCI</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[CHOLINC(X,'inf') has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -3667,7 +3667,7 @@
 		<key>BTSFT</key>
 		<configKey>BTSFT</configKey>
 		<name>BTSFT</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[BITSHIFT(A,K,N) has been removed. Use BITSHIFT(A,K,ASSUMEDTYPE) instead.]]>
 		</description>
@@ -3676,7 +3676,7 @@
 		<key>MTFA1</key>
 		<configKey>MTFA1</configKey>
 		<name>MTFA1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MAKETFORM('AFFINE',A) is not recommended. Use AFFINE2D or AFFINE3D instead.]]>
 		</description>
@@ -3685,7 +3685,7 @@
 		<key>MTFA2</key>
 		<configKey>MTFA2</configKey>
 		<name>MTFA2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MAKETFORM('AFFINE',U,X) is not recommended. Use FITGEOTRANS instead.]]>
 		</description>
@@ -3694,7 +3694,7 @@
 		<key>MTFP1</key>
 		<configKey>MTFP1</configKey>
 		<name>MTFP1</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MAKETFORM('PROJECTIVE',A) is not recommended. Use PROJECTIVE2D instead.]]>
 		</description>
@@ -3703,7 +3703,7 @@
 		<key>MTFP2</key>
 		<configKey>MTFP2</configKey>
 		<name>MTFP2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MAKETFORM('PROJECTIVE',U,X) is not recommended. Use FITGEOTRANS instead.]]>
 		</description>
@@ -3712,7 +3712,7 @@
 		<key>MTFB</key>
 		<configKey>MTFB</configKey>
 		<name>MTFB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MAKETFORM('BOX',...) is not recommended. Use IMREF2D or IMREF3D instead.]]>
 		</description>
@@ -3721,7 +3721,7 @@
 		<key>MSYSTEM</key>
 		<configKey>MSYSTEM</configKey>
 		<name>MSYSTEM</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[matlab.system.System will be removed in a future release. Use matlab.System instead.]]>
 		</description>
@@ -3730,7 +3730,7 @@
 		<key>BTCMP</key>
 		<configKey>BTCMP</configKey>
 		<name>BTCMP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[BITCMP(A,N) has been removed. Use BITCMP(A,ASSUMEDTYPE) instead.]]>
 		</description>
@@ -3739,7 +3739,7 @@
 		<key>CRTJOB</key>
 		<configKey>CRTJOB</configKey>
 		<name>CRTJOB</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[<NAME> using zero inputs has been removed. Use a cluster object as the first input instead.]]>
 		</description>
@@ -3748,7 +3748,7 @@
 		<key>PMTMCONF</key>
 		<configKey>PMTMCONF</configKey>
 		<name>PMTMCONF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[When using PMTM with three output arguments, the 'conflevel' input argument is recommended.]]>
 		</description>
@@ -3757,7 +3757,7 @@
 		<key>ZEROLIKE</key>
 		<configKey>ZEROLIKE</configKey>
 		<name>ZEROLIKE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[Consider using <NAME>(..., 'like', X ) instead of <NAME>(..., class(X) ).]]>
 		</description>
@@ -3766,7 +3766,7 @@
 		<key>NCHKI</key>
 		<configKey>NCHKI</configKey>
 		<name>NCHKI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use NARGINCHK instead.]]>
 		</description>
@@ -3775,7 +3775,7 @@
 		<key>NCHKO</key>
 		<configKey>NCHKO</configKey>
 		<name>NCHKO</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use NARGOUTCHK instead.]]>
 		</description>
@@ -3784,7 +3784,7 @@
 		<key>NCHKN</key>
 		<configKey>NCHKN</configKey>
 		<name>NCHKN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[NARGCHK will be removed in a future release. Use NARGINCHK without ERROR instead.]]>
 		</description>
@@ -3793,7 +3793,7 @@
 		<key>NCHKM</key>
 		<configKey>NCHKM</configKey>
 		<name>NCHKM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[NARGCHK will be removed in a future release. Use NARGOUTCHK without ERROR instead.]]>
 		</description>
@@ -3802,7 +3802,7 @@
 		<key>NCHKNO</key>
 		<configKey>NCHKNO</configKey>
 		<name>NCHKNO</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[NARGOUTCHK using more than two inputs will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -3811,7 +3811,7 @@
 		<key>NVREPL</key>
 		<configKey>NVREPL</configKey>
 		<name>NVREPL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> is not recommended. Use <NAME> instead.]]>
 		</description>
@@ -3820,7 +3820,7 @@
 		<key>GENDEP</key>
 		<configKey>GENDEP</configKey>
 		<name>GENDEP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<NAME> will be removed in a future release. Use <NAME> instead.]]>
 		</description>
@@ -3829,7 +3829,7 @@
 		<key>GENWARN</key>
 		<configKey>GENWARN</configKey>
 		<name>GENWARN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[<name> is not recommended.]]>
 		</description>
@@ -3838,7 +3838,7 @@
 		<key>DEPCLG</key>
 		<configKey>DEPCLG</configKey>
 		<name>DEPCLG</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[CLG has been removed. Use CLF instead.]]>
 		</description>
@@ -3847,7 +3847,7 @@
 		<key>DEPBART</key>
 		<configKey>DEPBART</configKey>
 		<name>DEPBART</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.barthannwin is not recommended. Use BARTHANNWIN instead.]]>
 		</description>
@@ -3856,7 +3856,7 @@
 		<key>DEPLETT</key>
 		<configKey>DEPLETT</configKey>
 		<name>DEPLETT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.bartlett is not recommended. Use BARTLETT instead.]]>
 		</description>
@@ -3865,7 +3865,7 @@
 		<key>FAFD</key>
 		<configKey>FAFD</configKey>
 		<name>FAFD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[farrow.fd will be removed in a future release. Use dfilt.farrowfd instead.]]>
 		</description>
@@ -3874,7 +3874,7 @@
 		<key>FALFD</key>
 		<configKey>FALFD</configKey>
 		<name>FALFD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[farrow.linearfd will be removed in a future release. Use dfilt.farrowlinearfd instead.]]>
 		</description>
@@ -3883,7 +3883,7 @@
 		<key>SQGPN</key>
 		<configKey>SQGPN</configKey>
 		<name>SQGPN</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[seqgen.pn has been removed. Use comm.PNSequence instead.]]>
 		</description>
@@ -3892,7 +3892,7 @@
 		<key>NORALG</key>
 		<configKey>NORALG</configKey>
 		<name>NORALG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RandStream.RandnAlg will be removed in a future release. Use NormalTransform instead.]]>
 		</description>
@@ -3901,7 +3901,7 @@
 		<key>SETRS</key>
 		<configKey>SETRS</configKey>
 		<name>SETRS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[RandStream.setDefaultStream has been removed. Use RandStream.setGlobalStream instead.]]>
 		</description>
@@ -3910,7 +3910,7 @@
 		<key>GETRS</key>
 		<configKey>GETRS</configKey>
 		<name>GETRS</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[RandStream.getDefaultStream has been removed. Use RandStream.getGlobalStream instead.]]>
 		</description>
@@ -3919,7 +3919,7 @@
 		<key>DBLKMN</key>
 		<configKey>DBLKMN</configKey>
 		<name>DBLKMN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.blackman is not recommended. Use BLACKMAN instead.]]>
 		</description>
@@ -3928,7 +3928,7 @@
 		<key>DBHRRS</key>
 		<configKey>DBHRRS</configKey>
 		<name>DBHRRS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.blackmanharris is not recommended. Use BLACKMANHARRIS instead.]]>
 		</description>
@@ -3937,7 +3937,7 @@
 		<key>DBHMNWN</key>
 		<configKey>DBHMNWN</configKey>
 		<name>DBHMNWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.bohmanwin is not recommended. Use BOHMANWIN instead.]]>
 		</description>
@@ -3946,7 +3946,7 @@
 		<key>DCHBWN</key>
 		<configKey>DCHBWN</configKey>
 		<name>DCHBWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.chebwin is not recommended. Use CHEBWIN instead.]]>
 		</description>
@@ -3955,7 +3955,7 @@
 		<key>DFLTTPWN</key>
 		<configKey>DFLTTPWN</configKey>
 		<name>DFLTTPWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.flattopwin is not recommended. Use FLATTOPWIN instead.]]>
 		</description>
@@ -3964,7 +3964,7 @@
 		<key>DGSWIN</key>
 		<configKey>DGSWIN</configKey>
 		<name>DGSWIN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.gausswin is not recommended. Use GAUSSWIN instead.]]>
 		</description>
@@ -3973,7 +3973,7 @@
 		<key>DHMMNG</key>
 		<configKey>DHMMNG</configKey>
 		<name>DHMMNG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.hamming is not recommended. Use HAMMING instead.]]>
 		</description>
@@ -3982,7 +3982,7 @@
 		<key>DHANN</key>
 		<configKey>DHANN</configKey>
 		<name>DHANN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.hann is not recommended. Use HANN instead.]]>
 		</description>
@@ -3991,7 +3991,7 @@
 		<key>DKSER</key>
 		<configKey>DKSER</configKey>
 		<name>DKSER</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.kaiser is not recommended. Use KAISER instead.]]>
 		</description>
@@ -4000,7 +4000,7 @@
 		<key>DNLWN</key>
 		<configKey>DNLWN</configKey>
 		<name>DNLWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.nuttallwin is not recommended. Use NUTTALLWIN instead.]]>
 		</description>
@@ -4009,7 +4009,7 @@
 		<key>DPNWN</key>
 		<configKey>DPNWN</configKey>
 		<name>DPNWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.parzenwin is not recommended. Use PARZENWIN instead.]]>
 		</description>
@@ -4018,7 +4018,7 @@
 		<key>DRCTWN</key>
 		<configKey>DRCTWN</configKey>
 		<name>DRCTWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.rectwin is not recommended. Use RECTWIN instead.]]>
 		</description>
@@ -4027,7 +4027,7 @@
 		<key>DTYLRWN</key>
 		<configKey>DTYLRWN</configKey>
 		<name>DTYLRWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.taylorwin is not recommended. Use TAYLORWIN instead.]]>
 		</description>
@@ -4036,7 +4036,7 @@
 		<key>DTRNG</key>
 		<configKey>DTRNG</configKey>
 		<name>DTRNG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.triang is not recommended. Use TRIANG instead.]]>
 		</description>
@@ -4045,7 +4045,7 @@
 		<key>DTKYWN</key>
 		<configKey>DTKYWN</configKey>
 		<name>DTKYWN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[sigwin.tukeywin is not recommended. Use TUKEYWIN instead.]]>
 		</description>
@@ -4054,7 +4054,7 @@
 		<key>DBURG</key>
 		<configKey>DBURG</configKey>
 		<name>DBURG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.burg is not recommended. Use PBURG instead.]]>
 		</description>
@@ -4063,7 +4063,7 @@
 		<key>DCOV</key>
 		<configKey>DCOV</configKey>
 		<name>DCOV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.cov is not recommended. Use PCOV instead.]]>
 		</description>
@@ -4072,7 +4072,7 @@
 		<key>DEVCTR</key>
 		<configKey>DEVCTR</configKey>
 		<name>DEVCTR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.eigenvector is not recommended. Use PEIG instead.]]>
 		</description>
@@ -4081,7 +4081,7 @@
 		<key>DMCOV</key>
 		<configKey>DMCOV</configKey>
 		<name>DMCOV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.mcov is not recommended. Use PMCOV instead.]]>
 		</description>
@@ -4090,7 +4090,7 @@
 		<key>DMTM</key>
 		<configKey>DMTM</configKey>
 		<name>DMTM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.mtm is not recommended. Use PMTM instead.]]>
 		</description>
@@ -4099,7 +4099,7 @@
 		<key>DMUSIC</key>
 		<configKey>DMUSIC</configKey>
 		<name>DMUSIC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.music is not recommended. Use PMUSIC instead.]]>
 		</description>
@@ -4108,7 +4108,7 @@
 		<key>DPRDGRM</key>
 		<configKey>DPRDGRM</configKey>
 		<name>DPRDGRM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.periodogram is not recommended. Use PERIODOGRAM instead.]]>
 		</description>
@@ -4117,7 +4117,7 @@
 		<key>DWELCH</key>
 		<configKey>DWELCH</configKey>
 		<name>DWELCH</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.welch is not recommended. Use PWELCH instead.]]>
 		</description>
@@ -4126,7 +4126,7 @@
 		<key>DYULEAR</key>
 		<configKey>DYULEAR</configKey>
 		<name>DYULEAR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[spectrum.yulear is not recommended. Use PYULEAR instead.]]>
 		</description>
@@ -4135,7 +4135,7 @@
 		<key>DPBCHNC</key>
 		<configKey>DPBCHNC</configKey>
 		<name>DPBCHNC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[fec.bchenc will be removed in a future release. Use comm.BCHEncoder instead.]]>
 		</description>
@@ -4144,7 +4144,7 @@
 		<key>DBCHNC</key>
 		<configKey>DBCHNC</configKey>
 		<name>DBCHNC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[BCHENC has been removed. Use comm.BCHEncoder instead.]]>
 		</description>
@@ -4153,7 +4153,7 @@
 		<key>DPBCHDC</key>
 		<configKey>DPBCHDC</configKey>
 		<name>DPBCHDC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[fec.bchdec will be removed in a future release. Use comm.BCHDecoder instead.]]>
 		</description>
@@ -4162,7 +4162,7 @@
 		<key>DBCHDC</key>
 		<configKey>DBCHDC</configKey>
 		<name>DBCHDC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[BCHDEC has been removed. Use comm.BCHDecoder instead.]]>
 		</description>
@@ -4171,7 +4171,7 @@
 		<key>DPRSNC</key>
 		<configKey>DPRSNC</configKey>
 		<name>DPRSNC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[fec.rsenc will be removed in a future release. Use comm.RSEncoder instead.]]>
 		</description>
@@ -4180,7 +4180,7 @@
 		<key>DRSNC</key>
 		<configKey>DRSNC</configKey>
 		<name>DRSNC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[RSENC has been removed. Use comm.RSEncoder instead.]]>
 		</description>
@@ -4189,7 +4189,7 @@
 		<key>DPRSDC</key>
 		<configKey>DPRSDC</configKey>
 		<name>DPRSDC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[fec.rsdec will be removed in a future release. Use comm.RSDecoder instead.]]>
 		</description>
@@ -4198,7 +4198,7 @@
 		<key>DRSDC</key>
 		<configKey>DRSDC</configKey>
 		<name>DRSDC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[RSDEC has been removed. Use comm.RSDecoder instead.]]>
 		</description>
@@ -4207,7 +4207,7 @@
 		<key>DLDPCNC</key>
 		<configKey>DLDPCNC</configKey>
 		<name>DLDPCNC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[fec.ldpcenc will be removed in a future release. Use comm.LDPCEncoder instead.]]>
 		</description>
@@ -4216,7 +4216,7 @@
 		<key>DLDPCDC</key>
 		<configKey>DLDPCDC</configKey>
 		<name>DLDPCDC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[fec.ldpcdec will be removed in a future release. Use comm.LDPCDecoder instead.]]>
 		</description>
@@ -4225,7 +4225,7 @@
 		<key>DEVM</key>
 		<configKey>DEVM</configKey>
 		<name>DEVM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[commmeasure.EVM is not recommended. Use comm.EVM instead.]]>
 		</description>
@@ -4234,7 +4234,7 @@
 		<key>DMER</key>
 		<configKey>DMER</configKey>
 		<name>DMER</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[commmeasure.MER is not recommended. Use comm.MER instead.]]>
 		</description>
@@ -4243,7 +4243,7 @@
 		<key>DACPR</key>
 		<configKey>DACPR</configKey>
 		<name>DACPR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[commmeasure.ACPR is not recommended. Use comm.ACPR instead.]]>
 		</description>
@@ -4252,7 +4252,7 @@
 		<key>DTRIREP</key>
 		<configKey>DTRIREP</configKey>
 		<name>DTRIREP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[TriRep will be removed in a future release. Use TRIANGULATION instead.]]>
 		</description>
@@ -4261,7 +4261,7 @@
 		<key>DDELTRI</key>
 		<configKey>DDELTRI</configKey>
 		<name>DDELTRI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[DelaunayTri will be removed in a future release. Use delaunayTriangulation instead.]]>
 		</description>
@@ -4270,7 +4270,7 @@
 		<key>DTRIINT</key>
 		<configKey>DTRIINT</configKey>
 		<name>DTRIINT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[TriScatteredInterp will be removed in a future release. Use scatteredInterpolant instead.]]>
 		</description>
@@ -4279,7 +4279,7 @@
 		<key>DQUAD</key>
 		<configKey>DQUAD</configKey>
 		<name>DQUAD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[QUAD will be removed in a future release. Use INTEGRAL instead.]]>
 		</description>
@@ -4288,7 +4288,7 @@
 		<key>DQUADL</key>
 		<configKey>DQUADL</configKey>
 		<name>DQUADL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[QUADL will be removed in a future release. Use INTEGRAL instead.]]>
 		</description>
@@ -4297,7 +4297,7 @@
 		<key>DQUADV</key>
 		<configKey>DQUADV</configKey>
 		<name>DQUADV</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[QUADV will be removed in a future release. Use INTEGRAL instead.]]>
 		</description>
@@ -4306,7 +4306,7 @@
 		<key>DDBLQD</key>
 		<configKey>DDBLQD</configKey>
 		<name>DDBLQD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[DBLQUAD will be removed in a future release. Use INTEGRAL2 instead.]]>
 		</description>
@@ -4315,7 +4315,7 @@
 		<key>DTRIQD</key>
 		<configKey>DTRIQD</configKey>
 		<name>DTRIQD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[TRIPLEQUAD will be removed in a future release. Use INTEGRAL3 instead.]]>
 		</description>
@@ -4324,7 +4324,7 @@
 		<key>DAVIRD</key>
 		<configKey>DAVIRD</configKey>
 		<name>DAVIRD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[AVIREAD will be removed in a future release. Use VideoReader instead.]]>
 		</description>
@@ -4333,7 +4333,7 @@
 		<key>DAVIINF</key>
 		<configKey>DAVIINF</configKey>
 		<name>DAVIINF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[AVIINFO will be removed in a future release. Use VideoReader instead.]]>
 		</description>
@@ -4342,7 +4342,7 @@
 		<key>DAFINF</key>
 		<configKey>DAFINF</configKey>
 		<name>DAFINF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[AVIFINFO will be removed in a future release. Use VideoReader instead.]]>
 		</description>
@@ -4351,7 +4351,7 @@
 		<key>DEXIFRD</key>
 		<configKey>DEXIFRD</configKey>
 		<name>DEXIFRD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[EXIFREAD has been removed. Use IMFINFO instead.]]>
 		</description>
@@ -4360,7 +4360,7 @@
 		<key>DILEVAL</key>
 		<configKey>DILEVAL</configKey>
 		<name>DILEVAL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[INLINEEVAL will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4369,7 +4369,7 @@
 		<key>DRNDINT</key>
 		<configKey>DRNDINT</configKey>
 		<name>DRNDINT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RANDINT is not recommended. Use RANDI instead.]]>
 		</description>
@@ -4378,7 +4378,7 @@
 		<key>DSTRRD</key>
 		<configKey>DSTRRD</configKey>
 		<name>DSTRRD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[STRREAD is not recommended. Use TEXTSCAN instead.]]>
 		</description>
@@ -4387,7 +4387,7 @@
 		<key>DTXTRD</key>
 		<configKey>DTXTRD</configKey>
 		<name>DTXTRD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[TEXTREAD is not recommended. Use TEXTSCAN instead.]]>
 		</description>
@@ -4396,7 +4396,7 @@
 		<key>DDTRD</key>
 		<configKey>DDTRD</configKey>
 		<name>DDTRD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[DATAREAD will be removed in a future release. Use TEXTSCAN instead.]]>
 		</description>
@@ -4405,7 +4405,7 @@
 		<key>DFNDR</key>
 		<configKey>DFNDR</configKey>
 		<name>DFNDR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[findResource has been removed. Use PARCLUSTER instead.]]>
 		</description>
@@ -4414,7 +4414,7 @@
 		<key>DCRTPJ</key>
 		<configKey>DCRTPJ</configKey>
 		<name>DCRTPJ</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[createParallelJob has been removed. Use createCommunicatingJob instead.]]>
 		</description>
@@ -4423,7 +4423,7 @@
 		<key>DCRTMJ</key>
 		<configKey>DCRTMJ</configKey>
 		<name>DCRTMJ</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[createMatlabPoolJob has been removed. Use createCommunicatingJob instead.]]>
 		</description>
@@ -4432,7 +4432,7 @@
 		<key>DDFEVL</key>
 		<configKey>DDFEVL</configKey>
 		<name>DDFEVL</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[DFEVAL has been removed. Use BATCH instead.]]>
 		</description>
@@ -4441,7 +4441,7 @@
 		<key>DDFEVLA</key>
 		<configKey>DDFEVLA</configKey>
 		<name>DDFEVLA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[DFEVALASYNC has been removed. Use BATCH instead.]]>
 		</description>
@@ -4450,7 +4450,7 @@
 		<key>DDFTPC</key>
 		<configKey>DDFTPC</configKey>
 		<name>DDFTPC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[defaultParallelConfig has been removed. Use parallel.defaultClusterProfile instead.]]>
 		</description>
@@ -4459,7 +4459,7 @@
 		<key>DIMTPC</key>
 		<configKey>DIMTPC</configKey>
 		<name>DIMTPC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[importParallelConfig has been removed. Use parallel.importProfile instead.]]>
 		</description>
@@ -4468,7 +4468,7 @@
 		<key>DGCURJM</key>
 		<configKey>DGCURJM</configKey>
 		<name>DGCURJM</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[getCurrentJobmanager has been removed. Use getCurrentCluster instead.]]>
 		</description>
@@ -4477,7 +4477,7 @@
 		<key>DGFDEPD</key>
 		<configKey>DGFDEPD</configKey>
 		<name>DGFDEPD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[getFileDependencyDir has been removed. Use getAttachedFilesFolder instead.]]>
 		</description>
@@ -4486,7 +4486,7 @@
 		<key>DWVRD</key>
 		<configKey>DWVRD</configKey>
 		<name>DWVRD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WAVREAD has been removed. Use AUDIOREAD instead.]]>
 		</description>
@@ -4495,7 +4495,7 @@
 		<key>DWVWR</key>
 		<configKey>DWVWR</configKey>
 		<name>DWVWR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WAVWRITE has been removed. Use AUDIOWRITE instead.]]>
 		</description>
@@ -4504,7 +4504,7 @@
 		<key>DWVFINF</key>
 		<configKey>DWVFINF</configKey>
 		<name>DWVFINF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WAVFINFO has been removed. Use AUDIOINFO instead.]]>
 		</description>
@@ -4513,7 +4513,7 @@
 		<key>DAURD</key>
 		<configKey>DAURD</configKey>
 		<name>DAURD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[AUREAD has been removed. Use AUDIOREAD instead.]]>
 		</description>
@@ -4522,7 +4522,7 @@
 		<key>DAUFINF</key>
 		<configKey>DAUFINF</configKey>
 		<name>DAUFINF</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[AUFINFO has been removed. Use AUDIOINFO instead.]]>
 		</description>
@@ -4531,7 +4531,7 @@
 		<key>DAUWR</key>
 		<configKey>DAUWR</configKey>
 		<name>DAUWR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[AUWRITE has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4540,7 +4540,7 @@
 		<key>DSTRRNG</key>
 		<configKey>DSTRRNG</configKey>
 		<name>DSTRRNG</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[STR2RNG has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4549,7 +4549,7 @@
 		<key>DWK1C</key>
 		<configKey>DWK1C</configKey>
 		<name>DWK1C</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WK1CONST has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4558,7 +4558,7 @@
 		<key>DWK1RD</key>
 		<configKey>DWK1RD</configKey>
 		<name>DWK1RD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WK1READ has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4567,7 +4567,7 @@
 		<key>DWK1WR</key>
 		<configKey>DWK1WR</configKey>
 		<name>DWK1WR</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WK1WRITE has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4576,7 +4576,7 @@
 		<key>DWK1FI</key>
 		<configKey>DWK1FI</configKey>
 		<name>DWK1FI</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WK1FINFO has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4585,7 +4585,7 @@
 		<key>DWK1WRC</key>
 		<configKey>DWK1WRC</configKey>
 		<name>DWK1WRC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WK1WREC has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4594,7 +4594,7 @@
 		<key>DSTRMT</key>
 		<configKey>DSTRMT</configKey>
 		<name>DSTRMT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[STR2MAT is not recommended. Use CHAR instead.]]>
 		</description>
@@ -4603,7 +4603,7 @@
 		<key>DSTSTR</key>
 		<configKey>DSTSTR</configKey>
 		<name>DSTSTR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[SETSTR is not recommended. Use CHAR instead.]]>
 		</description>
@@ -4612,7 +4612,7 @@
 		<key>DSTRVCT</key>
 		<configKey>DSTRVCT</configKey>
 		<name>DSTRVCT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[STRVCAT is not recommended. Use CHAR instead.]]>
 		</description>
@@ -4621,7 +4621,7 @@
 		<key>DISSTR</key>
 		<configKey>DISSTR</configKey>
 		<name>DISSTR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[ISSTR is not recommended. Use ISCHAR instead.]]>
 		</description>
@@ -4630,7 +4630,7 @@
 		<key>DBLKPRC</key>
 		<configKey>DBLKPRC</configKey>
 		<name>DBLKPRC</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[BLKPROC is not recommended. Use BLOCKPROC instead.]]>
 		</description>
@@ -4639,7 +4639,7 @@
 		<key>DPGUPDLG</key>
 		<configKey>DPGUPDLG</configKey>
 		<name>DPGUPDLG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[PAGESETUPDLG will be removed in a future release. Use PRINTPREVIEW instead.]]>
 		</description>
@@ -4648,7 +4648,7 @@
 		<key>DEMLC</key>
 		<configKey>DEMLC</configKey>
 		<name>DEMLC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[EMLC has been removed. Use CODEGEN instead.]]>
 		</description>
@@ -4657,7 +4657,7 @@
 		<key>DEMLMEX</key>
 		<configKey>DEMLMEX</configKey>
 		<name>DEMLMEX</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[EMLMEX has been removed. Use CODEGEN instead.]]>
 		</description>
@@ -4666,7 +4666,7 @@
 		<key>DLUINC</key>
 		<configKey>DLUINC</configKey>
 		<name>DLUINC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[LUINC has been removed. Use ILU instead.]]>
 		</description>
@@ -4675,7 +4675,7 @@
 		<key>DWVPLY</key>
 		<configKey>DWVPLY</configKey>
 		<name>DWVPLY</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WAVPLAY has been removed. Use AUDIOPLAYER instead.]]>
 		</description>
@@ -4684,7 +4684,7 @@
 		<key>DWVREC</key>
 		<configKey>DWVREC</configKey>
 		<name>DWVREC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[WAVRECORD has been removed. Use AUDIORECORDER instead.]]>
 		</description>
@@ -4693,7 +4693,7 @@
 		<key>DAVIFL</key>
 		<configKey>DAVIFL</configKey>
 		<name>DAVIFL</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[AVIFILE has been removed. Use VideoWriter instead.]]>
 		</description>
@@ -4702,7 +4702,7 @@
 		<key>DISEQN</key>
 		<configKey>DISEQN</configKey>
 		<name>DISEQN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[ISEQUALWITHEQUALNANS is not recommended. Use ISEQUALN instead.]]>
 		</description>
@@ -4711,7 +4711,7 @@
 		<key>DAPPLUT</key>
 		<configKey>DAPPLUT</configKey>
 		<name>DAPPLUT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[APPLYLUT is not recommended. Use BWLOOKUP instead.]]>
 		</description>
@@ -4720,7 +4720,7 @@
 		<key>DRSDEC</key>
 		<configKey>DRSDEC</configKey>
 		<name>DRSDEC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[RSDECOF has been removed. Use comm.RSDecoder instead.]]>
 		</description>
@@ -4729,7 +4729,7 @@
 		<key>DRSENC</key>
 		<configKey>DRSENC</configKey>
 		<name>DRSENC</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[RSENCOF has been removed. Use comm.RSEncoder instead.]]>
 		</description>
@@ -4738,7 +4738,7 @@
 		<key>DMCHN</key>
 		<configKey>DMCHN</configKey>
 		<name>DMCHN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MIMOCHAN will be removed in a future release. Use comm.MIMOChannel instead.]]>
 		</description>
@@ -4747,7 +4747,7 @@
 		<key>DBITMAX</key>
 		<configKey>DBITMAX</configKey>
 		<name>DBITMAX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[BITMAX will be removed in a future release. Use FLINTMAX instead.]]>
 		</description>
@@ -4756,7 +4756,7 @@
 		<key>DRCOSFIR</key>
 		<configKey>DRCOSFIR</configKey>
 		<name>DRCOSFIR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RCOSFIR is not recommended. Use RCOSDESIGN instead.]]>
 		</description>
@@ -4765,7 +4765,7 @@
 		<key>DRCOSFLT</key>
 		<configKey>DRCOSFLT</configKey>
 		<name>DRCOSFLT</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RCOSFLT is not recommended. Use RCOSDESIGN instead.]]>
 		</description>
@@ -4774,7 +4774,7 @@
 		<key>DRCOSIIR</key>
 		<configKey>DRCOSIIR</configKey>
 		<name>DRCOSIIR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RCOSIIR is not recommended. Use RCOSDESIGN instead.]]>
 		</description>
@@ -4783,7 +4783,7 @@
 		<key>DRCOSINE</key>
 		<configKey>DRCOSINE</configKey>
 		<name>DRCOSINE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[RCOSINE is not recommended. Use RCOSDESIGN instead.]]>
 		</description>
@@ -4792,7 +4792,7 @@
 		<key>DFIRRCOS</key>
 		<configKey>DFIRRCOS</configKey>
 		<name>DFIRRCOS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FIRRCOS is not recommended. Use RCOSDESIGN instead.]]>
 		</description>
@@ -4801,7 +4801,7 @@
 		<key>DFIRGAUSS</key>
 		<configKey>DFIRGAUSS</configKey>
 		<name>DFIRGAUSS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FIRGAUSS is not recommended. Use GAUSSDESIGN instead.]]>
 		</description>
@@ -4810,7 +4810,7 @@
 		<key>DGAUSSFIR</key>
 		<configKey>DGAUSSFIR</configKey>
 		<name>DGAUSSFIR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[GAUSSFIR is not recommended. Use GAUSSDESIGN instead.]]>
 		</description>
@@ -4819,7 +4819,7 @@
 		<key>DVRML</key>
 		<configKey>DVRML</configKey>
 		<name>DVRML</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[VRML has been removed. There is no simple replacement for this.]]>
 		</description>
@@ -4828,7 +4828,7 @@
 		<key>DCSHELP</key>
 		<configKey>DCSHELP</configKey>
 		<name>DCSHELP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[CSHELP will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4837,7 +4837,7 @@
 		<key>DFIGFLAG</key>
 		<configKey>DFIGFLAG</configKey>
 		<name>DFIGFLAG</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FIGFLAG will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4846,7 +4846,7 @@
 		<key>DGETST</key>
 		<configKey>DGETST</configKey>
 		<name>DGETST</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[GETSTATUS will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4855,7 +4855,7 @@
 		<key>DMENUL</key>
 		<configKey>DMENUL</configKey>
 		<name>DMENUL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MENULABEL will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4864,7 +4864,7 @@
 		<key>DPOPUP</key>
 		<configKey>DPOPUP</configKey>
 		<name>DPOPUP</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[POPUPSTR will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4873,7 +4873,7 @@
 		<key>DUIGET</key>
 		<configKey>DUIGET</configKey>
 		<name>DUIGET</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[UIGETTOOLBAR will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4882,7 +4882,7 @@
 		<key>DNOANI</key>
 		<configKey>DNOANI</configKey>
 		<name>DNOANI</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[NOANIMATE will be removed in a future release. There is no simple replacement for this.]]>
 		</description>
@@ -4891,7 +4891,7 @@
 		<key>DGRDD</key>
 		<configKey>DGRDD</configKey>
 		<name>DGRDD</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[GRIDDATA3 has been removed. Use GRIDDATA instead.]]>
 		</description>
@@ -4900,7 +4900,7 @@
 		<key>DDELA</key>
 		<configKey>DDELA</configKey>
 		<name>DDELA</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[DELAUNAY3 has been removed. Use DELAUNAY instead.]]>
 		</description>
@@ -4909,7 +4909,7 @@
 		<key>DDSRCH</key>
 		<configKey>DDSRCH</configKey>
 		<name>DDSRCH</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[DSEARCH has been removed. Use DelaunayTri/nearestNeighbor instead.]]>
 		</description>
@@ -4918,7 +4918,7 @@
 		<key>DTSRCH</key>
 		<configKey>DTSRCH</configKey>
 		<name>DTSRCH</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[TSEARCH has been removed. Use DelaunayTri/pointLocation instead.]]>
 		</description>
@@ -4927,7 +4927,7 @@
 		<key>DPOOL</key>
 		<configKey>DPOOL</configKey>
 		<name>DPOOL</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MATLABPOOL will be removed in a future release. Use PARPOOL instead.]]>
 		</description>
@@ -4936,7 +4936,7 @@
 		<key>DFLIPDIM</key>
 		<configKey>DFLIPDIM</configKey>
 		<name>DFLIPDIM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FLIPDIM will be removed in a future release. Use FLIP instead.]]>
 		</description>
@@ -4945,7 +4945,7 @@
 		<key>FSTR</key>
 		<configKey>FSTR</configKey>
 		<name>FSTR</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FINDSTR is not recommended. Use STRFIND instead.]]>
 		</description>
@@ -4954,7 +4954,7 @@
 		<key>DDBMEX</key>
 		<configKey>DDBMEX</configKey>
 		<name>DDBMEX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MEXDEBUG is not recommended. Use DBMEX instead.]]>
 		</description>
@@ -4963,7 +4963,7 @@
 		<key>DFTSMTX</key>
 		<configKey>DFTSMTX</configKey>
 		<name>DFTSMTX</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[FTS2MTX is not recommended. Use FTS2MAT instead.]]>
 		</description>
@@ -4972,7 +4972,7 @@
 		<key>DIMTRNS</key>
 		<configKey>DIMTRNS</configKey>
 		<name>DIMTRNS</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[IMTRANSFORM is not recommended. Use IMWARP instead.]]>
 		</description>
@@ -4981,7 +4981,7 @@
 		<key>DCPTF</key>
 		<configKey>DCPTF</configKey>
 		<name>DCPTF</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[CP2TFORM is not recommended. Use FITGEOTRANS instead.]]>
 		</description>
@@ -4990,7 +4990,7 @@
 		<key>DEPNOE</key>
 		<configKey>DEPNOE</configKey>
 		<name>DEPNOE</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[NUMBEROFELEMENTS is not recommended. Use NUMEL instead.]]>
 		</description>
@@ -4999,7 +4999,7 @@
 		<key>DEPGENAM</key>
 		<configKey>DEPGENAM</configKey>
 		<name>DEPGENAM</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[GENVARNAME will be removed in a future release. Use MATLAB.LANG.MAKEVALIDNAME and MATLAB.LANG.MAKEUNIQUESTRINGS instead.]]>
 		</description>
@@ -5008,7 +5008,7 @@
 		<key>DEPFUN</key>
 		<configKey>DEPFUN</configKey>
 		<name>DEPFUN</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[DEPFUN will be removed in a future release. Use matlab.codetools.requiredFilesAndProducts instead.]]>
 		</description>
@@ -5017,7 +5017,7 @@
 		<key>MOVIE2</key>
 		<configKey>MOVIE2</configKey>
 		<name>MOVIE2</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[MOVIE2AVI will be removed in a future release. Use VideoWriter instead.]]>
 		</description>
@@ -5026,7 +5026,7 @@
 		<key>HDFGD</key>
 		<configKey>HDFGD</configKey>
 		<name>HDFGD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[HDFGD will be removed in a future release. Use matlab.io.hdfeos.gd instead.]]>
 		</description>
@@ -5035,7 +5035,7 @@
 		<key>HDFSD</key>
 		<configKey>HDFSD</configKey>
 		<name>HDFSD</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[HDFSD will be removed in a future release. Use matlab.io.hdfeos.sd instead.]]>
 		</description>
@@ -5044,7 +5044,7 @@
 		<key>HDFSW</key>
 		<configKey>HDFSW</configKey>
 		<name>HDFSW</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[HDFSW will be removed in a future release. Use matlab.io.hdfeos.sw instead.]]>
 		</description>
@@ -5053,7 +5053,7 @@
 		<key>BINTP</key>
 		<configKey>BINTP</configKey>
 		<name>BINTP</name>
-		<priority>CRITICAL</priority>
+		<priority>MINOR</priority>
 		<description>
 			<![CDATA[BINTPROG has been removed. Use INTLINPROG instead.]]>
 		</description>
@@ -5062,7 +5062,7 @@
 		<key>ISGLOB</key>
 		<configKey>ISGLOB</configKey>
 		<name>ISGLOB</name>
-		<priority>BLOCKER</priority>
+		<priority>INFO</priority>
 		<description>
 			<![CDATA[ISGLOBAL will be removed in a future release. There is no simple replacement for this.]]>
 		</description>

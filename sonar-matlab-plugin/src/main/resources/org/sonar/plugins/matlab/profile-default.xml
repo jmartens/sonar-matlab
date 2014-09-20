@@ -6,12 +6,12 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>MSHHH</key>
-			<priority>INFO</priority>
+			<priority>BLOCKER</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BAIL</key>
-			<priority>INFO</priority>
+			<priority>BLOCKER</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -21,197 +21,197 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>BDLEX</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TMMSG</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TMNOD</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MXASET</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOMEM</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>INERR</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XJOIN</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NULLA</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XOTHR</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XELSE</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XCASE</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XCTCH</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TOPLP</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TOPCL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TMPAR</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XTABL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XID</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XIDP</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XSTID</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XSTPT</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XNOU</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XQUOT</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOUSE</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOLST</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NONUK</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NODS</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XVAR2</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XCALL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XDCAL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XSB2E</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XDOPE</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XDUAL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XFOR</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XUPLV</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>UPFCN</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XTREE</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XTRCL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XMISS</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>XOUT</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -221,62 +221,62 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>QUIT</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOSPC</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MBIG</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOFIL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOFWR</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MDOTM</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BDFIL</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RDERR</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCDIR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCFIL</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CFERR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BDOPT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -311,7 +311,7 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>REDEF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -331,22 +331,22 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>MDEEP</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEEPC</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEEPN</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEEPS</key>
-			<priority>MINOR</priority>
+			<priority>CRITICAL</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -356,37 +356,37 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>TWOCM</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ROWLN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>COLND</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOCLS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GPFST</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NPERS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSARG</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -411,12 +411,12 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>CFIG</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BADNOT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -426,517 +426,517 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>PFRNG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFNST</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFDF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFBR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFLD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFSV</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFGP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFGV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFEVB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFEVC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFNAIO</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFNACK</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFUIX</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFOUS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFIIN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFUNK</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFRIN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFRUS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFPIE</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFBNS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFSAME</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFTIN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFBFN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFIFN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFNF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFTUS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFRNC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFRFH</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FORFLG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FORPF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFXST</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFCODN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFCODA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFCMPN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFCMPA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPDEC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPDEC3</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPNST</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPRET</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPBRK</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPLD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPSV</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPGP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPGV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPEVB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPEVC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPBFN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPIFN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPNF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCMIX</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPCN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPCNC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPICN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPCCO</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSPMDN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSPMDA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCUNK</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FSPMDN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FSPMDA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPWHOS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOEFF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NUSED</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOANS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PUSE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>USENS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SUSENS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SETNU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ASGLU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NASGU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PREALL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SNASGU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NODEF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>INUSD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>VANUS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>INUSL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEFNU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>VALST</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ASGSL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>UNRCH</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PROP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CPROP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>COMNL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FXSET</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FXUP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STRSZ</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>M3COL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BDLOG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BDSCA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BDLGI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BDSCI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DUALC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RHSFN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STOUT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>LTARG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GTARG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CTPCT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FNAN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOSEM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOCOM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TRYNC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NO4LP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FNDEF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CTCH</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -946,112 +946,112 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>CTORO</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOIN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MANU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MHERM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MOCUP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MDUPC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MNANC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MULCC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RMWRN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>UNONC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CHAIN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DISPLAY</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SUBSINDEX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>VARARG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SUBSASGN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CLEARSCRIPT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CLEARFUNCTION</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BRKCONT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATTF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATPPP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATPPI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATCA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -1066,22 +1066,22 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>ATNCA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATAS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATNAS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATUNK</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -1091,12 +1091,12 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>ATTOF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ATTO</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -1111,217 +1111,217 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>MCHV1</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCHV2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCHV3</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCVC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCHC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCEB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCDEL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCHM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCVM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSGP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSGA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCS2I</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCS1O</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCG1I</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCG1O</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCPO</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCGSA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSCN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCANI</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCASC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCPI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSH</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCBD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCPSG</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSCT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSCO</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSCF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCBS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCBU</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCMC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSCM</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCNPN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCNPR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCPE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSUP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCSP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTMAT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTAGS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSAC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSNO</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCAPP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCMSP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
@@ -1331,1492 +1331,1492 @@
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSWA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MOBSRV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPERR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPWRN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKOS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>WLAST</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>WNON</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>WNOFF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>WNTAG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ERTAG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ERTXT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>WTXT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STCI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STLOW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STCUL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STISA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PFCEL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STRNU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ITERS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TLEV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RGXP1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TRIM1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STTOK</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TRIM2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STNCI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STCCS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FLUDLR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RPMT0</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RPMT1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RPMTN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RPMTF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RPMTT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RPMTI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PSIZE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FNDSB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SFLD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GFLD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CCAT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>AGROW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SAGROW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISMT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>LOGL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ST2NM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FLPST</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MXFND</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EFIND</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EXIST</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>UDIM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISCHR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISSTR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISLOG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISCEL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MIPC1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>STFLD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RMFLD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FREAD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>N2UNI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TNMLP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>IJCL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MINV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>LAXES</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MMTC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MRPBW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPRIX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SPEIG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>TRSRT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CCAT1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GRIDD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISMAT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISROW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISCOL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMAO</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMCA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMTC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMSCR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMNST</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMFH</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMVDF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMGRO</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMNSI</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMTAG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EMXTR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCAP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCCD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCPRD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCPRT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCHLP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCKBD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCSVP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCMLR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCDP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCABF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCMFL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCTBX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCUOA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCLL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCWBF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MCWFL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSPS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SEPEX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NBRAK</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ALIGN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>AND2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>OR2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOPTS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOPRT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>VUNUS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>LNGNM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MFAMB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MSNU</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DNNW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>LIC3</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>APWT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PRTCAL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCOMMA</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NSTMT</key>
-			<priority>INFO</priority>
+			<priority>BLOCKER</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NSSMT</key>
-			<priority>INFO</priority>
+			<priority>BLOCKER</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CABE</key>
-			<priority>INFO</priority>
+			<priority>BLOCKER</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SCABE</key>
-			<priority>INFO</priority>
+			<priority>BLOCKER</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>LERR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>EVLC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>RAND</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NOV6</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>V6ON</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>HOUGH</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FROPT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FROPTX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPSD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>VRRPS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMMR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMSSPEC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPSPEC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPPSD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DINLN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFCNCHK</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MATCH2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MATCH3</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GPUAR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GPUARB</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CHLNC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CHLNCI</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BTSFT</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTFA1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTFA2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTFP1</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTFP2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MTFB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MSYSTEM</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BTCMP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>CRTJOB</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>PMTMCONF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ZEROLIKE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKO</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NCHKNO</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NVREPL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GENDEP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GENWARN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEPCLG</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEPBART</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEPLETT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FAFD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FALFD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SQGPN</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>NORALG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>SETRS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>GETRS</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBLKMN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBHRRS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBHMNWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCHBWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFLTTPWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DGSWIN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DHMMNG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DHANN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DKSER</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DNLWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPNWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRCTWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTYLRWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTRNG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTKYWN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBURG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCOV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEVCTR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMCOV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMTM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMUSIC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPRDGRM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWELCH</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DYULEAR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPBCHNC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBCHNC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPBCHDC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBCHDC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPRSNC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRSNC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPRSDC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRSDC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DLDPCNC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DLDPCDC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEVM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMER</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DACPR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTRIREP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDELTRI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTRIINT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DQUAD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DQUADL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DQUADV</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDBLQD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTRIQD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAVIRD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAVIINF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAFINF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEXIFRD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DILEVAL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRNDINT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSTRRD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTXTRD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDTRD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFNDR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCRTPJ</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCRTMJ</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDFEVL</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDFEVLA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDFTPC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DIMTPC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DGCURJM</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DGFDEPD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWVRD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWVWR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWVFINF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAURD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAUFINF</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAUWR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSTRRNG</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWK1C</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWK1RD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWK1WR</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWK1FI</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWK1WRC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSTRMT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSTSTR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DSTRVCT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DISSTR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBLKPRC</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPGUPDLG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEMLC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEMLMEX</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DLUINC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWVPLY</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DWVREC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAVIFL</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DISEQN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DAPPLUT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRSDEC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRSENC</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMCHN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DBITMAX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRCOSFIR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRCOSFLT</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRCOSIIR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DRCOSINE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFIRRCOS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFIRGAUSS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DGAUSSFIR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DVRML</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCSHELP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFIGFLAG</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DGETST</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DMENUL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPOPUP</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DUIGET</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DNOANI</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DGRDD</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDELA</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDSRCH</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DTSRCH</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DPOOL</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFLIPDIM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>FSTR</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DDBMEX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DFTSMTX</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DIMTRNS</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DCPTF</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEPNOE</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEPGENAM</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>DEPFUN</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>MOVIE2</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>HDFGD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>HDFSD</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>HDFSW</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>BINTP</key>
-			<priority>CRITICAL</priority>
+			<priority>MINOR</priority>
 		</rule>
 		<rule>
 			<repository>MLint<repository>
 			<key>ISGLOB</key>
-			<priority>BLOCKER</priority>
+			<priority>INFO</priority>
 		</rule>
 	</rules>
 </profile>
