@@ -1,1693 +1,5070 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rules>
-  <rule>
-    <key>C0102</key>
-    <name><![CDATA[Black listed name]]></name>
-    <configKey>C0102</configKey>
-    <description>
-      <![CDATA[Used when the name is listed in the black list (unauthorized names).]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0103</key>
-    <name><![CDATA[Invalid name]]></name>
-    <configKey>C0103</configKey>
-    <description>
-      <![CDATA[Used when the name doesn't match the regular expression associated to its type (constant, variable, class...).]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0111</key>
-    <name><![CDATA[Missing docstring]]></name>
-    <configKey>C0111</configKey>
-    <description>
-      <![CDATA[Used when a module, function, class or method has no docstring. Some special methods like __init__ doesn't necessary require a docstring.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0112</key>
-    <name><![CDATA[Empty docstring]]></name>
-    <configKey>C0112</configKey>
-    <description>
-      <![CDATA[Used when a module, function, class or method has an empty docstring (it would be too easy ;).]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0121</key>
-    <name><![CDATA[Missing required attribute]]></name>
-    <configKey>C0121</configKey>
-    <description>
-      <![CDATA[Used when an attribute required for modules is missing.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0202</key>
-    <name><![CDATA[Class method should have "cls" as first argument]]></name>
-    <configKey>C0202</configKey>
-    <description>
-      <![CDATA[Used when a class method has an attribute different than "cls" as first argument, to easily differentiate them from regular instance methods.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0203</key>
-    <name><![CDATA[Metaclass method should have "mcs" as first argument]]></name>
-    <configKey>C0203</configKey>
-    <description>
-      <![CDATA[Used when a metaclass method has an attribute different the "mcs" as first argument.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0301</key>
-    <name><![CDATA[Line too long]]></name>
-    <configKey>C0301</configKey>
-    <description>
-      <![CDATA[Used when a line is longer than a given number of characters.
-      <p>This rule is deprecated, use {rule:python:LineLength} instead.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-    <status>DEPRECATED</status>
-  </rule>
-  <rule>
-    <key>C0302</key>
-    <name><![CDATA[Too many lines in module]]></name>
-    <configKey>C0302</configKey>
-    <description>
-      <![CDATA[Used when a module has too much lines, reducing its readability.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0321</key>
-    <name><![CDATA[More than one statement on a single line]]></name>
-    <configKey>C0321</configKey>
-    <description>
-      <![CDATA[<p>Used when more than one statement are found on the same line.</p> 
-      <p>This rule is deprecated, use {rule:python:OneStatementPerLine} instead.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-    <status>DEPRECATED</status>
-  </rule>
-  <rule>
-    <key>C0322</key>
-    <name><![CDATA[Operator not preceded by a space]]></name>
-    <configKey>C0322</configKey>
-    <description>
-      <![CDATA[Used when one of the following operator (!= | <= | == | >= | < | > | = | \+= |-= | \*= | /= | %) is not preceded by a space.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0323</key>
-    <name><![CDATA[Operator not followed by a space]]></name>
-    <configKey>C0323</configKey>
-    <description>
-      <![CDATA[Used when one of the following operator (!= | <= | == | >= | < | > | = | \+= |-= | \*= | /= | %) is not followed by a space.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0324</key>
-    <name><![CDATA[Comma not followed by a space]]></name>
-    <configKey>C0324</configKey>
-    <description>
-      <![CDATA[Used when a comma (",") is not followed by a space.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0001</key>
-    <name><![CDATA[Syntax error]]></name>
-    <configKey>E0001</configKey>
-    <description>
-      <![CDATA[Used when a syntax error is raised for a module.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0011</key>
-    <name><![CDATA[Unrecognized file option]]></name>
-    <configKey>E0011</configKey>
-    <description>
-      <![CDATA[Used when an unknown inline option is encountered.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0012</key>
-    <name><![CDATA[Bad option value]]></name>
-    <configKey>E0012</configKey>
-    <description>
-      <![CDATA[Used when a bad value for an inline option is encountered.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0100</key>
-    <name><![CDATA[__init__ method is a generator]]></name>
-    <configKey>E0100</configKey>
-    <description>
-      <![CDATA[Used when the special class method __init__ is turned into a generator by a yield in its body.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0101</key>
-    <name><![CDATA[Explicit return in __init__]]></name>
-    <configKey>E0101</configKey>
-    <description>
-      <![CDATA[Used when the special class method __init__ has an explicit return value.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0102</key>
-    <name><![CDATA[Redefined function/class/method]]></name>
-    <configKey>E0102</configKey>
-    <description>
-      <![CDATA[Used when a function / class / method is redefined.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0103</key>
-    <name><![CDATA[Usage of 'break' or 'continue' outside of a loop]]></name>
-    <configKey>E0103</configKey>
-    <description>
-      <![CDATA[Used when break or continue keywords are used outside a loop.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0104</key>
-    <name><![CDATA[Return outside function]]></name>
-    <configKey>E0104</configKey>
-    <description>
-      <![CDATA[Used when a "return" statement is found outside a function or method.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0105</key>
-    <name><![CDATA[Yield outside function]]></name>
-    <configKey>E0105</configKey>
-    <description>
-      <![CDATA[Used when a "yield" statement is found outside a function or method.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0106</key>
-    <name><![CDATA[Return with argument inside generator]]></name>
-    <configKey>E0106</configKey>
-    <description>
-      <![CDATA[Used when a "return" statement with an argument is found outside in a generator function or method (e.g. with some "yield" statements).]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0107</key>
-    <name><![CDATA[Use of a non-existent operator]]></name>
-    <configKey>E0107</configKey>
-    <description>
-      <![CDATA[Used when you attempt to use the C-style pre-increment or pre-decrement operator -- and ++, which doesn't exist in Python.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0202</key>
-    <name><![CDATA[Method hidden by attribute of super class]]></name>
-    <configKey>E0202</configKey>
-    <description>
-      <![CDATA[Used when a class defines a method which is hidden by an instance attribute from an ancestor class.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0203</key>
-    <name><![CDATA[Access to member before its definition]]></name>
-    <configKey>E0203</configKey>
-    <description>
-      <![CDATA[Used when an instance member is accessed before it's actually assigned.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0211</key>
-    <name><![CDATA[Method has no argument]]></name>
-    <configKey>E0211</configKey>
-    <description>
-      <![CDATA[Used when a method which should have the bound instance as first argument has no argument defined.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0213</key>
-    <name><![CDATA[Method should have "self" as first argument]]></name>
-    <configKey>E0213</configKey>
-    <description>
-      <![CDATA[Used when a method has an attribute different the "self" as first argument. This is considered as an error since this is a so common convention that you shouldn't break it!]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0221</key>
-    <name><![CDATA[Implemented interface must be a class]]></name>
-    <configKey>E0221</configKey>
-    <description>
-      <![CDATA[Used when a class claims to implement an interface which is not a class.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0222</key>
-    <name><![CDATA[Missing method from interface]]></name>
-    <configKey>E0222</configKey>
-    <description>
-      <![CDATA[Used when a method declared in an interface is missing from a class implementing this interface]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0501</key>
-    <name><![CDATA[Non ascii characters found but no encoding specified (PEP 263)]]></name>
-    <configKey>E0501</configKey>
-    <description>
-      <![CDATA[Used when some non ascii characters are detected but no
-      encoding is specified, as stated in the PEP 263.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0502</key>
-    <name><![CDATA[Wrong encoding specified]]></name>
-    <configKey>E0502</configKey>
-    <description>
-      <![CDATA[Used when a known encoding is specified but the file
-      doesn't seem to be actually in this encoding.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0503</key>
-    <name><![CDATA[Unknown encoding specified]]></name>
-    <configKey>E0503</configKey>
-    <description>
-      <![CDATA[Used when an encoding is specified, but it's unknown to Python.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0601</key>
-    <name><![CDATA[Using variable before assignment]]></name>
-    <configKey>E0601</configKey>
-    <description>
-      <![CDATA[Used when a local variable is accessed before it's assignment.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0602</key>
-    <name><![CDATA[Undefined variable]]></name>
-    <configKey>E0602</configKey>
-    <description>
-      <![CDATA[Used when an undefined variable is accessed.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0611</key>
-    <name><![CDATA[Undefined name]]></name>
-    <configKey>E0611</configKey>
-    <description>
-      <![CDATA[Used when a name cannot be found in a module.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0701</key>
-    <name><![CDATA[Bad except clauses order]]></name>
-    <configKey>E0701</configKey>
-    <description>
-      <![CDATA[Used when except clauses are not in the correct order (from the more specific to the more generic). If you don't fix the order, some exceptions may not be catched by the most specific handler.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0702</key>
-    <name><![CDATA[Raising only allowed for classes, instances or strings]]></name>
-    <configKey>E0702</configKey>
-    <description>
-      <![CDATA[Used when something which is neither a class, an instance or a string is raised (i.e. a 'TypeError' will be raised).]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0710</key>
-    <name><![CDATA[Raising a new style class which doesn't inherit from BaseException]]></name>
-    <configKey>E0710</configKey>
-    <description>
-      <![CDATA[Used when a new style class which doesn't inherit from BaseException is raised.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E0711</key>
-    <name><![CDATA[NotImplemented raised - should raise NotImplementedError]]></name>
-    <configKey>E0711</configKey>
-    <description>
-      <![CDATA[Used when NotImplemented is raised instead of NotImplementedError]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1001</key>
-    <name><![CDATA[Use of __slots__ on an old style class]]></name>
-    <configKey>E1001</configKey>
-    <description>
-      <![CDATA[Used when an old style class uses the __slots__ attribute.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1002</key>
-    <name><![CDATA[Use of super on an old style class]]></name>
-    <configKey>E1002</configKey>
-    <description>
-      <![CDATA[Used when an old style class uses the super builtin.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1003</key>
-    <name><![CDATA[Bad first argument given to super]]></name>
-    <configKey>E1003</configKey>
-    <description>
-      <![CDATA[Used when another argument than the current class is given as first argument of the super builtin.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1101</key>
-    <name><![CDATA[Access of nonexistent member]]></name>
-    <configKey>E1101</configKey>
-    <description>
-      <![CDATA[Used when a variable is accessed for an nonexistent member.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1102</key>
-    <name><![CDATA[Calling of not callable]]></name>
-    <configKey>E1102</configKey>
-    <description>
-      <![CDATA[Used when an object being called has been inferred to a non callable object]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1103</key>
-    <name><![CDATA[Accessing nonexistent member (type information incomplete)]]></name>
-    <configKey>E1103</configKey>
-    <description>
-      <![CDATA[Used when a variable is accessed for an nonexistent member, but Pylint was not able to interpret all possible types of this variable.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1111</key>
-    <name><![CDATA[Assigning to function call which doesn't return]]></name>
-    <configKey>E1111</configKey>
-    <description>
-      <![CDATA[Used when an assignment is done on a function call but the inferred function doesn't return anything.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1120</key>
-    <name><![CDATA[Too few arguments]]></name>
-    <configKey>E1120</configKey>
-    <description>
-      <![CDATA[Used when a function call passes too few arguments.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1121</key>
-    <name><![CDATA[Too many positional arguments for function call]]></name>
-    <configKey>E1121</configKey>
-    <description>
-      <![CDATA[Used when a function call passes too many positional arguments.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1122</key>
-    <name><![CDATA[Duplicate keyword argument in function call]]></name>
-    <configKey>E1122</configKey>
-    <description>
-      <![CDATA[Used when a function call passes the same keyword argument multiple times.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1123</key>
-    <name><![CDATA[Passing unexpected keyword argument in function call]]></name>
-    <configKey>E1123</configKey>
-    <description>
-      <![CDATA[Used when a function call passes a keyword argument that doesn't correspond to one of the function's parameter names.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1124</key>
-    <name><![CDATA[Multiple values passed for parameter in function call]]></name>
-    <configKey>E1124</configKey>
-    <description>
-      <![CDATA[Used when a function call would result in assigning multiple values to a function parameter, one value from a positional argument and one from a keyword argument.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E9900</key>
-    <name><![CDATA[Unsupported format character]]></name>
-    <configKey>E1300</configKey>
-    <description>
-      <![CDATA[Used when a unsupported format character is used in a format string.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1301</key>
-    <name><![CDATA[Format string ends in middle of conversion specifier]]></name>
-    <configKey>E1301</configKey>
-    <description>
-      <![CDATA[Used when a format string terminates before the end of a conversion specifier.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1302</key>
-    <name><![CDATA[Mixing named and unnamed conversion specifiers in format string]]></name>
-    <configKey>E1302</configKey>
-    <description>
-      <![CDATA[Used when a format string contains both named (e.g. '%(foo)d') and unnamed (e.g. '%d') conversion specifiers. This is also used when a named conversion specifier contains * for the minimum field width and/or precision.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1303</key>
-    <name><![CDATA[Expected mapping for format string]]></name>
-    <configKey>E1303</configKey>
-    <description>
-      <![CDATA[Used when a format string that uses named conversion specifiers is used with an argument that is not a mapping.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1304</key>
-    <name><![CDATA[Missing key in format string dictionary]]></name>
-    <configKey>E1304</configKey>
-    <description>
-      <![CDATA[Used when a format string that uses named conversion specifiers is used with a dictionary that doesn't contain all the keys required by the format string.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1305</key>
-    <name><![CDATA[Too many arguments for format string]]></name>
-    <configKey>E1305</configKey>
-    <description>
-      <![CDATA[Used when a format string that uses unnamed conversion specifiers is given too few arguments.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1306</key>
-    <name><![CDATA[Not enough arguments for format string]]></name>
-    <configKey>E1306</configKey>
-    <description>
-      <![CDATA[Used when a format string that uses unnamed conversion specifiers is given too many arguments]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0001</key>
-    <name><![CDATA[Analysis failed]]></name>
-    <configKey>F0001</configKey>
-    <description>
-      <![CDATA[Used when an error occurred preventing the analysis of a
-               module (unable to find it for instance).]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0002</key>
-    <name><![CDATA[Internal pylint error]]></name>
-    <configKey>F0002</configKey>
-    <description>
-      <![CDATA[Used when an unexpected error occurred while building the ASTNG representation. This is usually accompanied by a traceback. Please report such errors!]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0003</key>
-    <name><![CDATA[Ignored builtin module]]></name>
-    <configKey>F0003</configKey>
-    <description>
-      <![CDATA[Used to indicate that the user asked to analyze a builtin module which has been skipped.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0004</key>
-    <name><![CDATA[Unexpected inferred value]]></name>
-    <configKey>F0004</configKey>
-    <description>
-      <![CDATA[Used to indicate that some value of an unexpected type has been inferred.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0010</key>
-    <name><![CDATA[Error while code parsing]]></name>
-    <configKey>F0010</configKey>
-    <description>
-      <![CDATA[Used when an exception occurred while building the ASTNG representation which could be handled by ASTNG.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0202</key>
-    <name><![CDATA[Unable to check methods signature]]></name>
-    <configKey>F0202</configKey>
-    <description>
-      <![CDATA[Used when PyLint has been unable to check methods signature compatibility for an unexpected reason. Please report this kind if you don't make sense of it.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0220</key>
-    <name><![CDATA[Failed to resolve interfaces]]></name>
-    <configKey>F0220</configKey>
-    <description>
-      <![CDATA[Used when a PyLint as failed to find interfaces implemented by a class]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0321</key>
-    <name><![CDATA[Format detection error]]></name>
-    <configKey>F0321</configKey>
-    <description>
-      <![CDATA[Used when an unexpected error occurred in bad format
-               detection. Please report the error if it occurs.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>F0401</key>
-    <name><![CDATA[Unable to import module]]></name>
-    <configKey>F0401</configKey>
-    <description>
-      <![CDATA[Used when pylint has been unable to import a module.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>I0001</key>
-    <name><![CDATA[Unable to run raw checkers on built-in module]]></name>
-    <configKey>I0001</configKey>
-    <description>
-      <![CDATA[Used to inform that a built-in module has not been checked using the raw checkers.]]>
-    </description>
-    <priority>INFO</priority>
-  </rule>
-  <rule>
-    <key>I0010</key>
-    <name><![CDATA[Unable to consider inline option]]></name>
-    <configKey>I0010</configKey>
-    <description>
-      <![CDATA[Used when an inline option is either badly formatted or can't be used inside modules.]]>
-    </description>
-    <priority>INFO</priority>
-  </rule>
-  <rule>
-    <key>I0011</key>
-    <name><![CDATA[Locally disabling message]]></name>
-    <configKey>I0011</configKey>
-    <description>
-      <![CDATA[Used when an inline option disables a message or a messages category.]]>
-    </description>
-    <priority>INFO</priority>
-  </rule>
-  <rule>
-    <key>I0012</key>
-    <name><![CDATA[Locally enabling message]]></name>
-    <configKey>I0012</configKey>
-    <description>
-      <![CDATA[Used when an inline option enables a message or a messages category.]]>
-    </description>
-    <priority>INFO</priority>
-  </rule>
-  <rule>
-    <key>I0013</key>
-    <name><![CDATA[Ignoring entire file]]></name>
-    <configKey>I0013</configKey>
-    <description>
-      <![CDATA[Used to inform that the file will not be checked]]>
-    </description>
-    <priority>INFO</priority>
-  </rule>
-  <rule>
-    <key>R0201</key>
-    <name><![CDATA[Method could be a function]]></name>
-    <configKey>R0201</configKey>
-    <description>
-      <![CDATA[Used when a method doesn't use its bound instance, and so could be written as a function.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0401</key>
-    <name><![CDATA[Cyclic import]]></name>
-    <configKey>R0401</configKey>
-    <description>
-      <![CDATA[Used when a cyclic import between two or more modules is detected.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0801</key>
-    <name><![CDATA[Similar lines]]></name>
-    <configKey>R0801</configKey>
-    <description>
-      <![CDATA[Indicates that a set of similar lines has been detected among multiple file. This usually means that the code should be refactored to avoid this duplication.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0901</key>
-    <name><![CDATA[Too many ancestors]]></name>
-    <configKey>R0901</configKey>
-    <description>
-      <![CDATA[Used when class has too many parent classes, try to reduce this to get a more simple (and so easier to use) class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0902</key>
-    <name><![CDATA[Too many instance attributes]]></name>
-    <configKey>R0902</configKey>
-    <description>
-      <![CDATA[Used when class has too many instance attributes, try to reduce this to get a more simple (and so easier to use) class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0903</key>
-    <name><![CDATA[Too few public methods]]></name>
-    <configKey>R0903</configKey>
-    <description>
-      <![CDATA[Used when class has too few public methods, so be sure it's really worth it.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0904</key>
-    <name><![CDATA[Too many public methods]]></name>
-    <configKey>R0904</configKey>
-    <description>
-      <![CDATA[Used when class has too many public methods, try to reduce this to get a more simple (and so easier to use) class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0911</key>
-    <name><![CDATA[Too many return statements]]></name>
-    <configKey>R0911</configKey>
-    <description>
-      <![CDATA[Used when a function or method has too many return statement, making it hard to follow.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0912</key>
-    <name><![CDATA[Too many branches]]></name>
-    <configKey>R0912</configKey>
-    <description>
-      <![CDATA[Used when a function or method has too many branches, making it hard to follow.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0913</key>
-    <name><![CDATA[Too many arguments]]></name>
-    <configKey>R0913</configKey>
-    <description>
-      <![CDATA[Used when a function or method takes too many arguments.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0914</key>
-    <name><![CDATA[Too many local variables]]></name>
-    <configKey>R0914</configKey>
-    <description>
-      <![CDATA[Used when a function or method has too many local variables.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0915</key>
-    <name><![CDATA[Too many statements]]></name>
-    <configKey>R0915</configKey>
-    <description>
-      <![CDATA[Used when a function or method has too many statements. You should then split it in smaller functions / methods.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0921</key>
-    <name><![CDATA[Abstract class not referenced]]></name>
-    <configKey>R0921</configKey>
-    <description>
-      <![CDATA[Used when an abstract class is not used as ancestor anywhere.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0922</key>
-    <name><![CDATA[Abstract class used too few times]]></name>
-    <configKey>R0922</configKey>
-    <description>
-      <![CDATA[Used when an abstract class is used less than X times as ancestor.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>R0923</key>
-    <name><![CDATA[Interface not implemented]]></name>
-    <configKey>R0923</configKey>
-    <description>
-      <![CDATA[Used when an interface class is not implemented anywhere.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0101</key>
-    <name><![CDATA[Unreachable code]]></name>
-    <configKey>W0101</configKey>
-    <description>
-      <![CDATA[Used when there is some code behind a "return" or "raise" statement, which will never be accessed.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0102</key>
-    <name><![CDATA[Dangerous default value as argument]]></name>
-    <configKey>W0102</configKey>
-    <description>
-      <![CDATA[Used when a mutable value as list or dictionary is detected in a default value for an argument.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0104</key>
-    <name><![CDATA[Statement seems to have no effect]]></name>
-    <configKey>W0104</configKey>
-    <description>
-      <![CDATA[Used when a statement doesn't have (or at least seems to) any effect.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0105</key>
-    <name><![CDATA[String statement has no effect]]></name>
-    <configKey>W0105</configKey>
-    <description>
-      <![CDATA[Used when a string is used as a statement (which of course has no effect). This is a particular case of W0104 with its own message so you can easily disable it if you're using those strings as documentation, instead of comments.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0106</key>
-    <name><![CDATA[Expression is assigned to nothing]]></name>
-    <configKey>W0106</configKey>
-    <description>
-      <![CDATA[Used when an expression that is not a function call is assigned to nothing. Probably something else was intended.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0107</key>
-    <name><![CDATA[Unnecessary pass statement]]></name>
-    <configKey>W0107</configKey>
-    <description>
-      <![CDATA[Used when a "pass" statement that can be avoided is encountered.)]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0108</key>
-    <name><![CDATA[Lambda may not be necessary]]></name>
-    <configKey>W0108</configKey>
-    <description>
-      <![CDATA[Used when the body of a lambda expression is a function call on the same argument list as the lambda itself; such lambda expressions are in all but a few cases replaceable with the function being called in the body of the lambda.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0109</key>
-    <name><![CDATA[Duplicate key in dictionary]]></name>
-    <configKey>W0109</configKey>
-    <description>
-      <![CDATA[Used when a dictionary expression binds the same key multiple times.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0122</key>
-    <name><![CDATA[Use of the exec statement]]></name>
-    <configKey>W0122</configKey>
-    <description>
-      <![CDATA[Used when you use the "exec" statement, to discourage its usage. That doesn't mean you can not use it!]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0141</key>
-    <name><![CDATA[Used black listed builtin function]]></name>
-    <configKey>W0141</configKey>
-    <description>
-      <![CDATA[Used when a black listed builtin function is used (see the bad-function option). Usual black listed functions are the ones like map, or filter, where Python offers now some cleaner alternative like list comprehension.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0142</key>
-    <name><![CDATA[Used * or ** magic]]></name>
-    <configKey>W0142</configKey>
-    <description>
-      <![CDATA[Used when a function or method is called using `*args` or `**kwargs` to dispatch arguments. This doesn't improve readability and should be used with care.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0150</key>
-    <name><![CDATA[Statement in finally block may swallow exception]]></name>
-    <configKey>W0150</configKey>
-    <description>
-      <![CDATA[Used when a break or a return statement is found inside the finally clause of a try...finally block: the exceptions raised in the try clause will be silently swallowed instead of being re-raised.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0199</key>
-    <name><![CDATA[Assert called on a 2-uple]]></name>
-    <configKey>W0199</configKey>
-    <description>
-      <![CDATA[A call of assert on a tuple will always evaluate to true if the tuple is not empty, and will always evaluate to false if it is. Did you mean 'assert x,y'?]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0201</key>
-    <name><![CDATA[Attribute defined outside __init__]]></name>
-    <configKey>W0201</configKey>
-    <description>
-      <![CDATA[Used when an instance attribute is defined outside the __init__ method.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0211</key>
-    <name><![CDATA[Static method with "self" or "cls" as first argument]]></name>
-    <configKey>W0211</configKey>
-    <description>
-      <![CDATA[Used when a static method has "self" or "cls" as first argument.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0212</key>
-    <name><![CDATA[Access to a protected member of a client class]]></name>
-    <configKey>W0212</configKey>
-    <description>
-      <![CDATA[Used when a protected member (i.e. class member with a name beginning with an underscore) is access outside the class or a descendant of the class where it's defined.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0221</key>
-    <name><![CDATA[Arguments number discrepancy]]></name>
-    <configKey>W0221</configKey>
-    <description>
-      <![CDATA[Used when a method has a different number of arguments than in the implemented interface or in an overridden method.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0222</key>
-    <name><![CDATA[Signature discrepancy]]></name>
-    <configKey>W0222</configKey>
-    <description>
-      <![CDATA[Used when a method signature is different than in the implemented interface or in an overridden method.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0223</key>
-    <name><![CDATA[Abstract method is not overridden]]></name>
-    <configKey>W0223</configKey>
-    <description>
-      <![CDATA[Used when an abstract method (i.e. raise NotImplementedError) is not overridden in concrete class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0231</key>
-    <name><![CDATA[__init__ method from base class is not called]]></name>
-    <configKey>W0231</configKey>
-    <description>
-      <![CDATA[Used when an ancestor class method has an __init__ method which is not called by a derived class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0232</key>
-    <name><![CDATA[Class has no __init__ method]]></name>
-    <configKey>W0232</configKey>
-    <description>
-      <![CDATA[Used when a class has no __init__ method, neither its parent classes.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0233</key>
-    <name><![CDATA[__init__ method from a non direct base class is called]]></name>
-    <configKey>W0233</configKey>
-    <description>
-      <![CDATA[Used when an __init__ method is called on a class which is not in the direct ancestors for the analysed class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0301</key>
-    <name><![CDATA[Unnecessary semicolon]]></name>
-    <configKey>W0301</configKey>
-    <description>
-      <![CDATA[Used when a statement is ended by a semi-colon (";"), which isn't necessary(that's python, not C ;).]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0311</key>
-    <name><![CDATA[Bad indentation]]></name>
-    <configKey>W0311</configKey>
-    <description>
-      <![CDATA[Used when an unexpected number of indentation's tabulations or spaces has been found.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0312</key>
-    <name><![CDATA[Mixed tabs/spaces indentation]]></name>
-    <configKey>W0312</configKey>
-    <description>
-      <![CDATA[Used when there are some mixed tabs and spaces in a module.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0331</key>
-    <name><![CDATA[Use of the <> operator]]></name>
-    <configKey>W0331</configKey>
-    <description>
-      <![CDATA[Used when the deprecated "<>" operator is used instead of "!=".]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0332</key>
-    <name><![CDATA[Use l as long integer identifier]]></name>
-    <configKey>W0332</configKey>
-    <description>
-      <![CDATA[Used when a lower case "l" is used to mark a long integer. You should use an upper case "L" since the letter "l" looks too much like the digit "1"]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0333</key>
-    <name><![CDATA[Use of the `` operator]]></name>
-    <configKey>W0333</configKey>
-    <description>
-      <![CDATA[Used when the deprecated "``" (backtick) operator is used instead of the str() function.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0401</key>
-    <name><![CDATA[Wildcard import]]></name>
-    <configKey>W0401</configKey>
-    <description>
-      <![CDATA[Used when `from module import *` is detected.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0402</key>
-    <name><![CDATA[Uses of a deprecated module]]></name>
-    <configKey>W0402</configKey>
-    <description>
-      <![CDATA[Used a module marked as deprecated is imported.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0403</key>
-    <name><![CDATA[Relative import]]></name>
-    <configKey>W0403</configKey>
-    <description>
-      <![CDATA[Used when an import relative to the package directory is detected.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0404</key>
-    <name><![CDATA[Reimport]]></name>
-    <configKey>W0404</configKey>
-    <description>
-      <![CDATA[Used when a module is reimported multiple times.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0406</key>
-    <name><![CDATA[Module imports itself]]></name>
-    <configKey>W0406</configKey>
-    <description>
-      <![CDATA[Used when a module is importing itself.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0410</key>
-    <name><![CDATA[__future__ import is not the first non docstring statement]]></name>
-    <configKey>W0410</configKey>
-    <description>
-      <![CDATA[Python 2.5 and greater require __future__ import to be the first non docstring statement in the module.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0511</key>
-    <name><![CDATA[Task marker found]]></name>
-    <configKey>W0511</configKey>
-    <description>
-      <![CDATA[Used when a warning note as FIXME or XXX is detected.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0601</key>
-    <name><![CDATA[Global variable undefined at the module level]]></name>
-    <configKey>W0601</configKey>
-    <description>
-      <![CDATA[Used when a variable is defined through the "global" statement but the variable is not defined in the module scope.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0602</key>
-    <name><![CDATA[Unassigned global variable]]></name>
-    <configKey>W0602</configKey>
-    <description>
-      <![CDATA[Used when a variable is defined through the "global" statement but no assignment to this variable is done.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0603</key>
-    <name><![CDATA[Using the global statement]]></name>
-    <configKey>W0603</configKey>
-    <description>
-      <![CDATA[Used when you use the "global" statement to update a global variable. PyLint just tries to discourage this usage. That doesn't mean you can not use it!]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0604</key>
-    <name><![CDATA[Using the global statement at the module level]]></name>
-    <configKey>W0604</configKey>
-    <description>
-      <![CDATA[Used when you use the "global" statement at the module level since it has no effect]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0611</key>
-    <name><![CDATA[Unused import]]></name>
-    <configKey>W0611</configKey>
-    <description>
-      <![CDATA[Used when an imported module or variable is not used.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0612</key>
-    <name><![CDATA[Unused variable]]></name>
-    <configKey>W0612</configKey>
-    <description>
-      <![CDATA[Used when a variable is defined but not used.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0613</key>
-    <name><![CDATA[Unused argument]]></name>
-    <configKey>W0613</configKey>
-    <description>
-      <![CDATA[Used when a function or method argument is not used.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0614</key>
-    <name><![CDATA[Unused import from wildcard import]]></name>
-    <configKey>W0614</configKey>
-    <description>
-      <![CDATA[Used when an imported module or variable is not used from a 'from X import *'style import.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0621</key>
-    <name><![CDATA[Redefining name from outer scope]]></name>
-    <configKey>W0621</configKey>
-    <description>
-      <![CDATA[Used when a variable's name hides a name defined in the outer scope.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0622</key>
-    <name><![CDATA[Redefining built-in]]></name>
-    <configKey>W0622</configKey>
-    <description>
-      <![CDATA[Used when a variable or function override a built-in.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0631</key>
-    <name><![CDATA[Using possibly undefined loop variable]]></name>
-    <configKey>W0631</configKey>
-    <description>
-      <![CDATA[Used when an loop variable (i.e. defined by a for loop or a list comprehension or a generator expression) is used outside the loop.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0701</key>
-    <name><![CDATA[Raising a string exception]]></name>
-    <configKey>W0701</configKey>
-    <description>
-      <![CDATA[Used when a string exception is raised.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0702</key>
-    <name><![CDATA[No exception type(s) specified]]></name>
-    <configKey>W0702</configKey>
-    <description>
-      <![CDATA[Used when an except clause doesn't specify exceptions type to catch.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0703</key>
-    <name><![CDATA[Catching too general exception]]></name>
-    <configKey>W0703</configKey>
-    <description>
-      <![CDATA[Used when an except catches a too general exception, possibly burying unrelated errors.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0704</key>
-    <name><![CDATA[Except doesn't do anything]]></name>
-    <configKey>W0704</configKey>
-    <description>
-      <![CDATA[Used when an except clause does nothing but "pass" and there is no "else" clause.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0710</key>
-    <name><![CDATA[Exception doesn't inherit from standard "Exception" class]]></name>
-    <configKey>W0710</configKey>
-    <description>
-      <![CDATA[Used when a custom exception class is raised but doesn't inherit from the builtin "Exception" class.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W1001</key>
-    <name><![CDATA[Use of "property" on an old style class]]></name>
-    <configKey>W1001</configKey>
-    <description>
-      <![CDATA[Used when PyLint detects the use of the builtin "property" on an old style class while this is relying on new style classes features]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W1111</key>
-    <name><![CDATA[Assigning to function call which only returns None]]></name>
-    <configKey>W1111</configKey>
-    <description>
-      <![CDATA[Used when an assignment is done on a function call but the inferred function returns nothing but None.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W1201</key>
-    <name><![CDATA[Specify string format arguments as logging function parameters]]></name>
-    <configKey>W1201</configKey>
-    <description>
-      <![CDATA[Used when a logging statement has a call form of
-               "logging.<loggingmethod>(format_string % (format_args...))". Such
-               calls should leave string interpolation to the logging method itself
-               and be written "logging.<loggingmethod>(format_string,
-               format_args...)" so that the program may avoid incurring the cost of
-               the interpolation in those cases in which no message will be
-               logged. For more, see http://www.python.org/dev/peps/pep-0282/.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W1300</key>
-    <name><![CDATA[Format string dictionary key should be a string]]></name>
-    <configKey>W1300</configKey>
-    <description>
-      <![CDATA[Used when a format string that uses named conversion specifiers is used with a dictionary whose keys are not all strings.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W1301</key>
-    <name><![CDATA[Unused key in format string dictionary]]></name>
-    <configKey>W1301</configKey>
-    <description>
-      <![CDATA[Used when a format string that uses named conversion specifiers is used with adictionary that contains keys not required by the format string.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-
-  <!-- removed in in pylint 0.22 -->
-  <!-- E0503 (Unknown encoding specified) -->
-
-  <!-- removed in in pylint 0.23 -->
-  <!-- E0501 (Non ascii characters found but no encoding specified (PEP 263)) -->
-  <!-- E0502 Wrong encoding specified -->
-  <!-- F0321 Format detection error in %r -->
-
-  <!-- new in pylint 0.24 -->
-  <rule>
-    <key>E1200</key>
-    <name><![CDATA[Unsupported logging format character]]></name>
-    <configKey>E1200</configKey>
-    <description>
-      <![CDATA[Used when an unsupported format character is used in a
-               logging statement format string.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1201</key>
-    <name><![CDATA[Logging format string ends in middle of conversion specifier]]></name>
-    <configKey>E1201</configKey>
-    <description>
-      <![CDATA[Used when a logging statement format string terminates
-               before the end of a conversion specifier.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1205</key>
-    <name><![CDATA[Too many arguments for logging format string]]></name>
-    <configKey>E1205</configKey>
-    <description>
-      <![CDATA[Used when a logging format string is given too few arguments.]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  <rule>
-    <key>E1206</key>
-    <name><![CDATA[Not enough arguments for logging format string]]></name>
-    <configKey>E1206</configKey>
-    <description>
-      <![CDATA[Used when a logging format string is given too many arguments]]>
-    </description>
-    <priority>MAJOR</priority>
-  </rule>
-  
-  <!-- Added between pylint 0.25 and 1.2.1 -->
-  <rule>
-    <key>C0204</key>
-    <name><![CDATA[Metaclass class method first argument]]></name>
-    <configKey>C0204</configKey>
-    <description>
-      <![CDATA[Used when a metaclass class method has a first argument named differently than the value specified 
-      in valid-metaclass-classmethod-first-arg option (defaultto "mcs"), 
-      recommended to easily differentiate them from regular instancemethods.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0303</key>
-    <name><![CDATA[Trailing whitespace]]></name>
-    <configKey>C0303</configKey>
-    <description>
-      <![CDATA[<p>Used when there is whitespace between the end of a line and the newline.</p>
-      <p>Added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0304</key>
-    <name><![CDATA[Final newline missing]]></name>
-    <configKey>C0304</configKey>
-    <description>
-      <![CDATA[<p>Used when the last line in a file is missing a newline.</p>
-      <p>Added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0325</key>
-    <name><![CDATA[Unnecessary parentheses]]></name>
-    <configKey>C0325</configKey>
-    <description>
-      <![CDATA[<p>Used when a single item in parentheses follows an if, for, or other keyword.</p> 
-      <p>This rule was added in Pylint 1.1.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0326</key>
-    <name><![CDATA[Wrong number of spaces around an operator, bracket, or comma, or before a block opener colon]]></name>
-    <configKey>C0326</configKey>
-    <description>
-      <![CDATA[
-        <p>Used when a wrong number of spaces is used around an operator, bracket, or comma, or before a block opener colon.</p>
-        <p>This message belongs to the format checker.</p>
-        <p>In PyLint 1.1.0, this message replaced the older whitespace-related messages 
-        {rule:Pylint:C0322}, {rule:Pylint:C0323}, and {rule:Pylint:C0324}, and now reports some additional situations.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C0330</key>
-    <name><![CDATA[Bad continuation]]></name>
-    <configKey>C0330</configKey>
-    <description>
-      <![CDATA[<p>Used when continued lines are badly indentend.</p>
-      <p>This rule was added in Pylint 1.2.1.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>C1001</key>
-    <name><![CDATA[Old-style class defined]]></name>
-    <configKey>C1001</configKey>
-    <description>
-      <![CDATA[<p>Used when a class is defined that does not inherit from anotherclass and does not inherit explicitly from “object”. 
-      This message can’t be emitted when using Python >= 3.0.</p>
-      <p>This rule was added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0108</key>
-    <name><![CDATA[Duplicate argument name in function definition]]></name>
-    <configKey>E0108</configKey>
-    <description>
-      <![CDATA[Duplicate argument names in function definitions are syntax errors. 
-        <p>This rule was added in Pylint 0.28.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0109</key>
-    <name><![CDATA[Missing argument to reversed()]]></name>
-    <configKey>E0109</configKey>
-    <description>
-      <![CDATA[Used when reversed() builtin didn't receive an argument.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0111</key>
-    <name><![CDATA[The first reversed() argument is not a sequence]]></name>
-    <configKey>E0111</configKey>
-    <description>
-      <![CDATA[Used when the first argument to reversed() builtin isn't a sequence 
-      (does not implement __reversed__, nor __getitem__ and __len__
-      <p>This rule was added in Pylint 1.2.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0235</key>
-    <name><![CDATA[__exit__ must accept 3 arguments: type, value, traceback]]></name>
-    <configKey>E0235</configKey>
-    <description>
-      <![CDATA[Used when the __exit__ special method, belonging to a context manager, does not accept 3 arguments (type, value, traceback).
-        <p>This rule was added in Pylint 1.1.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0236</key>
-    <name><![CDATA[Invalid object in __slots__, must contain only non empty strings]]></name>
-    <configKey>E0236</configKey>
-    <description>
-      <![CDATA[Used when an invalid (non-string) object occurs in __slots__.
-        <p>This rule was added in Pylint 1.2.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0238</key>
-    <name><![CDATA[Invalid __slots__ object]]></name>
-    <configKey>E0238</configKey>
-    <description>
-      <![CDATA[Used when an invalid __slots__ is found in class. Only a string, an iterable or a sequence is permitted.
-        <p>This rule was added in Pylint 1.2.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0603</key>
-    <name><![CDATA[Undefined variable name in __all__]]></name>
-    <configKey>E0603</configKey>
-    <description>
-      <![CDATA[Used when an undefined variable name is referenced in __all__.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0604</key>
-    <name><![CDATA[Invalid object in __all__, must contain only strings]]></name>
-    <configKey>E0604</configKey>
-    <description>
-      <![CDATA[Used when an invalid (non-string) object occurs in __all__. 
-       <p>This rule was added in Pylint 0.27.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E0712</key>
-    <name><![CDATA[Avoid catching an exception which doesn't inherit from BaseException]]></name>
-    <configKey>E0712</configKey>
-    <description>
-      <![CDATA[Used when a class which doesn't inherit from BaseException is used as an exception in an except clause.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E1004</key>
-    <name><![CDATA[Missing argument to super()]]></name>
-    <configKey>E1004</configKey>
-    <description>
-      <![CDATA[Used when the super builtin didn't receive an argument. This message can't be emitted when using Python >= 3.0.]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>E1310</key>
-    <name><![CDATA[Suspicious argument]]></name>
-    <configKey>E1310</configKey>
-    <description>
-      <![CDATA[The argument to a str.{l,r,}strip call contains a duplicate character,
-      <p>This rule was added in Pylint 0.28.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0110</key>
-    <name><![CDATA[map/filter on lambda could be replaced by comprehension]]></name>
-    <configKey>W0110</configKey>
-    <description>
-      <![CDATA[Used when a lambda is the first argument to "map" or "filter". 
-        It could be clearer as a list comprehension or generator expression. This message can't be emitted when using Python >= 3.0.
-        <p>This rule was added in Pylint 0.27.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0120</key>
-    <name><![CDATA[Else clause on loop without a break statement]]></name>
-    <configKey>W0120</configKey>
-    <description>
-      <![CDATA[Loops should only have an else clause if they can exit early with a break statement, 
-        otherwise the statements under else should be on the same scope as the loop itself.
-        <p>This rule was added in Pylint 0.28.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0121</key>
-    <name><![CDATA[Use raise ErrorClass(args) instead of raise ErrorClass, args.]]></name>
-    <configKey>W0121</configKey>
-    <description>
-      <![CDATA[Used when the alternate raise syntax 'raise foo, bar' is used instead of 'raise foo(bar)'. 
-        This message can't be emitted when using Python >= 3.0.
-        <p>This rule was added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0123</key>
-    <name><![CDATA[Use of eval]]></name>
-    <configKey>W0123</configKey>
-    <description>
-      <![CDATA[Used when you use the "eval" function, to discourage its usage. 
-        Consider using `ast.literal_eval` for safely evaluating strings containing Python expressionsfrom untrusted sources.
-        <p>This rule was added in Pylint 1.2.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0234</key>
-    <name><![CDATA[__iter__ returns non-iterator]]></name>
-    <configKey>W0234</configKey>
-    <description>
-      <![CDATA[Used when an __iter__ method returns something which is not an iterable (i.e. has no `next` method).
-        <p>This rule was added in Pylint 1.1.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0512</key>
-    <name><![CDATA[Source line cannot be decoded using the specified source file encoding]]></name>
-    <configKey>W0512</configKey>
-    <description>
-      <![CDATA[Used when a source line cannot be decoded using the specified source file encoding. 
-        This message can't be emitted when using Python >= 3.0.
-        <p>This rule was added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0623</key>
-    <name><![CDATA[Redefining name in exception handler]]></name>
-    <configKey>W0623</configKey>
-    <description>
-      <![CDATA[Used when an exception handler assigns the exception to an existing name]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0632</key>
-    <name><![CDATA[Possible unbalanced tuple unpacking]]></name>
-    <configKey>W0632</configKey>
-    <description>
-      <![CDATA[Used when there is an unbalanced tuple unpacking in assignment. 
-        <p>This rule was added in Pylint 1.1.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0633</key>
-    <name><![CDATA[Attempting to unpack a non-sequence]]></name>
-    <configKey>W0633</configKey>
-    <description>
-      <![CDATA[Used when something which is not a sequence is used in an unpack assignment. 
-        <p>This rule was added in Pylint 1.1.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0711</key>
-    <name><![CDATA[Exception to catch is the result of a binary operation]]></name>
-    <configKey>W0711</configKey>
-    <description>
-      <![CDATA[Used when the exception to catch is of the form "except A or B:". If intending to catch multiple, rewrite as "except (A, B):"]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-  <rule>
-    <key>W0712</key>
-    <name><![CDATA[Implicit unpacking of exceptions is not supported in Python 3]]></name>
-    <configKey>W0712</configKey>
-    <description>
-      <![CDATA[Python3 will not allow implicit unpacking of exceptions in except clauses. 
-        See http://www.python.org/dev/peps/pep-3110/ This message can't be emitted whenusing Python >= 3.0.
-        <p>This rule was added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-<rule>
-  <key>W1401</key>
-  <name><![CDATA[Anomalous backslash escape]]></name>
-  <configKey>W1401</configKey>
-  <description>
-    <![CDATA[Used when a backslash is in a literal string but not as an escape. 
-    <p>This rule was added in Pylint 0.26.0.</p>
-    <p>This rule is deprecated, use {rule:python:S1717} instead.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-    <status>DEPRECATED</status>
-</rule>
-<rule>
-  <key>W1402</key>
-  <name><![CDATA[Anomalous Unicode escape in byte string]]></name>
-  <configKey>W1402</configKey>
-  <description>
-    <![CDATA[Used when an escape like u is encountered in a byte string where it has no effect.
-    <p>This rule was added in Pylint 0.26.0.</p>]]>
-  </description>
-  <priority>MINOR</priority>
-</rule>
-  <rule>
-    <key>W1501</key>
-    <name><![CDATA[Invalid mode for open]]></name>
-    <configKey>W1501</configKey>
-    <description>
-      <![CDATA[Python supports: r, w, a modes with b, +, and U options. 
-        See http://docs.python.org/2/library/functions.html#open
-        <p>This rule was added in Pylint 1.0.0.</p>]]>
-    </description>
-    <priority>MINOR</priority>
-  </rule>
-
+	<rule>
+		<key>MSHHH</key>
+		<configKey>MSHHH</configKey>
+		<name>MSHHH</name>
+		<priority>INFO</priority>
+		<description>
+			<![CDATA[this is used for %#ok and should never be seen!]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BAIL</key>
+		<configKey>BAIL</configKey>
+		<name>BAIL</name>
+		<priority>INFO</priority>
+		<description>
+			<![CDATA[done with run due to error]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOLHS</key>
+		<configKey>NOLHS</configKey>
+		<name>NOLHS</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Left side of an assignment is empty.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDLEX</key>
+		<configKey>BDLEX</configKey>
+		<name>BDLEX</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: lexer returns unknown token.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TMMSG</key>
+		<configKey>TMMSG</configKey>
+		<name>TMMSG</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[More than 50,000 Code Analyzer messages were generated, leading to some being deleted.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TMNOD</key>
+		<configKey>TMNOD</configKey>
+		<name>TMNOD</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer node table exceeded due to complexity of this program.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MXASET</key>
+		<configKey>MXASET</configKey>
+		<name>MXASET</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Expression is too complex for code analysis to complete.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOMEM</key>
+		<configKey>NOMEM</configKey>
+		<name>NOMEM</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer has run out of memory.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>INERR</key>
+		<configKey>INERR</configKey>
+		<name>INERR</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[An internal Code Analyzer consistency check has failed (Code Analyzer bug!).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XJOIN</key>
+		<configKey>XJOIN</configKey>
+		<name>XJOIN</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected JOIN.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NULLA</key>
+		<configKey>NULLA</configKey>
+		<name>NULLA</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: Null pointer in ASET.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XOTHR</key>
+		<configKey>XOTHR</configKey>
+		<name>XOTHR</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected OTHERWISE.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XELSE</key>
+		<configKey>XELSE</configKey>
+		<name>XELSE</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected ELSE.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XCASE</key>
+		<configKey>XCASE</configKey>
+		<name>XCASE</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected CASE.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XCTCH</key>
+		<configKey>XCTCH</configKey>
+		<name>XCTCH</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected CATCH.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TOPLP</key>
+		<configKey>TOPLP</configKey>
+		<name>TOPLP</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected left parenthesis.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TOPCL</key>
+		<configKey>TOPCL</configKey>
+		<name>TOPCL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: call at top level.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TMPAR</key>
+		<configKey>TMPAR</configKey>
+		<name>TMPAR</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: multiple parents for node.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XTABL</key>
+		<configKey>XTABL</configKey>
+		<name>XTABL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: table format error.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XID</key>
+		<configKey>XID</configKey>
+		<name>XID</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: invalid ID index.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XIDP</key>
+		<configKey>XIDP</configKey>
+		<name>XIDP</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: ID points to missing entry.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XSTID</key>
+		<configKey>XSTID</configKey>
+		<name>XSTID</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: symbol table link is bad.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XSTPT</key>
+		<configKey>XSTPT</configKey>
+		<name>XSTPT</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: symbol table list error.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XNOU</key>
+		<configKey>XNOU</configKey>
+		<name>XNOU</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: missing use in table.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XQUOT</key>
+		<configKey>XQUOT</configKey>
+		<name>XQUOT</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected quote in table.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOUSE</key>
+		<configKey>NOUSE</configKey>
+		<name>NOUSE</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: Cannot find source of use conflict.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOLST</key>
+		<configKey>NOLST</configKey>
+		<name>NOLST</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: missing list entry.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NONUK</key>
+		<configKey>NONUK</configKey>
+		<name>NONUK</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected need to remove quote.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NODS</key>
+		<configKey>NODS</configKey>
+		<name>NODS</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: data structure corruption.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XVAR2</key>
+		<configKey>XVAR2</configKey>
+		<name>XVAR2</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: linking var twice.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XCALL</key>
+		<configKey>XCALL</configKey>
+		<name>XCALL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected CALL.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XDCAL</key>
+		<configKey>XDCAL</configKey>
+		<name>XDCAL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: unexpected DCALL.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XSB2E</key>
+		<configKey>XSB2E</configKey>
+		<name>XSB2E</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: subscript seen too early.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XDOPE</key>
+		<configKey>XDOPE</configKey>
+		<name>XDOPE</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: dope field seen for non-ID.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XDUAL</key>
+		<configKey>XDUAL</configKey>
+		<name>XDUAL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: Dual data structure error.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XFOR</key>
+		<configKey>XFOR</configKey>
+		<name>XFOR</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: badly constructed FOR.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XUPLV</key>
+		<configKey>XUPLV</configKey>
+		<name>XUPLV</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: missing list in uplevel.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>UPFCN</key>
+		<configKey>UPFCN</configKey>
+		<name>UPFCN</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: uplevel of function defn.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XTREE</key>
+		<configKey>XTREE</configKey>
+		<name>XTREE</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: bad parse tree.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XTRCL</key>
+		<configKey>XTRCL</configKey>
+		<name>XTRCL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: bad tree turning to call.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XMISS</key>
+		<configKey>XMISS</configKey>
+		<name>XMISS</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: no missing entries in scripts.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>XOUT</key>
+		<configKey>XOUT</configKey>
+		<name>XOUT</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Code Analyzer bug: bad outer scope entry.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LIN2L</key>
+		<configKey>LIN2L</configKey>
+		<name>LIN2L</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[A source file line is too long for Code Analyzer.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>QUIT</key>
+		<configKey>QUIT</configKey>
+		<name>QUIT</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Earlier syntax errors confused Code Analyzer (or a possible Code Analyzer bug).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOSPC</key>
+		<configKey>NOSPC</configKey>
+		<name>NOSPC</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[File <FILE> is too large or complex to analyze.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MBIG</key>
+		<configKey>MBIG</configKey>
+		<name>MBIG</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[File <FILE> is too big for Code Analyzer to handle.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOFIL</key>
+		<configKey>NOFIL</configKey>
+		<name>NOFIL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[File <FILE> cannot be opened for reading.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOFWR</key>
+		<configKey>NOFWR</configKey>
+		<name>NOFWR</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[File <FILE> cannot be opened for writing.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MDOTM</key>
+		<configKey>MDOTM</configKey>
+		<name>MDOTM</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Filename <FILE> must be a valid MATLAB code file.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDFIL</key>
+		<configKey>BDFIL</configKey>
+		<name>BDFIL</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Filename <FILE> is not formed from a valid MATLAB identifier.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RDERR</key>
+		<configKey>RDERR</configKey>
+		<name>RDERR</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Unable to read file <FILE>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCDIR</key>
+		<configKey>MCDIR</configKey>
+		<name>MCDIR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Class name <name> and @directory name do not agree: <FILE>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCFIL</key>
+		<configKey>MCFIL</configKey>
+		<name>MCFIL</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Class name <name> and file name do not agree: <file>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CFERR</key>
+		<configKey>CFERR</configKey>
+		<name>CFERR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Cannot open or read the Code Analyzer settings from file <FILE>. Using default settings instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDOPT</key>
+		<configKey>BDOPT</configKey>
+		<name>BDOPT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Option <name> is ignored because it is invalid.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BADCH</key>
+		<configKey>BADCH</configKey>
+		<name>BADCH</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Invalid character(s).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BADFP</key>
+		<configKey>BADFP</configKey>
+		<name>BADFP</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Invalid floating-point constant.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BADOT</key>
+		<configKey>BADOT</configKey>
+		<name>BADOT</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Use of two dots (..) is an invalid MATLAB construction.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STRIN</key>
+		<configKey>STRIN</configKey>
+		<name>STRIN</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[A quoted string is unterminated.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>INBLK</key>
+		<configKey>INBLK</configKey>
+		<name>INBLK</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[A block comment is unterminated at the end of the file.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RESWD</key>
+		<configKey>RESWD</configKey>
+		<name>RESWD</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Invalid use of a reserved word.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>REDEF</key>
+		<configKey>REDEF</configKey>
+		<name>REDEF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[<name> might be used incompatibly or redefined.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>UNSET</key>
+		<configKey>UNSET</configKey>
+		<name>UNSET</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Invalid use of <operator> on the left side of an assignment.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LHROW</key>
+		<configKey>LHROW</configKey>
+		<name>LHROW</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[The left side of an assignment cannot have multiple rows (';').]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EOFER</key>
+		<configKey>EOFER</configKey>
+		<name>EOFER</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Program might end prematurely (or an earlier error confused Code Analyzer).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MDEEP</key>
+		<configKey>MDEEP</configKey>
+		<name>MDEEP</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Parentheses, brackets, and braces are nested too deeply.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEEPC</key>
+		<configKey>DEEPC</configKey>
+		<name>DEEPC</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Block comments are nested too deeply.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEEPN</key>
+		<configKey>DEEPN</configKey>
+		<name>DEEPN</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Functions are nested too deeply.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEEPS</key>
+		<configKey>DEEPS</configKey>
+		<name>DEEPS</name>
+		<priority>MINOR</priority>
+		<description>
+			<![CDATA[Statements are nested too deeply.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOPAR</key>
+		<configKey>NOPAR</configKey>
+		<name>NOPAR</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Invalid syntax at <operator>. Possibly, a ), }, or ] is missing.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TWOCM</key>
+		<configKey>TWOCM</configKey>
+		<name>TWOCM</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A comma cannot immediately follow another comma.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ROWLN</key>
+		<configKey>ROWLN</configKey>
+		<name>ROWLN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[All matrix rows must be the same length.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>COLND</key>
+		<configKey>COLND</configKey>
+		<name>COLND</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[END or Colon can only be used to index arrays. This might be an incorrect use.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOCLS</key>
+		<configKey>NOCLS</configKey>
+		<name>NOCLS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[DOT in function name is only valid in methods of a class]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GPFST</key>
+		<configKey>GPFST</configKey>
+		<name>GPFST</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A GLOBAL or PERSISTENT declaration must precede first use.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NPERS</key>
+		<configKey>NPERS</configKey>
+		<name>NPERS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A PERSISTENT declaration is not valid in scripts.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSARG</key>
+		<configKey>DSARG</configKey>
+		<name>DSARG</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The DRANGE function must have 1, 2, or 3 arguments.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FNEST</key>
+		<configKey>FNEST</configKey>
+		<name>FNEST</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[FUNCTION keyword use is invalid here. This might cause later messages about END.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ENDCT</key>
+		<configKey>ENDCT</configKey>
+		<name>ENDCT</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[An END might be missing, possibly matching <reserved word>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SYNER</key>
+		<configKey>SYNER</configKey>
+		<name>SYNER</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Parse error at <reserved word>: usage might be invalid MATLAB syntax.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SBTMP</key>
+		<configKey>SBTMP</configKey>
+		<name>SBTMP</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Cannot call or index into a temporary array.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CFIG</key>
+		<configKey>CFIG</configKey>
+		<name>CFIG</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The Code Analyzer settings file, <FILE>, has an error on line <line #>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BADNOT</key>
+		<configKey>BADNOT</configKey>
+		<name>BADNOT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Using ~ to ignore a value is not permitted in this context.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ENDPAR</key>
+		<configKey>ENDPAR</configKey>
+		<name>ENDPAR</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Invalid syntax at end of file. Possibly, the indicated bracket is not matched.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFRNG</key>
+		<configKey>PFRNG</configKey>
+		<name>PFRNG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The range of a PARFOR statement must be increasing consecutive integers.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFNST</key>
+		<configKey>PFNST</configKey>
+		<name>PFNST</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[PARFOR or SPMD cannot be used inside another PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFDF</key>
+		<configKey>PFDF</configKey>
+		<name>PFDF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[FOR with DRANGE (old PARFOR) cannot be used inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFBR</key>
+		<configKey>PFBR</configKey>
+		<name>PFBR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[BREAK and RETURN statements cannot be used inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFLD</key>
+		<configKey>PFLD</configKey>
+		<name>PFLD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The LOAD function can only be used to assign an output structure in a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFSV</key>
+		<configKey>PFSV</configKey>
+		<name>PFSV</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[SAVE cannot be called in a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFGP</key>
+		<configKey>PFGP</configKey>
+		<name>PFGP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The GLOBAL or PERSISTENT variable <name> should not be set inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFGV</key>
+		<configKey>PFGV</configKey>
+		<name>PFGV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using GLOBAL variable <name> in a PARFOR loop could fail because it accesses a worker machine's global area.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFEVB</key>
+		<configKey>PFEVB</configKey>
+		<name>PFEVB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using EVALIN('base') or ASSIGNIN('base') inside a PARFOR loop refers to the worker machines' base workspaces.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFEVC</key>
+		<configKey>PFEVC</configKey>
+		<name>PFEVC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[EVALIN('caller') and ASSIGNIN('caller') are invalid inside of a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFNAIO</key>
+		<configKey>PFNAIO</configKey>
+		<name>PFNAIO</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> with zero input arguments should not be used inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFNACK</key>
+		<configKey>PFNACK</configKey>
+		<name>PFNACK</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> should not be used inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFUIX</key>
+		<configKey>PFUIX</configKey>
+		<name>PFUIX</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The index variable <name> might be used after the PARFOR loop, but it is unavailable after the loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFOUS</key>
+		<configKey>PFOUS</configKey>
+		<name>PFOUS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The output variable <name> might not be used after the PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFIIN</key>
+		<configKey>PFIIN</configKey>
+		<name>PFIIN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The input variable <name> should be initialized before the PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFUNK</key>
+		<configKey>PFUNK</configKey>
+		<name>PFUNK</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The PARFOR loop cannot run due to the way variable <name> is used.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFRIN</key>
+		<configKey>PFRIN</configKey>
+		<name>PFRIN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The reduction variable <name> might not be set before the PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFRUS</key>
+		<configKey>PFRUS</configKey>
+		<name>PFRUS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The reduction variable <name> might not be used after the PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFPIE</key>
+		<configKey>PFPIE</configKey>
+		<name>PFPIE</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Valid indices for <name> are restricted in PARFOR loops.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFBNS</key>
+		<configKey>PFBNS</configKey>
+		<name>PFBNS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The entire array or structure <name> is a broadcast variable. This might result in unnecessary communication overhead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFSAME</key>
+		<configKey>PFSAME</configKey>
+		<name>PFSAME</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[In a PARFOR loop, variable <name> is indexed in different ways, potentially causing dependencies between iterations.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFTIN</key>
+		<configKey>PFTIN</configKey>
+		<name>PFTIN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The temporary variable <name> uses a value set outside of the PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFBFN</key>
+		<configKey>PFBFN</configKey>
+		<name>PFBFN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The function <NAME> inside a PARFOR loop might not access the correct workspace.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFIFN</key>
+		<configKey>PFIFN</configKey>
+		<name>PFIFN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The function <NAME> might make an invalid workspace access inside the PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFNF</key>
+		<configKey>PFNF</configKey>
+		<name>PFNF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The nested function <NAME> cannot be called from within a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFTUS</key>
+		<configKey>PFTUS</configKey>
+		<name>PFTUS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The temporary variable <name> is used after the PARFOR loop, but its value is not available after the loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFRNC</key>
+		<configKey>PFRNC</configKey>
+		<name>PFRNC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The variable <name> is used like a PARFOR reduction variable, but it has additional (invalid) uses.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFRFH</key>
+		<configKey>PFRFH</configKey>
+		<name>PFRFH</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The PARFOR reduction function <NAME> must either be a function name or a broadcast variable.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FORFLG</key>
+		<configKey>FORFLG</configKey>
+		<name>FORFLG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Problems would result if this FOR keyword were replaced by PARFOR.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FORPF</key>
+		<configKey>FORPF</configKey>
+		<name>FORPF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This FOR loop might be a candidate for conversion to a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFXST</key>
+		<configKey>PFXST</configKey>
+		<name>PFXST</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Changing the loop index <name> is invalid inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFCODN</key>
+		<configKey>PFCODN</configKey>
+		<name>PFCODN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Because the variable <name> is or contains a distributed or codistributed variable, it is invalid inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFCODA</key>
+		<configKey>PFCODA</configKey>
+		<name>PFCODA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Because this expression appears to be or contain a distributed or codistributed variable, it is invalid inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFCMPN</key>
+		<configKey>PFCMPN</configKey>
+		<name>PFCMPN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Because the variable <name> is or contains a Composite, it is invalid inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFCMPA</key>
+		<configKey>PFCMPA</configKey>
+		<name>PFCMPA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Because this expression appears to be or contain a Composite, it is invalid inside a PARFOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPDEC</key>
+		<configKey>SPDEC</configKey>
+		<name>SPDEC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The bounds on the number of workers an SPMD block can use must be a positive integer.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPDEC3</key>
+		<configKey>SPDEC3</configKey>
+		<name>SPDEC3</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[An SPMD block can only specify a lower and upper bound for the number of workers to use.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPNST</key>
+		<configKey>SPNST</configKey>
+		<name>SPNST</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[PARFOR or SPMD cannot be used inside an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPRET</key>
+		<configKey>SPRET</configKey>
+		<name>SPRET</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[<reserved word> statement cannot be used inside an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPBRK</key>
+		<configKey>SPBRK</configKey>
+		<name>SPBRK</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The loop containing the BREAK or CONTINUE must be completely contained in the SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPLD</key>
+		<configKey>SPLD</configKey>
+		<name>SPLD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[In an SPMD block, the only valid use of the LOAD function is to assign to an output structure.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPSV</key>
+		<configKey>SPSV</configKey>
+		<name>SPSV</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[SAVE cannot be called in an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPGP</key>
+		<configKey>SPGP</configKey>
+		<name>SPGP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Setting the GLOBAL or PERSISTENT variable <name> in an SPMD block might fail because the set happens on a worker machine.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPGV</key>
+		<configKey>SPGV</configKey>
+		<name>SPGV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using the GLOBAL or PERSISTENT variable <name> in an SPMD block might fail because it is accessed on a worker machine.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPEVB</key>
+		<configKey>SPEVB</configKey>
+		<name>SPEVB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using EVALIN('base') or ASSIGNIN('base') inside an SPMD block refers to the worker machines' base workspaces.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPEVC</key>
+		<configKey>SPEVC</configKey>
+		<name>SPEVC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[EVALIN('caller') and ASSIGNIN('caller') are invalid inside of an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPBFN</key>
+		<configKey>SPBFN</configKey>
+		<name>SPBFN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The function <NAME> inside an SPMD block might not access the desired workspace.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPIFN</key>
+		<configKey>SPIFN</configKey>
+		<name>SPIFN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The function <NAME> might make an invalid workspace access inside the SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPNF</key>
+		<configKey>SPNF</configKey>
+		<name>SPNF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The nested function <NAME> cannot be called from within an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCMIX</key>
+		<configKey>DCMIX</configKey>
+		<name>DCMIX</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The operator <operator> appears to combine distributed and codistributed values.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPCN</key>
+		<configKey>SPCN</configKey>
+		<name>SPCN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Container <name> should not be used inside an SPMD block because it is hiding a Composite, distributed, or codistributed variable.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPCNC</key>
+		<configKey>SPCNC</configKey>
+		<name>SPCNC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This cell array should not be used inside an SPMD block because it is hiding a Composite, distributed, or codistributed variable.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPICN</key>
+		<configKey>SPICN</configKey>
+		<name>SPICN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The variable <name> contains a hidden Composite, distributed, or codistributed variable and therefore should not be used inside an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPCCO</key>
+		<configKey>SPCCO</configKey>
+		<name>SPCCO</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Because the variable <name> contains a hidden codistributed variable, it should not be used outside an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSPMDN</key>
+		<configKey>DSPMDN</configKey>
+		<name>DSPMDN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> appears to be distributed, but is created inside an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSPMDA</key>
+		<configKey>DSPMDA</configKey>
+		<name>DSPMDA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This expression appears to create a distributed value inside an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCUNK</key>
+		<configKey>DCUNK</configKey>
+		<name>DCUNK</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The codistributed or distributed array static function <name> is unrecognized.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FSPMDN</key>
+		<configKey>FSPMDN</configKey>
+		<name>FSPMDN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> appears to be set to a codistributed value outside of an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FSPMDA</key>
+		<configKey>FSPMDA</configKey>
+		<name>FSPMDA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This expression appears to create a codistributed value outside of an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPWHOS</key>
+		<configKey>SPWHOS</configKey>
+		<name>SPWHOS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The <NAME> function cannot be called from within an SPMD block.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOEFF</key>
+		<configKey>NOEFF</configKey>
+		<name>NOEFF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The operation or expression <operator> has no evident effect.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NUSED</key>
+		<configKey>NUSED</configKey>
+		<name>NUSED</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Global or persistent variable <name> might be unused or unset in this function or script.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOANS</key>
+		<configKey>NOANS</configKey>
+		<name>NOANS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using ANS as a variable is not recommended as ANS is frequently overwritten by MATLAB.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PUSE</key>
+		<configKey>PUSE</configKey>
+		<name>PUSE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Persistent variable <name> might be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>USENS</key>
+		<configKey>USENS</configKey>
+		<name>USENS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Variable <name> is used, but might be unset.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SUSENS</key>
+		<configKey>SUSENS</configKey>
+		<name>SUSENS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Variable <name> is used, but might be unset (within a script).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SETNU</key>
+		<configKey>SETNU</configKey>
+		<name>SETNU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Variable <name> is set, but might be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ASGLU</key>
+		<configKey>ASGLU</configKey>
+		<name>ASGLU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The value assigned here to <name> appears to be unused. Consider replacing it by ~.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NASGU</key>
+		<configKey>NASGU</configKey>
+		<name>NASGU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The value assigned to variable <name> might be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PREALL</key>
+		<configKey>PREALL</configKey>
+		<name>PREALL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> appears to be preallocated, but preallocation is not recommended here.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SNASGU</key>
+		<configKey>SNASGU</configKey>
+		<name>SNASGU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The value assigned to variable <name> might be unused (within the script).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NODEF</key>
+		<configKey>NODEF</configKey>
+		<name>NODEF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> might be used before it is defined.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>INUSD</key>
+		<configKey>INUSD</configKey>
+		<name>INUSD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Input argument <name> might be unused. If this is OK, consider replacing it by ~.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>VANUS</key>
+		<configKey>VANUS</configKey>
+		<name>VANUS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Input argument 'varargin' might be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>INUSL</key>
+		<configKey>INUSL</configKey>
+		<name>INUSL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Input argument <name> might be unused, although a later one is used. Consider replacing it by ~.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEFNU</key>
+		<configKey>DEFNU</configKey>
+		<name>DEFNU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The function <name> might be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>VALST</key>
+		<configKey>VALST</configKey>
+		<name>VALST</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<name> must be the last argument in the argument list.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ASGSL</key>
+		<configKey>ASGSL</configKey>
+		<name>ASGSL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Assignment to <name> might be unnecessary.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>UNRCH</key>
+		<configKey>UNRCH</configKey>
+		<name>UNRCH</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This statement (and possibly following ones) cannot be reached.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PROP</key>
+		<configKey>PROP</configKey>
+		<name>PROP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[There is a property named <name>. Did you mean to reference it?]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CPROP</key>
+		<configKey>CPROP</configKey>
+		<name>CPROP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Confusing function call. Did you mean to reference property <name>?]]>
+		</description>
+	</rule>
+	<rule>
+		<key>COMNL</key>
+		<configKey>COMNL</configKey>
+		<name>COMNL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Comma before newline might incorrectly suggest row continuation.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FXSET</key>
+		<configKey>FXSET</configKey>
+		<name>FXSET</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Loop index <name> is changed inside of a FOR loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FXUP</key>
+		<configKey>FXUP</configKey>
+		<name>FXUP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Outer loop index <name> is set inside a child function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STRSZ</key>
+		<configKey>STRSZ</configKey>
+		<name>STRSZ</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Comparing two strings that might have different sizes. Use STRCMP.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>M3COL</key>
+		<configKey>M3COL</configKey>
+		<name>M3COL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using three colons (a:b:c:d) in an expression is probably unintended.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDLOG</key>
+		<configKey>BDLOG</configKey>
+		<name>BDLOG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Operator <operator> is seldom used in a logical context.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDSCA</key>
+		<configKey>BDSCA</configKey>
+		<name>BDSCA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Operator <operator> is seldom used in a scalar context.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDLGI</key>
+		<configKey>BDLGI</configKey>
+		<name>BDLGI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Variable <name> might be set by a nonlogical operator.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BDSCI</key>
+		<configKey>BDSCI</configKey>
+		<name>BDSCI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Variable <name> might be set by a nonscalar operator.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DUALC</key>
+		<configKey>DUALC</configKey>
+		<name>DUALC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Command <name> might be prematurely ended by comma.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RHSFN</key>
+		<configKey>RHSFN</configKey>
+		<name>RHSFN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The expression cannot be assigned to multiple values.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STOUT</key>
+		<configKey>STOUT</configKey>
+		<name>STOUT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The function return value <name> might be unset.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LTARG</key>
+		<configKey>LTARG</configKey>
+		<name>LTARG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Function <NAME> might be called with too few arguments.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GTARG</key>
+		<configKey>GTARG</configKey>
+		<name>GTARG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Function <NAME> might be called with too many arguments.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CTPCT</key>
+		<configKey>CTPCT</configKey>
+		<name>CTPCT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The format string might not agree with the argument count.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FNAN</key>
+		<configKey>FNAN</configKey>
+		<name>FNAN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Use ISNAN when comparing values to NaN.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOSEM</key>
+		<configKey>NOSEM</configKey>
+		<name>NOSEM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Extra semicolon is unnecessary.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOCOM</key>
+		<configKey>NOCOM</configKey>
+		<name>NOCOM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Extra comma is unnecessary.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TRYNC</key>
+		<configKey>TRYNC</configKey>
+		<name>TRYNC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[TRY statement should have a CATCH statement to check for unexpected errors.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NO4LP</key>
+		<configKey>NO4LP</configKey>
+		<name>NO4LP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Parentheses are not needed in a FOR statement.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FNDEF</key>
+		<configKey>FNDEF</configKey>
+		<name>FNDEF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Function name <name> is known to MATLAB by its file name: <file>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CTCH</key>
+		<configKey>CTCH</configKey>
+		<name>CTCH</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Best practice is for CATCH to be followed by an identifier that gets the error information.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PSTAT</key>
+		<configKey>PSTAT</configKey>
+		<name>PSTAT</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[The 'Static' attribute is invalid on properties. Use 'Constant' instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CTORO</key>
+		<configKey>CTORO</configKey>
+		<name>CTORO</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Class constructors must be declared with at least one output argument.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOIN</key>
+		<configKey>NOIN</configKey>
+		<name>NOIN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Method <name> is not Static, so it must have at least one input argument.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MANU</key>
+		<configKey>MANU</configKey>
+		<name>MANU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Argument <name> is unused. Should this method be Static?]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MHERM</key>
+		<configKey>MHERM</configKey>
+		<name>MHERM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Parenthesize the multiplication of <name> and its transpose to ensure the result is Hermitian.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MOCUP</key>
+		<configKey>MOCUP</configKey>
+		<name>MOCUP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> is an uplevel variable, invalid in a function called by onCleanup.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MDUPC</key>
+		<configKey>MDUPC</configKey>
+		<name>MDUPC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The case value <name> is a duplicate of one on line <line #>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MNANC</key>
+		<configKey>MNANC</configKey>
+		<name>MNANC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[NaN never compares equal to any value, so this case will never be matched.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MULCC</key>
+		<configKey>MULCC</configKey>
+		<name>MULCC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This case cannot be matched due to a call to UPPER or LOWER on the SWITCH value.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RMWRN</key>
+		<configKey>RMWRN</configKey>
+		<name>RMWRN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The warning with tag <name> has been removed from MATLAB, so this statement has no effect.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>UNONC</key>
+		<configKey>UNONC</configKey>
+		<name>UNONC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Assign the onCleanup output argument to a variable. Do not use the tilde operator (~) in place of a variable.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CHAIN</key>
+		<configKey>CHAIN</configKey>
+		<name>CHAIN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use (<name> <name> <name>) && (<name> <name> <name>) instead of (<name> <name> <name> <name> <name>) to test if <name> is between <name> and <name>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DISPLAY</key>
+		<configKey>DISPLAY</configKey>
+		<name>DISPLAY</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Overloading DISPLAY is not recommended.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SUBSINDEX</key>
+		<configKey>SUBSINDEX</configKey>
+		<name>SUBSINDEX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Do not overload SUBSINDEX for fundamental data types.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>VARARG</key>
+		<configKey>VARARG</configKey>
+		<name>VARARG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Initialize VARARGOUT with a CELL.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SUBSASGN</key>
+		<configKey>SUBSASGN</configKey>
+		<name>SUBSASGN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Output of SUBSASGN must be assigned to a variable.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CLEARSCRIPT</key>
+		<configKey>CLEARSCRIPT</configKey>
+		<name>CLEARSCRIPT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[For improved performance, consider not using CLEAR <NAME> within a script.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CLEARFUNCTION</key>
+		<configKey>CLEARFUNCTION</configKey>
+		<name>CLEARFUNCTION</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[CLEAR <NAME> should only be used in a script.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BRKCONT</key>
+		<configKey>BRKCONT</configKey>
+		<name>BRKCONT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> can only be used in a FOR or WHILE loop..]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATTF</key>
+		<configKey>ATTF</configKey>
+		<name>ATTF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The attribute value <name> is unexpected. Use "true" or "false" instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATPPP</key>
+		<configKey>ATPPP</configKey>
+		<name>ATPPP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The attribute value <name> is unexpected. Use "public", "private", "protected", or a cell array of meta-classes instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATPPI</key>
+		<configKey>ATPPI</configKey>
+		<name>ATPPI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The attribute value <name> is unexpected. Use "public", "private", "protected", "immutable", or a cell array of meta-classes instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATCA</key>
+		<configKey>ATCA</configKey>
+		<name>ATCA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The attribute value <name> is unexpected. Use a cell array of meta-class objects instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATNPP</key>
+		<configKey>ATNPP</configKey>
+		<name>ATNPP</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Set attribute <name> to "public", "private", "protected", or a cell array of meta-classes instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATNPI</key>
+		<configKey>ATNPI</configKey>
+		<name>ATNPI</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Set attribute <name> to "public", "private", "protected", "immutable", or a cell array of meta-classes instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATNCA</key>
+		<configKey>ATNCA</configKey>
+		<name>ATNCA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Set attribute <name> to a cell array of meta-class objects.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATAS</key>
+		<configKey>ATAS</configKey>
+		<name>ATAS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The attribute value <name> is unexpected. Use a single meta-class object or a cell array of meta-class objects.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATNAS</key>
+		<configKey>ATNAS</configKey>
+		<name>ATNAS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Set attribute <name> to a single meta-class object or a cell array of meta-class objects.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATUNK</key>
+		<configKey>ATUNK</configKey>
+		<name>ATUNK</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Unknown attribute name <name>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATVIZ</key>
+		<configKey>ATVIZ</configKey>
+		<name>ATVIZ</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Attribute 'Visible' is spelled '~Hidden' in MATLAB, and is the default.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATTOF</key>
+		<configKey>ATTOF</configKey>
+		<name>ATTOF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Setting the class attribute Abstract to false is not recommended.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ATTO</key>
+		<configKey>ATTO</configKey>
+		<name>ATTO</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The attribute value <name> is unexpected. Use "true" or "false" instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CLTWO</key>
+		<configKey>CLTWO</configKey>
+		<name>CLTWO</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Only one class definition is allowed per file, and it must come at the head of the file.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOPRV</key>
+		<configKey>NOPRV</configKey>
+		<name>NOPRV</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[A class definition cannot be inside a private directory.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCHV1</key>
+		<configKey>MCHV1</configKey>
+		<name>MCHV1</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Conflict between handle and value class usage (lines <line #> and <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCHV2</key>
+		<configKey>MCHV2</configKey>
+		<name>MCHV2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Probable conflict between handle and value class usage (lines <line #> and <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCHV3</key>
+		<configKey>MCHV3</configKey>
+		<name>MCHV3</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Possible conflict between handle and value class usage (lines <line #> and <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCVC</key>
+		<configKey>MCVC</configKey>
+		<name>MCVC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The class <NAME> has no superclasses, so must be value class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCHC</key>
+		<configKey>MCHC</configKey>
+		<name>MCHC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The class <name> is derived from a handle class, so must be a handle class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCEB</key>
+		<configKey>MCEB</configKey>
+		<name>MCEB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The class has an <reserved word> block, so must be a handle class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCDEL</key>
+		<configKey>MCDEL</configKey>
+		<name>MCDEL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The class has a <NAME> method, so is likely to be a handle class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCHM</key>
+		<configKey>MCHM</configKey>
+		<name>MCHM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[A property is set in object <NAME>, but the modified object is not used or returned, implying that this class is a handle class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCVM</key>
+		<configKey>MCVM</configKey>
+		<name>MCVM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Method <NAME> sets a property and returns the modified object, implying that the class is a value class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSGP</key>
+		<configKey>MCSGP</configKey>
+		<name>MCSGP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The method <NAME> does not refer to a valid property name.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSGA</key>
+		<configKey>MCSGA</configKey>
+		<name>MCSGA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Set/Get method <NAME> must be defined in a METHODS block with no attributes.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCS2I</key>
+		<configKey>MCS2I</configKey>
+		<name>MCS2I</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Set Methods must have exactly two inputs.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCS1O</key>
+		<configKey>MCS1O</configKey>
+		<name>MCS1O</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Set Methods must have at most one output.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCG1I</key>
+		<configKey>MCG1I</configKey>
+		<name>MCG1I</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Get methods must have exactly one input.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCG1O</key>
+		<configKey>MCG1O</configKey>
+		<name>MCG1O</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Get methods must have exactly one output.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCPO</key>
+		<configKey>MCPO</configKey>
+		<name>MCPO</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The property <NAME> is observable, which implies the class is a handle class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCGSA</key>
+		<configKey>MCGSA</configKey>
+		<name>MCGSA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Method <NAME> tries to set or get an abstract property.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSCN</key>
+		<configKey>MCSCN</configKey>
+		<name>MCSCN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Method <NAME> tries to set a constant property.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCANI</key>
+		<configKey>MCANI</configKey>
+		<name>MCANI</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Abstract property <name> cannot be initialized.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCASC</key>
+		<configKey>MCASC</configKey>
+		<name>MCASC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Abstract property <name> cannot be used in a Sealed class.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCPI</key>
+		<configKey>MCCPI</configKey>
+		<name>MCCPI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The Constant property <name> needs to be initialized.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSH</key>
+		<configKey>MCSH</configKey>
+		<name>MCSH</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Method <NAME> has a signature consistent with a handle class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSV</key>
+		<configKey>MCSV</configKey>
+		<name>MCSV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Method <NAME> has a signature consistent with a value class (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCBD</key>
+		<configKey>MCCBD</configKey>
+		<name>MCCBD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The constructor <NAME> must be fully defined in the class definition file.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCPSG</key>
+		<configKey>MCPSG</configKey>
+		<name>MCPSG</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The set/get function <NAME> must be fully defined in the class definition file.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSCT</key>
+		<configKey>MCSCT</configKey>
+		<name>MCSCT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A call to a superclass constructor must appear at the top level (not conditional) in a constructor.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSCO</key>
+		<configKey>MCSCO</configKey>
+		<name>MCSCO</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A superclass constructor must be called using the first constructor output argument.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSCF</key>
+		<configKey>MCSCF</configKey>
+		<name>MCSCF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A superclass constructor must be assigned to the first constructor output argument.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCBS</key>
+		<configKey>MCCBS</configKey>
+		<name>MCCBS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A superclass constructor is being called, but <NAME> is not a declared superclass name.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCBU</key>
+		<configKey>MCCBU</configKey>
+		<name>MCCBU</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[This superclass constructor is called after a use of the constructed object.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCMC</key>
+		<configKey>MCCMC</configKey>
+		<name>MCCMC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The constructor for superclass <NAME> can only be called once.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSCM</key>
+		<configKey>MCSCM</configKey>
+		<name>MCSCM</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[In this call of a superclass method, <NAME> must match the name of the method in which it is used.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCNPN</key>
+		<configKey>MCNPN</configKey>
+		<name>MCNPN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<name> is referenced but is not a property, method, or event name defined in this class.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCNPR</key>
+		<configKey>MCNPR</configKey>
+		<name>MCNPR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<name> is not a property, but is the target of an assignment.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCPE</key>
+		<configKey>MCCPE</configKey>
+		<name>MCCPE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Attempting to call a property or event <NAME> as a function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSUP</key>
+		<configKey>MCSUP</configKey>
+		<name>MCSUP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[A set method for a non-Dependent property should not access another property (<name>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCSP</key>
+		<configKey>MCCSP</configKey>
+		<name>MCCSP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA['<name>.<name>' creates a struct named <name> with a field named <name>, matching the names of the class and constant property.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTMAT</key>
+		<configKey>MTMAT</configKey>
+		<name>MTMAT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The attribute <name> cannot be set more than once.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTAGS</key>
+		<configKey>MTAGS</configKey>
+		<name>MTAGS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Cannot use the <name> attribute when using the <name> attribute.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSAC</key>
+		<configKey>MCSAC</configKey>
+		<name>MCSAC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[SetAccess cannot be set on Constant properties.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSNO</key>
+		<configKey>MCSNO</configKey>
+		<name>MCSNO</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Set method's first argument <name> is not returned, implying a handle class.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCAPP</key>
+		<configKey>MCAPP</configKey>
+		<name>MCAPP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The private property <name> cannot be Abstract.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCMSP</key>
+		<configKey>MCMSP</configKey>
+		<name>MCMSP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[The private method <name> cannot be Abstract.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MHERIT</key>
+		<configKey>MHERIT</configKey>
+		<name>MHERIT</name>
+		<priority>MAJOR</priority>
+		<description>
+			<![CDATA[Deriving from the built-in MATLAB <name> class is not supported.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSWA</key>
+		<configKey>MCSWA</configKey>
+		<name>MCSWA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[A sealed class cannot specify allowed subclasses.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MOBSRV</key>
+		<configKey>MOBSRV</configKey>
+		<name>MOBSRV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using SetObservable or GetObservable on a Constant property has no effect.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPERR</key>
+		<configKey>SPERR</configKey>
+		<name>SPERR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[ERROR takes SPRINTF-like arguments directly.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPWRN</key>
+		<configKey>SPWRN</configKey>
+		<name>SPWRN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[WARNING takes SPRINTF-like arguments directly.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKOS</key>
+		<configKey>NCHKOS</configKey>
+		<name>NCHKOS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[NARGINCHK does not return any values.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKE</key>
+		<configKey>NCHKE</configKey>
+		<name>NCHKE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use NARGOUTCHK without ERROR.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>WLAST</key>
+		<configKey>WLAST</configKey>
+		<name>WLAST</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[WARNING('') does not reset the warning state. Use LASTWARN('') instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>WNON</key>
+		<configKey>WNON</configKey>
+		<name>WNON</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[WARNING('ON',msgID) is faster than WARNING('ON').]]>
+		</description>
+	</rule>
+	<rule>
+		<key>WNOFF</key>
+		<configKey>WNOFF</configKey>
+		<name>WNOFF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[WARNING('OFF',msgID) is faster than WARNING('OFF').]]>
+		</description>
+	</rule>
+	<rule>
+		<key>WNTAG</key>
+		<configKey>WNTAG</configKey>
+		<name>WNTAG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The first argument of WARNING should be a message identifier. Using a message identifier allows users better control over the message.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ERTAG</key>
+		<configKey>ERTAG</configKey>
+		<name>ERTAG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The first argument of ERROR should be a message identifier.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ERTXT</key>
+		<configKey>ERTXT</configKey>
+		<name>ERTXT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Specify an error message with the message identifier.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>WTXT</key>
+		<configKey>WTXT</configKey>
+		<name>WTXT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Specify a warning message with the message identifier.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STCI</key>
+		<configKey>STCI</configKey>
+		<name>STCI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use STRCMPI(str1,str2) instead of using UPPER/LOWER in a call to STRCMP.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STLOW</key>
+		<configKey>STLOW</configKey>
+		<name>STLOW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[There is no need for UPPER/LOWER in this string comparison.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STCUL</key>
+		<configKey>STCUL</configKey>
+		<name>STCUL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The string comparison will likely fail due to upper/lower case mismatch.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STISA</key>
+		<configKey>STISA</configKey>
+		<name>STISA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider using ISA instead of comparing the class to a string.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PFCEL</key>
+		<configKey>PFCEL</configKey>
+		<name>PFCEL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The function <NAME> is apparently called with a cell array (argument <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STRNU</key>
+		<configKey>STRNU</configKey>
+		<name>STRNU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Variable <name>, apparently a structure, is changed but the value seems to be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ITERS</key>
+		<configKey>ITERS</configKey>
+		<name>ITERS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The Code Analyzer type analysis may be incorrect here.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TLEV</key>
+		<configKey>TLEV</configKey>
+		<name>TLEV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<reserved word> could be very inefficient unless it is a top-level statement in its function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RGXP1</key>
+		<configKey>RGXP1</configKey>
+		<name>RGXP1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using REGEXP(string, pattern, 'ONCE') is faster in this case.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TRIM1</key>
+		<configKey>TRIM1</configKey>
+		<name>TRIM1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use STRTRIM(str) instead of nesting FLIPLR and DEBLANK calls.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STTOK</key>
+		<configKey>STTOK</configKey>
+		<name>STTOK</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use one call to TEXTSCAN instead of calling STRTOK in a loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TRIM2</key>
+		<configKey>TRIM2</configKey>
+		<name>TRIM2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use STRTRIM(str) instead of DEBLANK(STRJUST(str,'left')).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STNCI</key>
+		<configKey>STNCI</configKey>
+		<name>STNCI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use STRNCMPI(str1,str2) instead of using UPPER/LOWER in a call to STRNCMP.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STCCS</key>
+		<configKey>STCCS</configKey>
+		<name>STCCS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[It appears that STRCMPI/STRNCMPI can be replaced by a faster, case sensitive compare.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FLUDLR</key>
+		<configKey>FLUDLR</configKey>
+		<name>FLUDLR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[It appears that flipud(fliplr(x)) or fliplr(flipud(x)) can be replaced by a faster rot90(x,2).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RPMT0</key>
+		<configKey>RPMT0</configKey>
+		<name>RPMT0</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing repmat(0,x,y) with zeros(x,y) for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RPMT1</key>
+		<configKey>RPMT1</configKey>
+		<name>RPMT1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing repmat(1,x,y) with ones(x,y) for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RPMTN</key>
+		<configKey>RPMTN</configKey>
+		<name>RPMTN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing repmat(NaN,x,y) with NaN(x,y) for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RPMTF</key>
+		<configKey>RPMTF</configKey>
+		<name>RPMTF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing repmat(false,x,y) with false(x,y) for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RPMTT</key>
+		<configKey>RPMTT</configKey>
+		<name>RPMTT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing repmat(true,x,y) with true(x,y) for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RPMTI</key>
+		<configKey>RPMTI</configKey>
+		<name>RPMTI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing repmat(Inf,x,y) with Inf(x,y) for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PSIZE</key>
+		<configKey>PSIZE</configKey>
+		<name>PSIZE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[NUMEL(x) is usually faster than PROD(SIZE(x)).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FNDSB</key>
+		<configKey>FNDSB</configKey>
+		<name>FNDSB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[If <name> is an indexed variable, performance can be improved using logical indexing instead of FIND.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SFLD</key>
+		<configKey>SFLD</configKey>
+		<name>SFLD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use dynamic fieldnames with structures instead of SETFIELD.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GFLD</key>
+		<configKey>GFLD</configKey>
+		<name>GFLD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use dynamic fieldnames with structures instead of GETFIELD.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CCAT</key>
+		<configKey>CCAT</configKey>
+		<name>CCAT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[{ A{:} B } can often be replaced by [ A {B}], which can be much faster.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>AGROW</key>
+		<configKey>AGROW</configKey>
+		<name>AGROW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> appears to change size on every loop iteration. Consider preallocating for speed.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SAGROW</key>
+		<configKey>SAGROW</configKey>
+		<name>SAGROW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The variable <name> appears to change size on every loop iteration (within a script). Consider preallocating for speed.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISMT</key>
+		<configKey>ISMT</configKey>
+		<name>ISMT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using ISEMPTY is usually faster than comparing LENGTH to 0.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LOGL</key>
+		<configKey>LOGL</configKey>
+		<name>LOGL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use TRUE or FALSE instead of LOGICAL(1) or LOGICAL(0).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ST2NM</key>
+		<configKey>ST2NM</configKey>
+		<name>ST2NM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[STR2DOUBLE is faster than STR2NUM; however, STR2DOUBLE operates only on scalars. Use the function that best suits your needs.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FLPST</key>
+		<configKey>FLPST</configKey>
+		<name>FLPST</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[For better performance in some cases, use SORT with the 'descend' option.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MXFND</key>
+		<configKey>MXFND</configKey>
+		<name>MXFND</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use FIND with the 'first' or 'last' option.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EFIND</key>
+		<configKey>EFIND</configKey>
+		<name>EFIND</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[To improve performance, replace ISEMPTY(FIND(X)) with ISEMPTY(FIND( X, 1 )).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EXIST</key>
+		<configKey>EXIST</configKey>
+		<name>EXIST</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[EXIST with two input arguments is generally faster and clearer than with one input argument.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>UDIM</key>
+		<configKey>UDIM</configKey>
+		<name>UDIM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Instead of using transpose ('), consider using a different DIMENSION input argument to <NAME>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISCHR</key>
+		<configKey>ISCHR</configKey>
+		<name>ISCHR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use ISCHAR instead of comparing the class to 'char'.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISSTR</key>
+		<configKey>ISSTR</configKey>
+		<name>ISSTR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use ISSTRUCT instead of comparing the class to 'struct'.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISLOG</key>
+		<configKey>ISLOG</configKey>
+		<name>ISLOG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use ISLOGICAL instead of comparing the class to 'logical'.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISCEL</key>
+		<configKey>ISCEL</configKey>
+		<name>ISCEL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use ISCELL instead of comparing the class to 'cell'.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MIPC1</key>
+		<configKey>MIPC1</configKey>
+		<name>MIPC1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[On Windows platforms, calling COMPUTER with an argument returns 'win32' or 'win64', but never 'PCWIN'.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>STFLD</key>
+		<configKey>STFLD</configKey>
+		<name>STFLD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[SETFIELD output must be assigned back to the structure.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RMFLD</key>
+		<configKey>RMFLD</configKey>
+		<name>RMFLD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RMFIELD output must be assigned back to the structure.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FREAD</key>
+		<configKey>FREAD</configKey>
+		<name>FREAD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FREAD(FID,...,'*char') is more efficient than CHAR(FREAD(...)).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>N2UNI</key>
+		<configKey>N2UNI</configKey>
+		<name>N2UNI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FREAD no longer requires NATIVE2UNICODE in R2006A and later releases.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TNMLP</key>
+		<configKey>TNMLP</configKey>
+		<name>TNMLP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider moving the toolbox function <NAME> out of the loop for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>IJCL</key>
+		<configKey>IJCL</configKey>
+		<name>IJCL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Replace complex i and j by 1i for speed and improved robustness.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MINV</key>
+		<configKey>MINV</configKey>
+		<name>MINV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[INV(A)*b can be slower and less accurate than A\b. Consider using A\b for INV(A)*b or b/A for b*INV(A).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LAXES</key>
+		<configKey>LAXES</configKey>
+		<name>LAXES</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Calling AXES(h) in a loop can be slow. Consider moving the call to AXES outside the loop.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MMTC</key>
+		<configKey>MMTC</configKey>
+		<name>MMTC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This use of MAT2CELL should probably be replaced by a simpler, faster call to NUM2CELL.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MRPBW</key>
+		<configKey>MRPBW</configKey>
+		<name>MRPBW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[To use less memory, replace BWLABEL(bw) by LOGICAL(bw) in a call of REGIONPROPS.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPRIX</key>
+		<configKey>SPRIX</configKey>
+		<name>SPRIX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[This sparse indexing expression is likely to be slow.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SPEIG</key>
+		<configKey>SPEIG</configKey>
+		<name>SPEIG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The <NAME> function is called in an invalid manner with a sparse argument.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>TRSRT</key>
+		<configKey>TRSRT</configKey>
+		<name>TRSRT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Transposing the input to <NAME> is often unnecessary.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CCAT1</key>
+		<configKey>CCAT1</configKey>
+		<name>CCAT1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[{ A{I} } can usually be replaced by A(I) or A(I)', which can be much faster.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GRIDD</key>
+		<configKey>GRIDD</configKey>
+		<name>GRIDD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider replacing GRIDDATA with SCATTEREDINTERPOLANT for better performance.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISMAT</key>
+		<configKey>ISMAT</configKey>
+		<name>ISMAT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[When checking if a variable is a matrix consider using ISMATRIX.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISROW</key>
+		<configKey>ISROW</configKey>
+		<name>ISROW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[When checking if a variable is a row vector consider using ISROW.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISCOL</key>
+		<configKey>ISCOL</configKey>
+		<name>ISCOL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[When checking if a variable is a column vector consider using ISCOLUMN.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMAO</key>
+		<configKey>EMAO</configKey>
+		<name>EMAO</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation does not support & and ]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMCA</key>
+		<configKey>EMCA</configKey>
+		<name>EMCA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation only supports cell operations for varargin and varargout.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMTC</key>
+		<configKey>EMTC</configKey>
+		<name>EMTC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation does not support TRY/CATCH constructions.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMSCR</key>
+		<configKey>EMSCR</configKey>
+		<name>EMSCR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation does not support scripts.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMNST</key>
+		<configKey>EMNST</configKey>
+		<name>EMNST</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation does not support nested functions.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMFH</key>
+		<configKey>EMFH</configKey>
+		<name>EMFH</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation does not support anonymous functions.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMVDF</key>
+		<configKey>EMVDF</configKey>
+		<name>EMVDF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation requires variable <name> to be fully defined before subscripting it.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMGRO</key>
+		<configKey>EMGRO</configKey>
+		<name>EMGRO</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation does not support variable <name> size growth through indexing.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMNSI</key>
+		<configKey>EMNSI</configKey>
+		<name>EMNSI</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[Code generation requires IF and WHILE conditions to be scalar.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMTAG</key>
+		<configKey>EMTAG</configKey>
+		<name>EMTAG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The compilation directive (or pragma) EML is not recommended. Use CODEGEN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EMXTR</key>
+		<configKey>EMXTR</configKey>
+		<name>EMXTR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The EML package is not recommended. Use CODER instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCAP</key>
+		<configKey>MCAP</configKey>
+		<name>MCAP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[MCC does not permit the ADDPATH function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCCD</key>
+		<configKey>MCCD</configKey>
+		<name>MCCD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC use of the CD function is problematic.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCPRD</key>
+		<configKey>MCPRD</configKey>
+		<name>MCPRD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[MCC allows only one argument in the PRINTDLG function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCPRT</key>
+		<configKey>MCPRT</configKey>
+		<name>MCPRT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC prefers Windows applications to call DEPLOYPRINT instead of PRINT, but use PRINT when printing to a file.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCHLP</key>
+		<configKey>MCHLP</configKey>
+		<name>MCHLP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[MCC does not permit the HELP function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCKBD</key>
+		<configKey>MCKBD</configKey>
+		<name>MCKBD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[MCC does not permit the KEYBOARD function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCSVP</key>
+		<configKey>MCSVP</configKey>
+		<name>MCSVP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[MCC does not permit the SAVEPATH function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCMLR</key>
+		<configKey>MCMLR</configKey>
+		<name>MCMLR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC use of the MATLABROOT function is problematic.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCDP</key>
+		<configKey>MCDP</configKey>
+		<name>MCDP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC use of the DEPLOYPRINT function is problematic.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCABF</key>
+		<configKey>MCABF</configKey>
+		<name>MCABF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC use of absolute file names is likely to fail.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCMFL</key>
+		<configKey>MCMFL</configKey>
+		<name>MCMFL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC allows writing .m files, but they cannot be executed by the deployed application.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCTBX</key>
+		<configKey>MCTBX</configKey>
+		<name>MCTBX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC use of toolbox folder file names is likely to fail.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCUOA</key>
+		<configKey>MCUOA</configKey>
+		<name>MCUOA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[MCC requires the program to assign a value to output argument <name>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCLL</key>
+		<configKey>MCLL</configKey>
+		<name>MCLL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC does not allow C++ files to be read directly using LOADLIBRARY.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCWBF</key>
+		<configKey>MCWBF</configKey>
+		<name>MCWBF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC requires that the first argument of WEBFIGURE not come from FIGURE(n).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MCWFL</key>
+		<configKey>MCWFL</configKey>
+		<name>MCWFL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MCC requires that the first argument of WEBFIGURE not come from FIGURE(n) (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSPS</key>
+		<configKey>DSPS</configKey>
+		<name>DSPS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[DISP(SPRINTF(...)) can usually be replaced by FPRINTF(...).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SEPEX</key>
+		<configKey>SEPEX</configKey>
+		<name>SEPEX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[For better readability, use newline, semicolon, or comma before this statement.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NBRAK</key>
+		<configKey>NBRAK</configKey>
+		<name>NBRAK</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use of brackets [] is unnecessary. Use parentheses to group, if needed.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ALIGN</key>
+		<configKey>ALIGN</configKey>
+		<name>ALIGN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<reserved word> might not be aligned with its matching END (line <line #>).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>AND2</key>
+		<configKey>AND2</configKey>
+		<name>AND2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use && instead of & as the AND operator in (scalar) conditional statements.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>OR2</key>
+		<configKey>OR2</configKey>
+		<name>OR2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Use ]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOPTS</key>
+		<configKey>NOPTS</configKey>
+		<name>NOPTS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Terminate statement with semicolon to suppress output (within a script).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOPRT</key>
+		<configKey>NOPRT</configKey>
+		<name>NOPRT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Terminate statement with semicolon to suppress output (in functions).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>VUNUS</key>
+		<configKey>VUNUS</configKey>
+		<name>VUNUS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<operator> produces a value that might be unused.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LNGNM</key>
+		<configKey>LNGNM</configKey>
+		<name>LNGNM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The name <name> has been truncated to 63 characters.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MFAMB</key>
+		<configKey>MFAMB</configKey>
+		<name>MFAMB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Code Analyzer cannot determine whether <name> is a variable or a function, and assumes it is a function.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MSNU</key>
+		<configKey>MSNU</configKey>
+		<name>MSNU</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[A Code Analyzer message was once suppressed here, but the message is no longer generated.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DNNW</key>
+		<configKey>DNNW</configKey>
+		<name>DNNW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[DATENUM(NOW) can be replaced by NOW.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LIC3</key>
+		<configKey>LIC3</configKey>
+		<name>LIC3</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[In test files, use "qeLicense" instead of LICENSE.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>APWT</key>
+		<configKey>APWT</configKey>
+		<name>APWT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[In test files, use "qePoll" instead of APWAIT.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PRTCAL</key>
+		<configKey>PRTCAL</configKey>
+		<name>PRTCAL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Terminate call to <NAME> with semicolon to suppress output to command window.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCOMMA</key>
+		<configKey>NCOMMA</configKey>
+		<name>NCOMMA</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Best practice is to separate output variables with commas.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NSTMT</key>
+		<configKey>NSTMT</configKey>
+		<name>NSTMT</name>
+		<priority>INFO</priority>
+		<description>
+			<![CDATA[The function <name> has <line #> statements.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NSSMT</key>
+		<configKey>NSSMT</configKey>
+		<name>NSSMT</name>
+		<priority>INFO</priority>
+		<description>
+			<![CDATA[This script has <line #> statements.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CABE</key>
+		<configKey>CABE</configKey>
+		<name>CABE</name>
+		<priority>INFO</priority>
+		<description>
+			<![CDATA[The McCabe complexity of <name> is <line #>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SCABE</key>
+		<configKey>SCABE</configKey>
+		<name>SCABE</name>
+		<priority>INFO</priority>
+		<description>
+			<![CDATA[The McCabe complexity is <line #>.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>LERR</key>
+		<configKey>LERR</configKey>
+		<name>LERR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[LASTERR and LASTERROR are not recommended. Use an identifier on the CATCH block instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>EVLC</key>
+		<configKey>EVLC</configKey>
+		<name>EVLC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Using EVAL and EVALC with two arguments is not recommended. Use TRY/CATCH instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>RAND</key>
+		<configKey>RAND</configKey>
+		<name>RAND</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RAND and RANDN will not accept 'seed', 'state', or 'twister' in a future release.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NOV6</key>
+		<configKey>NOV6</configKey>
+		<name>NOV6</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[The 'v6' flag will be removed in <NAME> in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>V6ON</key>
+		<configKey>V6ON</configKey>
+		<name>V6ON</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[USEV6PLOTAPI('on') will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>HOUGH</key>
+		<configKey>HOUGH</configKey>
+		<name>HOUGH</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[HOUGH(BW,'ThetaResolution',VAL) is not recommended. Use HOUGH(BW,'Theta',-90:VAL:(90-VAL) ) instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FROPT</key>
+		<configKey>FROPT</configKey>
+		<name>FROPT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Option <NAME> will be removed in a future release. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FROPTX</key>
+		<configKey>FROPTX</configKey>
+		<name>FROPTX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Option <NAME> will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPSD</key>
+		<configKey>DPSD</configKey>
+		<name>DPSD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> is not recommended. Use <NAME> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>VRRPS</key>
+		<configKey>VRRPS</configKey>
+		<name>VRRPS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[VIDEOREADER.ISPLATFORMSUPPORTED has been removed. VIDEOREADER is now supported on all platforms.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMMR</key>
+		<configKey>DMMR</configKey>
+		<name>DMMR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[<NAME> has been removed. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMSSPEC</key>
+		<configKey>DMSSPEC</configKey>
+		<name>DMSSPEC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPSPEC</key>
+		<configKey>DPSPEC</configKey>
+		<name>DPSPEC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPPSD</key>
+		<configKey>DPPSD</configKey>
+		<name>DPPSD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DINLN</key>
+		<configKey>DINLN</configKey>
+		<name>DINLN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFCNCHK</key>
+		<configKey>DFCNCHK</configKey>
+		<name>DFCNCHK</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MATCH2</key>
+		<configKey>MATCH2</configKey>
+		<name>MATCH2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[STRMATCH is not recommended. Use STRNCMP or VALIDATESTRING instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MATCH3</key>
+		<configKey>MATCH3</configKey>
+		<name>MATCH3</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> is not recommended. Use <NAME> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GPUAR</key>
+		<configKey>GPUAR</configKey>
+		<name>GPUAR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[<NAME> has been removed. Use <name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GPUARB</key>
+		<configKey>GPUARB</configKey>
+		<name>GPUARB</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[parallel.gpu.GPUArray.<name> has been removed. Use gpuArray.<name> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CHLNC</key>
+		<configKey>CHLNC</configKey>
+		<name>CHLNC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[<NAME> has been removed. Use <NAME> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CHLNCI</key>
+		<configKey>CHLNCI</configKey>
+		<name>CHLNCI</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[CHOLINC(X,'inf') has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BTSFT</key>
+		<configKey>BTSFT</configKey>
+		<name>BTSFT</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[BITSHIFT(A,K,N) has been removed. Use BITSHIFT(A,K,ASSUMEDTYPE) instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTFA1</key>
+		<configKey>MTFA1</configKey>
+		<name>MTFA1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MAKETFORM('AFFINE',A) is not recommended. Use AFFINE2D or AFFINE3D instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTFA2</key>
+		<configKey>MTFA2</configKey>
+		<name>MTFA2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MAKETFORM('AFFINE',U,X) is not recommended. Use FITGEOTRANS instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTFP1</key>
+		<configKey>MTFP1</configKey>
+		<name>MTFP1</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MAKETFORM('PROJECTIVE',A) is not recommended. Use PROJECTIVE2D instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTFP2</key>
+		<configKey>MTFP2</configKey>
+		<name>MTFP2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MAKETFORM('PROJECTIVE',U,X) is not recommended. Use FITGEOTRANS instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MTFB</key>
+		<configKey>MTFB</configKey>
+		<name>MTFB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MAKETFORM('BOX',...) is not recommended. Use IMREF2D or IMREF3D instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MSYSTEM</key>
+		<configKey>MSYSTEM</configKey>
+		<name>MSYSTEM</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[matlab.system.System will be removed in a future release. Use matlab.System instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BTCMP</key>
+		<configKey>BTCMP</configKey>
+		<name>BTCMP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[BITCMP(A,N) has been removed. Use BITCMP(A,ASSUMEDTYPE) instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>CRTJOB</key>
+		<configKey>CRTJOB</configKey>
+		<name>CRTJOB</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[<NAME> using zero inputs has been removed. Use a cluster object as the first input instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>PMTMCONF</key>
+		<configKey>PMTMCONF</configKey>
+		<name>PMTMCONF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[When using PMTM with three output arguments, the 'conflevel' input argument is recommended.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ZEROLIKE</key>
+		<configKey>ZEROLIKE</configKey>
+		<name>ZEROLIKE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[Consider using <NAME>(..., 'like', X ) instead of <NAME>(..., class(X) ).]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKI</key>
+		<configKey>NCHKI</configKey>
+		<name>NCHKI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use NARGINCHK instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKO</key>
+		<configKey>NCHKO</configKey>
+		<name>NCHKO</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use NARGOUTCHK instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKN</key>
+		<configKey>NCHKN</configKey>
+		<name>NCHKN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[NARGCHK will be removed in a future release. Use NARGINCHK without ERROR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKM</key>
+		<configKey>NCHKM</configKey>
+		<name>NCHKM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[NARGCHK will be removed in a future release. Use NARGOUTCHK without ERROR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NCHKNO</key>
+		<configKey>NCHKNO</configKey>
+		<name>NCHKNO</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[NARGOUTCHK using more than two inputs will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NVREPL</key>
+		<configKey>NVREPL</configKey>
+		<name>NVREPL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> is not recommended. Use <NAME> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GENDEP</key>
+		<configKey>GENDEP</configKey>
+		<name>GENDEP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<NAME> will be removed in a future release. Use <NAME> instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GENWARN</key>
+		<configKey>GENWARN</configKey>
+		<name>GENWARN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[<name> is not recommended.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEPCLG</key>
+		<configKey>DEPCLG</configKey>
+		<name>DEPCLG</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[CLG has been removed. Use CLF instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEPBART</key>
+		<configKey>DEPBART</configKey>
+		<name>DEPBART</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.barthannwin is not recommended. Use BARTHANNWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEPLETT</key>
+		<configKey>DEPLETT</configKey>
+		<name>DEPLETT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.bartlett is not recommended. Use BARTLETT instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FAFD</key>
+		<configKey>FAFD</configKey>
+		<name>FAFD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[farrow.fd will be removed in a future release. Use dfilt.farrowfd instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FALFD</key>
+		<configKey>FALFD</configKey>
+		<name>FALFD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[farrow.linearfd will be removed in a future release. Use dfilt.farrowlinearfd instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SQGPN</key>
+		<configKey>SQGPN</configKey>
+		<name>SQGPN</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[seqgen.pn has been removed. Use comm.PNSequence instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>NORALG</key>
+		<configKey>NORALG</configKey>
+		<name>NORALG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RandStream.RandnAlg will be removed in a future release. Use NormalTransform instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>SETRS</key>
+		<configKey>SETRS</configKey>
+		<name>SETRS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[RandStream.setDefaultStream has been removed. Use RandStream.setGlobalStream instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>GETRS</key>
+		<configKey>GETRS</configKey>
+		<name>GETRS</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[RandStream.getDefaultStream has been removed. Use RandStream.getGlobalStream instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBLKMN</key>
+		<configKey>DBLKMN</configKey>
+		<name>DBLKMN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.blackman is not recommended. Use BLACKMAN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBHRRS</key>
+		<configKey>DBHRRS</configKey>
+		<name>DBHRRS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.blackmanharris is not recommended. Use BLACKMANHARRIS instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBHMNWN</key>
+		<configKey>DBHMNWN</configKey>
+		<name>DBHMNWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.bohmanwin is not recommended. Use BOHMANWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCHBWN</key>
+		<configKey>DCHBWN</configKey>
+		<name>DCHBWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.chebwin is not recommended. Use CHEBWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFLTTPWN</key>
+		<configKey>DFLTTPWN</configKey>
+		<name>DFLTTPWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.flattopwin is not recommended. Use FLATTOPWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DGSWIN</key>
+		<configKey>DGSWIN</configKey>
+		<name>DGSWIN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.gausswin is not recommended. Use GAUSSWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DHMMNG</key>
+		<configKey>DHMMNG</configKey>
+		<name>DHMMNG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.hamming is not recommended. Use HAMMING instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DHANN</key>
+		<configKey>DHANN</configKey>
+		<name>DHANN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.hann is not recommended. Use HANN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DKSER</key>
+		<configKey>DKSER</configKey>
+		<name>DKSER</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.kaiser is not recommended. Use KAISER instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DNLWN</key>
+		<configKey>DNLWN</configKey>
+		<name>DNLWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.nuttallwin is not recommended. Use NUTTALLWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPNWN</key>
+		<configKey>DPNWN</configKey>
+		<name>DPNWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.parzenwin is not recommended. Use PARZENWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRCTWN</key>
+		<configKey>DRCTWN</configKey>
+		<name>DRCTWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.rectwin is not recommended. Use RECTWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTYLRWN</key>
+		<configKey>DTYLRWN</configKey>
+		<name>DTYLRWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.taylorwin is not recommended. Use TAYLORWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTRNG</key>
+		<configKey>DTRNG</configKey>
+		<name>DTRNG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.triang is not recommended. Use TRIANG instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTKYWN</key>
+		<configKey>DTKYWN</configKey>
+		<name>DTKYWN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[sigwin.tukeywin is not recommended. Use TUKEYWIN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBURG</key>
+		<configKey>DBURG</configKey>
+		<name>DBURG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.burg is not recommended. Use PBURG instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCOV</key>
+		<configKey>DCOV</configKey>
+		<name>DCOV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.cov is not recommended. Use PCOV instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEVCTR</key>
+		<configKey>DEVCTR</configKey>
+		<name>DEVCTR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.eigenvector is not recommended. Use PEIG instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMCOV</key>
+		<configKey>DMCOV</configKey>
+		<name>DMCOV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.mcov is not recommended. Use PMCOV instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMTM</key>
+		<configKey>DMTM</configKey>
+		<name>DMTM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.mtm is not recommended. Use PMTM instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMUSIC</key>
+		<configKey>DMUSIC</configKey>
+		<name>DMUSIC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.music is not recommended. Use PMUSIC instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPRDGRM</key>
+		<configKey>DPRDGRM</configKey>
+		<name>DPRDGRM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.periodogram is not recommended. Use PERIODOGRAM instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWELCH</key>
+		<configKey>DWELCH</configKey>
+		<name>DWELCH</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.welch is not recommended. Use PWELCH instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DYULEAR</key>
+		<configKey>DYULEAR</configKey>
+		<name>DYULEAR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[spectrum.yulear is not recommended. Use PYULEAR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPBCHNC</key>
+		<configKey>DPBCHNC</configKey>
+		<name>DPBCHNC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[fec.bchenc will be removed in a future release. Use comm.BCHEncoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBCHNC</key>
+		<configKey>DBCHNC</configKey>
+		<name>DBCHNC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[BCHENC has been removed. Use comm.BCHEncoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPBCHDC</key>
+		<configKey>DPBCHDC</configKey>
+		<name>DPBCHDC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[fec.bchdec will be removed in a future release. Use comm.BCHDecoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBCHDC</key>
+		<configKey>DBCHDC</configKey>
+		<name>DBCHDC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[BCHDEC has been removed. Use comm.BCHDecoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPRSNC</key>
+		<configKey>DPRSNC</configKey>
+		<name>DPRSNC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[fec.rsenc will be removed in a future release. Use comm.RSEncoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRSNC</key>
+		<configKey>DRSNC</configKey>
+		<name>DRSNC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[RSENC has been removed. Use comm.RSEncoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPRSDC</key>
+		<configKey>DPRSDC</configKey>
+		<name>DPRSDC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[fec.rsdec will be removed in a future release. Use comm.RSDecoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRSDC</key>
+		<configKey>DRSDC</configKey>
+		<name>DRSDC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[RSDEC has been removed. Use comm.RSDecoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DLDPCNC</key>
+		<configKey>DLDPCNC</configKey>
+		<name>DLDPCNC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[fec.ldpcenc will be removed in a future release. Use comm.LDPCEncoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DLDPCDC</key>
+		<configKey>DLDPCDC</configKey>
+		<name>DLDPCDC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[fec.ldpcdec will be removed in a future release. Use comm.LDPCDecoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEVM</key>
+		<configKey>DEVM</configKey>
+		<name>DEVM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[commmeasure.EVM is not recommended. Use comm.EVM instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMER</key>
+		<configKey>DMER</configKey>
+		<name>DMER</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[commmeasure.MER is not recommended. Use comm.MER instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DACPR</key>
+		<configKey>DACPR</configKey>
+		<name>DACPR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[commmeasure.ACPR is not recommended. Use comm.ACPR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTRIREP</key>
+		<configKey>DTRIREP</configKey>
+		<name>DTRIREP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[TriRep will be removed in a future release. Use TRIANGULATION instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDELTRI</key>
+		<configKey>DDELTRI</configKey>
+		<name>DDELTRI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[DelaunayTri will be removed in a future release. Use delaunayTriangulation instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTRIINT</key>
+		<configKey>DTRIINT</configKey>
+		<name>DTRIINT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[TriScatteredInterp will be removed in a future release. Use scatteredInterpolant instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DQUAD</key>
+		<configKey>DQUAD</configKey>
+		<name>DQUAD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[QUAD will be removed in a future release. Use INTEGRAL instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DQUADL</key>
+		<configKey>DQUADL</configKey>
+		<name>DQUADL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[QUADL will be removed in a future release. Use INTEGRAL instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DQUADV</key>
+		<configKey>DQUADV</configKey>
+		<name>DQUADV</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[QUADV will be removed in a future release. Use INTEGRAL instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDBLQD</key>
+		<configKey>DDBLQD</configKey>
+		<name>DDBLQD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[DBLQUAD will be removed in a future release. Use INTEGRAL2 instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTRIQD</key>
+		<configKey>DTRIQD</configKey>
+		<name>DTRIQD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[TRIPLEQUAD will be removed in a future release. Use INTEGRAL3 instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAVIRD</key>
+		<configKey>DAVIRD</configKey>
+		<name>DAVIRD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[AVIREAD will be removed in a future release. Use VideoReader instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAVIINF</key>
+		<configKey>DAVIINF</configKey>
+		<name>DAVIINF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[AVIINFO will be removed in a future release. Use VideoReader instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAFINF</key>
+		<configKey>DAFINF</configKey>
+		<name>DAFINF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[AVIFINFO will be removed in a future release. Use VideoReader instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEXIFRD</key>
+		<configKey>DEXIFRD</configKey>
+		<name>DEXIFRD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[EXIFREAD has been removed. Use IMFINFO instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DILEVAL</key>
+		<configKey>DILEVAL</configKey>
+		<name>DILEVAL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[INLINEEVAL will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRNDINT</key>
+		<configKey>DRNDINT</configKey>
+		<name>DRNDINT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RANDINT is not recommended. Use RANDI instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSTRRD</key>
+		<configKey>DSTRRD</configKey>
+		<name>DSTRRD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[STRREAD is not recommended. Use TEXTSCAN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTXTRD</key>
+		<configKey>DTXTRD</configKey>
+		<name>DTXTRD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[TEXTREAD is not recommended. Use TEXTSCAN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDTRD</key>
+		<configKey>DDTRD</configKey>
+		<name>DDTRD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[DATAREAD will be removed in a future release. Use TEXTSCAN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFNDR</key>
+		<configKey>DFNDR</configKey>
+		<name>DFNDR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[findResource has been removed. Use PARCLUSTER instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCRTPJ</key>
+		<configKey>DCRTPJ</configKey>
+		<name>DCRTPJ</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[createParallelJob has been removed. Use createCommunicatingJob instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCRTMJ</key>
+		<configKey>DCRTMJ</configKey>
+		<name>DCRTMJ</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[createMatlabPoolJob has been removed. Use createCommunicatingJob instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDFEVL</key>
+		<configKey>DDFEVL</configKey>
+		<name>DDFEVL</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[DFEVAL has been removed. Use BATCH instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDFEVLA</key>
+		<configKey>DDFEVLA</configKey>
+		<name>DDFEVLA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[DFEVALASYNC has been removed. Use BATCH instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDFTPC</key>
+		<configKey>DDFTPC</configKey>
+		<name>DDFTPC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[defaultParallelConfig has been removed. Use parallel.defaultClusterProfile instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DIMTPC</key>
+		<configKey>DIMTPC</configKey>
+		<name>DIMTPC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[importParallelConfig has been removed. Use parallel.importProfile instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DGCURJM</key>
+		<configKey>DGCURJM</configKey>
+		<name>DGCURJM</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[getCurrentJobmanager has been removed. Use getCurrentCluster instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DGFDEPD</key>
+		<configKey>DGFDEPD</configKey>
+		<name>DGFDEPD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[getFileDependencyDir has been removed. Use getAttachedFilesFolder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWVRD</key>
+		<configKey>DWVRD</configKey>
+		<name>DWVRD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WAVREAD has been removed. Use AUDIOREAD instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWVWR</key>
+		<configKey>DWVWR</configKey>
+		<name>DWVWR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WAVWRITE has been removed. Use AUDIOWRITE instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWVFINF</key>
+		<configKey>DWVFINF</configKey>
+		<name>DWVFINF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WAVFINFO has been removed. Use AUDIOINFO instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAURD</key>
+		<configKey>DAURD</configKey>
+		<name>DAURD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[AUREAD has been removed. Use AUDIOREAD instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAUFINF</key>
+		<configKey>DAUFINF</configKey>
+		<name>DAUFINF</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[AUFINFO has been removed. Use AUDIOINFO instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAUWR</key>
+		<configKey>DAUWR</configKey>
+		<name>DAUWR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[AUWRITE has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSTRRNG</key>
+		<configKey>DSTRRNG</configKey>
+		<name>DSTRRNG</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[STR2RNG has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWK1C</key>
+		<configKey>DWK1C</configKey>
+		<name>DWK1C</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WK1CONST has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWK1RD</key>
+		<configKey>DWK1RD</configKey>
+		<name>DWK1RD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WK1READ has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWK1WR</key>
+		<configKey>DWK1WR</configKey>
+		<name>DWK1WR</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WK1WRITE has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWK1FI</key>
+		<configKey>DWK1FI</configKey>
+		<name>DWK1FI</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WK1FINFO has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWK1WRC</key>
+		<configKey>DWK1WRC</configKey>
+		<name>DWK1WRC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WK1WREC has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSTRMT</key>
+		<configKey>DSTRMT</configKey>
+		<name>DSTRMT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[STR2MAT is not recommended. Use CHAR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSTSTR</key>
+		<configKey>DSTSTR</configKey>
+		<name>DSTSTR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[SETSTR is not recommended. Use CHAR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DSTRVCT</key>
+		<configKey>DSTRVCT</configKey>
+		<name>DSTRVCT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[STRVCAT is not recommended. Use CHAR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DISSTR</key>
+		<configKey>DISSTR</configKey>
+		<name>DISSTR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[ISSTR is not recommended. Use ISCHAR instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBLKPRC</key>
+		<configKey>DBLKPRC</configKey>
+		<name>DBLKPRC</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[BLKPROC is not recommended. Use BLOCKPROC instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPGUPDLG</key>
+		<configKey>DPGUPDLG</configKey>
+		<name>DPGUPDLG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[PAGESETUPDLG will be removed in a future release. Use PRINTPREVIEW instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEMLC</key>
+		<configKey>DEMLC</configKey>
+		<name>DEMLC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[EMLC has been removed. Use CODEGEN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEMLMEX</key>
+		<configKey>DEMLMEX</configKey>
+		<name>DEMLMEX</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[EMLMEX has been removed. Use CODEGEN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DLUINC</key>
+		<configKey>DLUINC</configKey>
+		<name>DLUINC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[LUINC has been removed. Use ILU instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWVPLY</key>
+		<configKey>DWVPLY</configKey>
+		<name>DWVPLY</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WAVPLAY has been removed. Use AUDIOPLAYER instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DWVREC</key>
+		<configKey>DWVREC</configKey>
+		<name>DWVREC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[WAVRECORD has been removed. Use AUDIORECORDER instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAVIFL</key>
+		<configKey>DAVIFL</configKey>
+		<name>DAVIFL</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[AVIFILE has been removed. Use VideoWriter instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DISEQN</key>
+		<configKey>DISEQN</configKey>
+		<name>DISEQN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[ISEQUALWITHEQUALNANS is not recommended. Use ISEQUALN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DAPPLUT</key>
+		<configKey>DAPPLUT</configKey>
+		<name>DAPPLUT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[APPLYLUT is not recommended. Use BWLOOKUP instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRSDEC</key>
+		<configKey>DRSDEC</configKey>
+		<name>DRSDEC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[RSDECOF has been removed. Use comm.RSDecoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRSENC</key>
+		<configKey>DRSENC</configKey>
+		<name>DRSENC</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[RSENCOF has been removed. Use comm.RSEncoder instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMCHN</key>
+		<configKey>DMCHN</configKey>
+		<name>DMCHN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MIMOCHAN will be removed in a future release. Use comm.MIMOChannel instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DBITMAX</key>
+		<configKey>DBITMAX</configKey>
+		<name>DBITMAX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[BITMAX will be removed in a future release. Use FLINTMAX instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRCOSFIR</key>
+		<configKey>DRCOSFIR</configKey>
+		<name>DRCOSFIR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RCOSFIR is not recommended. Use RCOSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRCOSFLT</key>
+		<configKey>DRCOSFLT</configKey>
+		<name>DRCOSFLT</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RCOSFLT is not recommended. Use RCOSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRCOSIIR</key>
+		<configKey>DRCOSIIR</configKey>
+		<name>DRCOSIIR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RCOSIIR is not recommended. Use RCOSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DRCOSINE</key>
+		<configKey>DRCOSINE</configKey>
+		<name>DRCOSINE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[RCOSINE is not recommended. Use RCOSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFIRRCOS</key>
+		<configKey>DFIRRCOS</configKey>
+		<name>DFIRRCOS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FIRRCOS is not recommended. Use RCOSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFIRGAUSS</key>
+		<configKey>DFIRGAUSS</configKey>
+		<name>DFIRGAUSS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FIRGAUSS is not recommended. Use GAUSSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DGAUSSFIR</key>
+		<configKey>DGAUSSFIR</configKey>
+		<name>DGAUSSFIR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[GAUSSFIR is not recommended. Use GAUSSDESIGN instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DVRML</key>
+		<configKey>DVRML</configKey>
+		<name>DVRML</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[VRML has been removed. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCSHELP</key>
+		<configKey>DCSHELP</configKey>
+		<name>DCSHELP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[CSHELP will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFIGFLAG</key>
+		<configKey>DFIGFLAG</configKey>
+		<name>DFIGFLAG</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FIGFLAG will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DGETST</key>
+		<configKey>DGETST</configKey>
+		<name>DGETST</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[GETSTATUS will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DMENUL</key>
+		<configKey>DMENUL</configKey>
+		<name>DMENUL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MENULABEL will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPOPUP</key>
+		<configKey>DPOPUP</configKey>
+		<name>DPOPUP</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[POPUPSTR will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DUIGET</key>
+		<configKey>DUIGET</configKey>
+		<name>DUIGET</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[UIGETTOOLBAR will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DNOANI</key>
+		<configKey>DNOANI</configKey>
+		<name>DNOANI</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[NOANIMATE will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DGRDD</key>
+		<configKey>DGRDD</configKey>
+		<name>DGRDD</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[GRIDDATA3 has been removed. Use GRIDDATA instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDELA</key>
+		<configKey>DDELA</configKey>
+		<name>DDELA</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[DELAUNAY3 has been removed. Use DELAUNAY instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDSRCH</key>
+		<configKey>DDSRCH</configKey>
+		<name>DDSRCH</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[DSEARCH has been removed. Use DelaunayTri/nearestNeighbor instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DTSRCH</key>
+		<configKey>DTSRCH</configKey>
+		<name>DTSRCH</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[TSEARCH has been removed. Use DelaunayTri/pointLocation instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DPOOL</key>
+		<configKey>DPOOL</configKey>
+		<name>DPOOL</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MATLABPOOL will be removed in a future release. Use PARPOOL instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFLIPDIM</key>
+		<configKey>DFLIPDIM</configKey>
+		<name>DFLIPDIM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FLIPDIM will be removed in a future release. Use FLIP instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>FSTR</key>
+		<configKey>FSTR</configKey>
+		<name>FSTR</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FINDSTR is not recommended. Use STRFIND instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DDBMEX</key>
+		<configKey>DDBMEX</configKey>
+		<name>DDBMEX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MEXDEBUG is not recommended. Use DBMEX instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DFTSMTX</key>
+		<configKey>DFTSMTX</configKey>
+		<name>DFTSMTX</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[FTS2MTX is not recommended. Use FTS2MAT instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DIMTRNS</key>
+		<configKey>DIMTRNS</configKey>
+		<name>DIMTRNS</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[IMTRANSFORM is not recommended. Use IMWARP instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DCPTF</key>
+		<configKey>DCPTF</configKey>
+		<name>DCPTF</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[CP2TFORM is not recommended. Use FITGEOTRANS instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEPNOE</key>
+		<configKey>DEPNOE</configKey>
+		<name>DEPNOE</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[NUMBEROFELEMENTS is not recommended. Use NUMEL instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEPGENAM</key>
+		<configKey>DEPGENAM</configKey>
+		<name>DEPGENAM</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[GENVARNAME will be removed in a future release. Use MATLAB.LANG.MAKEVALIDNAME and MATLAB.LANG.MAKEUNIQUESTRINGS instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>DEPFUN</key>
+		<configKey>DEPFUN</configKey>
+		<name>DEPFUN</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[DEPFUN will be removed in a future release. Use matlab.codetools.requiredFilesAndProducts instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>MOVIE2</key>
+		<configKey>MOVIE2</configKey>
+		<name>MOVIE2</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[MOVIE2AVI will be removed in a future release. Use VideoWriter instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>HDFGD</key>
+		<configKey>HDFGD</configKey>
+		<name>HDFGD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[HDFGD will be removed in a future release. Use matlab.io.hdfeos.gd instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>HDFSD</key>
+		<configKey>HDFSD</configKey>
+		<name>HDFSD</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[HDFSD will be removed in a future release. Use matlab.io.hdfeos.sd instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>HDFSW</key>
+		<configKey>HDFSW</configKey>
+		<name>HDFSW</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[HDFSW will be removed in a future release. Use matlab.io.hdfeos.sw instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>BINTP</key>
+		<configKey>BINTP</configKey>
+		<name>BINTP</name>
+		<priority>CRITICAL</priority>
+		<description>
+			<![CDATA[BINTPROG has been removed. Use INTLINPROG instead.]]>
+		</description>
+	</rule>
+	<rule>
+		<key>ISGLOB</key>
+		<configKey>ISGLOB</configKey>
+		<name>ISGLOB</name>
+		<priority>BLOCKER</priority>
+		<description>
+			<![CDATA[ISGLOBAL will be removed in a future release. There is no simple replacement for this.]]>
+		</description>
+	</rule>
 </rules>

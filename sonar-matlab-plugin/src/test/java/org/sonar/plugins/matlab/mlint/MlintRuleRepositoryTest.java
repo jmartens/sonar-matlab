@@ -34,7 +34,7 @@ public class MlintRuleRepositoryTest {
     MlintRuleRepository rulerep = new MlintRuleRepository(new XMLRuleParser());
     List<Rule> rules = rulerep.createRules();
 
-    assertThat(rules.size()).isEqualTo(180);
+    assertThat(rules.size()).isEqualTo(563);
   }
 
 }
