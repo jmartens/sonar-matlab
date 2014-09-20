@@ -27,29 +27,6 @@ import static org.fest.assertions.Assertions.assertThat;
 
 public class MlintArgumentsTest {
 
-  @Test
-  public void mlint_0_x() {
-    String[] arguments = new MlintArguments(command("mlint 0.28.0")).arguments();
-    assertThat(arguments).containsOnly("-i", "y", "-f", "parseable", "-r", "n");
-  }
-
-  @Test
-  public void mlint_bat_0_x() {
-    String[] arguments = new MlintArguments(command("mlint.bat 0.28.0")).arguments();
-    assertThat(arguments).containsOnly("-i", "y", "-f", "parseable", "-r", "n");
-  }
-
-  @Test
-  public void mlint_1_x() {
-    String[] arguments = new MlintArguments(command("mlint 1.1.0")).arguments();
-    assertThat(arguments).containsOnly("--msg-template", "{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}", "-r", "n");
-  }
-
-  @Test(expected = IllegalArgumentException.class)
-  public void unknown() throws Exception {
-    new MlintArguments(command(""));
-  }
-
   private Command command(String toOutput) {
     if (SystemUtils.IS_OS_WINDOWS) {
       return Command.create("cmd.exe").addArguments(new String[] {"/c", "echo", toOutput});
