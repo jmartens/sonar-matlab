@@ -57,7 +57,7 @@ public class MlintIssuesAnalyzer {
     .put("W9901", "W1301")
     .build();
 
-  private static final String FALLBACK_PYLINT = "mlint";
+  private static final String FALLBACK_MLINT = "mlint";
   private static final Pattern PATTERN = Pattern.compile("(.+):([0-9]+): \\[(.*)\\] (.*)");
 
   private String mlint = null;
@@ -88,7 +88,7 @@ public class MlintIssuesAnalyzer {
       }
       return mlintPath;
     }
-    return FALLBACK_PYLINT;
+    return FALLBACK_MLINT;
   }
 
   public List<Issue> analyze(String path, Charset charset, File out) throws IOException {

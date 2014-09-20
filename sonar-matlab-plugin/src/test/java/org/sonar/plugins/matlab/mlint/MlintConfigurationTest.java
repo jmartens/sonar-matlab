@@ -48,21 +48,21 @@ public class MlintConfigurationTest {
 
     assertThat(mlintConfiguration.getMlintConfigPath(fs)).isNull();
 
-    settings.setProperty(MlintConfiguration.PYLINT_CONFIG_KEY, (String) null);
+    settings.setProperty(MlintConfiguration.MLINT_CONFIG_KEY, (String) null);
     assertThat(mlintConfiguration.getMlintConfigPath(fs)).isNull();
 
-    settings.setProperty(MlintConfiguration.PYLINT_CONFIG_KEY, ".mlintrc");
+    settings.setProperty(MlintConfiguration.MLINT_CONFIG_KEY, ".mlintrc");
     assertThat(mlintConfiguration.getMlintConfigPath(fs)).isEqualTo(new File("/projectroot/.mlintrc").getAbsolutePath());
 
     String absolutePath = new File("/absolute/.mlintrc").getAbsolutePath();
-    settings.setProperty(MlintConfiguration.PYLINT_CONFIG_KEY, absolutePath);
+    settings.setProperty(MlintConfiguration.MLINT_CONFIG_KEY, absolutePath);
     assertThat(mlintConfiguration.getMlintConfigPath(fs)).isEqualTo(absolutePath);
   }
 
   @Test
   public void getMlintPath() {
     String path = "test/path";
-    settings.setProperty(MlintConfiguration.PYLINT_KEY, path);
+    settings.setProperty(MlintConfiguration.MLINT_KEY, path);
 
     assertThat(mlintConfiguration.getMlintPath()).isEqualTo(path);
   }

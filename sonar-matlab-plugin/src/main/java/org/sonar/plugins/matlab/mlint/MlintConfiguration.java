@@ -30,14 +30,14 @@ import java.io.File;
 
 @Properties({
   @Property(
-    key = MlintConfiguration.PYLINT_CONFIG_KEY,
+    key = MlintConfiguration.MLINT_CONFIG_KEY,
     defaultValue = "",
     name = "mlint configuration",
     description = "Path to the mlint configuration file to use in mlint analysis. Set to empty to use the default.",
     global = false,
     project = true),
   @Property(
-    key = MlintConfiguration.PYLINT_KEY,
+    key = MlintConfiguration.MLINT_KEY,
     defaultValue = "",
     name = "mlint executable",
     description = "Path to the mlint executable to use in mlint analysis. Set to empty to use the default one.",
@@ -46,8 +46,8 @@ import java.io.File;
 })
 public class MlintConfiguration implements BatchExtension {
 
-  public static final String PYLINT_CONFIG_KEY = "sonar.matlab.mlint_config";
-  public static final String PYLINT_KEY = "sonar.matlab.mlint";
+  public static final String MLINT_CONFIG_KEY = "sonar.matlab.mlint_config";
+  public static final String MLINT_KEY = "sonar.matlab.mlint";
 
   private final Settings conf;
 
@@ -56,7 +56,7 @@ public class MlintConfiguration implements BatchExtension {
   }
 
   public String getMlintConfigPath(ModuleFileSystem fileSystem) {
-    String configPath = conf.getString(MlintConfiguration.PYLINT_CONFIG_KEY);
+    String configPath = conf.getString(MlintConfiguration.MLINT_CONFIG_KEY);
     if (StringUtils.isEmpty(configPath)) {
       return null;
     }
@@ -69,7 +69,7 @@ public class MlintConfiguration implements BatchExtension {
   }
 
   public String getMlintPath() {
-    return conf.getString(MlintConfiguration.PYLINT_KEY);
+    return conf.getString(MlintConfiguration.MLINT_KEY);
   }
 
 }

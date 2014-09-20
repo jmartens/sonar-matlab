@@ -29,15 +29,15 @@ import java.util.regex.Pattern;
 
 public class MlintArguments {
 
-  private static final Pattern PYLINT_VERSION_PATTERN = Pattern.compile(".*mlint[^ ]* ([0-9\\.]+).*");
-  private static final String[] ARGS_PYLINT_0_X = {"-i", "y", "-f", "parseable", "-r", "n"};
-  private static final String[] ARGS_PYLINT_1_X = {"--msg-template", "{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}", "-r", "n"};
+  private static final Pattern MLINT_VERSION_PATTERN = Pattern.compile(".*mlint[^ ]* ([0-9\\.]+).*");
+  private static final String[] ARGS_MLINT_0_X = {"-i", "y", "-f", "parseable", "-r", "n"};
+  private static final String[] ARGS_MLINT_1_X = {"--msg-template", "{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}", "-r", "n"};
 
   private final String[] arguments;
 
   public MlintArguments(Command command) {
     String mlintVersion = mlintVersion(command);
-    this.arguments = mlintVersion.startsWith("0") ? ARGS_PYLINT_0_X : ARGS_PYLINT_1_X;
+    this.arguments = mlintVersion.startsWith("0") ? ARGS_MLINT_0_X : ARGS_MLINT_1_X;
   }
 
   private static String mlintVersion(Command command) {
@@ -47,7 +47,7 @@ public class MlintArguments {
     CommandExecutor.create().execute(command, out, err, timeout);
     Iterable<String> outputLines = Iterables.concat(out.getData(), err.getData());
     for (String outLine : outputLines) {
-      Matcher matcher = PYLINT_VERSION_PATTERN.matcher(outLine);
+      Matcher matcher = MLINT_VERSION_PATTERN.matcher(outLine);
       if (matcher.matches()) {
         return matcher.group(1);
       }
