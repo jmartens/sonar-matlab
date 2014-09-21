@@ -55,7 +55,7 @@ public class CollapsibleIfStatementsCheck extends SquidCheck<Grammar> {
   }
 
   private boolean hasElseOrElif(AstNode ifNode) {
-    return ifNode.hasDirectChildren(MatlabKeyword.ELIF) || ifNode.hasDirectChildren(MatlabKeyword.ELSE);
+    return ifNode.hasDirectChildren(MatlabKeyword.ELSEIF) || ifNode.hasDirectChildren(MatlabKeyword.ELSE);
   }
 
   private AstNode singleIfChild(AstNode suite) {

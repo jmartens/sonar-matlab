@@ -193,7 +193,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
       MatlabTokenType.NUMBER,
       b.oneOrMore(MatlabTokenType.STRING),
       "...",
-      MatlabKeyword.NONE,
+      MatlabKeyword.NAN,
       MatlabKeyword.TRUE,
       MatlabKeyword.FALSE));
     b.rule(TESTLIST_COMP).is(b.firstOf(TEST, STAR_EXPR), b.firstOf(COMP_FOR, b.sequence(b.zeroOrMore(",", b.firstOf(TEST, STAR_EXPR)), b.optional(","))));
