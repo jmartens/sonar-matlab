@@ -36,6 +36,17 @@ import static com.sonar.sslr.impl.channel.RegexpChannelBuilder.regexp;
 
 public final class MatlabLexer {
 
+  // COMMENTS
+
+  /**
+   * The "one-line" comment styles only comment to the end of the line or the current block of PHP code, whichever comes first.
+   */
+  private static final String SINGLE_LINE_COMMENT_CONTENT = "(?:[^\\n\\r])*+";
+  private static final String SINGLE_LINE_COMMENT1 = "%%" + SINGLE_LINE_COMMENT_CONTENT;
+  private static final String SINGLE_LINE_COMMENT2 = "%" + SINGLE_LINE_COMMENT_CONTENT;
+  private static final String MULTI_LINE_COMMENT = "(?:%\\{[\\s\\S]*?%\\})";
+  public static final String COMMENT = "(?:" + MULTI_LINE_COMMENT + "|" + SINGLE_LINE_COMMENT1 + "|" + SINGLE_LINE_COMMENT2 + ")";
+	
   private MatlabLexer() {
   }
 
@@ -59,7 +70,7 @@ public final class MatlabLexer {
         .withChannel(new BlackHoleChannel("\\s"))
 
         // http://docs.matlab.org/reference/lexical_analysis.html#comments
-        .withChannel(commentRegexp("#[^\\n\\r]*+"))
+        .withChannel(commentRegexp(COMMENT))
 
         // http://docs.matlab.org/reference/lexical_analysis.html#string-literals
         .withChannel(new StringLiteralsChannel())

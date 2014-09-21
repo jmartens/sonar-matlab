@@ -38,14 +38,14 @@ public class MatlabAstScannerTest {
   @Test
   public void files() {
     AstScanner<Grammar> scanner = MatlabAstScanner.create(new MatlabConfiguration(Charsets.UTF_8));
-    scanner.scanFiles(ImmutableList.of(new File("src/test/resources/metrics/lines.py"), new File("src/test/resources/metrics/comments.py")));
+    scanner.scanFiles(ImmutableList.of(new File("src/test/resources/metrics/lines.py"), new File("src/test/resources/metrics/comments.m")));
     SourceProject project = (SourceProject) scanner.getIndex().search(new QueryByType(SourceProject.class)).iterator().next();
     assertThat(project.getInt(MatlabMetric.FILES)).isEqualTo(2);
   }
 
   @Test
   public void comments() {
-    SourceFile file = MatlabAstScanner.scanSingleFile(new File("src/test/resources/metrics/comments.py"));
+    SourceFile file = MatlabAstScanner.scanSingleFile(new File("src/test/resources/metrics/comments.m"));
     assertThat(file.getInt(MatlabMetric.COMMENT_LINES)).isEqualTo(1);
     assertThat(file.getNoSonarTagLines()).contains(3).hasSize(1);
   }

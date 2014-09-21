@@ -50,7 +50,7 @@ public class MatlabLexerTest {
    */
   @Test
   public void comments() {
-    assertThat(lexer.lex("# My comment \n new line"), hasComment("# My comment "));
+    assertThat(lexer.lex("% My comment \n new line"), hasComment("% My comment "));
   }
 
   /**
@@ -175,7 +175,7 @@ public class MatlabLexerTest {
    */
   @Test
   public void identifiers_and_keywords() {
-    assertThat(lexer.lex("True"), hasToken("True", MatlabKeyword.TRUE));
+    assertThat(lexer.lex("true"), hasToken("true", MatlabKeyword.TRUE));
     assertThat(lexer.lex("identifier"), hasToken("identifier", GenericTokenType.IDENTIFIER));
   }
 
@@ -194,7 +194,16 @@ public class MatlabLexerTest {
    */
   @Test
   public void blank_lines() {
-    assertThat(lexer.lex("    # comment\n")).hasSize(1);
+    assertThat(lexer.lex("% comment\n")).hasSize(1);
+    assertThat(lexer.lex("%% comment\n")).hasSize(1);
+    assertThat(lexer.lex("%{ comment %}\n")).hasSize(1);
+    assertThat(lexer.lex("%{ comment \n %}\n")).hasSize(1);
+    assertThat(lexer.lex("    % comment\n")).hasSize(1);
+    assertThat(lexer.lex("    %% comment\n")).hasSize(1);
+    assertThat(lexer.lex("    %{ comment %}\n")).hasSize(1);
+    assertThat(lexer.lex("    %{ comment \n %}\n")).hasSize(1);
+    assertThat(lexer.lex("    %{ comment \n %}foo\n")).hasSize(3);
+    assertThat(lexer.lex("    %{ comment \n %}\nbar\n")).hasSize(3);
     assertThat(lexer.lex("    \n")).hasSize(1);
     assertThat(lexer.lex("    ")).hasSize(1);
     assertThat(lexer.lex("line\n\n")).hasSize(3);

@@ -42,12 +42,12 @@ public class MatlabColorizerTest {
 
   @Test
   public void should_colorize_keywords() {
-    assertThat(colorize("False")).contains("<span class=\"k\">False</span>");
+    assertThat(colorize("false")).contains("<span class=\"k\">false</span>");
   }
 
   @Test
   public void should_colorize_comments() {
-    assertThat(colorize("# comment \n new line")).contains("<span class=\"cd\"># comment </span>");
+    assertThat(colorize("% comment \n new line")).contains("<span class=\"cd\">% comment </span>");
   }
 
   @Test

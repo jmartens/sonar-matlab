@@ -24,7 +24,7 @@ import org.sonar.colorizer.InlineDocTokenizer;
 public class MatlabDocTokenizer extends InlineDocTokenizer {
 
   public MatlabDocTokenizer(String tagBefore, String tagAfter) {
-    super("#", tagBefore, tagAfter);
+    super("%", tagBefore, tagAfter);
   }
 
 }

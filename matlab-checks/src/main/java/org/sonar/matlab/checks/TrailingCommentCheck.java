@@ -38,7 +38,8 @@ import java.util.regex.Pattern;
 @BelongsToProfile(title = CheckList.SONAR_WAY_PROFILE, priority = Priority.INFO)
 public class TrailingCommentCheck extends SquidCheck<Grammar> implements AstAndTokenVisitor {
 
-  private static final String DEFAULT_LEGAL_COMMENT_PATTERN = "^#\\s*+[^\\s]++$";
+  // TODO: Check if we do not need to use the comment pattern as defined in MatlabLexer
+  private static final String DEFAULT_LEGAL_COMMENT_PATTERN = "^%\\s*+[^\\s]++$";
 
   @RuleProperty(
     key = "legalTrailingCommentPattern",
