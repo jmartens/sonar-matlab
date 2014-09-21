@@ -27,7 +27,7 @@ public class MatlabKeywordTest {
 
   @Test
   public void test() {
-    assertThat(MatlabKeyword.values()).hasSize(33);
+    assertThat(MatlabKeyword.values()).hasSize(1766);
     assertThat(MatlabKeyword.keywordValues()).hasSize(MatlabKeyword.values().length);
   }
 
