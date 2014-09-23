@@ -43,7 +43,7 @@ public class MatlabParserTest {
 
   private static Collection<File> listFiles() {
     File dir = new File("src/test/resources/parser/");
-    return FileUtils.listFiles(dir, new String[]{"py"}, true);
+    return FileUtils.listFiles(dir, new String[]{"m"}, true);
   }
 
 }

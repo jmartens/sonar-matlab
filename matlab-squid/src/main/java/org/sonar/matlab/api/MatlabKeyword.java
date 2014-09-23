@@ -27,6 +27,25 @@ import com.sonar.sslr.api.TokenType;
  */
 public enum MatlabKeyword implements TokenType {
 	
+  ABORTSET("AbortSet"),
+  ABSTRACT("Abstract"),
+  ACCESS("Access"),
+  CONSTANT("Constant"),
+  DEPENDANT("Dependant"),
+  GETACCESS("GetAccess"),
+  GETOBSERVABLE("GetObservable"),
+  PRIVATE("private"),
+  PROTECTED("protected"), 
+  PUBLIC("public"), 
+  SEALED("Sealed"),
+  SETACCESS("SetAccess"),
+  SETOBSERVABLE("SetObservable"),
+  STATIC("Static"),
+  TRANSIENT("Transient"),  
+  CONSTRUCTONLOAD("ConstructOnLoad"),
+  HANDLECOMPATIBLE("HandleCompatible"),
+  ALLOWEDSUBCLASSES("AllowedSubclasses"), 
+  INFERIORCLASSES("InferiorClasses"),
   /*
    * Entering Commands
    */
@@ -9989,7 +10008,7 @@ public enum MatlabKeyword implements TokenType {
    * Class definition keywords
    * @see http://www.mathworks.com/matlab/matlab/ref/classdef.html
    */
-  CLASSDEF("classdef"),
+  CLASSDEF_KW("classdef"),
   /*
    * Add package or class to current import list
    * @see http://www.mathworks.com/matlab/matlab/ref/import.html

@@ -27,9 +27,12 @@ import static com.sonar.sslr.api.GenericTokenType.IDENTIFIER;
 import static org.sonar.matlab.api.MatlabTokenType.DEDENT;
 import static org.sonar.matlab.api.MatlabTokenType.INDENT;
 import static org.sonar.matlab.api.MatlabTokenType.NEWLINE;
+import static org.sonar.matlab.api.MatlabTokenType.NUMBER;
+import static org.sonar.matlab.api.MatlabPunctuator.*;
+import static org.sonar.matlab.api.MatlabKeyword.*;
 
 public enum MatlabGrammar implements GrammarRuleKey {
-  FACTOR,
+/*  FACTOR,
   TRAILER,
   SUBSCRIPTLIST,
   SUBSCRIPT,
@@ -117,9 +120,9 @@ public enum MatlabGrammar implements GrammarRuleKey {
   // Compound statements
 
   COMPOUND_STMT,
-  SUITE,
+  SUITE,*/
   STATEMENT,
-  STMT_LIST,
+/*  STMT_LIST,
 
   IF_STMT,
   WHILE_STMT,
@@ -136,13 +139,34 @@ public enum MatlabGrammar implements GrammarRuleKey {
   DECORATOR,
   DOTTED_NAME,
   FUNCNAME,
-
-  CLASSDEF,
-  CLASSNAME,
-
+*/
   // Top-level components
 
-  FILE_INPUT;
+  FILE_INPUT, 
+  
+  CLASS_BLOCK, 
+  CLASSDEF,
+  CLASSNAME,
+  CLASS_ATTRIBUTE, 
+  CLASS_ATTRIBUTE_BOOLEAN, 
+  CLASS_ATTRIBUTES_CLASSES, 
+  
+  METHODS_BLOCK, 
+  METHODSDEF, 
+  METHODS_ATTRIBUTE, 
+  METHODS_ATTRIBUTE_BOOLEAN, 
+  METHODS_ACCESS_TYPE, 
+  
+  PROPERTIES_BLOCK, 
+  PROPERTIESDEF, 
+  PROPERTIES_ATTRIBUTE, 
+  PROPERTIES_ATTRIBUTE_BOOLEAN, 
+  PROPERTIES_ACCESS_TYPE, 
+  
+  EVENTS_BLOCK, 
+  
+  ENUMS_BLOCK, 
+  ENUM; 
 
   public static LexerfulGrammarBuilder create() {
     LexerfulGrammarBuilder b = LexerfulGrammarBuilder.create();
@@ -162,6 +186,188 @@ public enum MatlabGrammar implements GrammarRuleKey {
 
   public static void grammar(LexerfulGrammarBuilder b) {
 
+	/*
+	 * Matlab rule set
+	 */
+	/*
+	 * // Parameter definition b.rule(PARAMETERLIST).is(
+	 * b.zeroOrMore(PARAMETER, b.optional(COMMA, PARAMETER)));
+	 * b.rule(PARAMETER).is( b.sequence(b.optional(RBRACKET), b.firstOf("~",
+	 * "TODO: add possible datatypes"), b.optional(LBRACKET)));
+	 */
+
+	/*
+	 * Block defintion to match all blocks that start with a opening keyword
+	 * and is closed with the end keyword
+	 */
+	// b.rule(BLOCK).is(CLASSDEF, b.zeroOrMore(NEWLINE), "end");
+
+	b.rule(STATEMENT).is(
+			b.firstOf(NEWLINE, IDENTIFIER, CLASS_BLOCK));
+	
+//		b.rule(BLOCK).is(b.firstOf(ENUMS_BLOCK, EVENTS_BLOCK, METHODS_BLOCK, PROPERTIES_BLOCK));
+
+	/*
+	 * Class definition
+	 * 
+	 * @see
+	 * http://www.mathworks.nl/help/matlab/matlab_oop/class-definition.html
+	 * 
+	 * For example of a Matlab class definition
+	 * 
+	 * @see
+	 * http://www.mathworks.nl/help/matlab/matlab_oop/a-class-code-listing.html
+	 */		
+	b.rule(CLASSDEF).is(CLASSDEF_KW,
+			b.optional(LPARENTHESIS, CLASS_ATTRIBUTE, RPARENTHESIS), IDENTIFIER,
+			b.optional(MatlabPunctuator.LT, HANDLE));
+
+	/*
+	 *  Class attributes
+	 *  @see http://www.mathworks.nl/help/matlab/matlab_oop/class-attributes.html
+	 *  
+	 *  Class attributes that only allow TRUE/FALSE:
+	 *  - abstract
+	 *  - constructonload
+	 *  - handlecompatible
+	 *  - hidden
+	 *  - static
+	 *  - sealed
+	 */
+	b.rule(CLASS_ATTRIBUTE_BOOLEAN).is(
+			b.firstOf(b.sequence(b.firstOf(ABSTRACT, CONSTRUCTONLOAD, HANDLECOMPATIBLE, HIDDEN, SEALED),
+					ASSIGN, b.firstOf(TRUE, FALSE)), b.firstOf(ABSTRACT, CONSTRUCTONLOAD, HANDLECOMPATIBLE, HIDDEN, SEALED)));
+
+	/*
+	 * Allowed subclasses
+	 */
+	b.rule(CLASS_ATTRIBUTES_CLASSES).is(b.firstOf(ALLOWEDSUBCLASSES, INFERIORCLASSES));		
+
+	/*
+	 * Aggregate of all method attributes
+	 */
+	b.rule(CLASS_ATTRIBUTE).is(b.firstOf(CLASS_ATTRIBUTE_BOOLEAN, CLASS_ATTRIBUTES_CLASSES));
+
+	
+	b.rule(CLASS_BLOCK).is(CLASSDEF, NEWLINE, INDENT, b.oneOrMore(b.firstOf(METHODS_BLOCK, PROPERTIES_BLOCK, EVENTS_BLOCK, ENUMS_BLOCK), NEWLINE), DEDENT, END);
+
+	/*
+	 * Method definition
+	 * @see http://www.mathworks.nl/help/matlab/matlab_oop/method-attributes.html
+	 */
+	b.rule(METHODSDEF).is(
+			METHODS,
+			b.optional(LPARENTHESIS, METHODS_ATTRIBUTE,
+					b.zeroOrMore(COMMA, METHODS_ATTRIBUTE), RPARENTHESIS));
+	
+	/*
+	 *  Method attributes that only allow TRUE/FALSE:
+	 *  - abstract
+	 *  - hidden
+	 *  - sealed
+	 *  - static
+	 */
+	b.rule(METHODS_ATTRIBUTE_BOOLEAN).is(
+			b.firstOf(b.sequence(b.firstOf(ABSTRACT, HIDDEN, SEALED, STATIC),
+					ASSIGN, b.firstOf(TRUE, FALSE)), b.firstOf(ABSTRACT,
+					HIDDEN, SEALED, STATIC)));
+
+	/*
+	 * Methods access type:
+	 * - public
+	 * - protected
+	 * - private
+	 */
+	b.rule(METHODS_ACCESS_TYPE).is(ACCESS, ASSIGN, b.firstOf(PUBLIC, PROTECTED, PRIVATE));
+
+	/*
+	 * Aggregate of all method attributes
+	 */
+	b.rule(METHODS_ATTRIBUTE).is(b.firstOf(METHODS_ATTRIBUTE_BOOLEAN, METHODS_ACCESS_TYPE));
+	
+	b.rule(METHODS_BLOCK).is(METHODSDEF, NEWLINE, b.optional(INDENT, b.oneOrMore(IDENTIFIER, NEWLINE), DEDENT), END);
+
+	/*
+	 * Properties
+	 * @see http://www.mathworks.nl/help/matlab/matlab_oop/defining-properties.html
+	 */
+	b.rule(PROPERTIESDEF).is(
+			PROPERTIES,
+			b.optional(LPARENTHESIS, PROPERTIES_ATTRIBUTE,
+					b.zeroOrMore(COMMA, PROPERTIES_ATTRIBUTE), RPARENTHESIS));
+	
+	/*
+	 * Properties attributes
+	 * @see http://www.mathworks.nl/help/matlab/matlab_oop/property-attributes.html
+	 * 
+	 *  Properties attributes that only allow TRUE/FALSE:
+	 *  - abortset 
+	 *  - abstract
+	 *  - constant
+	 *  - dependant
+	 *  - getobservanle
+	 *  - setobservable
+	 *  - hidden
+	 *  - transient
+	 *  
+	 */
+	b.rule(PROPERTIES_ATTRIBUTE_BOOLEAN).is(
+			b.firstOf(
+					b.sequence(
+							b.firstOf(
+									ABORTSET, ABSTRACT, 
+									CONSTANT, DEPENDANT, 
+									GETOBSERVABLE, SETOBSERVABLE, 
+									HIDDEN, TRANSIENT
+									), 
+									ASSIGN, 
+									b.firstOf(TRUE, FALSE)
+							), 
+					b.firstOf(
+							ABORTSET, ABSTRACT, 
+							CONSTANT, DEPENDANT, 
+							GETOBSERVABLE, SETOBSERVABLE, 
+							HIDDEN, TRANSIENT
+							)
+					)
+			);
+
+	/*
+	 * Properties set-/get- and access type:
+	 * - public
+	 * - protected
+	 * - private
+	 */
+	b.rule(PROPERTIES_ACCESS_TYPE).is(b.firstOf(ACCESS, GETACCESS, SETACCESS), ASSIGN, b.firstOf(PUBLIC, PROTECTED, PRIVATE));
+
+	/*
+	 * Aggregate of all properties attributes
+	 */
+	b.rule(PROPERTIES_ATTRIBUTE).is(b.firstOf(PROPERTIES_ATTRIBUTE_BOOLEAN, PROPERTIES_ACCESS_TYPE));
+	//		b.rule(METHODS_BLOCK).is(METHODSDEF, NEWLINE, b.optional(b.oneOrMore(INDENT, IDENTIFIER, NEWLINE), DEDENT), END);
+
+	b.rule(PROPERTIES_BLOCK).is(PROPERTIESDEF, NEWLINE, b.optional(INDENT, b.oneOrMore(IDENTIFIER, ASSIGN, IDENTIFIER, NEWLINE), DEDENT), END);
+
+	/*
+	 *  Data types
+	 */
+	/*
+	 * Enum
+	 * @see http://www.mathworks.nl/help/matlab/ref/enumeration.html
+	 */
+	b.rule(ENUM).is(IDENTIFIER, b.optional(LPARENTHESIS, NUMBER, RPARENTHESIS));
+	b.rule(ENUMS_BLOCK).is(ENUMERATION, NEWLINE, b.optional(INDENT, b.oneOrMore(ENUM, NEWLINE), DEDENT), END);
+	
+	b.rule(EVENTS_BLOCK).is(EVENTS, NEWLINE, b.optional(INDENT, b.oneOrMore(IDENTIFIER, NEWLINE), DEDENT), END);
+
+	
+	/*
+	 * b.rule(CLASSNAME).is(NAME);
+	 * b.rule(CLASS_ATTRIBUTES).is("ConstructOnLoad");
+	 */
+	  
+	  
+/*
     b.rule(EXPRESSION_STMT).is(
       TESTLIST_STAR_EXPR,
       b.firstOf(
@@ -233,7 +439,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
     b.rule(FPDEF).is(b.firstOf(
       NAME,
       b.sequence("(", FPLIST, ")")));
-    b.rule(FPLIST).is(FPDEF, b.zeroOrMore(",", FPDEF), b.optional(","));
+    b.rule(FPLIST).is(FPDEF, b.zeroOrMore(",", FPDEF), b.optional(","));*/
   }
 
   /**
@@ -241,7 +447,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
    * http://docs.matlab.org/reference/expressions.html
    */
   public static void expressions(LexerfulGrammarBuilder b) {
-    b.rule(M_EXPR).is(FACTOR, b.zeroOrMore(b.firstOf("*", "//", "/", "%"), FACTOR)).skipIfOneChild();
+/*    b.rule(M_EXPR).is(FACTOR, b.zeroOrMore(b.firstOf("*", "//", "/", "%"), FACTOR)).skipIfOneChild();
     b.rule(A_EXPR).is(M_EXPR, b.zeroOrMore(b.firstOf("+", "-"), M_EXPR)).skipIfOneChild();
 
     b.rule(SHIFT_EXPR).is(A_EXPR, b.zeroOrMore(b.firstOf("<<", ">>"), A_EXPR)).skipIfOneChild();
@@ -264,7 +470,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
 
     b.rule(OR_TEST).is(AND_TEST, b.zeroOrMore("or", AND_TEST)).skipIfOneChild();
     b.rule(AND_TEST).is(NOT_TEST, b.zeroOrMore("and", NOT_TEST)).skipIfOneChild();
-    b.rule(NOT_TEST).is(b.firstOf(COMPARISON, b.sequence("not", NOT_TEST))).skipIfOneChild();
+    b.rule(NOT_TEST).is(b.firstOf(COMPARISON, b.sequence("not", NOT_TEST))).skipIfOneChild();*/
   }
 
   /**
@@ -272,7 +478,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
    * http://docs.matlab.org/reference/simple_stmts.html
    */
   public static void simpleStatements(LexerfulGrammarBuilder b) {
-    b.rule(SIMPLE_STMT).is(b.firstOf(
+/*    b.rule(SIMPLE_STMT).is(b.firstOf(
       PRINT_STMT,
       EXEC_STMT,
       EXPRESSION_STMT,
@@ -314,7 +520,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
     b.rule(DOTTED_AS_NAMES).is(DOTTED_AS_NAME, b.zeroOrMore(",", DOTTED_AS_NAME));
 
     b.rule(GLOBAL_STMT).is("global", NAME, b.zeroOrMore(",", NAME));
-    b.rule(NONLOCAL_STMT).is("nonlocal", NAME, b.zeroOrMore(",", NAME));
+    b.rule(NONLOCAL_STMT).is("nonlocal", NAME, b.zeroOrMore(",", NAME));*/
   }
 
   /**
@@ -322,7 +528,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
    * http://docs.matlab.org/reference/compound_stmts.html
    */
   public static void compoundStatements(LexerfulGrammarBuilder b) {
-    b.rule(COMPOUND_STMT).is(b.firstOf(
+/*    b.rule(COMPOUND_STMT).is(b.firstOf(
       IF_STMT,
       WHILE_STMT,
       FOR_STMT,
@@ -362,7 +568,7 @@ public enum MatlabGrammar implements GrammarRuleKey {
     b.rule(DOTTED_NAME).is(NAME, b.zeroOrMore(".", NAME));
 
     b.rule(CLASSDEF).is(b.optional(DECORATORS), "class", CLASSNAME, b.optional("(", b.optional(ARGLIST), ")"), ":", SUITE);
-    b.rule(CLASSNAME).is(NAME);
+    b.rule(CLASSNAME).is(NAME);*/
   }
 
 }

@@ -41,7 +41,7 @@ public final class MatlabLexer {
   /**
    * The "one-line" comment styles only comment to the end of the line or the current block of PHP code, whichever comes first.
    */
-  private static final String SINGLE_LINE_COMMENT_CONTENT = "(?:[^\\n\\r])*+";
+  private static final String SINGLE_LINE_COMMENT_CONTENT = "(?:.*+)";
   private static final String SINGLE_LINE_COMMENT1 = "%%" + SINGLE_LINE_COMMENT_CONTENT;
   private static final String SINGLE_LINE_COMMENT2 = "%" + SINGLE_LINE_COMMENT_CONTENT;
   private static final String MULTI_LINE_COMMENT = "(?:%\\{[\\s\\S]*?%\\})";
